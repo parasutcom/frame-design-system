@@ -1,0 +1,31 @@
+@import '../colors/colors';
+
+.example [class*=col] {
+  background-color: color(bronze,20);
+  outline: 1px dashed color(bronze, 30);
+}
+
+.inside {
+  background-color: color(bronze,10);
+  height: 64px;
+}
+
+.example .p--row--narrow  [class*=col] {
+  background-color: color(purple,20);
+  outline: 1px dashed color(purple, 30);
+}
+
+.p--row--narrow .inside {
+  background-color: color(purple,10);
+}
+
+.example .p--row--condensed  [class*=col] {
+  background-color: color(green,20);
+  outline: 1px dashed color(green, 30);
+}
+
+.p--row--condensed .inside {
+  background-color: color(green,10);
+}
+
+

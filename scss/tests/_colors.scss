@@ -1,0 +1,257 @@
+@import '../colors/colors';
+
+[class*="c__"] {
+  display: inline-flex;
+  width: 72px;
+  height: 72px;
+}
+
+.c {
+  &__blue-10 {
+    background-color: color(blue, 10);
+  }
+  &__blue-20 {
+    background-color: color(blue,20);
+  }
+  &__blue-30 {
+    background-color: color(blue,30);
+  }
+  &__blue-40 {
+    background-color: color(blue,40);
+  }
+  &__blue-50 {
+    background-color: color(blue,50);
+  }
+  &__blue-60 {
+    background-color: color(blue,60);
+  }
+  &__blue-70 {
+    background-color: color(blue,70);
+  }
+  &__blue-80 {
+    background-color: color(blue,80);
+  }
+  &__blue-90 {
+    background-color: color(blue,90);
+  }
+  &__blue-100 {
+    background-color: color(blue,100);
+  }
+  
+  &__brown-10 {
+    background-color: color(brown,10);
+  }
+  &__brown-20 {
+    background-color: color(brown,20);
+  }
+  &__brown-30 {
+    background-color: color(brown,30);
+  }
+  &__brown-40 {
+    background-color: color(brown,40);
+  }
+  &__brown-50 {
+    background-color: color(brown,50);
+  }
+  &__brown-60 {
+    background-color: color(brown,60);
+  }
+  &__brown-70 {
+    background-color: color(brown,70);
+  }
+  &__brown-80 {
+    background-color: color(brown,80);
+  }
+  &__brown-90 {
+    background-color: color(brown,90);
+  }
+  &__brown-100 {
+    background-color: color(brown,100);
+  }
+
+  &__cool-gray-10 {
+    background-color: color(cool-gray,10);
+  }
+  &__cool-gray-20 {
+    background-color: color(cool-gray,20);
+  }
+  &__cool-gray-30 {
+    background-color: color(cool-gray,30);
+  }
+  &__cool-gray-40 {
+    background-color: color(cool-gray,40);
+  }
+  &__cool-gray-50 {
+    background-color: color(cool-gray,50);
+  }
+  &__cool-gray-60 {
+    background-color: color(cool-gray,60);
+  }
+  &__cool-gray-70 {
+    background-color: color(cool-gray,70);
+  }
+  &__cool-gray-80 {
+    background-color: color(cool-gray,80);
+  }
+  &__cool-gray-90 {
+    background-color: color(cool-gray,90);
+  }
+  &__cool-gray-100 {
+    background-color: color(cool-gray,100);
+  }
+
+  &__gray-10 {
+    background-color: color(gray,10);
+  }
+  &__gray-20 {
+    background-color: color(gray,20);
+  }
+  &__gray-30 {
+    background-color: color(gray,30);
+  }
+  &__gray-40 {
+    background-color: color(gray,40);
+  }
+  &__gray-50 {
+    background-color: color(gray,50);
+  }
+  &__gray-60 {
+    background-color: color(gray,60);
+  }
+  &__gray-70 {
+    background-color: color(gray,70);
+  }
+  &__gray-80 {
+    background-color: color(gray,80);
+  }
+  &__gray-90 {
+    background-color: color(gray,90);
+  }
+  &__gray-100 {
+    background-color: color(gray,100);
+  }
+
+  &__green-10 {
+    background-color: color(green,10);
+  }
+  &__green-20 {
+    background-color: color(green,20);
+  }
+  &__green-30 {
+    background-color: color(green,30);
+  }
+  &__green-40 {
+    background-color: color(green,40);
+  }
+  &__green-50 {
+    background-color: color(green,50);
+  }
+  &__green-60 {
+    background-color: color(green,60);
+  }
+  &__green-70 {
+    background-color: color(green,70);
+  }
+  &__green-80 {
+    background-color: color(green,80);
+  }
+  &__green-90 {
+    background-color: color(green,90);
+  }
+  &__green-100 {
+    background-color: color(green,100);
+  }
+
+  &__bronze-10 {
+    background-color: color(bronze,10);
+  }
+  &__bronze-20 {
+    background-color: color(bronze,20);
+  }
+  &__bronze-30 {
+    background-color: color(bronze,30);
+  }
+  &__bronze-40 {
+    background-color: color(bronze,40);
+  }
+  &__bronze-50 {
+    background-color: color(bronze,50);
+  }
+  &__bronze-60 {
+    background-color: color(bronze,60);
+  }
+  &__bronze-70 {
+    background-color: color(bronze,70);
+  }
+  &__bronze-80 {
+    background-color: color(bronze,80);
+  }
+  &__bronze-90 {
+    background-color: color(bronze,90);
+  }
+  &__bronze-100 {
+    background-color: color(bronze,100);
+  }
+
+  &__red-10 {
+    background-color: color(red,10);
+  }
+  &__red-20 {
+    background-color: color(red,20);
+  }
+  &__red-30 {
+    background-color: color(red,30);
+  }
+  &__red-40 {
+    background-color: color(red,40);
+  }
+  &__red-50 {
+    background-color: color(red,50);
+  }
+  &__red-60 {
+    background-color: color(red,60);
+  }
+  &__red-70 {
+    background-color: color(red,70);
+  }
+  &__red-80 {
+    background-color: color(red,80);
+  }
+  &__red-90 {
+    background-color: color(red,90);
+  }
+  &__red-100 {
+    background-color: color(red,100);
+  }
+
+  &__purple-10 {
+    background-color: color(purple,10);
+  }
+  &__purple-20 {
+    background-color: color(purple,20);
+  }
+  &__purple-30 {
+    background-color: color(purple,30);
+  }
+  &__purple-40 {
+    background-color: color(purple,40);
+  }
+  &__purple-50 {
+    background-color: color(purple,50);
+  }
+  &__purple-60 {
+    background-color: color(purple,60);
+  }
+  &__purple-70 {
+    background-color: color(purple,70);
+  }
+  &__purple-80 {
+    background-color: color(purple,80);
+  }
+  &__purple-90 {
+    background-color: color(purple,90);
+  }
+  &__purple-100 {
+    background-color: color(purple,100);
+  }
+}

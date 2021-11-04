@@ -1,0 +1,55 @@
+@import '../spacing';
+@import '../colors/colors';
+
+
+[class*="square__"] {
+  display: inline-block;
+  background-color: rgb(241, 94, 79, 1);
+}
+
+.square {
+  &__2 {
+    width: spacing('spacing-2');
+    height: spacing('spacing-2');
+  }
+
+  &__4 {
+    width: spacing('spacing-4');
+    height: spacing('spacing-4');
+  }
+
+  &__8 {
+    width: spacing('spacing-8');
+    height: spacing('spacing-8');
+  }
+
+  &__12 {
+    width: spacing('spacing-12');
+    height: spacing('spacing-12');
+  }
+
+  &__16 {
+    width: spacing('spacing-16');
+    height: spacing('spacing-16');
+  }
+
+  &__24 {
+    width: spacing('spacing-24');
+    height: spacing('spacing-24');
+  }
+
+  &__32 {
+    width: spacing('spacing-32');
+    height: spacing('spacing-32');
+  }
+
+  &__40 {
+    width: spacing('spacing-40');
+    height: spacing('spacing-40');
+  }
+
+  &__48 {
+    width: spacing('spacing-48');
+    height: spacing('spacing-48');
+  }
+}

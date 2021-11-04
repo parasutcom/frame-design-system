@@ -1,0 +1,26 @@
+{
+  "name": "frame-design-system",
+  "version": "1.0.0",
+  "description": "Open source design system for financial products and digital experiences.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parasutcom/frame-design-system.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/parasutcom/frame-design-system/issues"
+  },
+  "homepage": "https://github.com/parasutcom/frame-design-system#readme",
+  "devDependencies": {
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.43.4"
+  },
+  "dependencies": {
+    "gulp": "^4.0.2"
+  }
+}

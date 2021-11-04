@@ -1,0 +1,19 @@
+@use "colors" as *;
+@import '../../spacing';
+@import '../../themes/tokens';
+
+$p-primary-70: color(blue,70);
+
+
+// $p-color-border-primary: color()
+$p-color-background-primary: color(blue, 60);
+$p-color-text-primary: color(gray, 10);
+$p-color-background-primary-hover: color(blue, 70);
+$p-color-background-primary-active: color(blue, 80);
+$p-color-text-primary-hover: color(gray, 10);
+
+
+
+$button-padding-field: calc(#{$spacing-base} * 0.625) $spacing-base;
+$button-padding-sm: calc(#{$spacing-base} * 0.375) $spacing-base;
+$button-padding-lg: calc(#{$spacing-base} * 0.875) $spacing-base;

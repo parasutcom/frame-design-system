@@ -1,0 +1,22 @@
+@import 'tokens';
+
+$spacing-scales: (
+  'spacing-2':              $size-4xs,
+  'spacing-4':              $size-3xs,
+  'spacing-8':              $size-2xs,
+  'spacing-12':             $size-xs,
+  'spacing-16':             $size-base,
+  'spacing-24':             $size-2xl,
+  'spacing-32':             $size-4xl,
+  'spacing-40':             $size-7xl,
+  'spacing-48':             $size-8xl,
+) !default;
+
+
+@function spacing($value) {
+  @if map-has-key($spacing-scales, $value) {
+    @return map-get($spacing-scales, $value);
+  } @else {
+    @error 'Unable to find a token with the name: `#{$value}`';
+  }
+}
