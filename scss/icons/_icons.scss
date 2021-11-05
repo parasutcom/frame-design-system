@@ -92,6 +92,8 @@ $icon-scales: (
   border: 1px solid;
 }
 
+
+
 @function icon-scale($scale) {
   @return map-get($icon-scales, $scale);
 }
