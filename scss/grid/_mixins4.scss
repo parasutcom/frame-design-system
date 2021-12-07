@@ -1,0 +1,95 @@
+@import '../layout/breakpoint';
+
+@mixin make-row($breakpoints: $grid-breakpoints){
+  display: flex;
+  flex-wrap: wrap;
+
+  @each $name, $breakpoint in $breakpoints {
+    $gutter: map-get($breakpoint, gutter);
+
+    @include breakpoint($name) {
+      margin-right: calc($gutter / 2 * -1);
+      margin-left: calc($gutter / 2 * -1);
+    }
+  }
+}
+
+@mixin make-col-ready($breakpoints: $grid-breakpoints) {
+  width: 100%;
+
+  @each $name, $breakpoint in $breakpoints {
+    $gutter: map-get($breakpoint, gutter);
+
+    @include breakpoint($name) {
+      padding-right: calc($gutter / 2);
+      padding-left: calc($gutter / 2);
+    }
+  }
+};
+
+@mixin make-col($size, $columns: $grid-columns){
+  @if $size == 0 {
+    display: none;
+  } @else {
+    display: block;
+    flex: 0 0 calc($size / (#{$columns}) * 100%);
+    max-width: calc($size / (#{$columns}) * 100%);
+  }
+}
+
+@mixin make-col-offset($size, $columns: $grid-columns){
+  $offset: calc($size / $columns);
+  @if $offset == 0 {
+    margin-left: 0;
+  } @else {
+    margin-left: calc($offset * 100%);
+  }
+}
+
+
+@mixin make-grid-columns($breakpoints: $grid-breakpoints, $columns: $grid-columns){
+
+  @each $name, $breakpoint in $breakpoints {
+    $gutter: map-get($breakpoint, gutter);
+
+    @include breakpoint($name) {
+      margin-right: calc($gutter / 2 * -1);
+      margin-left: calc($gutter / 2 * -1);
+    }
+  }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+@mixin grid($breakpoints: $grid-breakpoints) {
+
+  @each $name, $breakpoint in $breakpoints {
+    $gutter: map-get($breakpoint, gutter);
+
+    @include make-grid-columns($breakpoints);
+  }
+
+  
+
+  .p--row {
+    @include make-row($breakpoints);
+  }
+
+  .p--col {
+    @include make-col-ready($breakpoints);
+  }
+}
+
+@include grid();
+
+
+

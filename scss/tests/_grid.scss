@@ -1,31 +1,47 @@
 @import '../colors/colors';
 
-.example [class*=col] {
+.example .p--css-grid [class*=col],
+.example .p--css-grid {
   background-color: color(bronze,20);
   outline: 1px dashed color(bronze, 30);
 }
 
-.inside {
-  background-color: color(bronze,10);
-  height: 64px;
-}
-
-.example .p--row--narrow  [class*=col] {
-  background-color: color(purple,20);
-  outline: 1px dashed color(purple, 30);
-}
-
-.p--row--narrow .inside {
-  background-color: color(purple,10);
-}
-
-.example .p--row--condensed  [class*=col] {
+.example .p--subgrid [class*=col],
+.example .p--subgrid {
   background-color: color(green,20);
   outline: 1px dashed color(green, 30);
 }
 
-.p--row--condensed .inside {
-  background-color: color(green,10);
+.inside {
+  background-color: color(bronze,10);
+  min-height: 64px;
+  height: 100%;
 }
 
+.p--subgrid .inside {
+  background-color: color(green,10);
+  min-height: 64px;
+  height: 100%;
+}
 
+.example .p--row--narrow  [class*=col],
+.example .p--grid--narrow  [class*=col] {
+  background-color: color(purple,20);
+  outline: 1px dashed color(purple, 30);
+}
+
+.p--row--narrow .inside,
+.p--grid--narrow .inside {
+  background-color: color(purple,10);
+}
+
+.example .p--row--condensed [class*=col],
+.example .p--grid--condensed [class*=col] {
+  background-color: color(green,20);
+  outline: 1px dashed color(green, 30);
+}
+
+.p--row--condensed .inside,
+.p--grid--condensed .inside {
+  background-color: color(green,10);
+}

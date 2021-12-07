@@ -1,0 +1,118 @@
+@import '../layout/breakpoint';
+$grid-column-size: 1fr;
+
+@mixin css-grid($breakpoints: $grid-breakpoints) {
+  display: grid;
+  max-width: 99rem;
+  margin-right: auto;
+  margin-left: auto;
+  grid-template-columns: repeat(
+    $grid-columns,
+    minmax(0, $grid-column-size)
+  );
+
+  @each $name, $value in $breakpoints {
+    $gutter: map-get($value, gutter);
+
+    @include breakpoint($name) {
+      column-gap: $gutter;
+    }
+  }
+
+  
+
+  @for $i from 0 through 50 {
+    &.p--grid--#{$i} {
+      grid-template-columns: repeat(
+      $i,
+      minmax(0, $grid-column-size)
+    );
+    }
+  }
+}
+
+
+
+
+@mixin make-css-grid-container($breakpoints: $grid-breakpoints) {
+  @include css-grid();
+  
+  @each $name, $value in $breakpoints {
+    $margin: map-get($value, margin);
+
+    @include breakpoint($name) {
+      padding-right: #{calc(($grid-gutter / 2)) + $margin};
+      padding-left: #{calc(($grid-gutter / 2)) + $margin};
+    }
+  }
+}
+
+.p--css-grid {
+  @include make-css-grid-container();
+}
+
+.p--css-grid--fluid {
+  max-width: 100%;
+}
+
+// @mixin css-grid($breakpoints: $grid-breakpoints) {
+//  .p--css-grid {
+//     @include make-css-grid-container($breakpoints);
+//  }
+
+//  .p--css-grid--fluid {
+//    max-width: 100%;
+//  }
+// }
+// @include css-grid();
+
+
+@mixin -column-span($i) {
+  @if $i == 0 {
+    display: none;
+  } @else {
+    display: block;
+    grid-column: span $i / span $i;
+  }
+}
+
+// bu for make-grid-columns içinde olabilir
+@for $i from 0 through $grid-columns {
+  .p--col--span-#{$i} {
+    @include -column-span($i);
+  }
+}
+
+.p--col-span-auto {
+  grid-column: auto;
+}
+
+@mixin make-css-grid($breakpoints: $grid-breakpoints, $columns: $grid-columns) {
+  @each $name, $value in $breakpoints {
+
+    @include breakpoint($name) {
+      @for $i from 0 through $columns {
+        .p--#{$name}\:col--span-#{$i} {
+          @include -column-span($i);
+        }
+      }
+
+      .p--#{$name}\:col--span-auto {
+        grid-column: auto;
+      }
+    }
+  }
+}
+
+@include make-css-grid();
+
+
+@for $i from 1 through $grid-columns {
+  .p--col-start-#{$i} {
+    grid-column-start: $i;
+  }
+
+  .p--col-end-#{$i} {
+    grid-column-end: $i;
+  }
+}

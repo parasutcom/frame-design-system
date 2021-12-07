@@ -1,0 +1,112 @@
+@import '../layout/breakpoint';
+$grid-column-size: 1fr;
+
+@mixin css-grid() {
+  display: grid;
+  max-width: 99rem;
+  margin-right: auto;
+  margin-left: auto;
+  grid-template-columns: repeat(
+    $grid-columns,
+    minmax(0, $grid-column-size)
+  );
+
+  @for $i from 0 through $advanced-grid-columns {
+    &.p--grid--#{$i} {
+      grid-template-columns: repeat(
+        $i,
+        minmax(0, $grid-column-size)
+      );
+    }
+  }
+}
+
+@mixin -column-span($i) {
+  @if $i == 0 {
+    display: none;
+  } @else {
+    display: block;
+    grid-column: span $i / span $i;
+  }
+}
+
+@mixin make-css-grid($breakpoints: $grid-breakpoints, $columns: $advanced-grid-columns) {
+
+  @for $i from 0 through $columns {
+    .p--css-grid.p--grid--#{$i} {
+      grid-template-columns: repeat(
+        $i,
+        minmax(0, $grid-column-size)
+      );
+    }
+  }
+
+  @for $i from 0 through $columns {
+    .p--col--span-#{$i} {
+      @include -column-span($i);
+    }
+  }
+
+  @each $name, $value in $breakpoints {
+    @include breakpoint($name) {
+
+      @for $i from 0 through $columns {
+        .p--css-grid.p--grid--#{$name}-#{$i} {
+          grid-template-columns: repeat(
+            $i,
+            minmax(0, $grid-column-size)
+          );
+        }
+      }
+
+      @for $i from 0 through $columns {
+        .p--#{$name}\:col--span-#{$i} {
+          @include -column-span($i);
+        }
+      }
+    }
+  }
+}
+
+
+@mixin make-css-grid-container($breakpoints: $grid-breakpoints){
+
+  @each $name, $value in $breakpoints {
+    $margin: map-get($value, margin);
+
+    @include breakpoint($name) {
+      padding-right: #{calc(($grid-gutter / 2)) + $margin};
+      padding-left: #{calc(($grid-gutter / 2)) + $margin};
+    }
+  }
+}
+
+
+@mixin grid-css($breakpoints: $grid-breakpoints) {
+  .p--css-grid {
+    @include css-grid();
+    @include make-css-grid-container($breakpoints);
+  }
+
+  .p--css-grid--fluid {
+    max-width: 100%;
+  }
+}
+
+@include grid-css();
+
+@include make-css-grid();
+
+// .p--css-grid {
+//   @include css-grid();
+// }
+
+
+
+
+
+
+
+
+
+

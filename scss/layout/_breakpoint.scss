@@ -1,4 +1,5 @@
 $grid-columns: 12;
+$advanced-grid-columns: 48;
 $grid-gutter: 32px;
 $grid-gutter--condensed: 1px;
 
@@ -6,22 +7,27 @@ $grid-breakpoints: (
   sm: (
     width: 600px,
     margin: 16px,
+    gutter: 16px,
   ),
   md: (
     width: 900px,
     margin: 16px,
+    gutter: 16px,
   ),
   lg: (
     width: 1300px,
     margin: 24px,
+    gutter: 16px,
   ),
   xl: (
     width: 1500px,
     margin: 40px,
+    gutter: 32px,
   ),
   2xl: (
     width: 1800px,
     margin: 48px,
+    gutter: 32px,
   ),
 )!default;
 
