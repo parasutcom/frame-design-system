@@ -1,7 +1,6 @@
 @import '../layout/breakpoint';
 $grid-column-size: 1fr;
 
-
 @mixin css-grid() {
   display: grid;
   max-width: 99rem;
@@ -20,7 +19,6 @@ $grid-column-size: 1fr;
     minmax(0, $grid-column-size)
   );
 }
-
 
 @mixin -column-span($i) {
   @if $i == 0 {
@@ -43,18 +41,18 @@ $grid-column-size: 1fr;
     }
   }
 
-  .p--col-span-auto {
-    grid-column: auto;
-  }
-
   @for $i from 0 through $columns {
     .p--col-span-#{$i} {
       @include -column-span($i);
     }
-  };
+  }
+
+  .p--col-span-auto {
+    grid-column: auto;
+  }
 
   @each $name, $value in $breakpoints {
-    @include breakpoint($name) {   
+    @include breakpoint($name) {
       @for $i from 0 through $columns {
         .p--#{$name}\:col-span-#{$i} {
           @include -column-span($i);
@@ -68,6 +66,32 @@ $grid-column-size: 1fr;
   }
 }
 
+@mixin make-css-grid-col-offset($breakpoints: $grid-breakpoints, $columns: $advanced-grid-columns) {
+
+  @for $i from 0 through $columns {
+    .p--col-start-#{$i} {
+      grid-column-start: $i;
+    }
+
+    .p--col-end-#{$i} {
+      grid-column-end: $i;
+    }
+  }
+
+  @each $name, $value in $breakpoints {
+    @include breakpoint($name) {
+      @for $i from 0 through $columns + 1 {
+        .p--#{$name}\:col-start-#{$i} {
+          grid-column-start: $i;
+        }
+
+        .p--#{$name}\:col-end-#{$i} {
+          grid-column-end: $i;
+        }
+      }
+    }
+  }
+}
 
 @mixin make-css-grid-container($breakpoints: $grid-breakpoints) {
 
@@ -76,88 +100,20 @@ $grid-column-size: 1fr;
     $gutter: map-get($value, gutter);
 
     @include breakpoint($name) {
-      padding-right: #{calc(($grid-gutter / 2)) + $margin};
-      padding-left: #{calc(($grid-gutter / 2)) + $margin};
+      padding-right: #{calc(($gutter / 2)) + $margin};
+      padding-left: #{calc(($gutter / 2)) + $margin};
       column-gap: $gutter;
+
+      .p--subgrid.p--css-grid--condensed > [class*='col'] {
+        margin-right: calc( $gutter / 2 * -1);
+        margin-left: calc( $gutter / 2 * -1);
+      }
 
       &.p--css-grid--narrow > [class*='col'] {
         margin-left: calc( $gutter / 2 * -1);
       }
-
-      &.p--css-grid--condensed {
-        margin-right: calc( $gutter / 2 * -1);
-        margin-left: calc( $gutter / 2 * -1);
-      }
     }
   }
-}
-
-
-@mixin css-grid-col-offset($breakpoints: $grid-breakpoints, $columns: $advanced-grid-columns) {
-
-  @for $i from 1 through $columns {
-    .p--col-start-#{$i} {
-      grid-column-start: $i;
-    }
-  
-    .p--col-end-#{$i} {
-      grid-column-end: $i;
-    }
-  }
-
-  @each $name, $value in $breakpoints {
-    @include breakpoint($name) {
-      @for $i from 1 through $columns + 1 {
-
-        .p--#{$name}\:col-start-#{$i} {
-          grid-column-start: $i;
-        }
-
-        .p--#{$name}\:col-end-#{$i} {
-          grid-column-start: $i;
-        }
-      }
-    }
-  }
-}
-
-
-
-
-@mixin grid-css() {
-  .p--css-grid {
-    @include css-grid();
-    @include make-css-grid-container(); 
-  }
-
-  .p--css-grid--fluid {
-    max-width: 100%;
-  }
-
-
-  @include make-css-grid-columns();
-  @include css-grid-col-offset();
-
-  .p--subgrid {
-    @include subgrid();
-    @include make-css-grid-container();
-  }
-
-  .p--css-grid--no-gutter {
-    column-gap: 0;
-  }
-}
-
-
-
-.p--css-grid 
-  .p--subgrid {
-  padding: 0;
-}
-
-.p--css-grid
-  .p--subgrid.p--css-grid--narrow {
-  padding: 0;
 }
 
 .p--css-grid--condensed {
@@ -165,9 +121,10 @@ $grid-column-size: 1fr;
   row-gap: $grid-gutter--condensed !important;
 }
 
-// -----------------------------------------------------------------------------
-// Utilities
-// -----------------------------------------------------------------------------
+.p--css-grid 
+  .p--subgrid {
+  padding: 0
+}
 
 .p--justify-items-start {
   justify-items: start;
@@ -192,3 +149,33 @@ $grid-column-size: 1fr;
 .p--align-items-end {
   align-items: end;
 }
+
+@mixin grid-css() {
+  .p--css-grid {
+    @include css-grid();
+    @include make-css-grid-container();
+  }
+
+  .p--subgrid {
+    @include subgrid();
+    @include make-css-grid-container();
+  }
+
+  @include make-css-grid-columns();
+  @include make-css-grid-col-offset();
+
+  .p--css-grid--fluid {
+    max-width: 100%;
+  }
+
+  .p--css-grid--no-gutter {
+    column-gap: 0;
+  }
+
+  .p--css-grid--no-padding {
+    padding: 0;
+  }
+};
+
+
+
