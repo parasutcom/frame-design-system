@@ -22,6 +22,16 @@
       display: block;
       background-color: #2d2c2c;
     }
+
+    @media (max-width: 600px) {
+      .content {
+        padding: 16px;
+      }
+
+      .test-pages .side {
+        display: none;
+      }
+    }
     .test-pages .content {
       flex-grow: 1;
       background-color: #f1f1f1;
@@ -65,12 +75,12 @@
   <div class="wrap">
     <div class="side"></div>
     <div class="content">
-      <div class="p--css-grid p--css-grid--fluid">
+      <div class="p--css-grid p--css-grid--full-width">
         <div class="p--col-span-12 p--sm:col-span-12">
           <div class="breadcrumb">Satış Faturaları > Yeni satış faturası</div>
         </div>
       </div>
-      <div class="p--css-grid p--css-grid--fluid">
+      <div class="p--css-grid p--css-grid--full-width">
         <div class="p--col-span-12 p--sm:col-span-12 p--md:col-span-8 p--lg:col-span-8">
           <div class="p--subgrid p--css-grid--narrow">
             <div class="p--col-span-12 p--sm:col-span-12">
