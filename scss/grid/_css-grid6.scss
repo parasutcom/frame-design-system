@@ -5,6 +5,7 @@
   max-width: 99rem;
   margin-right: auto;
   margin-left: auto;
+  column-gap: $grid-gutter;
   grid-template-columns: repeat(
     $grid-columns,
     minmax(0, $grid-column-size)
@@ -13,6 +14,7 @@
 
 @mixin subgrid() {
   display: grid;
+  column-gap: $grid-gutter;
   grid-template-columns: repeat(
     $grid-columns,
     minmax(0, $grid-column-size)
@@ -28,11 +30,10 @@
   }
 }
 
-@mixin make-css-grid-columns($breakpoints: $grid-breakpoints, $columns: $advanced-grid-columns) {
+@mixin make-css-grid-columns($breakpoints: $grid-breakpoints ,$columns: $advanced-grid-columns) {
 
   @for $i from 0 through $columns {
-    .p--css-grid.p--grid--#{$i},
-    .p--subgrid.p--grid--#{$i} {
+    .p--grid--#{$i} {
       grid-template-columns: repeat(
         $i,
         minmax(0, $grid-column-size)
@@ -46,10 +47,6 @@
     }
   }
 
-  .p--col-span-auto {
-    grid-column: auto;
-  }
-
   @each $name, $value in $breakpoints {
     @include breakpoint($name) {
       @for $i from 0 through $columns {
@@ -57,15 +54,11 @@
           @include -column-span($i);
         }
       }
-
-      .p--#{$name}\:col-span-auto {
-        grid-column: auto;
-      }
     }
   }
 }
 
-@mixin make-css-grid-col-offset($breakpoints: $grid-breakpoints, $columns: $advanced-grid-columns) {
+@mixin make-css-grid-col-offset($breakpoints: $grid-breakpoints ,$columns: $advanced-grid-columns) {
 
   @for $i from 0 through $columns {
     .p--col-start-#{$i} {
@@ -90,13 +83,9 @@
       }
     }
   }
-
 }
 
-
 @mixin make-css-grid-container($breakpoints: $grid-breakpoints) {
-  column-gap: $grid-gutter;
-
   @each $name, $value in $breakpoints {
     $margin: map-get($value, margin);
 
@@ -108,36 +97,81 @@
 }
 
 
-@mixin grid-css {
+
+
+
+
+
+
+
+@mixin grid-css() {
+
   .p--css-grid {
     @include css-grid();
     @include make-css-grid-container();
   }
-  
+
   .p--subgrid {
     @include subgrid();
-    @include make-css-grid-container();
   }
 
-  .p--css-grid 
-    .p--subgrid {
-    padding: 0
+
+
+  // -----------------------------------------------------------------------------
+
+  .p--css-grid--narrow {
+    padding-right: $grid-gutter;
+    padding-left: $grid-gutter;
   }
 
   .p--css-grid--narrow > [class*='col'] {
     margin-left: calc( $grid-gutter / 2 * -1);
   }
 
-  .p--css-grid--condensed {
-    column-gap: $grid-gutter--condensed !important;
-    row-gap: $grid-gutter--condensed !important;
+  .p--css-grid:not(.p--css-grid--condensed) 
+    .p--subgrid.p--css-grid--narrow {
+    padding: 0;
   }
 
   .p--css-grid
-    .p--subgrid.p--css-grid--condensed {
-    margin-right: calc( $grid-gutter / 2 * -1);
+    .p--subgrid.p--css-grid--narrow > [class*='col'] {
     margin-left: calc( $grid-gutter / 2 * -1);
   }
+
+
+  .p--css-grid--condensed {
+    column-gap: $grid-gutter--condensed;
+    row-gap: $grid-gutter--condensed;
+  }
+
+  .p--css-grid:not(.p--css-grid--narrow)
+    .p--subgrid.p--css-grid--condensed {
+      margin-right: calc( $grid-gutter / 2 * -1);
+      margin-left: calc( $grid-gutter / 2 * -1);
+  }
+
+
+
+
+
+
+
+  // -----------------------------------------------------------------------------
+
+  // .p--css-grid--narrow > [class*='col'] {
+  //   margin-left: calc( $grid-gutter / 2 * -1);
+  // }
+
+  // .p--css-grid--condensed {
+  //   column-gap: $grid-gutter--condensed;
+  //   row-gap: $grid-gutter--condensed;
+  // }
+
+  // .p--css-grid:not(.p--css-grid--narrow)
+  //   .p--subgrid.p--css-grid--condensed {
+  //     margin-right: calc( $grid-gutter / 2 * -1);
+  //     margin-left: calc( $grid-gutter / 2 * -1);
+  // }
 
   @include make-css-grid-columns();
   @include make-css-grid-col-offset();
@@ -150,4 +184,3 @@
     column-gap: 0;
   }
 }
-
