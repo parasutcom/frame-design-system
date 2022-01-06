@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../dist/css/main.css">
+  <title>FDS | Test Pages | Grid</title>
+  <style>
+
+    .test-pages {
+      margin: 0;
+      padding: 0;
+    }
+    .test-pages .wrap {
+      display: flex;
+      height: 100%;
+      min-height: 100vh;
+    }
+    .test-pages .side {
+      min-width: 56px;
+      display: block;
+      background-color: #2d2c2c;
+    }
+
+    @media (max-width: 600px) {
+      .content {
+        padding: 16px;
+      }
+
+      .test-pages .side {
+        display: none;
+      }
+    }
+    .test-pages .content {
+      flex-grow: 1;
+      background-color: #f1f1f1;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+    .breadcrumb {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+    .card {
+      background-color: #fff;
+      display: inline-block;
+      border-radius: 8px;
+      width: 100%;
+      padding: 16px;
+      min-height: 200px;
+      margin-bottom: 20px;
+    }
+
+    .card div {
+      border: 1px dashed #ccc;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+    .text-right {
+      text-align: right;
+    }
+    .mb-1 {
+      margin-bottom: 10px;
+    }
+    .mb-2 {
+      margin-bottom: 20px;
+    }
+    .mb-4 {
+      margin-bottom: 40px;
+    }
+  </style>
+</head>
+<body class="test-pages">
+  <div class="wrap">
+    <div class="side"></div>
+    <div class="content">
+      <div class="card">
+        <div class="p--css-grid">
+          <div class="p--col-span-4">Genel Bilgiler</div>
+          <div class="p--col-span-8">
+            <div class="p--subgrid">
+              <div class="p--col-span-12">İdari Bilgiler</div>
+              <div class="p--col-span-12">
+                <div class="p--subgrid">
+                  <div class="p--col-span-3">Vergi Dairesi</div>
+                  <div class="p--col-span-3">Dönem Tipi</div>
+                  <div class="p--col-span-3">Ay</div>
+                  <div class="p--col-span-3">Yıl</div>
+                </div>
+              </div>
+              <div class="p--col-span-12">Mükellef Bilgisi</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

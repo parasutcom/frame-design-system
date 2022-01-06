@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../dist/css/main.css">
+  <title>FDS | Test Pages | Grid</title>
+  <style>
+
+    .test-pages {
+      margin: 0;
+      padding: 0;
+    }
+    .test-pages .wrap {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      min-height: 100vh;
+    }
+    .test-pages .nav {
+      min-height: 60px;
+      width: 100%;
+      display: block;
+      background-color: #0447DE;
+    }
+    .test-pages .head {
+      min-height: 186px;
+      width: 100%;
+      display: block;
+      background-color: #fff;
+    }
+
+
+    @media (max-width: 600px) {
+      .content {
+        padding: 16px;
+      }
+
+      .test-pages .side {
+        display: none;
+      }
+    }
+    .test-pages .content {
+      flex-grow: 1;
+      background-color: #f1f1f1;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+    .breadcrumb {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+    .card {
+      background-color: #fff;
+      display: inline-block;
+      border-radius: 8px;
+      width: 100%;
+      padding: 16px;
+      min-height: 200px;
+      margin-bottom: 20px;
+    }
+
+    .card div {
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+    .text-right {
+      text-align: right;
+    }
+    .mb-1 {
+      margin-bottom: 10px;
+    }
+    .mb-2 {
+      margin-bottom: 20px;
+    }
+    .mb-4 {
+      margin-bottom: 40px;
+    }
+    .p-0 {
+      padding: 0;
+    }
+    .mh-auto {
+      min-height: auto;
+    }
+    .border {
+      border: 1px dashed #ccc;
+    }
+    .p--css-grid.table > [class*='col'],
+    .p--subgrid.table > [class*='col'] {
+      padding: 16px;
+      border-top: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body class="test-pages">
+  <div class="wrap">
+    <div class="nav"></div>
+    <div class="head"></div>
+    <div class="content">
+     <div class="p--css-grid">
+       <div class="p--col-span-12">
+        <div class="breadcrumb">Aralık 2021</div>
+       </div>
+       <div class="p--col-span-12">
+        <div class="p--subgrid p--css-grid--narrow">
+          <div class="p--col-span-12 p--md:col-span-6">
+            <div class="card">Satışlar</div>
+          </div>
+          <div class="p--col-span-12 p--md:col-span-6">
+            <div class="card">Giderler</div>
+          </div>
+          <div class="p--col-span-12 p--md:col-span-12">
+            <div class="card">Banka Hesap Hareketleri</div>
+          </div>
+        </div>
+       </div>
+     </div>
+     <div class="p--css-grid">
+      <div class="p--col-span-12">
+       <div class="breadcrumb">Ocak 2022</div>
+      </div>
+      <div class="p--col-span-12">
+       <div class="p--subgrid p--css-grid--narrow">
+         <div class="p--col-span-12 p--md:col-span-6">
+           <div class="card">Satışlar</div>
+         </div>
+         <div class="p--col-span-12 p--md:col-span-6">
+           <div class="card">Giderler</div>
+         </div>
+         <div class="p--col-span-12 p--md:col-span-12">
+           <div class="card">Banka Hesap Hareketleri</div>
+         </div>
+       </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</body>
+</html>

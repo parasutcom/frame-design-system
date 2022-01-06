@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../dist/css/main.css">
+  <title>FDS | Test Pages | Grid</title>
+  <style>
+
+    .test-pages {
+      margin: 0;
+      padding: 0;
+      font-size: 14px;
+    }
+    .test-pages .wrap {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      min-height: 100vh;
+    }
+    .test-pages .nav {
+      min-height: 60px;
+      width: 100%;
+      display: block;
+      background-color: #0447DE;
+    }
+    .test-pages .head {
+      min-height: 186px;
+      width: 100%;
+      display: block;
+      background-color: #fff;
+    }
+
+
+    @media (max-width: 600px) {
+      .content {
+        padding: 16px;
+      }
+
+      .test-pages .side {
+        display: none;
+      }
+    }
+    .test-pages .content {
+      flex-grow: 1;
+      background-color: #f1f1f1;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+    .breadcrumb {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+    .card {
+      background-color: #fff;
+      display: inline-block;
+      border-radius: 8px;
+      width: 100%;
+      padding: 16px;
+      min-height: 200px;
+      margin-bottom: 20px;
+    }
+
+    .text-right {
+      text-align: right;
+    }
+    .mb-1 {
+      margin-bottom: 10px;
+    }
+    .mb-2 {
+      margin-bottom: 20px;
+    }
+    .mb-4 {
+      margin-bottom: 40px;
+    }
+    .p-0 {
+      padding: 0;
+    }
+    .mh-auto {
+      min-height: auto;
+    }
+    .border {
+      border: 1px dashed #ccc;
+    }
+    .p--css-grid.table > [class*='col'],
+    .p--subgrid.table > [class*='col'] {
+      padding: 16px;
+      border: 1px solid;
+    }
+  </style>
+</head>
+<body class="test-pages">
+  <div class="wrap">
+    <div class="nav"></div>
+    <div class="head"></div>
+    <div class="content">
+      <div class="p--css-grid">
+        <div class="p--col-span-12">
+          <div class="p--subgrid p--css-grid--no-gutter p--grid--16 table">
+            <div class="p--col-span-3 p--col-start-2">AÇIKLAMA (CARİ ÜNVANI)</div>
+            <div class="p--col-span-3">CARİ HESAP KODU</div>
+            <div class="p--col-span-3">GİDER HESAP KODU</div>
+            <div class="p--col-span-1">KDV1</div>
+            <div class="p--col-span-1">KDV8</div>
+            <div class="p--col-span-1">KDV18</div>
+            <div class="p--col-span-3">KDV HARİÇ TOPLAM</div>
+          </div>
+        </div>
+        <div class="p--col-span-12">
+          <div class="card p-0">
+            <div class="p--subgrid p--css-grid--no-gutter p--grid--16 table">
+              <div class="p--col-span-1"><i class="far fa-file-text icon-4xl"></i></div>
+              <div class="p--col-span-3">denemeee</div>
+              <div class="p--col-span-3">191.01.018</div>
+              <div class="p--col-span-3">391.01.005</div>
+              <div class="p--col-span-1">0,00₺</div>
+              <div class="p--col-span-1">0,00₺</div>
+              <div class="p--col-span-1">417.108,84₺</div>
+              <div class="p--col-span-2">2.317.271,36₺</div>
+              <div class="p--col-span-1 text-right">Button</div>
+            </div>
+            <div class="p--subgrid p--css-grid--no-gutter p--grid--16 table">
+              <div class="p--col-span-3 p--col-start-2">EVRAK TARİHİ 21.12.2021</div>
+              <div class="p--col-span-3">EVRAK NO —</div>
+              <div class="p--col-span-9"><div class="text-right">Paraşüt'te göster</div></div>
+            </div>
+            <div class="p--subgrid p--css-grid--no-gutter p--grid--16 table">
+              <div class="p--col-span-1">MİKTAR</div>
+              <div class="p--col-span-2">ÜRÜN/HİZMET</div>
+              <div class="p--col-span-1">KDV</div>
+              <div class="p--col-span-3">KDV HESAP KODU</div>
+              <div class="p--col-span-3">GİDER HESAP KODU</div>
+              <div class="p--col-span-2">KDV TUTARI</div>
+              <div class="p--col-span-2">KDV'SİZ TUTAR</div>
+              <div class="p--col-span-2 text-right">KDV'Lİ TUTAR</div>
+            </div>
+            <div class="p--subgrid p--css-grid--no-gutter p--grid--16 table">
+              <div class="p--col-span-1">1</div>
+              <div class="p--col-span-2">FORM KALIBI 10 GÖZLÜ</div>
+              <div class="p--col-span-1">%18</div>
+              <div class="p--col-span-3">191.01.018</div>
+              <div class="p--col-span-3">391.01.005</div>
+              <div class="p--col-span-2">417.108,84₺</div>
+              <div class="p--col-span-2">2.317.271,36₺</div>
+              <div class="p--col-span-2 text-right">2.734.380,20₺</div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
