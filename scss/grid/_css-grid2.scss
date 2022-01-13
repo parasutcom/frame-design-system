@@ -1,10 +1,13 @@
 @import '../layout/breakpoint';
 
 @mixin make-row($gutter: $grid-gutter) {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   margin-right: calc($gutter / 2 * -1);
   margin-left: calc($gutter / 2 * -1);
+  grid-template-columns: repeat(
+    $grid-columns,
+    minmax(0, $grid-column-size)
+  );
 }
 
 @mixin make-col-ready($gutter: $grid-gutter) {
@@ -13,61 +16,71 @@
   padding-left: calc($gutter / 2);
 }
 
-@mixin make-col($size, $columns: $grid-columns) {
-  @if $size == 0 {
+@mixin make-col-span($i) {
+  @if $i == 0 {
     display: none;
   } @else {
     display: block;
-    flex: 0 0 calc($size / (#{$columns}) * 100%);
-    max-width: calc($size / (#{$columns}) * 100%);
+    grid-column: span $i / span $i;
   }
 }
 
-@mixin make-col-offset($size, $columns: $grid-columns) {
-  $offset: calc($size / $columns);
-  @if $offset == 0 {
-    margin-left: 0;
-  } @else {
-    margin-left: calc($offset * 100%);
-  }
-}
+@mixin make-grid-columns($breakpoints: $grid-breakpoints, $columns: $advanced-grid-columns) {
 
-@mixin make-grid-columns($breakpoints: $grid-breakpoints, $gutter: $grid-gutter, $columns: $grid-columns) {
-
-  .p--col {
-    max-width: 100%;
-    flex-basis: 0;
-    flex-grow: 1;
-  }
-  
   @for $i from 0 through $columns {
-    .p--col-#{$i} {
-      @include make-col($i, $columns);
+    .p--row--#{$i} {
+      grid-template-columns: repeat(
+        $i,
+        minmax(0, $grid-column-size)
+      );
     }
   }
 
-  @each $breakpoint in map-keys($breakpoints) {
-    $infix: breakpoint-infix($breakpoint);
+  @for $i from 0 through $columns {
+    .p--col-span-#{$i} {
+      @include make-col-span($i);
+    }
+  }
 
-    @include breakpoint($breakpoint, $breakpoints){
+  @each $name, $value in $breakpoints {
+    @include breakpoint($name) {
       @for $i from 0 through $columns {
-        .p--col#{$infix}-#{$i} {
-          @include make-col($i, $columns);
-        }
-      }
-      @for $i from 0 through ($columns - 1) {
-        @if not($infix == '') {
-          .p--offset#{$infix}-#{$i} {
-            @include make-col-offset($i, $columns);
-          }
+        .p--#{$name}\:col-span-#{$i} {
+          @include make-col-span($i);
         }
       }
     }
   }
 }
 
+@mixin make-grid-col-offset($breakpoints: $grid-breakpoints, $columns: $advanced-grid-columns) {
 
-@mixin make-container($breakpoints: $grid-breakpoints) {
+  @for $i from 0 through $columns {
+    .p--col-start-#{$i} {
+      grid-column-start: $i;
+    }
+
+    .p--col-end-#{$i} {
+      grid-column-end: $i;
+    }
+  }
+
+  @each $name, $value in $breakpoints {
+    @include breakpoint($name) {
+      @for $i from 0 through $columns + 1 {
+        .p--#{$name}\:col-start-#{$i} {
+          grid-column-start: $i;
+        }
+
+        .p--#{$name}\:col-end-#{$i} {
+          grid-column-end: $i;
+        }
+      }
+    }
+  }
+}
+
+@mixin make-grid-container($breakpoints: $grid-breakpoints) {
   max-width: 99rem;
   margin-right: auto;
   margin-left: auto;
@@ -76,7 +89,6 @@
     $margin: map-get($value, margin);
 
     @include breakpoint($name) {
-      
       padding-right: #{calc(($grid-gutter / 2)) + $margin};
       padding-left: #{calc(($grid-gutter / 2)) + $margin};
     }
@@ -99,13 +111,17 @@
   .p--row.p--no-gutter--end [class*='col'] {
     padding-right: 0;
   }
-} 
+}
 
-@mixin grid($gutter: $grid-gutter, $condensed-gutter: $grid-gutter--condensed) {
+
+
+
+@mixin grid-css($gutter: $grid-gutter, $condensed-gutter: $grid-gutter--condensed) {
+
   .p--grid {
-    @include make-container();
+    @include make-grid-container();
   }
-  
+ 
   .p--row {
     @include make-row();
 
@@ -134,10 +150,11 @@
     max-width: 100%;
   }
 
+  .p--row-padding-end {
+    padding-right: calc($gutter / 2); 
+  }
+
   @include make-grid-columns();
+  @include make-grid-col-offset();
   @include make-no-gutter();
 }
-
-
-
-

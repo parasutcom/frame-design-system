@@ -30,7 +30,7 @@
   }
 }
 
-@mixin make-css-grid-columns($breakpoints: $grid-breakpoints ,$columns: $advanced-grid-columns) {
+@mixin make-css-grid-columns($breakpoints: $grid-breakpoints, $columns: $advanced-grid-columns) {
 
   @for $i from 0 through $columns {
     .p--grid--#{$i} {

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../dist/css/main.css">
+  <title>Zirve Nova</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    #example .wrapper {
+      display: flex;
+      height: 100%;
+      min-height: 100vh;
+    }
+    #example .navigation {
+      flex-shrink: 0;
+      width: 60px;
+      display: block;
+      background-color: #2d2c2c;
+    }
+    #example .content {
+      display: block;
+      flex-grow: 1;
+      background-color: #DEDDDC;
+    }
+    #example .card {
+      background-color: #fff;
+      display: inline-block;
+      border-radius: 8px;
+      width: 100%;
+      padding: 16px;
+    }
+    .mb-2 {
+      margin-bottom: 20px;
+    }
+    .py-4 {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+    .border {
+      border: 2px solid #7e58f3;
+    }
+    .min-h-200 {
+      min-height: 200px;
+    }
+  </style>
+</head>
+<body id="example">
+  <div class="wrapper">
+    <div class="navigation"></div>
+    <div class="content">
+      <div class="p--grid p--grid--full-width">
+        <div class="p--row">
+          <div class="p--col-span-12">
+            <div class="card min-h-200">
+              <div class="p--row">
+                <div class="p--col-span-4"><div class="border">Genel Bilgiler</div></div>
+                <div class="p--col-span-8">
+                  <div class="p--row">
+                    <div class="p--col-span-12"><div class="border">İdari Bilgiler</div></div>
+                    <div class="p--col-span-12">
+                      <div class="p--row p--row-padding">
+                        <div class="p--col-span-3"><div class="border">Vergi Dairesi</div></div>
+                        <div class="p--col-span-3"><div class="border">Dönem Tipi</div></div>
+                        <div class="p--col-span-3"><div class="border">Ay</div></div>
+                        <div class="p--col-span-3"><div class="border">Yıl</div></div>
+                      </div>
+                    </div>
+                    <div class="p--col-span-12"><div class="border">Mükellef Bilgisi</div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

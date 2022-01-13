@@ -1,7 +1,7 @@
 $grid-columns: 12;
-$advanced-grid-columns: 48;
 $grid-gutter: 32px;
 $grid-gutter--condensed: 2px;
+$advanced-grid-columns: 24;
 $grid-column-size: 1fr;
 
 $grid-breakpoints: (
@@ -26,6 +26,7 @@ $grid-breakpoints: (
     margin: 48px,
   ),
 )!default;
+
 
 @function breakpoint-infix($name) {
   @return '-#{$name}';
