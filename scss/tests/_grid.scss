@@ -1,47 +1,43 @@
 @import '../colors/colors';
 
-.example .p--css-grid [class*=col],
-.example .p--css-grid {
-  background-color: color(bronze,20);
-  outline: 1px dashed color(bronze, 30);
+.example .p--row [class*=col] {
+  background-color: color(blue,20);
+  outline: 1px dashed color(blue, 30);
+}
+.example .inside {
+  background-color: color(blue,10);
+  min-height: 64px;
 }
 
-.example .p--subgrid [class*=col],
-.example .p--subgrid {
+
+
+
+
+.example .p--row .p--row [class*=col] {
+  background-color: color(red,20);
+  outline: 1px dashed color(red, 30);
+}
+
+.example .p--row .p--row .inside {
+  background-color: color(red,10);
+}
+
+.example .p--row.p--row--condensed [class*=col] {
   background-color: color(green,20);
   outline: 1px dashed color(green, 30);
 }
 
-.inside {
-  background-color: color(bronze,10);
-  min-height: 64px;
-  height: 100%;
-}
-
-.p--subgrid .inside {
+.example .p--row.p--row--condensed .inside {
   background-color: color(green,10);
   min-height: 64px;
-  height: 100%;
 }
 
-.example .p--row--narrow  [class*=col],
-.example .p--grid--narrow  [class*=col] {
+.example .p--row.p--row--narrow [class*=col] {
   background-color: color(purple,20);
   outline: 1px dashed color(purple, 30);
 }
 
-.p--row--narrow .inside,
-.p--grid--narrow .inside {
+.example .p--row.p--row--narrow .inside {
   background-color: color(purple,10);
-}
-
-.example .p--row--condensed [class*=col],
-.example .p--grid--condensed [class*=col] {
-  background-color: color(green,20);
-  outline: 1px dashed color(green, 30);
-}
-
-.p--row--condensed .inside,
-.p--grid--condensed .inside {
-  background-color: color(green,10);
+  min-height: 64px;
 }

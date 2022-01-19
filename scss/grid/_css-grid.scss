@@ -1,27 +1,22 @@
 @import '../layout/breakpoint';
 
-@mixin css-grid() {
+@mixin make-row($gutter: $grid-gutter) {
   display: grid;
-  max-width: 99rem;
-  margin-right: auto;
-  margin-left: auto;
-  column-gap: $grid-gutter;
+  margin-right: calc($gutter / 2 * -1);
+  margin-left: calc($gutter / 2 * -1);
   grid-template-columns: repeat(
     $grid-columns,
     minmax(0, $grid-column-size)
   );
 }
 
-@mixin subgrid() {
-  display: grid;
-  column-gap: $grid-gutter;
-  grid-template-columns: repeat(
-    $grid-columns,
-    minmax(0, $grid-column-size)
-  );
+@mixin make-col-ready($gutter: $grid-gutter) {
+  width: 100%;
+  padding-right: calc($gutter / 2);
+  padding-left: calc($gutter / 2);
 }
 
-@mixin -column-span($i) {
+@mixin make-col-span($i) {
   @if $i == 0 {
     display: none;
   } @else {
@@ -30,10 +25,10 @@
   }
 }
 
-@mixin make-css-grid-columns($breakpoints: $grid-breakpoints, $columns: $advanced-grid-columns) {
+@mixin make-grid-columns($breakpoints: $grid-breakpoints, $columns: $advanced-grid-columns) {
 
   @for $i from 0 through $columns {
-    .p--grid--#{$i} {
+    .p--row--#{$i} {
       grid-template-columns: repeat(
         $i,
         minmax(0, $grid-column-size)
@@ -43,7 +38,7 @@
 
   @for $i from 0 through $columns {
     .p--col-span-#{$i} {
-      @include -column-span($i);
+      @include make-col-span($i);
     }
   }
 
@@ -51,14 +46,14 @@
     @include breakpoint($name) {
       @for $i from 0 through $columns {
         .p--#{$name}\:col-span-#{$i} {
-          @include -column-span($i);
+          @include make-col-span($i);
         }
       }
     }
   }
 }
 
-@mixin make-css-grid-col-offset($breakpoints: $grid-breakpoints ,$columns: $advanced-grid-columns) {
+@mixin make-grid-col-offset($breakpoints: $grid-breakpoints, $columns: $advanced-grid-columns) {
 
   @for $i from 0 through $columns {
     .p--col-start-#{$i} {
@@ -85,7 +80,11 @@
   }
 }
 
-@mixin make-css-grid-container($breakpoints: $grid-breakpoints) {
+@mixin make-grid-container($breakpoints: $grid-breakpoints) {
+  max-width: 99rem;
+  margin-right: auto;
+  margin-left: auto;
+
   @each $name, $value in $breakpoints {
     $margin: map-get($value, margin);
 
@@ -96,46 +95,66 @@
   }
 }
 
-
-@mixin grid-css() {
-
-  .p--css-grid {
-    @include css-grid();
-    @include make-css-grid-container();
+@mixin make-no-gutter() {
+  .p--no-gutter,
+  .p--row.p--no-gutter [class*='col'] {
+    padding-right: 0;
+    padding-left: 0;
   }
 
-  .p--subgrid {
-    @include subgrid();
+  .p--no-gutter--start,
+  .p--row.p--no-gutter--start [class*='col'] {
+    padding-left: 0;
   }
 
-  .p--css-grid--narrow > [class*='col'] {
-    margin-left: calc( $grid-gutter / 2 * -1);
+  .p--no-gutter--end,
+  .p--row.p--no-gutter--end [class*='col'] {
+    padding-right: 0;
+  }
+}
+
+
+
+
+@mixin grid-css($gutter: $grid-gutter, $condensed-gutter: $grid-gutter--condensed) {
+
+  .p--grid {
+    @include make-grid-container();
+  }
+ 
+  .p--row {
+    @include make-row();
+
+    > * {
+      @include make-col-ready();
+    }
   }
 
-  .p--css-grid:not(.p--css-grid--condensed) 
-    .p--subgrid.p--css-grid--narrow {
-    padding: 0;
+  .p--row.p--row--condensed > [class*='col'] {
+    padding-right: calc($condensed-gutter / 2);
+    padding-left: calc($condensed-gutter / 2);
   }
 
-  .p--css-grid--condensed {
-    column-gap: $grid-gutter--condensed;
-    row-gap: $grid-gutter--condensed;
+  .p--row.p--row--narrow > [class*='col'] {
+    padding-right: calc($gutter / 2);
+    padding-left: 0;
   }
 
-  .p--css-grid:not(.p--css-grid--narrow)
-    .p--subgrid.p--css-grid--condensed {
-      margin-right: calc( $grid-gutter / 2 * -1);
-      margin-left: calc( $grid-gutter / 2 * -1);
+  .p--row-padding [class*='col'],
+  .p--col-padding {
+    padding-top: calc($gutter / 2);
+    padding-bottom: calc($gutter / 2);
   }
 
-  @include make-css-grid-columns();
-  @include make-css-grid-col-offset();
-
-  .p--css-grid--full-width {
+  .p--grid--full-width {
     max-width: 100%;
   }
 
-  .p--css-grid--no-gutter {
-    column-gap: 0;
+  .p--row-padding-end {
+    padding-right: calc($gutter / 2); 
   }
+
+  @include make-grid-columns();
+  @include make-grid-col-offset();
+  @include make-no-gutter();
 }
