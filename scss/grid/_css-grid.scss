@@ -113,12 +113,8 @@
   }
 }
 
-
-
-
 @mixin grid-css($gutter: $grid-gutter, $condensed-gutter: $grid-gutter--condensed) {
-
-  .p--grid {
+  .p--grid--container {
     @include make-grid-container();
   }
  
@@ -146,7 +142,7 @@
     padding-bottom: calc($gutter / 2);
   }
 
-  .p--grid--full-width {
+  .p--grid--container--full-width {
     max-width: 100%;
   }
 

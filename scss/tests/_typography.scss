@@ -1,7 +1,7 @@
 @import '../type/type';
 
 .body-short-01 {
-  @include type-style('body-short-02');
+  @include type-style('body-short-01');
 }
 .body-short-02 {
   @include type-style('body-short-02');
