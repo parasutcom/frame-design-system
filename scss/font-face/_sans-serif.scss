@@ -1,6 +1,6 @@
 @mixin font-face-sans-serif {
   @font-face {
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-display: auto;
@@ -11,7 +11,7 @@
   }
 
   @font-face {
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-display: auto;
@@ -22,7 +22,7 @@
   }
 
   @font-face {
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-display: auto;

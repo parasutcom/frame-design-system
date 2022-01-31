@@ -10,6 +10,7 @@
     "declaration-no-important": true,
     "string-quotes": "single",
     "font-weight-notation": "numeric",
-    "selector-class-pattern": null
+    "selector-class-pattern": null,
+    "font-family-name-quotes": "always-unless-keyword"
   }
 }

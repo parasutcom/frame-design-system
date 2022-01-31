@@ -17,20 +17,19 @@
 //   8xl  ||  48px
 //   ==========================================
 
-$base-size:                   16px !default;
-
-$size-4xs:									  $base-size * 0.125	!default;
-$size-3xs:									  $base-size * 0.25		!default;
-$size-2xs:									  $base-size * 0.5		!default;
-$size-xs:										  $base-size * 0.75		!default;
-$size-sm:										  $base-size * 0.875	!default;
-$size-base:									  $base-size * 1			!default;
-$size-lg:										  $base-size * 1.125	!default;
-$size-xl:										  $base-size * 1.25		!default;
-$size-2xl:										$base-size * 1.50		!default;
-$size-3xl:										$base-size * 1.75		!default;
-$size-4xl:										$base-size * 2			!default;
-$size-5xl:										$base-size * 2.25		!default;
-$size-6xl:										$base-size * 2.5	  !default;
-$size-7xl:										$base-size * 2.625	!default;
-$size-8xl:										$base-size * 3			!default;
+$base-size: 16px !default;
+$size-4xs: $base-size * 0.125 !default;
+$size-3xs: $base-size * 0.25 !default;
+$size-2xs: $base-size * 0.5 !default;
+$size-xs: $base-size * 0.75 !default;
+$size-sm: $base-size * 0.875 !default;
+$size-base: $base-size * 1 !default;
+$size-lg: $base-size * 1.125 !default;
+$size-xl: $base-size * 1.25 !default;
+$size-2xl: $base-size * 1.5 !default;
+$size-3xl: $base-size * 1.75 !default;
+$size-4xl: $base-size * 2 !default;
+$size-5xl: $base-size * 2.25 !default;
+$size-6xl: $base-size * 2.5 !default;
+$size-7xl: $base-size * 2.625 !default;
+$size-8xl: $base-size * 3 !default;

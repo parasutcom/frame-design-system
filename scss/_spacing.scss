@@ -12,7 +12,6 @@ $spacing-scales: (
   'spacing-48':             $size-8xl,
 ) !default;
 
-
 @function spacing($value) {
   @if map-has-key($spacing-scales, $value) {
     @return map-get($spacing-scales, $value);

@@ -10,7 +10,7 @@ $border-radiuses: (
 
 @function radius($value) {
   @return map-get($border-radiuses, $value);
-};
+}
 
 @mixin radius($value) {
   border-radius: radius($value);
