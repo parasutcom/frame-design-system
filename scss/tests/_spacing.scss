@@ -1,10 +1,9 @@
 @import '../spacing';
 @import '../colors/colors';
 
-
-[class*="square__"] {
+[class*='square__'] {
   display: inline-block;
-  background-color: rgba(241, 94, 79, 1);
+  background-color: rgb(241 94 79 / 100%);
 }
 
 .square {

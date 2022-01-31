@@ -4,26 +4,31 @@
     font-style: normal;
     font-weight: 400;
     font-display: auto;
-    src: local('Jetbrains Mono Regular')
-         url('globals/fonts/JetBrainsMono-Regular.woff2') format('woff2'),
-         url('globals/fonts/JetBrainsMono-Regular.woff') format('woff'),
+    src:
+      local('Jetbrains Mono Regular')
+      url('globals/fonts/JetBrainsMono-Regular.woff2') format('woff2'),
+      url('globals/fonts/JetBrainsMono-Regular.woff') format('woff'),;
   }
+
   @font-face {
     font-family: 'Jetbrains Mono';
     font-style: normal;
     font-weight: 500;
     font-display: auto;
-    src: local('Jetbrains Mono Medium')
-         url('globals/fonts/JetBrainsMono-Regular.woff2') format('woff2'),
-         url('globals/fonts/JetBrainsMono-Regular.woff') format('woff'),
+    src:
+      local('Jetbrains Mono Medium')
+      url('globals/fonts/JetBrainsMono-Regular.woff2') format('woff2'),
+      url('globals/fonts/JetBrainsMono-Regular.woff') format('woff'),;
   }
+
   @font-face {
     font-family: 'Jetbrains Mono';
     font-style: normal;
     font-weight: 700;
     font-display: auto;
-    src: local('Jetbrains Mono Bold')
-         url('globals/fonts/JetBrainsMono-Regular.woff2') format('woff2'),
-         url('globals/fonts/JetBrainsMono-Regular.woff') format('woff'),
+    src:
+      local('Jetbrains Mono Bold')
+      url('globals/fonts/JetBrainsMono-Regular.woff2') format('woff2'),
+      url('globals/fonts/JetBrainsMono-Regular.woff') format('woff'),;
   }
 }

@@ -1,39 +1,40 @@
 @import '../colors/colors';
 
-.example .p--row [class*=col] {
-  background-color: color(blue,20);
+.example .p--row [class*='col'] {
+  background-color: color(blue, 20);
   outline: 1px dashed color(blue, 30);
 }
+
 .example .inside {
-  background-color: color(blue,10);
+  background-color: color(blue, 10);
   min-height: 64px;
 }
 
-.example .p--row .p--row [class*=col] {
-  background-color: color(red,20);
+.example .p--row .p--row [class*='col'] {
+  background-color: color(red, 20);
   outline: 1px dashed color(red, 30);
 }
 
 .example .p--row .p--row .inside {
-  background-color: color(red,10);
+  background-color: color(red, 10);
 }
 
-.example .p--row.p--row--condensed [class*=col] {
-  background-color: color(green,20);
+.example .p--row.p--row--condensed [class*='col'] {
+  background-color: color(green, 20);
   outline: 1px dashed color(green, 30);
 }
 
 .example .p--row.p--row--condensed .inside {
-  background-color: color(green,10);
+  background-color: color(green, 10);
   min-height: 64px;
 }
 
-.example .p--row.p--row--narrow [class*=col] {
-  background-color: color(purple,20);
+.example .p--row.p--row--narrow [class*='col'] {
+  background-color: color(purple, 20);
   outline: 1px dashed color(purple, 30);
 }
 
 .example .p--row.p--row--narrow .inside {
-  background-color: color(purple,10);
+  background-color: color(purple, 10);
   min-height: 64px;
 }

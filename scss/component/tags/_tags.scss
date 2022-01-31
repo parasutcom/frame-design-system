@@ -1,14 +1,8 @@
-
-
-
 @import 'prefix';
 @import 'type';
 @import 'radius';
 @import 'spacing-v2';
-@use "colorsv4" as *;
-
-
-
+@use 'colorsv4' as *;
 
 @mixin text-truncate() {
   display: inline-block;
@@ -18,27 +12,27 @@
   white-space: nowrap;
 }
 
-
-
-
 .#{$prefix}--tag {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   vertical-align: middle;
+
   @include type-style('helper-text-01');
   @include radius('radius-pill');
+
   background-color: get-color(gray, 10);
-  color: get-color(gray,70);
+  color: get-color(gray, 70);
   cursor: default;
 
   &__label {
     @include text-truncate;
+
     padding: spacing('spacing-4') spacing('spacing-8');
   }
 
   &--dynamic:hover {
-    background-color: get-color(gray,20);
+    background-color: get-color(gray, 20);
   }
 
   // &--dynamic:focus {
@@ -76,28 +70,27 @@
     justify-content: center;
     flex-shrink: 0;
     background-color: transparent;
-    color: currentColor;
+    color: currentcolor;
     padding: spacing('none');
-    margin-top: spacing('spacing-2'); 
-    margin-right: spacing('spacing-2'); 
-    margin-bottom: spacing('spacing-2'); 
+    margin-top: spacing('spacing-2');
+    margin-right: spacing('spacing-2');
+    margin-bottom: spacing('spacing-2');
+
     @include radius('radius-pill');
+
     cursor: pointer;
     border: 0;
 
     &:hover {
-      background-color: get-color(gray,30);
+      background-color: get-color(gray, 30);
     }
   }
 }
-
-
 
 @mixin tag-variant($bg-color, $text-color: null) {
   background-color: $bg-color;
   color: $text-color;
 }
-
 
 .#{$prefix}--tag--blue {
   @include tag-variant(
@@ -135,8 +128,6 @@
     get-color(gray,10)
   );
 }
-
-
 
 // @each $color, $value in $theme-colors {
 //   .#{$prefix}--tag--#{$color} {

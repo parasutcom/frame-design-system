@@ -1,23 +1,23 @@
 @import '../../prefix';
 @import '../../type';
-// @import '../../radius';
 
+// @import '../../radius';
 
 @import 'mixins';
 @import 'tokens';
 @import '../../tokens';
 
-
-
-
 .#{$prefix}--btn {
   position: relative;
+
   @include type-style('label-01');
+
   display: inline-flex;
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
   padding: spacing('spacing-12') spacing('spacing-16');
+
   // @include radius('radius-4');
   cursor: pointer;
   outline: none;
@@ -37,8 +37,6 @@
   padding: $button-padding-lg;
 }
 
-
-
 .#{$prefix}--btn--primary {
   @include button-theme(
     transparent,
@@ -55,4 +53,3 @@
     // $p-primary-70,
   );
 }
-

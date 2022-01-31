@@ -1,11 +1,11 @@
-@mixin button-theme (
+@mixin button-theme(
   $border-color,
   $bg-color,
   $text-color,
   $bg-hover-color,
   $text-hover-color,
   $bg-active-color,
-){
+) {
   border-color: $border-color;
   background-color: $bg-color;
   color: $text-color;
@@ -14,9 +14,8 @@
     background-color: $bg-hover-color;
     color: $text-hover-color;
   }
+
   &:active {
     background-color: $bg-active-color;
   }
 }
-
-

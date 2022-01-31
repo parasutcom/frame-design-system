@@ -1,15 +1,14 @@
 @import 'vars';
 @import '../tokens';
 @import '../font-face/icon';
-
-@include font-face-icon();
+@include font-face-icon;
 
 $icon-family: (
-  'icon': 
-    unquote(
-      "'Font Awesome 6 Pro'"
-    ),
-  'icon-duotune': 
+  'icon':
+  unquote(
+    "'Font Awesome 6 Pro'"
+  ),
+  'icon-duotune':
   unquote(
     "'Font Awesome 6 Duotune'"
   ),
@@ -18,7 +17,6 @@ $icon-family: (
 @function icon-family($name) {
   @return map-get($icon-family, $name);
 }
-
 
 .fa,
 .fas,
@@ -41,31 +39,31 @@ $icon-family: (
 
 .fas,
 .fa-solid {
-  font-family: "Font Awesome 6 Pro";
+  font-family: 'Font Awesome 6 Pro';
   font-weight: 900;
 }
 
 .far,
 .fa-regular {
-  font-family: "Font Awesome 6 Pro";
+  font-family: 'Font Awesome 6 Pro';
   font-weight: 400;
 }
 
 .fal,
 .fa-light {
-  font-family: "Font Awesome 6 Pro";
+  font-family: 'Font Awesome 6 Pro';
   font-weight: 300;
 }
 
 .fad,
 .fa-duotone {
   position: relative;
-  font-family: "Font Awesome 6 Duotone";
+  font-family: 'Font Awesome 6 Duotone';
   font-weight: 900;
 }
 
 @function fa-content($fa-var) {
-  @return unquote("\"#{ $fa-var }\"");
+  @return unquote('\"#{ $fa-var }\"');
 }
 
 @each $name, $icon in $fa-icons {
@@ -82,7 +80,6 @@ $icon-scales: (
   '4xl':                $size-4xl,
 ) !default;
 
-
 .icon {
   display: inline-flex;
   align-items: center;
@@ -90,8 +87,6 @@ $icon-scales: (
   text-align: center;
   vertical-align: middle;
 }
-
-
 
 @function icon-scale($scale) {
   @return map-get($icon-scales, $scale);
@@ -102,7 +97,7 @@ $icon-scales: (
 
   height: calc(#{$unit} + #{icon-scale($height)});
   width: calc(#{$unit} + #{icon-scale($width)});
-  font-size: icon-scale($font-size); 
+  font-size: icon-scale($font-size);
 }
 
 @each $size, $value in $icon-scales {
@@ -110,4 +105,3 @@ $icon-scales: (
     @include icon-scale($size, $size, $size);
   }
 }
-

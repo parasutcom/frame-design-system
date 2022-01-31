@@ -1,0 +1,15 @@
+{
+  "extends": "stylelint-config-standard-scss",
+  "rules": {
+    "property-no-unknown": true,
+    "block-no-empty": true,
+    "comment-no-empty": true,
+    "no-duplicate-selectors": true,
+    "color-named": "never",
+    "length-zero-no-unit": true,
+    "declaration-no-important": true,
+    "string-quotes": "single",
+    "font-weight-notation": "numeric",
+    "selector-class-pattern": null
+  }
+}

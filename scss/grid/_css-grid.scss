@@ -4,10 +4,11 @@
   display: grid;
   margin-right: calc($gutter / 2 * -1);
   margin-left: calc($gutter / 2 * -1);
-  grid-template-columns: repeat(
-    $grid-columns,
-    minmax(0, $grid-column-size)
-  );
+  grid-template-columns:
+    repeat(
+      $grid-columns,
+      minmax(0, $grid-column-size)
+    );
 }
 
 @mixin make-col-ready($gutter: $grid-gutter) {
@@ -26,13 +27,13 @@
 }
 
 @mixin make-grid-columns($breakpoints: $grid-breakpoints, $columns: $advanced-grid-columns) {
-
   @for $i from 0 through $columns {
     .p--row--#{$i} {
-      grid-template-columns: repeat(
-        $i,
-        minmax(0, $grid-column-size)
-      );
+      grid-template-columns:
+        repeat(
+          $i,
+          minmax(0, $grid-column-size)
+        );
     }
   }
 
@@ -54,7 +55,6 @@
 }
 
 @mixin make-grid-col-offset($breakpoints: $grid-breakpoints, $columns: $advanced-grid-columns) {
-
   @for $i from 0 through $columns {
     .p--col-start-#{$i} {
       grid-column-start: $i;
@@ -115,14 +115,14 @@
 
 @mixin grid-css($gutter: $grid-gutter, $condensed-gutter: $grid-gutter--condensed) {
   .p--grid--container {
-    @include make-grid-container();
+    @include make-grid-container;
   }
- 
+
   .p--row {
-    @include make-row();
+    @include make-row;
 
     > * {
-      @include make-col-ready();
+      @include make-col-ready;
     }
   }
 
@@ -147,10 +147,10 @@
   }
 
   .p--row-padding-end {
-    padding-right: calc($gutter / 2); 
+    padding-right: calc($gutter / 2);
   }
 
-  @include make-grid-columns();
-  @include make-grid-col-offset();
-  @include make-no-gutter();
+  @include make-grid-columns;
+  @include make-grid-col-offset;
+  @include make-no-gutter;
 }

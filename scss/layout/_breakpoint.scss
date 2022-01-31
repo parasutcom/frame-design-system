@@ -3,7 +3,6 @@ $grid-gutter: 32px;
 $grid-gutter--condensed: 2px;
 $advanced-grid-columns: 24;
 $grid-column-size: 1fr;
-
 $grid-breakpoints: (
   sm: (
     width: 600px,
@@ -25,8 +24,7 @@ $grid-breakpoints: (
     width: 1800px,
     margin: 48px,
   ),
-)!default;
-
+) !default;
 
 @function breakpoint-infix($name) {
   @return '-#{$name}';
@@ -36,6 +34,7 @@ $grid-breakpoints: (
   @if map-has-key($breakpoints, $name) {
     $breakpoint: map-get($breakpoints, $name);
     $width: map-get($breakpoint, width);
+
     @media (min-width: $width) {
       @content;
     }

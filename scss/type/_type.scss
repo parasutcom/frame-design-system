@@ -8,7 +8,6 @@ $body-short-01: (
   line-height: font-scale-line-height('18'),
   letter-spacing: 0.16px,
 ) !default;
-
 $body-short-02: (
   font-family: font-family('sans-serif'),
   font-size: font-scale-size('16'),
@@ -16,7 +15,6 @@ $body-short-02: (
   line-height: font-scale-line-height('20'),
   letter-spacing: 0,
 ) !default;
-
 $body-long-01: (
   font-family: font-family('sans-serif'),
   font-size: font-scale-size('16'),
@@ -24,7 +22,6 @@ $body-long-01: (
   line-height: font-scale-line-height('20'),
   letter-spacing: 0.16px,
 ) !default;
-
 $body-long-02: (
   font-family: font-family('sans-serif'),
   font-size: font-scale-size('16'),
@@ -32,7 +29,6 @@ $body-long-02: (
   line-height: font-scale-line-height('24'),
   letter-spacing: 0,
 ) !default;
-
 $heading-01: (
   font-family: font-family('sans-serif'),
   font-size: font-scale-size('14'),
@@ -40,7 +36,6 @@ $heading-01: (
   line-height: font-scale-line-height('18'),
   letter-spacing: 0.16px,
 ) !default;
-
 $heading-02: (
   font-family: font-family('sans-serif'),
   font-size: font-scale-size('16'),
@@ -48,7 +43,6 @@ $heading-02: (
   line-height: font-scale-line-height('20'),
   letter-spacing: 0,
 ) !default;
-
 $heading-03: (
   font-family: font-family('sans-serif'),
   font-size: font-scale-size('20'),
@@ -56,7 +50,6 @@ $heading-03: (
   line-height: font-scale-line-height('24'),
   letter-spacing: 0,
 ) !default;
-
 $heading-04: (
   font-family: font-family('sans-serif'),
   font-size: font-scale-size('28'),
@@ -64,7 +57,6 @@ $heading-04: (
   line-height: font-scale-line-height('32'),
   letter-spacing: 0,
 ) !default;
-
 $heading-05: (
   font-family: font-family('sans-serif'),
   font-size: font-scale-size('32'),
@@ -72,7 +64,6 @@ $heading-05: (
   line-height: font-scale-line-height('40'),
   letter-spacing: 0,
 ) !default;
-
 $heading-06: (
   font-family: font-family('sans-serif'),
   font-size: font-scale-size('42'),
@@ -80,7 +71,6 @@ $heading-06: (
   line-height: font-scale-line-height('48'),
   letter-spacing: 0,
 ) !default;
-
 $code-01: (
   font-family: font-family('mono'),
   font-size: font-scale-size('12'),
@@ -88,63 +78,55 @@ $code-01: (
   line-height: font-scale-line-height('16'),
   letter-spacing: 0,
 ) !default;
-
 $code-02: (
   font-family: font-family('mono'),
   font-size: font-scale-size('14'),
   font-weight: font-weight('regular'),
   line-height: font-scale-line-height('20'),
   letter-spacing: 0,
-)!default;
-
+) !default;
 $helper-text-01: (
   font-family: font-family('sans-serif'),
   font-size: font-scale-size('12'),
   font-weight: font-weight('regular'),
   line-height: font-scale-line-height('14'),
   letter-spacing: 0.32px,
-)!default;
-
+) !default;
 $label-01: (
   font-family: font-family('sans-serif'),
   font-size: font-scale-size('14'),
   font-weight: font-weight('regular'),
   line-height: font-scale-line-height('16'),
   letter-spacing: 0.32px,
-)!default;
-
+) !default;
 $amount-01: (
   font-family: font-family('mono'),
   font-size: font-scale-size('14'),
   font-weight: font-weight('regular'),
   line-height: font-scale-line-height('16'),
   letter-spacing: 0,
-)!default;
-
+) !default;
 $amount-02: (
   font-family: font-family('mono'),
   font-size: font-scale-size('16'),
   font-weight: font-weight('regular'),
   line-height: font-scale-line-height('20'),
   letter-spacing: 0,
-)!default;
-
+) !default;
 $amount-03: (
   font-family: font-family('mono'),
   font-size: font-scale-size('20'),
   font-weight: font-weight('medium'),
   line-height: font-scale-line-height('24'),
   letter-spacing: 0,
-)!default;
-
+) !default;
 $count-01: (
   font-family: font-family('sans-serif'),
   font-size: font-scale-size('24'),
   font-weight: font-weight('regular'),
   line-height: font-scale-line-height('28'),
   letter-spacing: 0,
-)!default;
-
+) !default;
 
 // Tipografi tiplerini map içinde belirtmek
 $tokens: (
@@ -178,8 +160,8 @@ $tokens: (
 @mixin type-style($name) {
   @if map-has-key($tokens, $name) {
     $token: map-get($tokens, $name);
-    @include properties(map-remove($token));
 
+    @include properties(map-remove($token));
   } @else {
     @error 'Unable to find a token with the name: `#{$name}`';
   }

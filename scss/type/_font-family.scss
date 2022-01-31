@@ -3,15 +3,14 @@
 // Üründe kullanılması gereken font aileleri
 // (Kullanılan font aileleri bulunamaması halinde, kullanılacak diğer uygun fontların stack'e eklenmesi)
 $font-families: (
-  'sans-serif': 
-    unquote(
-      "'Inter', 'Arial'"
-    ),
-
-  'mono': 
-    unquote(
-      "'Jetbrains Mono', 'Arial'"
-    ),
+  'sans-serif':
+  unquote(
+    "'Inter', 'Arial'"
+  ),
+  'mono':
+  unquote(
+    "'Jetbrains Mono', 'Arial'"
+  ),
 ) !default;
 
 // Belirli bir font-family değerini almak için
@@ -23,7 +22,6 @@ $font-families: (
 @mixin font-family($name) {
   font-family: font-family($name);
 }
-
 
 // Üründe kullanılması gereken font ağırlıkları
 $font-weights: (
