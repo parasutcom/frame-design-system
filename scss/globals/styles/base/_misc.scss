@@ -1,0 +1,14 @@
+@import '../../../core/settings/font';
+@import '../../../core/settings/typography';
+
+@mixin misc-reset {
+  p {
+    @include type-style('body-long-01');
+  }
+
+  code {
+    @include font-family('mono');
+  }
+}
+
+@include misc-reset();

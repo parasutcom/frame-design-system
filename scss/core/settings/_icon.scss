@@ -1,0 +1,36 @@
+$icon-family: (
+  'icon':
+  unquote(
+    "'Font Awesome 6 Pro'"
+  ),
+  'icon-duotune':
+  unquote(
+    "'Font Awesome 6 Duotune'"
+  ),
+) !default;
+
+@function icon-family($name) {
+  @return map-get($icon-family, $name);
+}
+
+$icon-scales: (
+  'xs':                 $size-xs,
+  'sm':                 $size-sm,
+  'base':               $size-base,
+  'xl':                 $size-xl,
+  '2xl':                $size-2xl,
+  '3xl':                $size-3xl,
+  '4xl':                $size-4xl,
+) !default;
+
+@function icon-scale($scale) {
+  @return map-get($icon-scales, $scale);
+}
+
+@mixin icon-scale($height, $width, $font-size) {
+  $unit: $size-3xs !default;
+
+  height: calc(#{$unit} + #{icon-scale($height)});
+  width: calc(#{$unit} + #{icon-scale($width)});
+  font-size: icon-scale($font-size);
+}
