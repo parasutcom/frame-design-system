@@ -1,0 +1,43 @@
+.fa,
+.fas,
+.fa-solid,
+.far,
+.fa-regular,
+.fal,
+.fa-light,
+.fad,
+.fa-duotone {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-size: inherit;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+}
+
+.fas,
+.fa-solid {
+  font-family: 'Font Awesome 6 Pro';
+  font-weight: 900;
+}
+
+.far,
+.fa-regular {
+  font-family: 'Font Awesome 6 Pro';
+  font-weight: 400;
+}
+
+.fal,
+.fa-light {
+  font-family: 'Font Awesome 6 Pro';
+  font-weight: 300;
+}
+
+.fad,
+.fa-duotone {
+  position: relative;
+  font-family: 'Font Awesome 6 Duotone';
+  font-weight: 900;
+}

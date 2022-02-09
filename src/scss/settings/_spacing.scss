@@ -1,0 +1,13 @@
+@import 'tokens';
+
+$spaces: (
+  'space-2':              $size-4xs,
+  'space-4':              $size-3xs,
+  'space-8':              $size-2xs,
+  'space-12':             $size-xs,
+  'space-16':             $size-base,
+  'space-24':             $size-2xl,
+  'space-32':             $size-4xl,
+  'space-40':             $size-7xl,
+  'space-48':             $size-8xl,
+) !default;

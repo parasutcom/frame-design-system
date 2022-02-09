@@ -1,0 +1,41 @@
+@mixin font-face-icon {
+  @font-face {
+    font-family: 'Font Awesome 6 Pro';
+    font-style: normal;
+    font-weight: 900;
+    font-display: block;
+    src:
+      url('../../src/fonts/fa-solid-900.woff2') format('woff2'),
+      url('../../src/fonts/fa-solid-900.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Font Awesome 6 Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src:
+      url('../../src/fonts/fa-regular-400.woff2') format('woff2'),
+      url('../../src/fonts/fa-regular-400.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Font Awesome 6 Pro';
+    font-style: normal;
+    font-weight: 300;
+    font-display: block;
+    src:
+      url('../../src/fonts/fa-light-300.woff2') format('woff2'),
+      url('../../src/fonts/fa-light-300.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Font Awesome 6 Duotune';
+    font-style: normal;
+    font-weight: 900;
+    font-display: block;
+    src:
+      url('../../src/fonts/fa-duotone-900.woff2') format('woff2'),
+      url('../../src/fonts/fa-duotone-900.ttf') format('truetype');
+  }
+}

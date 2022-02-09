@@ -1,0 +1,17 @@
+@import '../settings/type';
+
+@mixin properties($map) {
+  @each $name, $value in $map {
+    #{$name}: $value;
+  }
+}
+
+@mixin type-style($name) {
+  @if map-has-key($types, $name) {
+    $token: map-get($types, $name);
+
+    @include properties(map-remove($token));
+  } @else {
+    @error 'Unable to find a token with the name: `#{$name}`';
+  }
+}

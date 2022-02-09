@@ -1,0 +1,24 @@
+
+@import 'base';
+@import '../../tools/icon';
+@import '../../tools/font-face/icon';
+@include font-face-icon;
+
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+}
+
+@each $size, $value in $icon-sizes {
+  .icon-#{$size} {
+    @include icon-size($size, $size, $size);
+  }
+}
+
+@each $name, $icon in $fa-icons {
+  .fa-#{$name}::before { content: fa-content($icon); }
+}

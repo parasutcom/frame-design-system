@@ -1,0 +1,19 @@
+@import '../tools/font-family';
+
+@mixin page-reset {
+  html {
+    font-size: 100%;
+  }
+
+  body {
+    font-family: font-family('sans-serif');
+    font-size: font-size('16');
+    font-weight: font-weight('regular');
+
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+@include page-reset();

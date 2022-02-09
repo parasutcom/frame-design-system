@@ -1,0 +1,24 @@
+@import '../settings/breakpoint';
+
+@function breakpoint-infix($name) {
+  @return '-#{$name}';
+}
+
+@mixin breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+  @if map-has-key($breakpoints, $name) {
+    $breakpoint: map-get($breakpoints, $name);
+    $width: map-get($breakpoint, width);
+
+    @media (min-width: $width) {
+      @content;
+    }
+  } @else {
+    @error 'Unable to find a token with the name: `#{$name}`';
+  }
+}
+
+@mixin breakpoint($name, $breakpoints: $grid-breakpoints) {
+  @include breakpoint-up($name, $breakpoints) {
+    @content;
+  }
+}

@@ -1,0 +1,8 @@
+@import '../settings/prefix';
+@import '../settings/border-radius';
+
+@each $name, $value in $border-radiuses {
+  .#{$prefix}-u-#{$name} {
+    border-radius: $value;
+  }
+}
