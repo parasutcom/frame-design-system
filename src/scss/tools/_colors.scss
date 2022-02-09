@@ -6,6 +6,7 @@
 
     @if map-has-key($color, $tone) {
       $tone: map-get($color, $tone);
+
       @return $tone;
     } @else {
       @error 'Unable to find a token with the name: `#{$tone}`';

@@ -98,5 +98,4 @@ $semantic-colors: (
     100:       hsl(274deg 96% 10% / 100%),
   ),
 );
-
 $colors: map-merge($product-colors, $semantic-colors);

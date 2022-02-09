@@ -12,14 +12,12 @@ $font-families: (
   ),
 ) !default;
 
-
 $font-weights: (
   'regular':              400,
   'medium':               500,
   'semibold':             600,
   'bold':                 700,
 ) !default;
-
 $font-sizes: (
   '12':                $size-xs,
   '14':                $size-sm,

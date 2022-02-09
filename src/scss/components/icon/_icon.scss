@@ -1,9 +1,7 @@
-
 @import 'base';
 @import '../../tools/icon';
 @import '../../tools/font-face/icon';
 @include font-face-icon;
-
 
 .icon {
   display: inline-flex;

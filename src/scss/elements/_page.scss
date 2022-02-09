@@ -9,11 +9,10 @@
     font-family: font-family('sans-serif');
     font-size: font-size('16');
     font-weight: font-weight('regular');
-
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
+    text-rendering: optimizelegibility;
   }
 }
 
-@include page-reset();
+@include page-reset;

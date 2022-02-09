@@ -1,7 +1,6 @@
 @import '../../settings/prefix';
 @import '../../tools/breakpoint';
 
-
 @mixin make-row($gutter: $grid-gutter) {
   display: grid;
   margin-right: calc($gutter / 2 * -1);
