@@ -29,7 +29,7 @@
 
 @mixin make-grid-columns($breakpoints: $grid-breakpoints, $columns: $advanced-grid-columns) {
   @for $i from 0 through $columns {
-    .#{$prefix}--row--#{$i} {
+    .#{$prefix}-row--#{$i} {
       grid-template-columns:
         repeat(
           $i,
@@ -39,7 +39,7 @@
   }
 
   @for $i from 0 through $columns {
-    .#{$prefix}--col-span-#{$i} {
+    .#{$prefix}-col-span-#{$i} {
       @include make-col-span($i);
     }
   }
@@ -47,7 +47,7 @@
   @each $name, $value in $breakpoints {
     @include breakpoint($name) {
       @for $i from 0 through $columns {
-        .#{$prefix}--#{$name}\:col-span-#{$i} {
+        .#{$prefix}-#{$name}\:col-span-#{$i} {
           @include make-col-span($i);
         }
       }
@@ -57,11 +57,11 @@
 
 @mixin make-grid-col-offset($breakpoints: $grid-breakpoints, $columns: $advanced-grid-columns) {
   @for $i from 0 through $columns {
-    .#{$prefix}--col-start-#{$i} {
+    .#{$prefix}-col-start-#{$i} {
       grid-column-start: $i;
     }
 
-    .#{$prefix}--col-end-#{$i} {
+    .#{$prefix}-col-end-#{$i} {
       grid-column-end: $i;
     }
   }
@@ -69,11 +69,11 @@
   @each $name, $value in $breakpoints {
     @include breakpoint($name) {
       @for $i from 0 through $columns + 1 {
-        .#{$prefix}--#{$name}\:col-start-#{$i} {
+        .#{$prefix}-#{$name}\:col-start-#{$i} {
           grid-column-start: $i;
         }
 
-        .#{$prefix}--#{$name}\:col-end-#{$i} {
+        .#{$prefix}-#{$name}\:col-end-#{$i} {
           grid-column-end: $i;
         }
       }
@@ -97,29 +97,29 @@
 }
 
 @mixin make-no-gutter() {
-  .#{$prefix}--no-gutter,
-  .#{$prefix}--row.#{$prefix}--no-gutter [class*='col'] {
+  .#{$prefix}-no-gutter,
+  .#{$prefix}-row.#{$prefix}-no-gutter [class*='col'] {
     padding-right: 0;
     padding-left: 0;
   }
 
-  .#{$prefix}--no-gutter--start,
-  .#{$prefix}--row.#{$prefix}--no-gutter--start [class*='col'] {
+  .#{$prefix}-no-gutter--start,
+  .#{$prefix}-row.#{$prefix}-no-gutter--start [class*='col'] {
     padding-left: 0;
   }
 
-  .#{$prefix}--no-gutter--end,
-  .#{$prefix}--row.#{$prefix}--no-gutter--end [class*='col'] {
+  .#{$prefix}-no-gutter--end,
+  .#{$prefix}-row.#{$prefix}-no-gutter--end [class*='col'] {
     padding-right: 0;
   }
 }
 
 @mixin grid-css($gutter: $grid-gutter, $condensed-gutter: $grid-gutter--condensed) {
-  .#{$prefix}--grid-container {
+  .#{$prefix}-grid-container {
     @include make-grid-container;
   }
 
-  .#{$prefix}--row {
+  .#{$prefix}-row {
     @include make-row;
 
     > * {
@@ -127,27 +127,27 @@
     }
   }
 
-  .#{$prefix}--row-padding [class*='col'],
-  .#{$prefix}--col-padding {
+  .#{$prefix}-row-padding [class*='col'],
+  .#{$prefix}-col-padding {
     padding-top: calc($gutter / 2);
     padding-bottom: calc($gutter / 2);
   }
 
-  .#{$prefix}--row.#{$prefix}--row--condensed > [class*='col'] {
+  .#{$prefix}-row.#{$prefix}-row--condensed > [class*='col'] {
     padding-right: calc($condensed-gutter / 2);
     padding-left: calc($condensed-gutter / 2);
   }
 
-  .#{$prefix}--row.#{$prefix}--row--narrow > [class*='col'] {
+  .#{$prefix}-row.#{$prefix}-row--narrow > [class*='col'] {
     padding-right: calc($gutter / 2);
     padding-left: 0;
   }
 
-  .#{$prefix}--grid-container--full-width {
+  .#{$prefix}-grid-container--full-width {
     max-width: 100%;
   }
 
-  .#{$prefix}--row-padding--end {
+  .#{$prefix}-row-padding--end {
     padding-right: calc($gutter / 2);
   }
 
