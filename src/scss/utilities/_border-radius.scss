@@ -2,7 +2,7 @@
 @import '../settings/border-radius';
 
 @each $name, $value in $border-radiuses {
-  .#{$prefix}-u-#{$name} {
+  .#{$prefix}-#{$name} {
     border-radius: $value;
   }
 }

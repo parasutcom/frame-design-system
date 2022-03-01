@@ -1,9 +1,9 @@
 @import 'tokens';
 
 $border-radiuses: (
-  'none':                     none,
-  'radius-2':                 $size-4xs,
-  'radius-4':                 $size-3xs,
-  'radius-circle':            50%,
-  'radius-pill':              100%,
+  'radius-none':                     none,
+  'radius-2':                        $size-4xs,
+  'radius-4':                        $size-3xs,
+  'radius-circle':                   50%,
+  'radius-pill':                     100%,
 );
