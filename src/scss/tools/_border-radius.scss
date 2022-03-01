@@ -1,0 +1,9 @@
+@import '../settings/border-radius';
+
+@function border-radius($value) {
+  @if map-has-key($border-radiuses, $value) {
+    @return map-get($border-radiuses, $value);
+  } @else {
+    @error 'Unable to find a token with the name: `#{$value}`';
+  }
+}

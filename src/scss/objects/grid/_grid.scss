@@ -1,0 +1,157 @@
+@import '../../settings/prefix';
+@import '../../tools/breakpoint';
+
+@mixin make-row($gutter: $grid-gutter) {
+  display: grid;
+  margin-right: calc($gutter / 2 * -1);
+  margin-left: calc($gutter / 2 * -1);
+  grid-template-columns:
+    repeat(
+      $grid-columns,
+      minmax(0, $grid-column-size)
+    );
+}
+
+@mixin make-col-ready($gutter: $grid-gutter) {
+  width: 100%;
+  padding-right: calc($gutter / 2);
+  padding-left: calc($gutter / 2);
+}
+
+@mixin make-col-span($i) {
+  @if $i == 0 {
+    display: none;
+  } @else {
+    display: block;
+    grid-column: span $i / span $i;
+  }
+}
+
+@mixin make-grid-columns($breakpoints: $grid-breakpoints, $columns: $advanced-grid-columns) {
+  @for $i from 0 through $columns {
+    .#{$prefix}-row--#{$i} {
+      grid-template-columns:
+        repeat(
+          $i,
+          minmax(0, $grid-column-size)
+        );
+    }
+  }
+
+  @for $i from 0 through $columns {
+    .#{$prefix}-col-span-#{$i} {
+      @include make-col-span($i);
+    }
+  }
+
+  @each $name, $value in $breakpoints {
+    @include breakpoint($name) {
+      @for $i from 0 through $columns {
+        .#{$prefix}-#{$name}\:col-span-#{$i} {
+          @include make-col-span($i);
+        }
+      }
+    }
+  }
+}
+
+@mixin make-grid-col-offset($breakpoints: $grid-breakpoints, $columns: $advanced-grid-columns) {
+  @for $i from 0 through $columns {
+    .#{$prefix}-col-start-#{$i} {
+      grid-column-start: $i;
+    }
+
+    .#{$prefix}-col-end-#{$i} {
+      grid-column-end: $i;
+    }
+  }
+
+  @each $name, $value in $breakpoints {
+    @include breakpoint($name) {
+      @for $i from 0 through $columns + 1 {
+        .#{$prefix}-#{$name}\:col-start-#{$i} {
+          grid-column-start: $i;
+        }
+
+        .#{$prefix}-#{$name}\:col-end-#{$i} {
+          grid-column-end: $i;
+        }
+      }
+    }
+  }
+}
+
+@mixin make-grid-container($breakpoints: $grid-breakpoints) {
+  max-width: 99rem;
+  margin-right: auto;
+  margin-left: auto;
+
+  @each $name, $value in $breakpoints {
+    $margin: map-get($value, margin);
+
+    @include breakpoint($name) {
+      padding-right: #{calc(($grid-gutter / 2)) + $margin};
+      padding-left: #{calc(($grid-gutter / 2)) + $margin};
+    }
+  }
+}
+
+@mixin make-no-gutter() {
+  .#{$prefix}-no-gutter,
+  .#{$prefix}-row.#{$prefix}-no-gutter [class*='col'] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .#{$prefix}-no-gutter--start,
+  .#{$prefix}-row.#{$prefix}-no-gutter--start [class*='col'] {
+    padding-left: 0;
+  }
+
+  .#{$prefix}-no-gutter--end,
+  .#{$prefix}-row.#{$prefix}-no-gutter--end [class*='col'] {
+    padding-right: 0;
+  }
+}
+
+@mixin grid-css($gutter: $grid-gutter, $condensed-gutter: $grid-gutter--condensed) {
+  .#{$prefix}-grid-container {
+    @include make-grid-container;
+  }
+
+  .#{$prefix}-row {
+    @include make-row;
+
+    > * {
+      @include make-col-ready;
+    }
+  }
+
+  .#{$prefix}-row-padding [class*='col'],
+  .#{$prefix}-col-padding {
+    padding-top: calc($gutter / 2);
+    padding-bottom: calc($gutter / 2);
+  }
+
+  .#{$prefix}-row.#{$prefix}-row--condensed > [class*='col'] {
+    padding-right: calc($condensed-gutter / 2);
+    padding-left: calc($condensed-gutter / 2);
+  }
+
+  .#{$prefix}-row.#{$prefix}-row--narrow > [class*='col'] {
+    padding-right: calc($gutter / 2);
+    padding-left: 0;
+  }
+
+  .#{$prefix}-grid-container--full-width {
+    max-width: 100%;
+  }
+
+  .#{$prefix}-row-padding--end {
+    padding-right: calc($gutter / 2);
+  }
+
+  @include make-grid-columns;
+  @include make-grid-col-offset;
+  @include make-no-gutter;
+}

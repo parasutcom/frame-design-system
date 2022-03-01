@@ -1,0 +1,22 @@
+@import '../tokens';
+
+$icon-families: (
+  'icon':
+  unquote(
+    "'Font Awesome 6 Pro'"
+  ),
+  'icon-duotune':
+  unquote(
+    "'Font Awesome 6 Duotune'"
+  ),
+) !default;
+
+$icon-sizes: (
+  'xs':                 $size-xs,
+  'sm':                 $size-sm,
+  'base':               $size-base,
+  'xl':                 $size-xl,
+  '2xl':                $size-2xl,
+  '3xl':                $size-3xl,
+  '4xl':                $size-4xl,
+) !default;

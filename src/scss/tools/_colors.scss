@@ -1,0 +1,17 @@
+@import '../settings/colors';
+
+@function color($color, $tone) {
+  @if map-has-key($colors, $color) {
+    $color: map-get($colors, $color);
+
+    @if map-has-key($color, $tone) {
+      $tone: map-get($color, $tone);
+
+      @return $tone;
+    } @else {
+      @error 'Unable to find a token with the name: `#{$tone}`';
+    }
+  } @else {
+    @error 'Unable to find a token with the name: `#{$color}`';
+  }
+}

@@ -1,0 +1,31 @@
+@mixin font-face-mono {
+  @font-face {
+    font-family: 'Jetbrains Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: auto;
+    src:
+      url('../../src/fonts/JetBrainsMono-Regular.woff2') format('woff2'),
+      url('../../src/fonts/JetBrainsMono-Regular.woff') format('woff'),;
+  }
+
+  @font-face {
+    font-family: 'Jetbrains Mono';
+    font-style: normal;
+    font-weight: 500;
+    font-display: auto;
+    src:
+      url('../../src/fonts/JetBrainsMono-Medium.woff2') format('woff2'),
+      url('../../src/fonts/JetBrainsMono-Medium.woff') format('woff'),;
+  }
+
+  @font-face {
+    font-family: 'Jetbrains Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-display: auto;
+    src:
+      url('../../src/fonts/JetBrainsMono-Bold.woff2') format('woff2'),
+      url('../../src/fonts/JetBrainsMono-Bold.woff') format('woff'),;
+  }
+}

@@ -1,0 +1,33 @@
+@import '../settings/font-family';
+
+@function font-family($font-family) {
+  @if map-has-key($font-families, $font-family) {
+    @return map-get($font-families, $font-family);
+  } @else {
+    @error 'Unable to find a token with the name: `#{$font-family}`';
+  }
+}
+
+@function font-weight($weight) {
+  @if map-has-key($font-weights, $weight) {
+    @return map-get($font-weights, $weight);
+  } @else {
+    @error 'Unable to find a token with the name: `#{$weight}`';
+  }
+}
+
+@function font-size($font-size) {
+  @if map-has-key($font-sizes, $font-size) {
+    @return map-get($font-sizes, $font-size);
+  } @else {
+    @error 'Unable to find a token with the name: `#{$font-size}`';
+  }
+}
+
+@function line-height($line-height) {
+  @if map-has-key($font-sizes, $line-height) {
+    @return map-get($font-sizes, $line-height);
+  } @else {
+    @error 'Unable to find a token with the name: `#{$line-height}`';
+  }
+}

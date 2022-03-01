@@ -1,0 +1,31 @@
+@import '../settings/tokens';
+@import '../settings/icon/vars';
+@import '../settings/icon/icon';
+
+@function fa-content($fa-var) {
+  @return unquote('\"#{ $fa-var }\"');
+}
+
+@function icon-font-family($font-family) {
+  @if map-has-key($icon-families, $font-family) {
+    @return map-get($icon-families, $font-family);
+  } @else {
+    @error 'Unable to find a token with the name: `#{$name}`';
+  }
+}
+
+@function icon-size($size) {
+  @if map-has-key($icon-sizes, $size) {
+    @return map-get($icon-sizes, $size);
+  } @else {
+    @error 'Unable to find a token with the name: `#{$size}`';
+  }
+}
+
+@mixin icon-size($height, $width, $icon-size) {
+  $unit: $size-3xs !default;
+
+  height: calc(#{$unit} + #{icon-size($height)});
+  width: calc(#{$unit} + #{icon-size($width)});
+  font-size: icon-size($icon-size);
+}
