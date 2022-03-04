@@ -7,6 +7,10 @@
 }
 
 .c {
+  &__blue-0 {
+    background-color: color(blue, 0);
+  }
+
   &__blue-10 {
     background-color: color(blue, 10);
   }
@@ -47,44 +51,52 @@
     background-color: color(blue, 100);
   }
 
-  &__brown-10 {
-    background-color: color(brown, 10);
+  &__antrasit-gray-0 {
+    background-color: color(antrasit-gray, 0);
   }
 
-  &__brown-20 {
-    background-color: color(brown, 20);
+  &__antrasit-gray-10 {
+    background-color: color(antrasit-gray, 10);
   }
 
-  &__brown-30 {
-    background-color: color(brown, 30);
+  &__antrasit-gray-20 {
+    background-color: color(antrasit-gray, 20);
   }
 
-  &__brown-40 {
-    background-color: color(brown, 40);
+  &__antrasit-gray-30 {
+    background-color: color(antrasit-gray, 30);
   }
 
-  &__brown-50 {
-    background-color: color(brown, 50);
+  &__antrasit-gray-40 {
+    background-color: color(antrasit-gray, 40);
   }
 
-  &__brown-60 {
-    background-color: color(brown, 60);
+  &__antrasit-gray-50 {
+    background-color: color(antrasit-gray, 50);
   }
 
-  &__brown-70 {
-    background-color: color(brown, 70);
+  &__antrasit-gray-60 {
+    background-color: color(antrasit-gray, 60);
   }
 
-  &__brown-80 {
-    background-color: color(brown, 80);
+  &__antrasit-gray-70 {
+    background-color: color(antrasit-gray, 70);
   }
 
-  &__brown-90 {
-    background-color: color(brown, 90);
+  &__antrasit-gray-80 {
+    background-color: color(antrasit-gray, 80);
   }
 
-  &__brown-100 {
-    background-color: color(brown, 100);
+  &__antrasit-gray-90 {
+    background-color: color(antrasit-gray, 90);
+  }
+
+  &__antrasit-gray-100 {
+    background-color: color(antrasit-gray, 100);
+  }
+
+  &__cool-gray-0 {
+    background-color: color(cool-gray, 0);
   }
 
   &__cool-gray-10 {
@@ -127,6 +139,10 @@
     background-color: color(cool-gray, 100);
   }
 
+  &__gray-0 {
+    background-color: color(gray, 0);
+  }
+
   &__gray-10 {
     background-color: color(gray, 10);
   }
@@ -165,6 +181,10 @@
 
   &__gray-100 {
     background-color: color(gray, 100);
+  }
+
+  &__green-0 {
+    background-color: color(green, 0);
   }
 
   &__green-10 {
@@ -207,6 +227,10 @@
     background-color: color(green, 100);
   }
 
+  &__bronze-0 {
+    background-color: color(bronze, 0);
+  }
+
   &__bronze-10 {
     background-color: color(bronze, 10);
   }
@@ -247,6 +271,10 @@
     background-color: color(bronze, 100);
   }
 
+  &__red-0 {
+    background-color: color(red, 0);
+  }
+
   &__red-10 {
     background-color: color(red, 10);
   }
@@ -285,6 +313,10 @@
 
   &__red-100 {
     background-color: color(red, 100);
+  }
+
+  &__purple-0 {
+    background-color: color(purple, 0);
   }
 
   &__purple-10 {
