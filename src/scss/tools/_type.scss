@@ -7,8 +7,8 @@
 }
 
 @mixin type-style($name) {
-  @if map-has-key($types, $name) {
-    $token: map-get($types, $name);
+  @if map-has-key($fds-types, $name) {
+    $token: map-get($fds-types, $name);
 
     @include properties(map-remove($token));
   } @else {

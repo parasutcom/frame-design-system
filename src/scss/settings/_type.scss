@@ -1,148 +1,176 @@
 @import '../tools/font-family';
 
-$body-short-01: (
+$fds-body-short-01: (
   font-family: font-family('sans-serif'),
   font-size: font-size('14'),
   font-weight: font-weight('regular'),
   line-height: line-height('18'),
   letter-spacing: 0.16px,
 ) !default;
-$body-short-02: (
+
+$fds-body-short-02: (
   font-family: font-family('sans-serif'),
   font-size: font-size('16'),
   font-weight: font-weight('regular'),
   line-height: line-height('20'),
   letter-spacing: 0,
 ) !default;
-$body-long-01: (
+
+$fds-body-long-01: (
   font-family: font-family('sans-serif'),
-  font-size: font-size('16'),
+  font-size: font-size('14'),
   font-weight: font-weight('regular'),
   line-height: line-height('20'),
   letter-spacing: 0.16px,
 ) !default;
-$body-long-02: (
+
+$fds-body-long-02: (
   font-family: font-family('sans-serif'),
   font-size: font-size('16'),
   font-weight: font-weight('regular'),
   line-height: line-height('24'),
   letter-spacing: 0,
 ) !default;
-$heading-01: (
+
+$fds-heading-06: (
   font-family: font-family('sans-serif'),
   font-size: font-size('14'),
   font-weight: font-weight('semibold'),
   line-height: line-height('18'),
   letter-spacing: 0.16px,
 ) !default;
-$heading-02: (
+
+$fds-heading-05: (
   font-family: font-family('sans-serif'),
   font-size: font-size('16'),
   font-weight: font-weight('medium'),
   line-height: line-height('20'),
   letter-spacing: 0,
 ) !default;
-$heading-03: (
+
+$fds-heading-04: (
   font-family: font-family('sans-serif'),
   font-size: font-size('20'),
   font-weight: font-weight('regular'),
   line-height: line-height('24'),
   letter-spacing: 0,
 ) !default;
-$heading-04: (
+
+$fds-heading-03: (
   font-family: font-family('sans-serif'),
   font-size: font-size('28'),
   font-weight: font-weight('regular'),
   line-height: line-height('32'),
   letter-spacing: 0,
 ) !default;
-$heading-05: (
+
+$fds-heading-02: (
   font-family: font-family('sans-serif'),
   font-size: font-size('32'),
   font-weight: font-weight('regular'),
   line-height: line-height('40'),
   letter-spacing: 0,
 ) !default;
-$heading-06: (
+
+$fds-heading-01: (
   font-family: font-family('sans-serif'),
-  font-size: font-size('42'),
+  font-size: font-size('40'),
   font-weight: font-weight('regular'),
   line-height: line-height('48'),
   letter-spacing: 0,
 ) !default;
-$code-01: (
+
+$fds-code-01: (
   font-family: font-family('mono'),
   font-size: font-size('12'),
   font-weight: font-weight('regular'),
   line-height: line-height('16'),
   letter-spacing: 0,
 ) !default;
-$code-02: (
+
+$fds-code-02: (
   font-family: font-family('mono'),
   font-size: font-size('14'),
   font-weight: font-weight('regular'),
   line-height: line-height('20'),
   letter-spacing: 0,
 ) !default;
-$helper-text-01: (
+
+$fds-helper-text-01: (
   font-family: font-family('sans-serif'),
   font-size: font-size('12'),
   font-weight: font-weight('regular'),
   line-height: line-height('14'),
   letter-spacing: 0.32px,
 ) !default;
-$label-01: (
+
+$fds-label-01: (
   font-family: font-family('sans-serif'),
   font-size: font-size('14'),
   font-weight: font-weight('regular'),
   line-height: line-height('16'),
   letter-spacing: 0.32px,
 ) !default;
-$amount-01: (
+
+$fds-label-02: (
+  font-family: font-family('sans-serif'),
+  font-size: font-size('14'),
+  font-weight: font-weight('medium'),
+  line-height: line-height('16'),
+  letter-spacing: 0.32px,
+) !default;
+
+$fds-amount-01: (
   font-family: font-family('mono'),
   font-size: font-size('14'),
   font-weight: font-weight('regular'),
   line-height: line-height('16'),
   letter-spacing: 0,
 ) !default;
-$amount-02: (
+
+$fds-amount-02: (
   font-family: font-family('mono'),
   font-size: font-size('16'),
   font-weight: font-weight('regular'),
   line-height: line-height('20'),
   letter-spacing: 0,
 ) !default;
-$amount-03: (
+
+$fds-amount-03: (
   font-family: font-family('mono'),
   font-size: font-size('20'),
   font-weight: font-weight('medium'),
   line-height: line-height('24'),
   letter-spacing: 0,
 ) !default;
-$count-01: (
+
+$fds-count-01: (
   font-family: font-family('sans-serif'),
   font-size: font-size('24'),
   font-weight: font-weight('regular'),
   line-height: line-height('28'),
   letter-spacing: 0,
 ) !default;
-$types: (
-  body-short-01: $body-short-01,
-  body-short-02: $body-short-02,
-  body-long-01: $body-long-01,
-  body-long-02: $body-long-02,
-  heading-01: $heading-01,
-  heading-02: $heading-02,
-  heading-03: $heading-03,
-  heading-04: $heading-04,
-  heading-05: $heading-05,
-  heading-06: $heading-06,
-  code-01: $code-01,
-  code-02: $code-02,
-  helper-text-01: $helper-text-01,
-  label-01: $label-01,
-  amount-01: $amount-01,
-  amount-02: $amount-02,
-  amount-03: $amount-03,
-  count-01: $count-01,
+
+
+$fds-types: (
+  body-short-01: $fds-body-short-01,
+  body-short-02: $fds-body-short-02,
+  body-long-01: $fds-body-long-01,
+  body-long-02: $fds-body-long-02,
+  heading-06: $fds-heading-06,
+  heading-05: $fds-heading-05,
+  heading-04: $fds-heading-04,
+  heading-03: $fds-heading-03,
+  heading-02: $fds-heading-02,
+  heading-01: $fds-heading-01,
+  code-01: $fds-code-01,
+  code-02: $fds-code-02,
+  helper-text-01: $fds-helper-text-01,
+  label-01: $fds-label-01,
+  label-02: $fds-label-02,
+  amount-01: $fds-amount-01,
+  amount-02: $fds-amount-02,
+  amount-03: $fds-amount-03,
+  count-01: $fds-count-01,
 );

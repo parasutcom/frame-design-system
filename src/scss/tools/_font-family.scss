@@ -8,11 +8,11 @@
   }
 }
 
-@function font-weight($weight) {
-  @if map-has-key($font-weights, $weight) {
-    @return map-get($font-weights, $weight);
+@function font-weight($font-weight) {
+  @if map-has-key($font-weights, $font-weight) {
+    @return map-get($font-weights, $font-weight);
   } @else {
-    @error 'Unable to find a token with the name: `#{$weight}`';
+    @error 'Unable to find a token with the name: `#{$font-weight}`';
   }
 }
 

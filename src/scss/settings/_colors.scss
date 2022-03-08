@@ -1,4 +1,10 @@
-$product-colors: (
+/* ------------------------------------ *\
+  SETTINGS - COLORS
+\* ------------------------------------ */
+
+
+/// fds brand colors
+$fds-product-colors: (
   blue: (
     0: #f0f4fa,
     10: #ddecff,
@@ -11,7 +17,12 @@ $product-colors: (
     80: #002599,
     90: #001466,
     100: #010933,
-  ),
+  )
+);
+
+
+/// fds neutral product colors
+$fds-neutral-colors: (
   cool-gray: (
     0: #f7f9fa,
     10: #e5e9ec,
@@ -52,7 +63,10 @@ $product-colors: (
     100: #191919,
   ),
 );
-$semantic-colors: (
+
+
+/// fds semantic colors
+$fds-semantic-colors: (
   green: (
     0: #f0faf1,
     10: #d1f2d3,
@@ -105,5 +119,16 @@ $semantic-colors: (
     90: #350061,
     100: #1d0133,
   ),
+  white: (
+    100: #ffffff,
+  ),
+  black: (
+    100: #000000,
+  ),
 );
-$colors: map-merge($product-colors, $semantic-colors);
+
+/// All fds colors
+$fds-colors: map-merge(
+  map-merge($fds-product-colors, $fds-neutral-colors),
+  $fds-semantic-colors
+) !default
