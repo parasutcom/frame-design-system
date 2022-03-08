@@ -7,47 +7,47 @@
 
 .square {
   &__2 {
-    width: spacing('spacing-2');
-    height: spacing('spacing-2');
+    width: space('2');
+    height: space('2');
   }
 
   &__4 {
-    width: spacing('spacing-4');
-    height: spacing('spacing-4');
+    width: space('4');
+    height: space('4');
   }
 
   &__8 {
-    width: spacing('spacing-8');
-    height: spacing('spacing-8');
+    width: space('8');
+    height: space('8');
   }
 
   &__12 {
-    width: spacing('spacing-12');
-    height: spacing('spacing-12');
+    width: space('12');
+    height: space('12');
   }
 
   &__16 {
-    width: spacing('spacing-16');
-    height: spacing('spacing-16');
+    width: space('16');
+    height: space('16');
   }
 
   &__24 {
-    width: spacing('spacing-24');
-    height: spacing('spacing-24');
+    width: space('24');
+    height: space('24');
   }
 
   &__32 {
-    width: spacing('spacing-32');
-    height: spacing('spacing-32');
+    width: space('32');
+    height: space('32');
   }
 
   &__40 {
-    width: spacing('spacing-40');
-    height: spacing('spacing-40');
+    width: space('40');
+    height: space('40');
   }
 
   &__48 {
-    width: spacing('spacing-48');
-    height: spacing('spacing-48');
+    width: space('48');
+    height: space('48');
   }
 }

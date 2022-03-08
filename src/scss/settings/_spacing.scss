@@ -1,13 +1,13 @@
 @import 'tokens';
 
-$spaces: (
-  'space-2':              $size-4xs,
-  'space-4':              $size-3xs,
-  'space-8':              $size-2xs,
-  'space-12':             $size-xs,
-  'space-16':             $size-md,
-  'space-24':             $size-2xl,
-  'space-32':             $size-4xl,
-  'space-40':             $size-7xl,
-  'space-48':             $size-8xl,
-) !default;
+$fds-spacinges: (
+  '2': $size-4xs,
+  '4': $size-3xs,
+  '8': $size-2xs,
+  '12': $size-xs,
+  '16': $size-md,
+  '24': $size-2xl,
+  '32': $size-4xl,
+  '40': $size-6xl,
+  '48': $size-8xl,
+) !default

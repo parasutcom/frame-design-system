@@ -4,7 +4,7 @@
   @return '-#{$name}';
 }
 
-@mixin breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+@mixin breakpoint-up($name, $breakpoints: $fds-grid-breakpoints) {
   @if map-has-key($breakpoints, $name) {
     $breakpoint: map-get($breakpoints, $name);
     $width: map-get($breakpoint, width);
@@ -17,7 +17,7 @@
   }
 }
 
-@mixin breakpoint($name, $breakpoints: $grid-breakpoints) {
+@mixin breakpoint($name, $breakpoints: $fds-grid-breakpoints) {
   @include breakpoint-up($name, $breakpoints) {
     @content;
   }

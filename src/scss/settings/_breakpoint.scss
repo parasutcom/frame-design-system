@@ -1,9 +1,9 @@
-$grid-columns: 12;
-$grid-gutter: 32px;
-$grid-gutter--condensed: 2px;
-$advanced-grid-columns: 24;
-$grid-column-size: 1fr;
-$grid-breakpoints: (
+$fds-grid-columns: 12;
+$fds-grid-columns--advanced: 24;
+$fds-grid-gutter: 32px;
+$fds-grid-gutter--condensed: 2px;
+$fds-grid-column-size: 1fr;
+$fds-grid-breakpoints: (
   sm: (
     width: 600px,
     margin: 16px,

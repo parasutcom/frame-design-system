@@ -1,18 +1,18 @@
 @import '../../settings/prefix';
 @import '../../tools/breakpoint';
 
-@mixin make-row($gutter: $grid-gutter) {
+@mixin make-row($gutter: $fds-grid-gutter) {
   display: grid;
   margin-right: calc($gutter / 2 * -1);
   margin-left: calc($gutter / 2 * -1);
   grid-template-columns:
     repeat(
-      $grid-columns,
-      minmax(0, $grid-column-size)
+      $fds-grid-columns,
+      minmax(0, $fds-grid-column-size)
     );
 }
 
-@mixin make-col-ready($gutter: $grid-gutter) {
+@mixin make-col-ready($gutter: $fds-grid-gutter) {
   width: 100%;
   padding-right: calc($gutter / 2);
   padding-left: calc($gutter / 2);
@@ -27,13 +27,13 @@
   }
 }
 
-@mixin make-grid-columns($breakpoints: $grid-breakpoints, $columns: $advanced-grid-columns) {
+@mixin make-grid-columns($breakpoints: $fds-grid-breakpoints, $columns: $fds-grid-columns--advanced) {
   @for $i from 0 through $columns {
     .#{$prefix}-row--#{$i} {
       grid-template-columns:
         repeat(
           $i,
-          minmax(0, $grid-column-size)
+          minmax(0, $fds-grid-column-size)
         );
     }
   }
@@ -55,7 +55,7 @@
   }
 }
 
-@mixin make-grid-col-offset($breakpoints: $grid-breakpoints, $columns: $advanced-grid-columns) {
+@mixin make-grid-col-offset($breakpoints: $fds-grid-breakpoints, $columns: $fds-grid-columns--advanced) {
   @for $i from 0 through $columns {
     .#{$prefix}-col-start-#{$i} {
       grid-column-start: $i;
@@ -81,7 +81,7 @@
   }
 }
 
-@mixin make-grid-container($breakpoints: $grid-breakpoints) {
+@mixin make-grid-container($breakpoints: $fds-grid-breakpoints) {
   max-width: 99rem;
   margin-right: auto;
   margin-left: auto;
@@ -90,8 +90,8 @@
     $margin: map-get($value, margin);
 
     @include breakpoint($name) {
-      padding-right: #{calc(($grid-gutter / 2)) + $margin};
-      padding-left: #{calc(($grid-gutter / 2)) + $margin};
+      padding-right: #{calc(($fds-grid-gutter / 2)) + $margin};
+      padding-left: #{calc(($fds-grid-gutter / 2)) + $margin};
     }
   }
 }
@@ -114,7 +114,7 @@
   }
 }
 
-@mixin grid-css($gutter: $grid-gutter, $condensed-gutter: $grid-gutter--condensed) {
+@mixin grid-css($gutter: $fds-grid-gutter, $condensed-gutter: $fds-grid-gutter--condensed) {
   .#{$prefix}-grid-container {
     @include make-grid-container;
   }

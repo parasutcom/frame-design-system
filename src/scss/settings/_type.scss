@@ -5,7 +5,7 @@ $fds-body-short-01: (
   font-size: font-size('14'),
   font-weight: font-weight('regular'),
   line-height: line-height('18'),
-  letter-spacing: 0.16px,
+  letter-spacing: letter-spacing('wide'),
 ) !default;
 
 $fds-body-short-02: (
@@ -13,7 +13,7 @@ $fds-body-short-02: (
   font-size: font-size('16'),
   font-weight: font-weight('regular'),
   line-height: line-height('20'),
-  letter-spacing: 0,
+  letter-spacing: letter-spacing('regular'),
 ) !default;
 
 $fds-body-long-01: (
@@ -21,7 +21,7 @@ $fds-body-long-01: (
   font-size: font-size('14'),
   font-weight: font-weight('regular'),
   line-height: line-height('20'),
-  letter-spacing: 0.16px,
+  letter-spacing: letter-spacing('wide'),
 ) !default;
 
 $fds-body-long-02: (
@@ -29,7 +29,7 @@ $fds-body-long-02: (
   font-size: font-size('16'),
   font-weight: font-weight('regular'),
   line-height: line-height('24'),
-  letter-spacing: 0,
+  letter-spacing: letter-spacing('regular'),
 ) !default;
 
 $fds-heading-06: (
@@ -37,7 +37,7 @@ $fds-heading-06: (
   font-size: font-size('14'),
   font-weight: font-weight('semibold'),
   line-height: line-height('18'),
-  letter-spacing: 0.16px,
+  letter-spacing: letter-spacing('wide'),
 ) !default;
 
 $fds-heading-05: (
@@ -45,7 +45,7 @@ $fds-heading-05: (
   font-size: font-size('16'),
   font-weight: font-weight('medium'),
   line-height: line-height('20'),
-  letter-spacing: 0,
+  letter-spacing: letter-spacing('regular'),
 ) !default;
 
 $fds-heading-04: (
@@ -53,7 +53,7 @@ $fds-heading-04: (
   font-size: font-size('20'),
   font-weight: font-weight('regular'),
   line-height: line-height('24'),
-  letter-spacing: 0,
+  letter-spacing: letter-spacing('regular'),
 ) !default;
 
 $fds-heading-03: (
@@ -61,7 +61,7 @@ $fds-heading-03: (
   font-size: font-size('28'),
   font-weight: font-weight('regular'),
   line-height: line-height('32'),
-  letter-spacing: 0,
+  letter-spacing: letter-spacing('regular'),
 ) !default;
 
 $fds-heading-02: (
@@ -69,7 +69,7 @@ $fds-heading-02: (
   font-size: font-size('32'),
   font-weight: font-weight('regular'),
   line-height: line-height('40'),
-  letter-spacing: 0,
+  letter-spacing: letter-spacing('regular'),
 ) !default;
 
 $fds-heading-01: (
@@ -77,7 +77,7 @@ $fds-heading-01: (
   font-size: font-size('40'),
   font-weight: font-weight('regular'),
   line-height: line-height('48'),
-  letter-spacing: 0,
+  letter-spacing: letter-spacing('regular'),
 ) !default;
 
 $fds-code-01: (
@@ -85,7 +85,7 @@ $fds-code-01: (
   font-size: font-size('12'),
   font-weight: font-weight('regular'),
   line-height: line-height('16'),
-  letter-spacing: 0,
+  letter-spacing: letter-spacing('regular'),
 ) !default;
 
 $fds-code-02: (
@@ -93,7 +93,7 @@ $fds-code-02: (
   font-size: font-size('14'),
   font-weight: font-weight('regular'),
   line-height: line-height('20'),
-  letter-spacing: 0,
+  letter-spacing: letter-spacing('regular'),
 ) !default;
 
 $fds-helper-text-01: (
@@ -101,7 +101,7 @@ $fds-helper-text-01: (
   font-size: font-size('12'),
   font-weight: font-weight('regular'),
   line-height: line-height('14'),
-  letter-spacing: 0.32px,
+  letter-spacing: letter-spacing('extra-wide'),
 ) !default;
 
 $fds-label-01: (
@@ -109,7 +109,7 @@ $fds-label-01: (
   font-size: font-size('14'),
   font-weight: font-weight('regular'),
   line-height: line-height('16'),
-  letter-spacing: 0.32px,
+  letter-spacing: letter-spacing('extra-wide'),
 ) !default;
 
 $fds-label-02: (
@@ -117,7 +117,7 @@ $fds-label-02: (
   font-size: font-size('14'),
   font-weight: font-weight('medium'),
   line-height: line-height('16'),
-  letter-spacing: 0.32px,
+  letter-spacing: letter-spacing('extra-wide'),
 ) !default;
 
 $fds-amount-01: (
@@ -125,7 +125,7 @@ $fds-amount-01: (
   font-size: font-size('14'),
   font-weight: font-weight('regular'),
   line-height: line-height('16'),
-  letter-spacing: 0,
+  letter-spacing: letter-spacing('regular'),
 ) !default;
 
 $fds-amount-02: (
@@ -133,7 +133,7 @@ $fds-amount-02: (
   font-size: font-size('16'),
   font-weight: font-weight('regular'),
   line-height: line-height('20'),
-  letter-spacing: 0,
+  letter-spacing: letter-spacing('regular'),
 ) !default;
 
 $fds-amount-03: (
@@ -141,7 +141,7 @@ $fds-amount-03: (
   font-size: font-size('20'),
   font-weight: font-weight('medium'),
   line-height: line-height('24'),
-  letter-spacing: 0,
+  letter-spacing: letter-spacing('regular'),
 ) !default;
 
 $fds-count-01: (
@@ -149,7 +149,7 @@ $fds-count-01: (
   font-size: font-size('24'),
   font-weight: font-weight('regular'),
   line-height: line-height('28'),
-  letter-spacing: 0,
+  letter-spacing: letter-spacing('regular'),
 ) !default;
 
 
