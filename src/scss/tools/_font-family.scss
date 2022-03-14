@@ -33,8 +33,8 @@
 }
 
 @function letter-spacing($letter-spacing) {
-  @if map-has-key($fds-letter-spacinges, $letter-spacing) {
-    @return map-get($fds-letter-spacinges, $letter-spacing);
+  @if map-has-key($fds-letter-spaces, $letter-spacing) {
+    @return map-get($fds-letter-spaces, $letter-spacing);
   } @else {
     @error 'Unable to find a token with the name: `#{$letter-spacing}`';
   }

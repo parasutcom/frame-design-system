@@ -1,8 +1,8 @@
 @import '../settings/spacing';
 
 @function space($space) {
-  @if map-has-key($fds-spacinges, $space) {
-    @return map-get($fds-spacinges, $space);
+  @if map-has-key($fds-spaces, $space) {
+    @return map-get($fds-spaces, $space);
   } @else {
     @error 'Unable to find a token with the name: `#{$space}`';
   }
