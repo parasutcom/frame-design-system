@@ -3,7 +3,7 @@
 @import '../settings/icon/icon';
 
 @function fa-content($fa-var) {
-  @return unquote('\"#{ $fa-var }\"');
+  @return unquote('"#{ $fa-var }"');
 }
 
 @function icon-font-family($font-family) {

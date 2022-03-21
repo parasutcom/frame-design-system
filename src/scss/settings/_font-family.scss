@@ -2,14 +2,8 @@
 
 // (Kullanılan font aileleri bulunamaması halinde, kullanılacak diğer uygun fontların stack'e eklenmesi)
 $fds-font-families: (
-  'sans-serif':
-  unquote(
-    "'Inter', 'Arial'"
-  ),
-  'mono':
-  unquote(
-    "'Jetbrains Mono', 'Arial'"
-  ),
+  'sans-serif': unquote("'Inter', 'Arial'"),
+  'mono': unquote("'Jetbrains Mono', 'Arial'"),
 ) !default;
 
 $fds-font-weights: (
@@ -46,4 +40,4 @@ $fds-letter-spaces: (
   'regular': 0,
   'wide': 0.16px,
   'extra-wide': 0.32px,
-) !default
+) !default;
