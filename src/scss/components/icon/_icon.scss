@@ -18,5 +18,7 @@
 }
 
 @each $name, $icon in $fa-icons {
-  .fa-#{$name}::before { content: fa-content($icon); }
+  .fa-#{$name}::before {
+    content: fa-content($icon);
+  }
 }
