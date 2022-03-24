@@ -1,9 +1,11 @@
+'use strict';
+
 module.exports = {
   extends: [
-    'stylelint-config-standard-scss',
-    'stylelint-config-idiomatic-order',
-    './rules',
-    './plugins/scss',
-    './plugins/prettier',
+    require.resolve('stylelint-config-standard-scss'),
+    require.resolve('stylelint-config-idiomatic-order'),
+    require.resolve('./rules/rules'),
+    require.resolve('./plugins/scss'),
+    require.resolve('./plugins/prettier'),
   ],
 };
