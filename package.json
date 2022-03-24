@@ -19,8 +19,10 @@
   },
   "main": "index.js",
   "scripts": {
-    "lint": "prettier --check .",
-    "format": "prettier --write ."
+    "prettier": "prettier --write .",
+    "stylelint": "stylelint 'src/scss/**/*.scss'",
+    "stylelint:fix": "stylelint 'src/scss/**/*.scss' --fix",
+    "fix": "npm run prettier --fix; npm run stylelint:fix"
   },
   "husky": {
     "hooks": {
@@ -29,7 +31,8 @@
   },
   "lint-staged": {
     "*.scss": [
-      "prettier --write"
+      "prettier --write",
+      "stylelint"
     ]
   },
   "devDependencies": {
