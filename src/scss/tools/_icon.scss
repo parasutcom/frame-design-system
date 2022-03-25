@@ -25,7 +25,7 @@
 @mixin icon-size($height, $width, $icon-size) {
   $unit: $size-3xs !default;
 
-  height: calc(#{$unit} + #{icon-size($height)});
   width: calc(#{$unit} + #{icon-size($width)});
+  height: calc(#{$unit} + #{icon-size($height)});
   font-size: icon-size($icon-size);
 }

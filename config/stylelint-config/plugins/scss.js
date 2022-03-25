@@ -34,12 +34,18 @@ module.exports = {
     // Require a single space or disallow whitespace after the colon in $-variable declarations.
     'scss/dollar-variable-colon-space-after': 'always',
     // Require an empty line or disallow empty lines after $-variable declarations.
-    'scss/dollar-variable-empty-line-after': 'always',
+    'scss/dollar-variable-empty-line-after': null,
     // Require an empty line or disallow empty lines before $-variable declarations.
     'scss/dollar-variable-empty-line-before': null,
+    // Specify a pattern for Sass-like variables.
+    'scss/dollar-variable-pattern': null,
 
     // //-comment
     // Require or disallow //-comments to be inline comments.
     'scss/double-slash-comment-inline': 'never',
+
+    // General
+    // Disallows the use of global function names, as these global functions are now located inside built-in Sass modules.
+    'scss/no-global-function-names': null,
   },
 };

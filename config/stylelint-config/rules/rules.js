@@ -22,13 +22,18 @@ module.exports = {
     'property-no-unknown': true,
     'block-no-empty': true,
     'comment-no-empty': true,
-
     'length-zero-no-unit': true,
     'declaration-no-important': true,
     'string-quotes': 'single',
-    'font-weight-notation': 'numeric',
+    'font-family-no-missing-generic-family-keyword': [
+      true,
+      {
+        ignoreFontFamilies: ['Font Awesome 6 Pro', 'Font Awesome 6 Duotone']
+      },
+    ],
+    'font-family-name-quotes': 'always-unless-keyword',
+    'font-weight-notation': null,
     'selector-class-pattern': null,
-    'font-family-name-quotes': 'always-where-recommended',
     'max-line-length': [
       80,
       {
