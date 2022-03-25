@@ -1,16 +1,16 @@
 @mixin reset {
   // https://elad2412.github.io/the-new-css-reset/
 
-  *:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
-    all: unset;
-    display: revert;
-  }
-
   /* Preferred box-sizing value */
   *,
   *::before,
   *::after {
     box-sizing: border-box;
+  }
+
+  *:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
   }
 
   /* Reapply the pointer cursor for anchor tags */
@@ -49,10 +49,10 @@
   /* revert for bug in Chromium browsers
   - fix for the content editable attribute will work properly. */
   :where([contenteditable]) {
+    -webkit-line-break: after-white-space;
+    overflow-wrap: break-word;
     -moz-user-modify: read-write;
     -webkit-user-modify: read-write;
-    overflow-wrap: break-word;
-    -webkit-line-break: after-white-space;
   }
 
   /* apply back the draggable feature - exist only in Chromium and Safari */
