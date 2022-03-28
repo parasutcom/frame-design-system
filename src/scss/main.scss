@@ -1,9 +1,20 @@
+// Generic
 @import 'generic/reset';
+
+// Elements
 @import 'elements/page';
 @import 'elements/headings';
 @import 'elements/misc';
-@import 'components/icon/icon';
+
+// Components
+@import 'components/button/button';
+
+// @import 'components/icon/icon';
+
+// Objects
 @import 'objects/grid/index';
+
+// Utilities
 @import 'utilities/shame';
 @import '../../tests/colors';
 @import '../../tests/custom';

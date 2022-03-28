@@ -4,14 +4,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="../dist/css/main.css">
-  
+
   <title>FDS | Buttons</title>
   <style>
     table {
       width: 100%;
       background-color: white;
       border-collapse: collapse;
+      vertical-align: baseline;
     }
     thead {
       border-bottom: 1px solid #e5e5e5;
@@ -19,6 +21,10 @@
     th, td {
       padding: 16px 24px;
       text-align: left;
+    }
+
+    td {
+      height: 100px;
     }
   </style>
 </head>
@@ -53,6 +59,44 @@
     <div class="main">
       <div class="header">
         <h2>Buttons</h2>
+      </div>
+      <div class="body">
+        <table>
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Default</th>
+              <th>Large</th>
+              <th>Disabled</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Default</td>
+              <td><button class="fds-btn">Button</button></td>
+              <td><button class="fds-btn fds-btn--lg">Button</button></td>
+              <td><button class="fds-btn fds-btn--lg fds-btn--disabled" disabled>Button</button></td>
+            </tr>
+            <tr>
+              <td>Primary</td>
+              <td><button class="fds-btn fds-btn--primary">Primary button</button></td>
+              <td><button class="fds-btn fds-btn--primary fds-btn--lg">Primary button</button></td>
+              <td><button class="fds-btn fds-btn--primary fds-btn--lg fds-btn--disabled">Primary button</button></td>
+            </tr>
+            <tr>
+              <td>Secondary</td>
+              <td><button class="fds-btn fds-btn--secondary">Secondary button</button></td>
+              <td><button class="fds-btn fds-btn--secondary fds-btn--lg">Secondary button</button></td>
+              <td><button class="fds-btn fds-btn--secondary fds-btn--lg fds-btn--disabled">Secondary button</button></td>
+            </tr>
+            <tr>
+              <td>Outline</td>
+              <td><button class="fds-btn fds-btn--outline">Outline button</button></td>
+              <td><button class="fds-btn fds-btn--outline fds-btn--lg">Outline button</button></td>
+              <td><button class="fds-btn fds-btn--outline fds-btn--lg fds-btn--disabled">Outline button</button></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
