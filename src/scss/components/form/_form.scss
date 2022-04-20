@@ -1,0 +1,53 @@
+@import '../../settings/prefix';
+@import '../../tools/spacing';
+@import '../../tools/type';
+@import '../../tools/colors';
+
+@mixin form {
+  .#{$prefix}-fieldset {
+    margin-bottom: space('32');
+  }
+
+  .#{$prefix}-form-item {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .#{$prefix}-label {
+    @include type-style('label-02');
+
+    display: inline-block;
+    margin-bottom: space('8');
+    color: color(gray, 90);
+  }
+
+  .#{$prefix}-form__helper-text {
+    @include type-style('helper-text-01');
+
+    width: 100%;
+    margin-top: space('8');
+    color: color(gray, 50);
+  }
+
+  .#{$prefix}-label--disabled,
+  .#{$prefix}-form__helper-text--disabled {
+    color: color(gray, 30);
+  }
+
+  fieldset[disabled] .#{$prefix}-label,
+  fieldset[disabled] .#{$prefix}-form__helper-text {
+    color: color(gray, 30);
+  }
+
+  .#{$prefix}-form__helper-text--error {
+    color: color(red, 60);
+  }
+
+  .#{$prefix}-form__helper-text--warning {
+    color: color(bronze, 60);
+  }
+}
+
+@include form;

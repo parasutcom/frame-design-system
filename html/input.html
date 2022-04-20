@@ -25,6 +25,7 @@
 
     td {
       height: 100px;
+      vertical-align: middle;
     }
   </style>
 </head>
@@ -64,14 +65,291 @@
         <table>
           <thead>
             <tr>
-              <th>Type</th>
+              <th></th>
               <th>Default</th>
               <th>Large</th>
-              <th>Disabled</th>
             </tr>
           </thead>
           <tbody>
             <tr>
+              <td>Enabled</td>
+              <td>
+                <form action="">
+                  <fieldset class="fds-fieldset">
+                    <div class="fds-form-item">
+                      <label for="" class="fds-label">Label</label>
+                      <div class="fds-text-input__field-outer-wrapper">
+                        <div class="fds-text-input__field-wrapper">
+                          <input type="text" name="" id="" class="fds-text-input" placeholder="Placeholder text">
+                        </div>
+                        <div class="fds-form__helper-text">Helper text goes here</div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </form>
+              </td>
+              <td>
+                <form action="">
+                  <fieldset class="fds-fieldset">
+                    <div class="fds-form-item">
+                      <label for="" class="fds-label">Label</label>
+                      <div class="fds-text-input__field-outer-wrapper">
+                        <div class="fds-text-input__field-wrapper">
+                          <input type="text" name="" id="" class="fds-text-input fds-text-input--lg" placeholder="Placeholder text">
+                        </div>
+                        <div class="fds-form__helper-text">Helper text goes here</div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <td>Disabled</td>
+              <td>
+                <form action="">
+                  <fieldset class="fds-fieldset" disabled>
+                    <div class="fds-form-item">
+                      <label for="" class="fds-label">Label</label>
+                      <div class="fds-text-input__field-outer-wrapper">
+                        <div class="fds-text-input__field-wrapper">
+                          <input type="text" name="" id="" class="fds-text-input" placeholder="Placeholder text">
+                        </div>
+                        <div class="fds-form__helper-text">Helper text goes here</div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </form>
+              </td>
+              <td>
+                <form action="">
+                  <fieldset class="fds-fieldset" disabled>
+                    <div class="fds-form-item">
+                      <label for="" class="fds-label">Label</label>
+                      <div class="fds-text-input__field-outer-wrapper">
+                        <div class="fds-text-input__field-wrapper">
+                          <input type="text" name="" id="" class="fds-text-input fds-text-input--lg" placeholder="Placeholder text">
+                        </div>
+                        <div class="fds-form__helper-text">Helper text goes here</div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <td>Error</td>
+              <td>
+                <form action="">
+                  <fieldset class="fds-fieldset">
+                    <div class="fds-form-item">
+                      <label for="" class="fds-label">Label</label>
+                      <div class="fds-text-input__field-outer-wrapper">
+                        <div class="fds-text-input__field-wrapper">
+                          <input type="text" name="" id="" class="fds-text-input fds-text-input--error" placeholder="Placeholder text">
+                          <i class="fas fa-circle-exclamation fds-text-input__error-icon"></i>
+                        </div>
+                        <div class="fds-form__helper-text fds-form__helper-text--error">Helper text goes here</div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </form>
+              </td>
+              <td>
+                <form action="">
+                  <fieldset class="fds-fieldset">
+                    <div class="fds-form-item">
+                      <label for="" class="fds-label">Label</label>
+                      <div class="fds-text-input__field-outer-wrapper">
+                        <div class="fds-text-input__field-wrapper">
+                          <input type="text" name="" id="" class="fds-text-input fds-text-input--lg fds-text-input--error" placeholder="Placeholder text">
+                          <i class="fas fa-circle-exclamation fds-text-input__error-icon"></i>
+                        </div>
+                        <div class="fds-form__helper-text fds-form__helper-text--error">Helper text goes here</div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <td>Warning</td>
+              <td>
+                <form action="">
+                  <fieldset class="fds-fieldset">
+                    <div class="fds-form-item">
+                      <label for="" class="fds-label">Label</label>
+                      <div class="fds-text-input__field-outer-wrapper">
+                        <div class="fds-text-input__field-wrapper">
+                          <input type="text" name="" id="" class="fds-text-input fds-text-input--warning" placeholder="Placeholder text">
+                          <i class="fas fa-triangle-exclamation fds-text-input__warning-icon"></i>
+                        </div>
+                        <div class="fds-form__helper-text fds-form__helper-text--warning">Helper text goes here</div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </form>
+              </td>
+              <td>
+                <form action="">
+                  <fieldset class="fds-fieldset">
+                    <div class="fds-form-item">
+                      <label for="" class="fds-label">Label</label>
+                      <div class="fds-text-input__field-outer-wrapper">
+                        <div class="fds-text-input__field-wrapper">
+                          <input type="text" name="" id="" class="fds-text-input fds-text-input--lg fds-text-input--warning" placeholder="Placeholder text">
+                          <i class="fas fa-triangle-exclamation fds-text-input__warning-icon"></i>
+                        </div>
+                        <div class="fds-form__helper-text fds-form__helper-text--warning">Helper text goes here</div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <td>Password Input / Enabled</td>
+              <td>
+                <form action="">
+                  <fieldset class="fds-fieldset">
+                    <div class="fds-form-item fds-password-input-wrapper">
+                      <label for="" class="fds-label">Label</label>
+                      <div class="fds-text-input__field-outer-wrapper">
+                        <div class="fds-text-input__field-wrapper">
+                          <input type="password" name="" id="" class="fds-text-input fds-password-input" placeholder="Placeholder text">
+                          <button type="button" class="fds-btn fds-text-input--password__visibility__toggle"><i class="fa-light fa-eye"></i></button>
+                        </div>
+                        <div class="fds-form__helper-text">Helper text goes here</div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </form>
+              </td>
+              <td>
+                <form action="">
+                  <fieldset class="fds-fieldset">
+                    <div class="fds-form-item fds-password-input-wrapper">
+                      <label for="" class="fds-label">Label</label>
+                      <div class="fds-text-input__field-outer-wrapper">
+                        <div class="fds-text-input__field-wrapper">
+                          <input type="password" name="" id="" class="fds-text-input fds-password-input fds-text-input--lg" placeholder="Placeholder text">
+                          <button type="button" class="fds-btn fds-text-input--password__visibility__toggle"><i class="fa-light fa-eye"></i></button>
+                        </div>
+                        <div class="fds-form__helper-text">Helper text goes here</div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <td>Password Input / Disabled</td>
+              <td>
+                <form action="">
+                  <fieldset class="fds-fieldset" disabled>
+                    <div class="fds-form-item fds-password-input-wrapper">
+                      <label for="" class="fds-label">Label</label>
+                      <div class="fds-text-input__field-outer-wrapper">
+                        <div class="fds-text-input__field-wrapper">
+                          <input type="password" name="" id="" class="fds-text-input fds-password-input" placeholder="Placeholder text">
+                          <button type="button" class="fds-btn fds-text-input--password__visibility__toggle"><i class="fa-light fa-eye"></i></button>
+                        </div>
+                        <div class="fds-form__helper-text">Helper text goes here</div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </form>
+              </td>
+              <td>
+                <form action="">
+                  <fieldset class="fds-fieldset" disabled>
+                    <div class="fds-form-item fds-password-input-wrapper">
+                      <label for="" class="fds-label">Label</label>
+                      <div class="fds-text-input__field-outer-wrapper">
+                        <div class="fds-text-input__field-wrapper">
+                          <input type="password" name="" id="" class="fds-text-input fds-password-input fds-text-input--lg" placeholder="Placeholder text">
+                          <button type="button" class="fds-btn fds-text-input--password__visibility__toggle"><i class="fa-light fa-eye"></i></button>
+                        </div>
+                        <div class="fds-form__helper-text">Helper text goes here</div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <td>Password Input / Error</td>
+              <td>
+                <form action="">
+                  <fieldset class="fds-fieldset">
+                    <div class="fds-form-item fds-password-input-wrapper">
+                      <label for="" class="fds-label">Label</label>
+                      <div class="fds-text-input__field-outer-wrapper">
+                        <div class="fds-text-input__field-wrapper">
+                          <i class="fas fa-circle-exclamation fds-text-input__error-icon"></i>
+                          <input type="password" name="" id="" class="fds-text-input fds-password-input fds-text-input--error" placeholder="Placeholder text">
+                          <button type="button" class="fds-btn fds-text-input--password__visibility__toggle"><i class="fa-light fa-eye"></i></button>
+                        </div>
+                        <div class="fds-form__helper-text fds-form__helper-text--error">Helper text goes here</div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </form>
+              </td>
+              <td>
+                <form action="">
+                  <fieldset class="fds-fieldset">
+                    <div class="fds-form-item fds-password-input-wrapper">
+                      <label for="" class="fds-label">Label</label>
+                      <div class="fds-text-input__field-outer-wrapper">
+                        <div class="fds-text-input__field-wrapper">
+                          <i class="fas fa-circle-exclamation fds-text-input__error-icon"></i>
+                          <input type="password" name="" id="" class="fds-text-input fds-password-input fds-text-input--error fds-text-input--lg" placeholder="Placeholder text">
+                          <button type="button" class="fds-btn fds-text-input--password__visibility__toggle"><i class="fa-light fa-eye"></i></button>
+                        </div>
+                        <div class="fds-form__helper-text fds-form__helper-text--error">Helper text goes here</div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <td>Password Input / Warning</td>
+              <td>
+                <form action="">
+                  <fieldset class="fds-fieldset">
+                    <div class="fds-form-item fds-password-input-wrapper">
+                      <label for="" class="fds-label">Label</label>
+                      <div class="fds-text-input__field-outer-wrapper">
+                        <div class="fds-text-input__field-wrapper">
+                          <i class="fas fa-circle-exclamation fds-text-input__warning-icon"></i>
+                          <input type="password" name="" id="" class="fds-text-input fds-password-input fds-text-input--warning" placeholder="Placeholder text">
+                          <button type="button" class="fds-btn fds-text-input--password__visibility__toggle"><i class="fa-light fa-eye"></i></button>
+                        </div>
+                        <div class="fds-form__helper-text fds-form__helper-text--warning">Helper text goes here</div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </form>
+              </td>
+              <td>
+                <form action="">
+                  <fieldset class="fds-fieldset">
+                    <div class="fds-form-item fds-password-input-wrapper">
+                      <label for="" class="fds-label">Label</label>
+                      <div class="fds-text-input__field-outer-wrapper">
+                        <div class="fds-text-input__field-wrapper">
+                          <i class="fas fa-circle-exclamation fds-text-input__warning-icon"></i>
+                          <input type="password" name="" id="" class="fds-text-input fds-password-input fds-text-input--warning fds-text-input--lg" placeholder="Placeholder text">
+                          <button type="button" class="fds-btn fds-text-input--password__visibility__toggle"><i class="fa-light fa-eye"></i></button>
+                        </div>
+                        <div class="fds-form__helper-text fds-form__helper-text--warning">Helper text goes here</div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </form>
+              </td>
             </tr>
           </tbody>
         </table>
