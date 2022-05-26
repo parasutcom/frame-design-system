@@ -7,5 +7,6 @@ module.exports = {
     require.resolve('./rules/rules'),
     require.resolve('./plugins/scss'),
     require.resolve('./plugins/prettier'),
+    require.resolve('./plugins/browserslist'),
   ],
 };
