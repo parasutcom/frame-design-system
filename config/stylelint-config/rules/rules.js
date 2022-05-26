@@ -28,7 +28,7 @@ module.exports = {
     'font-family-no-missing-generic-family-keyword': [
       true,
       {
-        ignoreFontFamilies: ['Font Awesome 6 Pro', 'Font Awesome 6 Duotone']
+        ignoreFontFamilies: ['Font Awesome 6 Pro', 'Font Awesome 6 Duotone'],
       },
     ],
     'font-family-name-quotes': 'always-unless-keyword',
