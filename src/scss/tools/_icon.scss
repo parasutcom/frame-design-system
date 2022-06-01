@@ -7,25 +7,25 @@
 }
 
 @function icon-font-family($font-family) {
-  @if map-has-key($icon-families, $font-family) {
-    @return map-get($icon-families, $font-family);
+  @if map-has-key($fds-icon-families, $font-family) {
+    @return map-get($fds-icon-families, $font-family);
   } @else {
     @error 'Unable to find a token with the name: `#{$name}`';
   }
 }
 
 @function icon-size($size) {
-  @if map-has-key($icon-sizes, $size) {
-    @return map-get($icon-sizes, $size);
+  @if map-has-key($fds-icon-sizes, $size) {
+    @return map-get($fds-icon-sizes, $size);
   } @else {
     @error 'Unable to find a token with the name: `#{$size}`';
   }
 }
 
-@mixin icon-size($height, $width, $icon-size) {
+@mixin icon-size($height, $width, $fds-icon-size) {
   $unit: $size-3xs !default;
 
   width: calc(#{$unit} + #{icon-size($width)});
   height: calc(#{$unit} + #{icon-size($height)});
-  font-size: icon-size($icon-size);
+  font-size: icon-size($fds-icon-size);
 }

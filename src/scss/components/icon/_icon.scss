@@ -1,9 +1,10 @@
-@import 'base';
+@import '../../settings/prefix';
+@import 'core';
 @import '../../tools/icon';
 @import '../../tools/font-face/icon';
 @include font-face-icon;
 
-.icon {
+.#{$prefix}-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -11,8 +12,8 @@
   vertical-align: middle;
 }
 
-@each $size, $value in $icon-sizes {
-  .icon-#{$size} {
+@each $size, $value in $fds-icon-sizes {
+  .#{$prefix}-icon--#{$size} {
     @include icon-size($size, $size, $size);
   }
 }

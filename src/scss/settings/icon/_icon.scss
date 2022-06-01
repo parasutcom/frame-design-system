@@ -1,11 +1,11 @@
 @import '../tokens';
 
-$icon-families: (
+$fds-icon-families: (
   'icon': unquote("'Font Awesome 6 Pro'"),
   'icon-duotune': unquote("'Font Awesome 6 Duotune'"),
 ) !default;
 
-$icon-sizes: (
+$fds-icon-sizes: (
   'xs': $size-xs,
   'sm': $size-sm,
   'base': $size-md,
