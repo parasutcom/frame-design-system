@@ -19,6 +19,7 @@
   },
   "main": "index.js",
   "scripts": {
+    "tokens:build": "cd src/design-tokens && style-dictionary build --config ./config.json",
     "format": "prettier --write '**/*.{js,md,scss}'",
     "lint:scss": "stylelint '**/*.scss'",
     "fix": "npm run format --fix; npm run lint:scss --fix",
@@ -46,6 +47,7 @@
     "lint-staged": "^12.3.7",
     "prettier": "^2.6.0",
     "sass": "^1.49.7",
+    "style-dictionary": "^3.7.1",
     "stylelint": "^14.3.0",
     "stylelint-config-idiomatic-order": "^8.1.0",
     "stylelint-config-prettier": "^9.0.3",
