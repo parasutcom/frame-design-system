@@ -1,0 +1,11 @@
+@import '../../design-tokens/build/scss/tokens';
+
+$fds-icon-sizes: (
+  'xs': $icon-size-x-small,
+  'sm': $icon-size-small,
+  'md': $icon-size-medium,
+  'xl': $icon-size-x-large,
+  '2xl': $icon-size-2x-large,
+  '3xl': $icon-size-3x-large,
+  '4xl': $icon-size-4x-large,
+) !default;

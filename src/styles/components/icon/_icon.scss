@@ -1,8 +1,8 @@
 @import '../../settings/prefix';
 @import 'core';
 @import '../../tools/icon';
-@import '../../tools/font-face/icon';
-@include font-face-icon;
+@import '../../tools/font-faces';
+@include font-faces;
 
 .#{$prefix}-icon {
   display: inline-flex;

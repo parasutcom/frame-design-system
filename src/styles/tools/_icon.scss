@@ -1,17 +1,8 @@
-@import '../settings/tokens';
-@import '../settings/icon/vars';
-@import '../settings/icon/icon';
+@import '../settings/icon-vars';
+@import '../settings/icon';
 
 @function fa-content($fa-var) {
   @return unquote('"#{ $fa-var }"');
-}
-
-@function icon-font-family($font-family) {
-  @if map-has-key($fds-icon-families, $font-family) {
-    @return map-get($fds-icon-families, $font-family);
-  } @else {
-    @error 'Unable to find a token with the name: `#{$name}`';
-  }
 }
 
 @function icon-size($size) {
@@ -23,7 +14,7 @@
 }
 
 @mixin icon-size($height, $width, $fds-icon-size) {
-  $unit: $size-3xs !default;
+  $unit: 4px !default;
 
   width: calc(#{$unit} + #{icon-size($width)});
   height: calc(#{$unit} + #{icon-size($height)});

@@ -1,3 +1,5 @@
+@import '../../../design-tokens/build/scss/tokens';
+
 .fa,
 .fas,
 .fa-solid,
@@ -19,25 +21,25 @@
 
 .fas,
 .fa-solid {
-  font-family: 'Font Awesome 6 Pro';
+  font-family: $font-family-icon;
   font-weight: 900;
 }
 
 .far,
 .fa-regular {
-  font-family: 'Font Awesome 6 Pro';
+  font-family: $font-family-icon;
   font-weight: 400;
 }
 
 .fal,
 .fa-light {
-  font-family: 'Font Awesome 6 Pro';
+  font-family: $font-family-icon;
   font-weight: 300;
 }
 
 .fad,
 .fa-duotone {
   position: relative;
-  font-family: 'Font Awesome 6 Duotone';
+  font-family: $font-family-icon-duotune;
   font-weight: 900;
 }
