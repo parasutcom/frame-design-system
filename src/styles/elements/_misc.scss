@@ -1,5 +1,5 @@
-@import '../tools/font-family';
-@import '../tools/type';
+@import '../../design-tokens/build/scss/tokens';
+@import '../tools/typography';
 
 @mixin misc-reset {
   p {
@@ -7,7 +7,7 @@
   }
 
   code {
-    font-family: font-family('mono');
+    font-family: $font-family-mono;
   }
 }
 

@@ -1,0 +1,50 @@
+{
+  "font": {
+    "family": {
+      "sans-serif": {
+        "value": "'Inter', 'Arial', sans-serif"
+      },
+      "mono": {
+        "value": "'Jetbrains Mono', 'Arial', monospace"
+      },
+      "icon": {
+        "value": "'Font Awesome 6 Pro'"
+      },
+      "icon-duotune": {
+        "value": "'Font Awesome 6 Duotune'"
+      }
+    },
+    "size": {
+      "x-small": { "value": "12px"},
+      "small": { "value": "14px"},
+      "medium": { "value": "16px"},
+      "x-large": { "value": "20px"},
+      "2x-large": { "value": "24px"},
+      "3x-large": { "value": "28px"},
+      "4x-large": { "value": "32px"},
+      "5x-large": { "value": "40px"}
+    },
+    "weight": {
+      "regular": { "value": "400"},
+      "medium": { "value": "500"},
+      "semibold": { "value": "600"},
+      "bold": { "value": "700"}
+    },
+    "line-height": {
+      "small": { "value": "14px"},
+      "medium": { "value": "16px"},
+      "large": { "value": "18px"},
+      "x-large": { "value": "20px"},
+      "2x-large": { "value": "24px"},
+      "3x-large": { "value": "28px"},
+      "4x-large": { "value": "32px"},
+      "5x-large": { "value": "40px"},
+      "6x-large": { "value": "48px"}
+    },
+    "letter-spacing": {
+      "default": { "value": "0"},
+      "wide": { "value": "0.16px"},
+      "extra-wide": { "value": "0.32px"}
+    }
+  }
+}

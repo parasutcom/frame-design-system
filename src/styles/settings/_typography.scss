@@ -1,0 +1,175 @@
+@import '../../design-tokens/build/scss/tokens';
+
+$fds-body-short-01: (
+  font-family: $font-family-sans-serif,
+  font-size: $font-size-small,
+  font-weight: $font-weight-regular,
+  line-height: $font-line-height-large,
+  letter-spacing: $font-letter-spacing-wide,
+) !default;
+
+$fds-body-short-02: (
+  font-family: $font-family-sans-serif,
+  font-size: $font-size-medium,
+  font-weight: $font-weight-regular,
+  line-height: $font-line-height-x-large,
+  letter-spacing: $font-letter-spacing-default,
+) !default;
+
+$fds-body-long-01: (
+  font-family: $font-family-sans-serif,
+  font-size: $font-size-small,
+  font-weight: $font-weight-regular,
+  line-height: $font-line-height-x-large,
+  letter-spacing: $font-letter-spacing-wide,
+) !default;
+
+$fds-body-long-02: (
+  font-family: $font-family-sans-serif,
+  font-size: $font-size-medium,
+  font-weight: $font-weight-regular,
+  line-height: $font-line-height-2x-large,
+  letter-spacing: $font-letter-spacing-default,
+) !default;
+
+$fds-heading-06: (
+  font-family: $font-family-sans-serif,
+  font-size: $font-size-small,
+  font-weight: $font-weight-semibold,
+  line-height: $font-line-height-large,
+  letter-spacing: $font-letter-spacing-wide,
+) !default;
+
+$fds-heading-05: (
+  font-family: $font-family-sans-serif,
+  font-size: $font-size-medium,
+  font-weight: $font-weight-medium,
+  line-height: $font-line-height-x-large,
+  letter-spacing: $font-letter-spacing-default,
+) !default;
+
+$fds-heading-04: (
+  font-family: $font-family-sans-serif,
+  font-size: $font-size-x-large,
+  font-weight: $font-weight-regular,
+  line-height: $font-line-height-2x-large,
+  letter-spacing: $font-letter-spacing-default,
+) !default;
+
+$fds-heading-03: (
+  font-family: $font-family-sans-serif,
+  font-size: $font-size-3x-large,
+  font-weight: $font-weight-regular,
+  line-height: $font-line-height-4x-large,
+  letter-spacing: $font-letter-spacing-default,
+) !default;
+
+$fds-heading-02: (
+  font-family: $font-family-sans-serif,
+  font-size: $font-size-4x-large,
+  font-weight: $font-weight-regular,
+  line-height: $font-line-height-5x-large,
+  letter-spacing: $font-letter-spacing-default,
+) !default;
+
+$fds-heading-01: (
+  font-family: $font-family-sans-serif,
+  font-size: $font-size-5x-large,
+  font-weight: $font-weight-regular,
+  line-height: $font-line-height-6x-large,
+  letter-spacing: $font-letter-spacing-default,
+) !default;
+
+$fds-code-01: (
+  font-family: $font-family-mono,
+  font-size: $font-size-x-small,
+  font-weight: $font-weight-regular,
+  line-height: $font-line-height-medium,
+  letter-spacing: $font-letter-spacing-default,
+) !default;
+
+$fds-code-02: (
+  font-family: $font-family-mono,
+  font-size: $font-size-small,
+  font-weight: $font-weight-regular,
+  line-height: $font-line-height-x-large,
+  letter-spacing: $font-letter-spacing-default,
+) !default;
+
+$fds-helper-text-01: (
+  font-family: $font-family-sans-serif,
+  font-size: $font-size-x-small,
+  font-weight: $font-weight-regular,
+  line-height: $font-line-height-small,
+  letter-spacing: $font-letter-spacing-extra-wide,
+) !default;
+
+$fds-label-01: (
+  font-family: $font-family-sans-serif,
+  font-size: $font-size-small,
+  font-weight: $font-weight-regular,
+  line-height: $font-line-height-medium,
+  letter-spacing: $font-letter-spacing-extra-wide,
+) !default;
+
+$fds-label-02: (
+  font-family: $font-family-sans-serif,
+  font-size: $font-size-small,
+  font-weight: $font-weight-medium,
+  line-height: $font-line-height-medium,
+  letter-spacing: $font-letter-spacing-extra-wide,
+) !default;
+
+$fds-amount-01: (
+  font-family: $font-family-mono,
+  font-size: $font-size-small,
+  font-weight: $font-weight-regular,
+  line-height: $font-line-height-medium,
+  letter-spacing: $font-letter-spacing-default,
+) !default;
+
+$fds-amount-02: (
+  font-family: $font-family-mono,
+  font-size: $font-size-medium,
+  font-weight: $font-weight-regular,
+  line-height: $font-line-height-x-large,
+  letter-spacing: $font-letter-spacing-default,
+) !default;
+
+$fds-amount-03: (
+  font-family: $font-family-mono,
+  font-size: $font-size-x-large,
+  font-weight: $font-weight-medium,
+  line-height: $font-line-height-2x-large,
+  letter-spacing: $font-letter-spacing-default,
+) !default;
+
+$fds-count-01: (
+  font-family: $font-family-sans-serif,
+  font-size: $font-size-2x-large,
+  font-weight: $font-weight-regular,
+  line-height: $font-line-height-3x-large,
+  letter-spacing: $font-letter-spacing-default,
+) !default;
+
+$fds-types: (
+  body-short-01: $fds-body-short-01,
+  body-short-02: $fds-body-short-02,
+  body-long-01: $fds-body-long-01,
+  body-long-02: $fds-body-long-02,
+  heading-06: $fds-heading-06,
+  heading-05: $fds-heading-05,
+  heading-04: $fds-heading-04,
+  heading-03: $fds-heading-03,
+  heading-02: $fds-heading-02,
+  heading-01: $fds-heading-01,
+  code-01: $fds-code-01,
+  code-02: $fds-code-02,
+  helper-text-01: $fds-helper-text-01,
+  label-01: $fds-label-01,
+  label-02: $fds-label-02,
+  amount-01: $fds-amount-01,
+  amount-02: $fds-amount-02,
+  amount-03: $fds-amount-03,
+  count-01: $fds-count-01,
+);

@@ -1,4 +1,4 @@
-@import '../settings/type';
+@import '../settings/typography';
 
 @mixin properties($map) {
   @each $name, $value in $map {
