@@ -7,6 +7,7 @@ module.exports = {
         ignore: ['inside-function'],
       },
     ],
+    'color-hex-length': 'long',
     'color-no-invalid-hex': true,
     'selector-max-id': 1,
     'selector-no-qualifying-type': [
