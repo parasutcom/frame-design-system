@@ -1,4 +1,4 @@
-@import '../src/styles/tools/spacing';
+@import '../src/design-tokens/build/scss/tokens';
 
 [class*='square__'] {
   display: inline-block;
@@ -7,47 +7,47 @@
 
 .square {
   &__2 {
-    width: space('2');
-    height: space('2');
+    width: $spacing-4x-small;
+    height: $spacing-4x-small;
   }
 
   &__4 {
-    width: space('4');
-    height: space('4');
+    width: $spacing-3x-small;
+    height: $spacing-3x-small;
   }
 
   &__8 {
-    width: space('8');
-    height: space('8');
+    width: $spacing-2x-small;
+    height: $spacing-2x-small;
   }
 
   &__12 {
-    width: space('12');
-    height: space('12');
+    width: $spacing-x-small;
+    height: $spacing-x-small;
   }
 
   &__16 {
-    width: space('16');
-    height: space('16');
+    width: $spacing-medium;
+    height: $spacing-medium;
   }
 
   &__24 {
-    width: space('24');
-    height: space('24');
+    width: $spacing-large;
+    height: $spacing-large;
   }
 
   &__32 {
-    width: space('32');
-    height: space('32');
+    width: $spacing-x-large;
+    height: $spacing-x-large;
   }
 
   &__40 {
-    width: space('40');
-    height: space('40');
+    width: $spacing-2x-large;
+    height: $spacing-2x-large;
   }
 
   &__48 {
-    width: space('48');
-    height: space('48');
+    width: $spacing-3x-large;
+    height: $spacing-3x-large;
   }
 }
