@@ -1,0 +1,17 @@
+@import '../../design-tokens/build/scss/tokens';
+@import '../settings/animation';
+
+@mixin animation-spin(
+  $delay: $animation-delay-x-short,
+  $direction: normal,
+  $duration: $animation-duration-medium,
+  $iteration: infinite,
+  $timing-function: $animation-timing-linear
+) {
+  animation-delay: $delay;
+  animation-direction: $direction;
+  animation-duration: $duration;
+  animation-iteration-count: $iteration;
+  animation-name: animation-spin;
+  animation-timing-function: $timing-function;
+}

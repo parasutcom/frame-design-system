@@ -1,0 +1,55 @@
+{
+  "animation": {
+    "duration": {
+      "x-fast": {
+        "value": "0.25s"
+      },
+      "fast": {
+        "value": "0.5s"
+      },
+      "medium": {
+        "value": "1s"
+      },
+      "slow": {
+        "value": "1.5s"
+      },
+      "x-slow": {
+        "value": "2s"
+      }
+    },
+    "delay": {
+      "x-short": {
+        "value": "0.05s"
+      },
+      "short": {
+        "value": "0.25s"
+      },
+      "medium": {
+        "value": "0.5s"
+      },
+      "long": {
+        "value": "1s"
+      },
+      "x-long": {
+        "value": "1.5s"
+      }
+    },
+    "timing": {
+      "ease": {
+        "value": "ease"
+      },
+      "ease-in": {
+        "value": "ease-in"
+      },
+      "ease-out": {
+        "value": "ease-out"
+      },
+      "ease-in-out": {
+        "value": "ease-in-out"
+      },
+      "linear": {
+        "value": "linear"
+      }
+    }
+  }
+}
