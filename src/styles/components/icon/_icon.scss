@@ -1,8 +1,63 @@
+@import '../../../design-tokens/build/scss/tokens';
 @import '../../settings/prefix';
-@import 'core';
 @import '../../tools/icon';
 @import '../../tools/font-faces';
 @include font-faces;
+
+.fa,
+.fas,
+.fa-solid,
+.far,
+.fa-regular,
+.fal,
+.fa-light,
+.fad,
+.fa-duotone {
+  display: inline-block;
+  font-size: inherit;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+}
+
+.fas,
+.fa-solid {
+  font-family: $font-family-icon;
+  font-weight: 900;
+}
+
+.far,
+.fa-regular {
+  font-family: $font-family-icon;
+  font-weight: 400;
+}
+
+.fal,
+.fa-light {
+  font-family: $font-family-icon;
+  font-weight: 300;
+}
+
+.fad,
+.fa-duotone {
+  position: relative;
+  font-family: $font-family-icon-duotune;
+  font-weight: 900;
+
+  &::before {
+    position: absolute;
+    color: inherit;
+    opacity: 1;
+  }
+
+  &::after {
+    color: inherit;
+    opacity: 0.5;
+  }
+}
 
 .#{$prefix}-icon {
   display: inline-flex;
@@ -10,16 +65,24 @@
   justify-content: center;
   text-align: center;
   vertical-align: middle;
+  @include icon-size('md');
 }
 
 @each $size, $value in $fds-icon-sizes {
   .#{$prefix}-icon--#{$size} {
-    @include icon-size($size, $size, $size);
+    @include icon-size($size);
   }
 }
 
 @each $name, $icon in $fa-icons {
   .fa-#{$name}::before {
     content: fa-content($icon);
+  }
+}
+
+@each $name, $icon in $fa-icons {
+  .fad.fa-#{$name}::after,
+  .fa-duotone.fa-#{$name}::after {
+    content: unquote('"#{ $icon }#{ $icon }"');
   }
 }

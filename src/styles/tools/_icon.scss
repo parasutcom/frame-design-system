@@ -5,18 +5,21 @@
   @return unquote('"#{ $fa-var }"');
 }
 
-@function icon-size($size) {
+@mixin set-icon-size($size) {
   @if map-has-key($fds-icon-sizes, $size) {
-    @return map-get($fds-icon-sizes, $size);
+    $unit: 4px !default;
+    $width: map-get($fds-icon-sizes, $size);
+    $height: map-get($fds-icon-sizes, $size);
+    $font-size: map-get($fds-icon-sizes, $size);
+
+    width: calc(#{$unit} + #{$height});
+    height: calc(#{$unit} + #{$width});
+    font-size: $font-size;
   } @else {
-    @error 'Unable to find a token with the name: `#{$size}`';
+    @error 'Unable to find a token with the name: `#{$name}`';
   }
 }
 
-@mixin icon-size($height, $width, $fds-icon-size) {
-  $unit: 4px !default;
-
-  width: calc(#{$unit} + #{icon-size($width)});
-  height: calc(#{$unit} + #{icon-size($height)});
-  font-size: icon-size($fds-icon-size);
+@mixin icon-size($size) {
+  @include set-icon-size($size);
 }
