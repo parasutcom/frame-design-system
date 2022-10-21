@@ -6,18 +6,20 @@
 @import 'elements/headings';
 @import 'elements/misc';
 
+// Objects
+@import 'objects/grid';
+
 // Components
 // @import 'components/form/form';
 // @import 'components/form/text-input';
 @import 'components/icon/icon';
 @import 'components/button/button';
 
-// Objects
-@import 'objects/grid/index';
-
 // Utilities
 @import 'utilities/animation';
 @import 'utilities/shame';
+
+// Tests
 @import '../../tests/colors';
 @import '../../tests/custom';
 @import '../../tests/grid';

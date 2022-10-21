@@ -1,5 +1,5 @@
-@import '../../settings/prefix';
-@import '../../tools/breakpoint';
+@import '../settings/prefix';
+@import '../tools/breakpoint';
 
 @mixin make-row($gutter: $fds-grid-gutter) {
   display: grid;
@@ -159,3 +159,5 @@
   @include make-grid-col-offset;
   @include make-no-gutter;
 }
+
+@include grid-css;
