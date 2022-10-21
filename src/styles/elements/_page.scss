@@ -10,7 +10,7 @@
     font-size: $font-size-medium;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    font-weight: font-weight('regular');
+    font-weight: $font-weight-regular;
     text-rendering: optimizelegibility;
   }
 }
