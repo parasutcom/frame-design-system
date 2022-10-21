@@ -1,3 +1,3 @@
 module.exports = {
-  '*.scss': ['prettier --write', 'stylelint'],
+  '*.scss': ['stylelint'],
 };
