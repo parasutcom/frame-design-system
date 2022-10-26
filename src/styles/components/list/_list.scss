@@ -1,0 +1,48 @@
+@mixin list {
+  .#{$prefix}-list {
+    @include type-style('label-01');
+
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-2x-small;
+  }
+
+  .#{$prefix}-list__item {
+    color: $color-gray-90;
+  }
+
+  .#{$prefix}-list--nested {
+    margin-top: $spacing-2x-small;
+    margin-left: $spacing-medium;
+  }
+
+  .#{$prefix}-list--unordered {
+    &.#{$prefix}-list--bulleted {
+      list-style-type: disc;
+    }
+
+    &.#{$prefix}-list--dashed > .#{$prefix}-list__item {
+      &::before {
+        position: absolute;
+        left: -$spacing-medium;
+        content: '\002013';
+      }
+    }
+
+    .#{$prefix}-list__item {
+      position: relative;
+    }
+  }
+
+  .#{$prefix}-list--ordered {
+    &.#{$prefix}-list--lettered {
+      list-style-type: lower-latin;
+    }
+
+    &.#{$prefix}-list--number {
+      list-style-type: decimal;
+    }
+  }
+}
+
+@include list;
