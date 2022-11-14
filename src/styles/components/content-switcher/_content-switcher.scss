@@ -1,0 +1,107 @@
+@import '../../settings/prefix';
+
+@mixin content-switcher {
+  .#{$prefix}-content-switcher {
+    display: inline-flex;
+    height: $content-switcher-size-default-height;
+    gap: 1px;
+  }
+
+  .#{$prefix}-content-switcher-btn {
+    @include button-base;
+
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .#{$prefix}-content-switcher-btn:first-child {
+    border-radius: $button-border-radius 0 0 $button-border-radius;
+  }
+
+  .#{$prefix}-content-switcher-btn:last-child {
+    border-radius: 0 $button-border-radius $button-border-radius 0;
+  }
+
+  .#{$prefix}-content-switcher--sm {
+    height: $content-switcher-size-small-height;
+  }
+
+  .#{$prefix}-content-switcher__label {
+    overflow: hidden;
+    flex-grow: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .#{$prefix}-content-switcher--solid {
+    .#{$prefix}-content-switcher-btn {
+      @include button-variant(
+        $button-color-secondary-default-background,
+        transparent,
+        $button-color-secondary-default-text,
+        $button-color-secondary-hover-background,
+        $button-color-secondary-focus-border,
+        $button-color-secondary-active-background
+      );
+
+      &:disabled,
+      &:hover:disabled,
+      &:focus-visible:disabled,
+      &.#{$prefix}-content-switcher-btn--disabled,
+      &.#{$prefix}-content-switcher-btn--disabled:hover,
+      &.#{$prefix}-content-switcher-btn--disabled:focus-visible {
+        background-color: $button-color-default-disabled-background;
+        box-shadow: none;
+        color: $button-color-default-disabled-text;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  .#{$prefix}-content-switcher--outline {
+    .#{$prefix}-content-switcher-btn {
+      @include button-variant(
+        transparent,
+        $button-color-outline-default-border,
+        $button-color-outline-default-text,
+        $button-color-outline-hover-background,
+        $button-color-outline-focus-border,
+        $button-color-outline-active-background
+      );
+
+      &:disabled,
+      &:hover:disabled,
+      &:focus-visible:disabled,
+      &.#{$prefix}-content-switcher-btn--disabled,
+      &.#{$prefix}-content-switcher-btn--disabled:hover,
+      &.#{$prefix}-content-switcher-btn--disabled:focus-visible {
+        background-color: transparent;
+        box-shadow: inset 0 0 0 1px $button-color-outline-disabled-border;
+        color: $button-color-outline-disabled-text;
+        cursor: not-allowed;
+      }
+
+      &:hover {
+        box-shadow: inset 0 0 0 1px $button-color-outline-hover-border;
+        color: $button-color-outline-hover-text;
+      }
+
+      &:focus-visible {
+        box-shadow: inset 0 0 0 2px $button-color-outline-focus-border,
+          inset 0 0 0 3px $color-white;
+      }
+
+      &:active {
+        box-shadow: unset;
+        color: $button-color-outline-active-text;
+      }
+    }
+  }
+
+  .#{$prefix}-content-switcher-btn.#{$prefix}-content-switcher--selected {
+    background-color: $content-switcher-color-default-selected-background;
+    color: $content-switcher-color-default-selected-text;
+  }
+}
+
+@include content-switcher;
