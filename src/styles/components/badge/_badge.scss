@@ -1,0 +1,43 @@
+@import '../../settings/prefix';
+
+@mixin badge {
+  .#{$prefix}-badge {
+    @include type-style('label-02');
+
+    display: inline-flex;
+    overflow: hidden;
+    width: $badge-size-default-width;
+    height: $badge-size-default-height;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    padding: $badge-size-default-padding;
+    background-color: $badge-color-default-background;
+    border-radius: $badge-border-radius;
+    color: $badge-color-default-text;
+  }
+
+  .#{$prefix}-badge--lg {
+    width: $badge-size-large-width;
+    height: $badge-size-large-height;
+  }
+
+  .#{$prefix}-badge__label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .#{$prefix}-badge__icon {
+    @include icon-size('xl');
+  }
+
+  .#{$prefix}-badge__image {
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+}
+
+@include badge;
