@@ -36,6 +36,7 @@
   .#{$prefix}-badge__image {
     height: 100%;
     aspect-ratio: 1 / 1;
+    border-radius: calc($badge-border-radius / 2);
     object-fit: cover;
   }
 }
