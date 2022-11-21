@@ -7,7 +7,7 @@
 
   <link rel="stylesheet" href="../dist/css/main.css">
 
-  <title>FDS | Links</title>
+  <title>FDS | Buttons</title>
   <style>
     table {
       width: 100%;
@@ -53,27 +53,27 @@
       <div class="menu-group">
         <h3>Components</h3>
         <a href="badge.html" class="side-link">Badge</a>
-        <a href="button.html" class="side-link">Button</a>
+        <a href="button.html" class="side-link active">Button</a>
         <a href="button-group.html" class="side-link">Button Group</a>
         <a href="content-switcher.html" class="side-link">Content Switcher</a>
         <a href="input.html" class="side-link">Input</a>
         <a href="list.html" class="side-link">List</a>
-        <a href="link.html" class="side-link active">Link</a>
+        <a href="link.html" class="side-link">Link</a>
         <a href="tag.html" class="side-link">Tag</a>
         <a href="pagination.html" class="side-link">Pagination</a>
       </div>
     </div>
     <div class="main">
       <div class="header">
-        <h2>Links</h2>
+        <h2>Buttons</h2>
       </div>
       <div class="body">
         <table>
           <thead>
             <tr>
               <th>Type</th>
+              <th>Small</th>
               <th>Default</th>
-              <th>Label</th>
               <th>Large</th>
               <th>Disabled</th>
             </tr>
@@ -82,46 +82,298 @@
             <tr>
               <td>Primary</td>
               <td>
-                <a href="#" class="fds-link fds-link--primary">Link</a>
+                <button class="fds-btn fds-btn--primary fds-btn--sm">
+                  <span class="fds-btn__label">Primary button</span>
+                </button>
               </td>
               <td>
-                <a href="#" class="fds-link fds-link--primary fds-link--label">Label link</a>
+                <button class="fds-btn fds-btn--primary">
+                  <span class="fds-btn__label">Primary button</span>
+                </button>
               </td>
               <td>
-                <a href="#" class="fds-link fds-link--primary fds-link--large">Large link</a>
+                <button class="fds-btn fds-btn--primary fds-btn--lg">
+                  <span class="fds-btn__label">Primary button</span>
+                </button>
               </td>
               <td>
-                <a href="#" class="fds-link fds-link--primary fds-link--large fds-link--disabled">Large link</a>
+                <button class="fds-btn fds-btn--primary fds-btn--disabled">
+                  <span class="fds-btn__label">Primary button</span>
+                </button>
               </td>
             </tr>
             <tr>
               <td>Secondary</td>
               <td>
-                <a href="#" class="fds-link fds-link--secondary">Link</a>
+                <button class="fds-btn fds-btn--secondary fds-btn--sm">
+                  <span class="fds-btn__label">Secondary button</span>
+                </button>
               </td>
               <td>
-                <a href="#" class="fds-link fds-link--secondary fds-link--label">Label link</a>
+                <button class="fds-btn fds-btn--secondary">
+                  <span class="fds-btn__label">Secondary button</span>
+                </button>
               </td>
               <td>
-                <a href="#" class="fds-link fds-link--secondary fds-link--large">Large link</a>
+                <button class="fds-btn fds-btn--secondary fds-btn--lg">
+                  <span class="fds-btn__label">Secondary button</span>
+                </button>
+              </td>
+              <td>
+                <button class="fds-btn fds-btn--secondary fds-btn--disabled">
+                  <span class="fds-btn__label">Secondary button</span>
+                </button>
               </td>
             </tr>
             <tr>
-              <td>Dark</td>
+              <td>Outline</td>
               <td>
-                <div style="background-color: #1f1f1f; display: inline-flex; padding: 8px;">
-                  <a href="#" class="fds-link fds-link--dark">Link</a>
-                </div>
+                <button class="fds-btn fds-btn--outline fds-btn--sm">
+                  <span class="fds-btn__label">Outline button</span>
+                </button>
               </td>
               <td>
-                <div style="background-color: #1f1f1f; display: inline-flex; padding: 8px;">
-                  <a href="#" class="fds-link fds-link--dark fds-link--label">Label link</a>
-                </div>
+                <button class="fds-btn fds-btn--outline">
+                  <span class="fds-btn__label">Outline button</span>
+                </button>
               </td>
               <td>
-                <div style="background-color: #1f1f1f; display: inline-flex; padding: 8px;">
-                  <a href="#" class="fds-link fds-link--dark fds-link--large">Large link</a>
-                </div>
+                <button class="fds-btn fds-btn--outline fds-btn--lg">
+                  <span class="fds-btn__label">Outline button</span>
+                </button>
+              </td>
+              <td>
+                <button class="fds-btn fds-btn--outline fds-btn--disabled">
+                  <span class="fds-btn__label">Outline button</span>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Ghost</td>
+              <td>
+                <button class="fds-btn fds-btn--ghost fds-btn--sm">
+                  <span class="fds-btn__label">Ghost button</span>
+                </button>
+              </td>
+              <td>
+                <button class="fds-btn fds-btn--ghost">
+                  <span class="fds-btn__label">Ghost button</span>
+                </button>
+              </td>
+              <td>
+                <button class="fds-btn fds-btn--ghost fds-btn--lg">
+                  <span class="fds-btn__label">Ghost button</span>
+                </button>
+              </td>
+              <td>
+                <button class="fds-btn fds-btn--ghost fds-btn--disabled">
+                  <span class="fds-btn__label">Ghost button</span>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Destructive</td>
+              <td>
+                <button class="fds-btn fds-btn--destructive fds-btn--sm">
+                  <span class="fds-btn__label">Destructive button</span>
+                </button>
+              </td>
+              <td>
+                <button class="fds-btn fds-btn--destructive">
+                  <span class="fds-btn__label">Destructive button</span>
+                </button>
+              </td>
+              <td>
+                <button class="fds-btn fds-btn--destructive fds-btn--lg">
+                  <span class="fds-btn__label">Destructive button</span>
+                </button>
+              </td>
+              <td>
+                <button class="fds-btn fds-btn--destructive fds-btn--disabled">
+                  <span class="fds-btn__label">Destructive button</span>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Destructive Outline</td>
+              <td>
+                <button class="fds-btn fds-btn--destructive-outline fds-btn--sm">
+                  <span class="fds-btn__label">Destructive outline button</span>
+                </button>
+              </td>
+              <td>
+                <button class="fds-btn fds-btn--destructive-outline">
+                  <span class="fds-btn__label">Destructive outline button</span>
+                </button>
+              </td>
+              <td>
+                <button class="fds-btn fds-btn--destructive-outline fds-btn--lg">
+                  <span class="fds-btn__label">Destructive outline button</span>
+                </button>
+              </td>
+              <td>
+                <button class="fds-btn fds-btn--destructive-outline fds-btn--disabled">
+                  <span class="fds-btn__label">Destructive outline button</span>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Full Width</td>
+              <td colspan="2">
+                <button class="fds-btn fds-btn--primary fds-btn--full-width">
+                  <span class="fds-btn__label">Primary button</span>
+                </button>
+              </td>
+              <td colspan="2">
+                <button class="fds-btn fds-btn--primary fds-btn--full-width">
+                  <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-check"></i></span>
+                  <span class="fds-btn__label">Primary button</span>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Truncate</td>
+              <td>
+                <button class="fds-btn fds-btn--primary"  style="max-width: 165px;">
+                  <span class="fds-btn__label">A very long sentence</span>
+                </button>
+              </td>
+              <td>
+                <button class="fds-btn fds-btn--primary"  style="max-width: 165px;">
+                  <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-check"></i></span>
+                  <span class="fds-btn__label">A very long sentence</span>
+                </button>
+              </td>
+              <td>
+                <button class="fds-btn fds-btn--primary"  style="max-width: 165px;">
+                  <span class="fds-btn__label">A very long sentence</span>
+                  <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-chevron-right"></i></span>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Only Icon</td>
+              <td>
+                <button class="fds-btn fds-btn--primary fds-btn--icon fds-btn--sm">
+                  <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-check"></i></span>
+                </button>
+                <button class="fds-btn fds-btn--secondary fds-btn--icon fds-btn--sm">
+                  <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-check"></i></span>
+                </button>
+                <button class="fds-btn fds-btn--outline fds-btn--icon fds-btn--sm">
+                  <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-check"></i></span>
+                </button>
+                <button class="fds-btn fds-btn--ghost fds-btn--icon fds-btn--sm">
+                  <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-check"></i></span>
+                </button>
+                <button class="fds-btn fds-btn--destructive fds-btn--icon fds-btn--sm">
+                  <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-check"></i></span>
+                </button>
+                <button class="fds-btn fds-btn--destructive-outline fds-btn--icon fds-btn--sm">
+                  <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-check"></i></span>
+                </button>
+              </td>
+              <td>
+                <button class="fds-btn fds-btn--primary fds-btn--icon">
+                  <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-check"></i></span>
+                </button>
+                <button class="fds-btn fds-btn--secondary fds-btn--icon">
+                  <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-check"></i></span>
+                </button>
+                <button class="fds-btn fds-btn--outline fds-btn--icon">
+                  <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-check"></i></span>
+                </button>
+                <button class="fds-btn fds-btn--ghost fds-btn--icon">
+                  <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-check"></i></span>
+                </button>
+                <button class="fds-btn fds-btn--destructive fds-btn--icon">
+                  <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-check"></i></span>
+                </button>
+                <button class="fds-btn fds-btn--destructive-outline fds-btn--icon">
+                  <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-check"></i></span>
+                </button>
+              </td>
+              <td>
+                <button class="fds-btn fds-btn--primary fds-btn--icon fds-btn--lg">
+                  <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-check"></i></span>
+                </button>
+                <button class="fds-btn fds-btn--secondary fds-btn--icon fds-btn--lg">
+                  <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-check"></i></span>
+                </button>
+                <button class="fds-btn fds-btn--outline fds-btn--icon fds-btn--lg">
+                  <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-check"></i></span>
+                </button>
+                <button class="fds-btn fds-btn--ghost fds-btn--icon fds-btn--lg">
+                  <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-check"></i></span>
+                </button>
+                <button class="fds-btn fds-btn--destructive fds-btn--icon fds-btn--lg">
+                  <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-check"></i></span>
+                </button>
+                <button class="fds-btn fds-btn--destructive-outline fds-btn--icon fds-btn--lg">
+                  <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-check"></i></span>
+                </button>
+              </td>
+              <td>
+                <button class="fds-btn fds-btn--primary fds-btn--icon fds-btn--disabled">
+                  <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-check"></i></span>
+                </button>
+                <button class="fds-btn fds-btn--secondary fds-btn--icon fds-btn--disabled">
+                  <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-check"></i></span>
+                </button>
+                <button class="fds-btn fds-btn--outline fds-btn--icon fds-btn--disabled">
+                  <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-check"></i></span>
+                </button>
+                <button class="fds-btn fds-btn--ghost fds-btn--icon fds-btn--disabled">
+                  <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-check"></i></span>
+                </button>
+                <button class="fds-btn fds-btn--destructive fds-btn--icon fds-btn--disabled">
+                  <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-check"></i></span>
+                </button>
+                <button class="fds-btn fds-btn--destructive-outline fds-btn--icon fds-btn--disabled">
+                  <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-check"></i></span>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>With Icon</td>
+              <td>
+                <button class="fds-btn fds-btn--primary fds-btn--sm">
+                  <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-check"></i></span>
+                  <span class="fds-btn__label">Primary button</span>
+                </button>
+              </td>
+              <td>
+                <button class="fds-btn fds-btn--primary">
+                  <span class="fds-btn__label">Primary button</span>
+                  <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-chevron-right"></i></span>
+                </button>
+              </td>
+              <td>
+                <button class="fds-btn fds-btn--primary fds-btn--lg">
+                  <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-check"></i></span>
+                  <span class="fds-btn__label">Primary button</span>
+                </button>
+              </td>
+              <td>
+                <button class="fds-btn fds-btn--primary fds-btn--disabled">
+                  <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-check"></i></span>
+                  <span class="fds-btn__label">Primary button</span>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Busy</td>
+              <td>
+                <button class="fds-btn fds-btn--primary fds-btn__busy" disabled>
+                  <span class="fds-icon fds-btn__icon fds-animation--spin"><i class="fa-regular fa-spinner-third"></i></span>
+                  <span class="fds-btn__label">Primary button</span>
+                </button>
+              </td>
+              <td>
+                <button class="fds-btn fds-btn--outline fds-btn__busy" disabled>
+                  <span class="fds-icon fds-btn__icon fds-animation--spin"><i class="fa-solid fa-spinner-third"></i></span>
+                  <span class="fds-btn__label">Outline button</span>
+                </button>
               </td>
             </tr>
           </tbody>
