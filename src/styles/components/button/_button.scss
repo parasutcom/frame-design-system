@@ -35,10 +35,9 @@
   }
 
   .#{$prefix}-btn__label {
-    overflow: hidden;
+    @include truncate;
+
     flex-grow: 1;
-    text-overflow: ellipsis;
-    white-space: nowrap;
   }
 
   .#{$prefix}-btn__icon {
