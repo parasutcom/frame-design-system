@@ -2,12 +2,20 @@
   "button": {
     "color": {
       "default": {
+        "focus": {
+          "border": {
+            "value": "{color.blue.60.value}"
+          }
+        },
         "disabled": {
           "background": {
             "value": "{color.gray.20.value}"
           },
           "text": {
             "value": "{color.gray.40.value}"
+          },
+          "border": {
+            "value": "{color.gray.20.value}"
           }
         }
       },
@@ -18,21 +26,25 @@
           },
           "text": {
             "value": "{color.white.value}"
+          },
+          "border": {
+            "value": "{color.blue.60.value}"
           }
         },
         "hover": {
           "background": {
+            "value": "{color.blue.70.value}"
+          },
+          "border": {
             "value": "{color.blue.70.value}"
           }
         },
         "active": {
           "background": {
             "value": "{color.blue.80.value}"
-          }
-        },
-        "focus": {
+          },
           "border": {
-            "value": "{color.blue.70.value}"
+            "value": "{color.blue.80.value}"
           }
         }
       },
@@ -43,21 +55,25 @@
           },
           "text": {
             "value": "{color.white.value}"
+          },
+          "border": {
+            "value": "{color.cool-gray.60.value}"
           }
         },
         "hover": {
           "background": {
+            "value": "{color.cool-gray.70.value}"
+          },
+          "border": {
             "value": "{color.cool-gray.70.value}"
           }
         },
         "active": {
           "background": {
             "value": "{color.cool-gray.80.value}"
-          }
-        },
-        "focus": {
+          },
           "border": {
-            "value": "{color.blue.70.value}"
+            "value": "{color.cool-gray.80.value}"
           }
         }
       },
@@ -87,11 +103,9 @@
           },
           "text": {
             "value": "{color.white.value}"
-          }
-        },
-        "focus": {
+          },
           "border": {
-            "value": "{color.blue.70.value}"
+            "value": "{color.cool-gray.80.value}"
           }
         },
         "disabled": {
@@ -112,16 +126,17 @@
         "hover": {
           "background": {
             "value": "{color.antrasit-gray.10.value}"
+          },
+          "border": {
+            "value": "{color.antrasit-gray.10.value}"
           }
         },
         "active": {
           "background": {
             "value": "{color.antrasit-gray.20.value}"
-          }
-        },
-        "focus": {
+          },
           "border": {
-            "value": "{color.blue.70.value}"
+            "value": "{color.antrasit-gray.20.value}"
           }
         },
         "disabled": {
@@ -137,21 +152,25 @@
           },
           "text": {
             "value": "{color.white.value}"
+          },
+          "border": {
+            "value": "{color.red.60.value}"
           }
         },
         "hover": {
           "background": {
+            "value": "{color.red.70.value}"
+          },
+          "border": {
             "value": "{color.red.70.value}"
           }
         },
         "active": {
           "background": {
             "value": "{color.red.80.value}"
-          }
-        },
-        "focus": {
+          },
           "border": {
-            "value": "{color.blue.70.value}"
+            "value": "{color.red.80.value}"
           }
         }
       },
@@ -181,11 +200,9 @@
           },
           "text": {
             "value": "{color.white.value}"
-          }
-        },
-        "focus": {
+          },
           "border": {
-            "value": "{color.blue.70.value}"
+            "value": "{color.red.80.value}"
           }
         },
         "disabled": {
