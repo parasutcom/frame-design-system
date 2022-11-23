@@ -1,5 +1,4 @@
 @import '../../design-tokens/build/scss/tokens';
-@import 'typography';
 
 @mixin button-reset() {
   padding: 0;
@@ -30,6 +29,11 @@
   transition: all 200ms ease;
   vertical-align: middle;
 
+  &:focus-visible {
+    box-shadow: inset 0 0 0 2px $button-color-default-focus-border,
+      inset 0 0 0 3px $color-white;
+  }
+
   &:disabled,
   &:hover:disabled,
   &:focus-visible:disabled,
@@ -37,35 +41,32 @@
   &.#{$prefix}-btn--disabled:hover,
   &.#{$prefix}-btn--disabled:focus-visible {
     background-color: $button-color-default-disabled-background;
-    box-shadow: none;
+    box-shadow: inset 0 0 0 1px $button-color-default-disabled-border;
     color: $button-color-default-disabled-text;
     cursor: not-allowed;
   }
 }
 
 @mixin button-variant(
-  $bg-color,
-  $border-color,
+  $background-color,
   $text-color,
-  $hover-bg-color,
-  $focus-border-color,
-  $active-color
+  $border-color,
+  $hover-background-color,
+  $hover-border-color,
+  $active-background-color,
+  $active-border-color
 ) {
-  background-color: $bg-color;
+  background-color: $background-color;
   box-shadow: inset 0 0 0 1px $border-color;
   color: $text-color;
 
   &:hover {
-    background-color: $hover-bg-color;
-  }
-
-  &:focus-visible {
-    box-shadow: inset 0 0 0 2px $focus-border-color,
-      inset 0 0 0 3px $color-white;
+    background-color: $hover-background-color;
+    box-shadow: inset 0 0 0 1px $hover-border-color;
   }
 
   &:active {
-    background-color: $active-color;
-    box-shadow: unset;
+    background-color: $active-background-color;
+    box-shadow: inset 0 0 0 1px $active-border-color;
   }
 }

@@ -61,34 +61,45 @@
   .#{$prefix}-btn--primary {
     @include button-variant(
       $button-color-primary-default-background,
-      transparent,
       $button-color-primary-default-text,
+      $button-color-primary-default-border,
       $button-color-primary-hover-background,
-      $button-color-primary-focus-border,
-      $button-color-primary-active-background
+      $button-color-primary-hover-border,
+      $button-color-primary-active-background,
+      $button-color-primary-active-border
     );
   }
 
   .#{$prefix}-btn--secondary {
     @include button-variant(
       $button-color-secondary-default-background,
-      transparent,
       $button-color-secondary-default-text,
+      $button-color-secondary-default-border,
       $button-color-secondary-hover-background,
-      $button-color-secondary-focus-border,
-      $button-color-secondary-active-background
+      $button-color-secondary-hover-border,
+      $button-color-secondary-active-background,
+      $button-color-secondary-active-border
     );
   }
 
   .#{$prefix}-btn--outline {
     @include button-variant(
       transparent,
-      $button-color-outline-default-border,
       $button-color-outline-default-text,
+      $button-color-outline-default-border,
       $button-color-outline-hover-background,
-      $button-color-outline-focus-border,
-      $button-color-outline-active-background
+      $button-color-outline-hover-border,
+      $button-color-outline-active-background,
+      $button-color-outline-active-border
     );
+
+    &:hover {
+      color: $button-color-outline-hover-text;
+    }
+
+    &:active {
+      color: $button-color-outline-active-text;
+    }
 
     &:disabled,
     &:hover:disabled,
@@ -100,31 +111,17 @@
       box-shadow: inset 0 0 0 1px $button-color-outline-disabled-border;
       color: $button-color-outline-disabled-text;
     }
-
-    &:hover {
-      box-shadow: inset 0 0 0 1px $button-color-outline-hover-border;
-      color: $button-color-outline-hover-text;
-    }
-
-    &:focus-visible {
-      box-shadow: inset 0 0 0 2px $button-color-outline-focus-border,
-        inset 0 0 0 3px $color-white;
-    }
-
-    &:active {
-      box-shadow: unset;
-      color: $button-color-outline-active-text;
-    }
   }
 
   .#{$prefix}-btn--ghost {
     @include button-variant(
       transparent,
-      transparent,
       $button-color-ghost-default-text,
+      transparent,
       $button-color-ghost-hover-background,
-      $button-color-ghost-focus-border,
-      $button-color-ghost-active-background
+      $button-color-ghost-hover-border,
+      $button-color-ghost-active-background,
+      $button-color-ghost-active-border
     );
 
     &:disabled,
@@ -134,39 +131,41 @@
     &.#{$prefix}-btn--disabled:hover,
     &.#{$prefix}-btn--disabled:focus-visible {
       background-color: transparent;
+      box-shadow: inset 0 0 0 1px transparent;
       color: $button-color-ghost-disabled-text;
-    }
-
-    &:focus-visible {
-      box-shadow: inset 0 0 0 2px $button-color-ghost-focus-border,
-        inset 0 0 0 3px transparent;
-    }
-
-    &:active {
-      box-shadow: unset;
     }
   }
 
   .#{$prefix}-btn--destructive {
     @include button-variant(
       $button-color-destructive-default-background,
-      transparent,
       $button-color-destructive-default-text,
+      $button-color-destructive-default-border,
       $button-color-destructive-hover-background,
-      $button-color-destructive-focus-border,
-      $button-color-destructive-active-background
+      $button-color-destructive-hover-border,
+      $button-color-destructive-active-background,
+      $button-color-destructive-active-border
     );
   }
 
   .#{$prefix}-btn--destructive-outline {
     @include button-variant(
       transparent,
-      $button-color-destructive-outline-default-border,
       $button-color-destructive-outline-default-text,
+      $button-color-destructive-outline-default-border,
       $button-color-destructive-outline-hover-background,
-      $button-color-destructive-outline-focus-border,
-      $button-color-destructive-outline-active-background
+      $button-color-destructive-outline-hover-border,
+      $button-color-destructive-outline-active-background,
+      $button-color-destructive-outline-active-border
     );
+
+    &:hover {
+      color: $button-color-destructive-outline-hover-text;
+    }
+
+    &:active {
+      color: $button-color-destructive-outline-active-text;
+    }
 
     &:disabled,
     &:hover:disabled,
@@ -178,21 +177,6 @@
       box-shadow: inset 0 0 0 1px
         $button-color-destructive-outline-disabled-border;
       color: $button-color-destructive-outline-disabled-text;
-    }
-
-    &:hover {
-      box-shadow: inset 0 0 0 1px $button-color-destructive-outline-hover-border;
-      color: $button-color-destructive-outline-hover-text;
-    }
-
-    &:focus-visible {
-      box-shadow: inset 0 0 0 2px $button-color-outline-focus-border,
-        inset 0 0 0 3px $color-white;
-    }
-
-    &:active {
-      box-shadow: unset;
-      color: $button-color-destructive-outline-active-text;
     }
   }
 }
