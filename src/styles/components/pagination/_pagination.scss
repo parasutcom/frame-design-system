@@ -1,0 +1,121 @@
+@import '../../settings/prefix';
+@import '../../tools/text-truncate';
+@import '../../tools/pagination';
+
+@mixin pagination {
+  .#{$prefix}-pagination {
+    display: inline-flex;
+    height: $pagination-size-default-height;
+    gap: 1px;
+  }
+
+  .#{$prefix}-pagination-btn {
+    @include pagination-button-base;
+
+    border-radius: 0;
+  }
+
+  .#{$prefix}-pagination-btn:first-child {
+    border-radius: $pagination-border-radius 0 0 $pagination-border-radius;
+  }
+
+  .#{$prefix}-pagination-btn:last-child {
+    border-radius: 0 $pagination-border-radius $pagination-border-radius 0;
+  }
+
+  .#{$prefix}-pagination--sm {
+    height: $pagination-size-small-height;
+
+    .#{$prefix}-pagination-btn {
+      min-width: $pagination-size-small-width;
+    }
+  }
+
+  .#{$prefix}-pagination__label {
+    @include truncate;
+
+    flex-grow: 1;
+  }
+
+  .#{$prefix}-pagination__icon {
+    @include icon-size('md');
+
+    flex-shrink: 0;
+  }
+
+  .#{$prefix}-pagination--gray {
+    .#{$prefix}-pagination-btn {
+      @include pagination-button-variant(
+        $pagination-color-gray-default-background,
+        $pagination-color-gray-default-text,
+        $pagination-color-gray-default-border,
+        $pagination-color-gray-hover-background,
+        $pagination-color-gray-hover-border,
+        $pagination-color-gray-active-background,
+        $pagination-color-gray-active-border
+      );
+
+      &:focus-visible {
+        box-shadow: inset 0 0 0 2px $pagination-color-default-focus-border,
+          inset 0 0 0 3px $color-white;
+      }
+
+      &:disabled,
+      &:hover:disabled,
+      &:focus-visible:disabled,
+      &.#{$prefix}-pagination-btn--disabled,
+      &.#{$prefix}-pagination-btn--disabled:hover,
+      &.#{$prefix}-pagination-btn--disabled:focus-visible {
+        background-color: $pagination-color-gray-disabled-background;
+        box-shadow: inset 0 0 0 1px $pagination-color-gray-disabled-border;
+        color: $pagination-color-gray-disabled-text;
+        cursor: not-allowed;
+      }
+    }
+
+    .#{$prefix}-pagination-btn.#{$prefix}-pagination-btn--selected {
+      background-color: $pagination-color-gray-active-background;
+      box-shadow: inset 0 0 0 1px $pagination-color-gray-active-border;
+      cursor: default;
+    }
+  }
+
+  .#{$prefix}-pagination--white {
+    .#{$prefix}-pagination-btn {
+      @include pagination-button-variant(
+        $pagination-color-white-default-background,
+        $pagination-color-white-default-text,
+        $pagination-color-white-default-border,
+        $pagination-color-white-hover-background,
+        $pagination-color-white-hover-border,
+        $pagination-color-white-active-background,
+        $pagination-color-white-active-border
+      );
+
+      &:focus-visible {
+        box-shadow: inset 0 0 0 2px $pagination-color-default-focus-border,
+          inset 0 0 0 3px $color-white;
+      }
+
+      &:disabled,
+      &:hover:disabled,
+      &:focus-visible:disabled,
+      &.#{$prefix}-pagination-btn--disabled,
+      &.#{$prefix}-pagination-btn--disabled:hover,
+      &.#{$prefix}-pagination-btn--disabled:focus-visible {
+        background-color: $pagination-color-white-disabled-background;
+        box-shadow: inset 0 0 0 1px $pagination-color-white-disabled-border;
+        color: $pagination-color-white-disabled-text;
+        cursor: not-allowed;
+      }
+    }
+
+    .#{$prefix}-pagination-btn.#{$prefix}-pagination-btn--selected {
+      background-color: $pagination-color-white-active-background;
+      box-shadow: inset 0 0 0 1px $pagination-color-white-active-border;
+      cursor: default;
+    }
+  }
+}
+
+@include pagination;
