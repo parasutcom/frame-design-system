@@ -1,0 +1,45 @@
+@import '../../design-tokens/build/scss/tokens';
+
+@mixin pagination-button-base {
+  @include button-reset;
+  @include type-style('label-02');
+
+  position: relative;
+  display: inline-flex;
+  min-width: $pagination-size-default-width;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-right: $pagination-size-default-padding;
+  padding-left: $pagination-size-default-padding;
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+  transition: all 200ms ease;
+  vertical-align: middle;
+}
+
+@mixin pagination-button-variant(
+  $background-color,
+  $text-color,
+  $border-color,
+  $hover-background-color,
+  $hover-border-color,
+  $active-background-color,
+  $active-border-color
+) {
+  background-color: $background-color;
+  box-shadow: inset 0 0 0 1px $border-color;
+  color: $text-color;
+
+  &:hover {
+    background-color: $hover-background-color;
+    box-shadow: inset 0 0 0 1px $hover-border-color;
+  }
+
+  &:active {
+    background-color: $active-background-color;
+    box-shadow: inset 0 0 0 1px $active-border-color;
+  }
+}
