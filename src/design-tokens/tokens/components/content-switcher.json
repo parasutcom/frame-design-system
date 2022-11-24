@@ -1,20 +1,5 @@
 {
   "content-switcher": {
-    "color": {
-      "default": {
-        "selected": {
-          "background": {
-            "value": "{color.cool-gray.80.value}"
-          },
-          "text": {
-            "value": "{color.white.value}"
-          },
-          "border": {
-            "value": "{color.cool-gray.80.value}"
-          }
-        }
-      }
-    },
     "size": {
       "small": {
         "height": {
