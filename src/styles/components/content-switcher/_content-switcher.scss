@@ -95,9 +95,9 @@
 
   .#{$prefix}-content-switcher-btn.#{$prefix}-content-switcher-btn--selected,
   .#{$prefix}-content-switcher-btn.#{$prefix}-content-switcher-btn--selected:hover {
-    background-color: $content-switcher-color-default-selected-background;
-    box-shadow: inset 0 0 0 1px $content-switcher-color-default-selected-border;
-    color: $content-switcher-color-default-selected-text;
+    background-color: $button-color-outline-active-background;
+    box-shadow: inset 0 0 0 1px $button-color-outline-active-border;
+    color: $button-color-outline-active-text;
     cursor: default;
   }
 }
