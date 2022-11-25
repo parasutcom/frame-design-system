@@ -41,10 +41,10 @@
       transparent,
       currentcolor,
       transparent,
+      $color-gray-20,
+      $color-gray-20,
       $color-gray-30,
-      $color-gray-30,
-      $color-gray-40,
-      $color-gray-40
+      $color-gray-30
     );
 
     &:focus-visible {
@@ -115,18 +115,6 @@
       $tag-color-interactive-default-text,
       $tag-color-interactive-default-border
     );
-
-    cursor: pointer;
-
-    &:hover {
-      background-color: $tag-color-interactive-hover-background;
-      box-shadow: inset 0 0 0 1px $tag-color-interactive-hover-border;
-    }
-
-    &:focus-visible {
-      box-shadow: inset 0 0 0 2px $tag-color-interactive-focus-border,
-        inset 0 0 0 3px $color-white;
-    }
 
     &:disabled,
     &:hover:disabled,
