@@ -2,6 +2,8 @@
   "radius": {
     "small": { "value" : "2px" },
     "medium": { "value" : "4px" },
-    "large": { "value" : "6px" }
+    "large": { "value" : "6px" },
+    "pill": { "value" : "10rem" },
+    "circle": { "value" : "50%" }
   }
 }
