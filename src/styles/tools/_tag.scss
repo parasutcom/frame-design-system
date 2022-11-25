@@ -1,0 +1,25 @@
+@import '../../design-tokens/build/scss/tokens';
+
+@mixin tag-base {
+  @include type-style('helper-text-01');
+
+  display: inline-flex;
+  max-width: 100%;
+  height: $tag-size-default-height;
+  align-items: center;
+  justify-content: center;
+  padding-right: $tag-size-default-padding;
+  padding-left: $tag-size-default-padding;
+  border-radius: $tag-border-radius;
+  cursor: default;
+  outline: none;
+  text-align: center;
+  transition: all 200ms ease;
+  vertical-align: middle;
+}
+
+@mixin tag-variant($background-color, $text-color, $border-color) {
+  background-color: $background-color;
+  box-shadow: inset 0 0 0 1px $border-color;
+  color: $text-color;
+}
