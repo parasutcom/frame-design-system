@@ -23,6 +23,8 @@ a {
 .sidebar {
   width: 256px;
   height: 100%;
+  overflow-y: auto;
+  flex-shrink: 0;
 }
 
 .logo .logo-link {
@@ -78,6 +80,7 @@ a {
   flex: 1 1 0;
   height: 100%;
   border-left: 1px solid #e5e5e5;
+  overflow-x: auto;
 }
 
 .main .header {
