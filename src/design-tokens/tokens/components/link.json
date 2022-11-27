@@ -1,0 +1,34 @@
+{
+  "link": {
+    "color": {
+      "text": {
+        "value": "{color.blue.60.value}"
+      },
+      "active": {
+        "text": {
+          "value": "{color.blue.80.value}"
+        }
+      },
+      "focus": {
+        "border": {
+          "value": "{color.blue.60.value}"
+        }
+      },
+      "disabled": {
+        "text": {
+          "value": "{color.gray.40.value}"
+        }
+      },
+      "dark": {
+        "text": {
+          "value": "{color.white.value}"
+        },
+        "active": {
+          "text": {
+            "value": "{color.white.value}"
+          }
+        }
+      }
+    }
+  }
+}
