@@ -1,14 +1,12 @@
 {
   "content-switcher": {
     "size": {
+      "height": {
+        "value": "{spacing.2x-large}"
+      },
       "small": {
         "height": {
           "value": "{spacing.x-large}"
-        }
-      },
-      "default": {
-        "height": {
-          "value": "{spacing.2x-large}"
         }
       }
     }
