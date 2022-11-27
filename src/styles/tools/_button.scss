@@ -15,14 +15,14 @@
   position: relative;
   display: inline-flex;
   max-width: 100%;
-  height: $button-size-default-height;
+  height: $button-size-height;
   align-items: center;
   justify-content: center;
-  padding-right: $button-size-default-padding;
-  padding-left: $button-size-default-padding;
+  padding-right: $button-size-padding;
+  padding-left: $button-size-padding;
   border-radius: $button-border-radius;
   cursor: pointer;
-  gap: $button-size-default-gap;
+  gap: $button-size-gap;
   outline: none;
   text-align: center;
   text-decoration: none;
@@ -30,7 +30,7 @@
   vertical-align: middle;
 
   &:focus-visible {
-    box-shadow: inset 0 0 0 2px $button-color-default-focus-border,
+    box-shadow: inset 0 0 0 2px $button-color-focus-border,
       inset 0 0 0 3px $color-white;
   }
 
@@ -40,9 +40,9 @@
   &.#{$prefix}-btn--disabled,
   &.#{$prefix}-btn--disabled:hover,
   &.#{$prefix}-btn--disabled:focus-visible {
-    background-color: $button-color-default-disabled-background;
-    box-shadow: inset 0 0 0 1px $button-color-default-disabled-border;
-    color: $button-color-default-disabled-text;
+    background-color: $button-color-disabled-background;
+    box-shadow: inset 0 0 0 1px $button-color-disabled-border;
+    color: $button-color-disabled-text;
     cursor: not-allowed;
   }
 }

@@ -1,35 +1,31 @@
 {
   "button": {
     "color": {
-      "default": {
-        "focus": {
-          "border": {
-            "value": "{color.blue.60.value}"
-          }
+      "focus": {
+        "border": {
+          "value": "{color.blue.60.value}"
+        }
+      },
+      "disabled": {
+        "background": {
+          "value": "{color.gray.20.value}"
         },
-        "disabled": {
-          "background": {
-            "value": "{color.gray.20.value}"
-          },
-          "text": {
-            "value": "{color.gray.40.value}"
-          },
-          "border": {
-            "value": "{color.gray.20.value}"
-          }
+        "text": {
+          "value": "{color.gray.40.value}"
+        },
+        "border": {
+          "value": "{color.gray.20.value}"
         }
       },
       "primary": {
-        "default": {
-          "background": {
-            "value": "{color.blue.60.value}"
-          },
-          "text": {
-            "value": "{color.white.value}"
-          },
-          "border": {
-            "value": "{color.blue.60.value}"
-          }
+        "background": {
+          "value": "{color.blue.60.value}"
+        },
+        "text": {
+          "value": "{color.white.value}"
+        },
+        "border": {
+          "value": "{color.blue.60.value}"
         },
         "hover": {
           "background": {
@@ -49,16 +45,14 @@
         }
       },
       "secondary": {
-        "default": {
-          "background": {
-            "value": "{color.cool-gray.60.value}"
-          },
-          "text": {
-            "value": "{color.white.value}"
-          },
-          "border": {
-            "value": "{color.cool-gray.60.value}"
-          }
+        "background": {
+          "value": "{color.cool-gray.60.value}"
+        },
+        "text": {
+          "value": "{color.white.value}"
+        },
+        "border": {
+          "value": "{color.cool-gray.60.value}"
         },
         "hover": {
           "background": {
@@ -78,13 +72,11 @@
         }
       },
       "outline": {
-        "default": {
-          "text": {
-            "value": "{color.cool-gray.60.value}"
-          },
-          "border": {
-            "value": "{color.cool-gray.60.value}"
-          }
+        "text": {
+          "value": "{color.cool-gray.60.value}"
+        },
+        "border": {
+          "value": "{color.cool-gray.60.value}"
         },
         "hover": {
           "background": {
@@ -118,10 +110,8 @@
         }
       },
       "ghost": {
-        "default": {
-          "text": {
-            "value": "{color.antrasit-gray.60.value}"
-          }
+        "text": {
+          "value": "{color.antrasit-gray.60.value}"
         },
         "hover": {
           "background": {
@@ -146,16 +136,14 @@
         }
       },
       "destructive": {
-        "default": {
-          "background": {
-            "value": "{color.red.60.value}"
-          },
-          "text": {
-            "value": "{color.white.value}"
-          },
-          "border": {
-            "value": "{color.red.60.value}"
-          }
+        "background": {
+          "value": "{color.red.60.value}"
+        },
+        "text": {
+          "value": "{color.white.value}"
+        },
+        "border": {
+          "value": "{color.red.60.value}"
         },
         "hover": {
           "background": {
@@ -175,13 +163,11 @@
         }
       },
       "destructive-outline": {
-        "default": {
-          "text": {
-            "value": "{color.red.60.value}"
-          },
-          "border": {
-            "value": "{color.red.60.value}"
-          }
+        "text": {
+          "value": "{color.red.60.value}"
+        },
+        "border": {
+          "value": "{color.red.60.value}"
         },
         "hover": {
           "background": {
@@ -216,26 +202,24 @@
       }
     },
     "size": {
+      "height": {
+        "value": "{spacing.2x-large}"
+      },
+      "width": {
+        "value": "{spacing.2x-large}"
+      },
+      "padding": {
+        "value": "{spacing.medium}"
+      },
+      "gap": {
+        "value": "{spacing.2x-small}"
+      },
       "small": {
         "height": {
           "value": "{spacing.x-large}"
         },
         "width": {
           "value": "{spacing.x-large}"
-        }
-      },
-      "default": {
-        "height": {
-          "value": "{spacing.2x-large}"
-        },
-        "width": {
-          "value": "{spacing.2x-large}"
-        },
-        "padding": {
-          "value": "{spacing.medium}"
-        },
-        "gap": {
-          "value": "{spacing.2x-small}"
         }
       },
       "large": {

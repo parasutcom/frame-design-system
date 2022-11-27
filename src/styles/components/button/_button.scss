@@ -14,7 +14,7 @@
   }
 
   .#{$prefix}-btn--icon {
-    width: $button-size-default-width;
+    width: $button-size-width;
     padding-right: 0;
     padding-left: 0;
   }
@@ -60,9 +60,9 @@
 
   .#{$prefix}-btn--primary {
     @include button-variant(
-      $button-color-primary-default-background,
-      $button-color-primary-default-text,
-      $button-color-primary-default-border,
+      $button-color-primary-background,
+      $button-color-primary-text,
+      $button-color-primary-border,
       $button-color-primary-hover-background,
       $button-color-primary-hover-border,
       $button-color-primary-active-background,
@@ -72,9 +72,9 @@
 
   .#{$prefix}-btn--secondary {
     @include button-variant(
-      $button-color-secondary-default-background,
-      $button-color-secondary-default-text,
-      $button-color-secondary-default-border,
+      $button-color-secondary-background,
+      $button-color-secondary-text,
+      $button-color-secondary-border,
       $button-color-secondary-hover-background,
       $button-color-secondary-hover-border,
       $button-color-secondary-active-background,
@@ -85,8 +85,8 @@
   .#{$prefix}-btn--outline {
     @include button-variant(
       transparent,
-      $button-color-outline-default-text,
-      $button-color-outline-default-border,
+      $button-color-outline-text,
+      $button-color-outline-border,
       $button-color-outline-hover-background,
       $button-color-outline-hover-border,
       $button-color-outline-active-background,
@@ -116,7 +116,7 @@
   .#{$prefix}-btn--ghost {
     @include button-variant(
       transparent,
-      $button-color-ghost-default-text,
+      $button-color-ghost-text,
       transparent,
       $button-color-ghost-hover-background,
       $button-color-ghost-hover-border,
@@ -138,9 +138,9 @@
 
   .#{$prefix}-btn--destructive {
     @include button-variant(
-      $button-color-destructive-default-background,
-      $button-color-destructive-default-text,
-      $button-color-destructive-default-border,
+      $button-color-destructive-background,
+      $button-color-destructive-text,
+      $button-color-destructive-border,
       $button-color-destructive-hover-background,
       $button-color-destructive-hover-border,
       $button-color-destructive-active-background,
@@ -151,8 +151,8 @@
   .#{$prefix}-btn--destructive-outline {
     @include button-variant(
       transparent,
-      $button-color-destructive-outline-default-text,
-      $button-color-destructive-outline-default-border,
+      $button-color-destructive-outline-text,
+      $button-color-destructive-outline-border,
       $button-color-destructive-outline-hover-background,
       $button-color-destructive-outline-hover-border,
       $button-color-destructive-outline-active-background,
