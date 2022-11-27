@@ -5,7 +5,7 @@
 @mixin pagination {
   .#{$prefix}-pagination {
     display: inline-flex;
-    height: $pagination-size-default-height;
+    height: $pagination-size-height;
     gap: 1px;
   }
 
@@ -46,9 +46,9 @@
   .#{$prefix}-pagination--gray {
     .#{$prefix}-pagination-btn {
       @include pagination-button-variant(
-        $pagination-color-gray-default-background,
-        $pagination-color-gray-default-text,
-        $pagination-color-gray-default-border,
+        $pagination-color-gray-background,
+        $pagination-color-gray-text,
+        $pagination-color-gray-border,
         $pagination-color-gray-hover-background,
         $pagination-color-gray-hover-border,
         $pagination-color-gray-active-background,
@@ -56,7 +56,7 @@
       );
 
       &:focus-visible {
-        box-shadow: inset 0 0 0 2px $pagination-color-default-focus-border,
+        box-shadow: inset 0 0 0 2px $pagination-color-focus-border,
           inset 0 0 0 3px $color-white;
       }
 
@@ -83,9 +83,9 @@
   .#{$prefix}-pagination--white {
     .#{$prefix}-pagination-btn {
       @include pagination-button-variant(
-        $pagination-color-white-default-background,
-        $pagination-color-white-default-text,
-        $pagination-color-white-default-border,
+        $pagination-color-white-background,
+        $pagination-color-white-text,
+        $pagination-color-white-border,
         $pagination-color-white-hover-background,
         $pagination-color-white-hover-border,
         $pagination-color-white-active-background,
@@ -93,7 +93,7 @@
       );
 
       &:focus-visible {
-        box-shadow: inset 0 0 0 2px $pagination-color-default-focus-border,
+        box-shadow: inset 0 0 0 2px $pagination-color-focus-border,
           inset 0 0 0 3px $color-white;
       }
 

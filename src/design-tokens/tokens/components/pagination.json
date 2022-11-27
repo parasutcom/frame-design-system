@@ -1,24 +1,20 @@
 {
   "pagination": {
     "color": {
-      "default": {
-        "focus": {
-          "border": {
-            "value": "{color.blue.60.value}"
-          }
+      "focus": {
+        "border": {
+          "value": "{color.blue.60.value}"
         }
       },
       "gray": {
-        "default": {
-          "background": {
-            "value": "{color.gray.10.value}"
-          },
-          "text": {
-            "value": "{color.gray.90.value}"
-          },
-          "border": {
-            "value": "{color.gray.10.value}"
-          }
+        "background": {
+          "value": "{color.gray.10.value}"
+        },
+        "text": {
+          "value": "{color.gray.90.value}"
+        },
+        "border": {
+          "value": "{color.gray.10.value}"
         },
         "hover": {
           "background": {
@@ -49,16 +45,14 @@
         }
       },
       "white": {
-        "default": {
-          "background": {
-            "value": "{color.white.value}"
-          },
-          "text": {
-            "value": "{color.gray.90.value}"
-          },
-          "border": {
-            "value": "{color.white.value}"
-          }
+        "background": {
+          "value": "{color.white.value}"
+        },
+        "text": {
+          "value": "{color.gray.90.value}"
+        },
+        "border": {
+          "value": "{color.white.value}"
         },
         "hover": {
           "background": {
@@ -90,23 +84,21 @@
       }
     },
     "size": {
-      "small": {
-        "height": {
-          "value": "{spacing.x-large}"
-        },
-        "width": {
-          "value": "{spacing.x-large}"
-        }
+      "width": {
+        "value": "{spacing.2x-large}"
       },
-      "default": {
-        "height": {
-          "value": "{spacing.2x-large}"
-        },
+      "height": {
+        "value": "{spacing.2x-large}"
+      },
+      "padding": {
+        "value": "{spacing.2x-small}"
+      },
+      "small": {
         "width": {
-          "value": "{spacing.2x-large}"
+          "value": "{spacing.x-large}"
         },
-        "padding": {
-          "value": "{spacing.2x-small}"
+        "height": {
+          "value": "{spacing.x-large}"
         }
       }
     },

@@ -6,12 +6,12 @@
 
   position: relative;
   display: inline-flex;
-  min-width: $pagination-size-default-width;
+  min-width: $pagination-size-width;
   max-width: 100%;
   align-items: center;
   justify-content: center;
-  padding-right: $pagination-size-default-padding;
-  padding-left: $pagination-size-default-padding;
+  padding-right: $pagination-size-padding;
+  padding-left: $pagination-size-padding;
   cursor: pointer;
   outline: none;
   text-align: center;
