@@ -6,15 +6,15 @@
 
     display: inline-flex;
     overflow: hidden;
-    width: $badge-size-default-width;
-    height: $badge-size-default-height;
+    width: $badge-size-width;
+    height: $badge-size-height;
     flex-shrink: 0;
     align-items: center;
     justify-content: center;
-    padding: $badge-size-default-padding;
-    background-color: $badge-color-default-background;
+    padding: $badge-size-padding;
+    background-color: $badge-color-background;
     border-radius: $badge-border-radius;
-    color: $badge-color-default-text;
+    color: $badge-color-text;
   }
 
   .#{$prefix}-badge--lg {
