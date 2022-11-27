@@ -1,32 +1,28 @@
 {
   "badge": {
     "color": {
-      "default": {
-        "background": {
-          "value": "{color.gray.10.value}"
-        },
-        "text": {
-          "value": "{color.gray.60.value}"
-        }
+      "background": {
+        "value": "{color.gray.10.value}"
+      },
+      "text": {
+        "value": "{color.gray.60.value}"
       }
     },
     "size": {
-      "default": {
-        "height": {
-          "value": "{spacing.2x-large}"
-        },
-        "width": {
-          "value": "{spacing.2x-large}"
-        },
-        "padding": {
-          "value": "{spacing.3x-small}"
-        }
+      "width": {
+        "value": "{spacing.2x-large}"
+      },
+      "height": {
+        "value": "{spacing.2x-large}"
+      },
+      "padding": {
+        "value": "{spacing.3x-small}"
       },
       "large": {
-        "height": {
+        "width": {
           "value": "{spacing.3x-large}"
         },
-        "width": {
+        "height": {
           "value": "{spacing.3x-large}"
         }
       }
