@@ -5,11 +5,11 @@
 
   display: inline-flex;
   max-width: 100%;
-  height: $tag-size-default-height;
+  height: $tag-size-height;
   align-items: center;
   justify-content: center;
-  padding-right: $tag-size-default-padding;
-  padding-left: $tag-size-default-padding;
+  padding-right: $tag-size-padding;
+  padding-left: $tag-size-padding;
   border-radius: $tag-border-radius;
   cursor: default;
   outline: none;

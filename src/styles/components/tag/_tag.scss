@@ -11,9 +11,9 @@
     @include truncate;
 
     flex-grow: 1;
-    padding-right: $tag-size-default-padding;
-    padding-left: $tag-size-default-padding;
-    color: $tag-color-default-text;
+    padding-right: $tag-size-padding;
+    padding-left: $tag-size-padding;
+    color: $tag-color-text;
   }
 
   .#{$prefix}-tag__icon {
@@ -54,45 +54,45 @@
 
   .#{$prefix}-tag--semantic.#{$prefix}-tag--success {
     @include tag-variant(
-      $tag-color-success-default-background,
-      $tag-color-success-default-text,
-      $tag-color-success-default-border
+      $tag-color-semantic-success-background,
+      $tag-color-semantic-success-text,
+      $tag-color-semantic-success-border
     );
   }
 
   .#{$prefix}-tag--semantic.#{$prefix}-tag--pending {
     @include tag-variant(
-      $tag-color-pending-default-background,
-      $tag-color-pending-default-text,
-      $tag-color-pending-default-border
+      $tag-color-semantic-pending-background,
+      $tag-color-semantic-pending-text,
+      $tag-color-semantic-pending-border
     );
   }
 
   .#{$prefix}-tag--semantic.#{$prefix}-tag--error {
     @include tag-variant(
-      $tag-color-error-default-background,
-      $tag-color-error-default-text,
-      $tag-color-error-default-border
+      $tag-color-semantic-error-background,
+      $tag-color-semantic-error-text,
+      $tag-color-semantic-error-border
     );
   }
 
   .#{$prefix}-tag--semantic.#{$prefix}-tag--purple {
     @include tag-variant(
-      $tag-color-purple-default-background,
-      $tag-color-purple-default-text,
-      $tag-color-purple-default-border
+      $tag-color-semantic-purple-background,
+      $tag-color-semantic-purple-text,
+      $tag-color-semantic-purple-border
     );
   }
 
   .#{$prefix}-tag--semantic.#{$prefix}-tag--information {
     @include tag-variant(
-      $tag-color-information-default-background,
-      $tag-color-information-default-text,
-      $tag-color-information-default-border
+      $tag-color-semantic-information-background,
+      $tag-color-semantic-information-text,
+      $tag-color-semantic-information-border
     );
 
     .#{$prefix}-tag__label {
-      color: $tag-color-information-default-text;
+      color: $tag-color-semantic-information-text;
     }
   }
 
@@ -102,18 +102,18 @@
   }
 
   .#{$prefix}-tag--semantic.#{$prefix}-tag--information.#{$prefix}-tag--transparent {
-    color: $tag-color-information-inverse-text;
+    color: $tag-color-semantic-information-dark-text;
 
     .#{$prefix}-tag__label {
-      color: $tag-color-information-inverse-text;
+      color: $tag-color-semantic-information-dark-text;
     }
   }
 
   .#{$prefix}-tag--interactive {
     @include tag-variant(
-      $tag-color-interactive-default-background,
-      $tag-color-interactive-default-text,
-      $tag-color-interactive-default-border
+      $tag-color-interactive-background,
+      $tag-color-interactive-text,
+      $tag-color-interactive-border
     );
 
     &:disabled,
