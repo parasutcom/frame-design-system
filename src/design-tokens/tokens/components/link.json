@@ -19,6 +19,16 @@
           "value": "{color.gray.40.value}"
         }
       },
+      "secondary": {
+        "text": {
+          "value": "{color.gray.60.value}"
+        },
+        "active": {
+          "text": {
+            "value": "{color.gray.80.value}"
+          }
+        }
+      },
       "dark": {
         "text": {
           "value": "{color.white.value}"
