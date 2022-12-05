@@ -1,0 +1,44 @@
+{
+  "radio-button": {
+    "color": {
+      "background": {
+        "value": "{color.white.value}"
+      },
+      "text": {
+        "value": "{color.gray.90.value}"
+      },
+      "border": {
+        "value": "{color.gray.90.value}"
+      },
+      "focus": {
+        "border": {
+          "value": "{color.blue.60.value}"
+        }
+      },
+      "disabled": {
+        "text": {
+          "value": "{color.gray.40.value}"
+        },
+        "border": {
+          "value": "{color.gray.20.value}"
+        }
+      }
+    },
+    "size": {
+      "height": {
+        "value": "{spacing.medium}"
+      },
+      "width": {
+        "value": "{spacing.medium}"
+      },
+      "gap": {
+        "value": "{spacing.2x-small}"
+      }
+    },
+    "border": {
+      "radius": {
+        "value": "{radius.circle}"
+      }
+    }
+  }
+}
