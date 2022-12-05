@@ -37,7 +37,7 @@
   .#{$prefix}-checkbox__label-mark::after {
     @include icon-size('xs');
 
-    content: "'\f00c'";
+    content: '\f00c';
     font-family: $font-family-icon;
     opacity: 0;
   }
