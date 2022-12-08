@@ -42,8 +42,9 @@
   }
 
   .#{$prefix}-btn__icon {
-    flex-shrink: 0;
     @include icon-size('md');
+
+    flex-shrink: 0;
   }
 
   .#{$prefix}-btn.#{$prefix}-btn__busy {
