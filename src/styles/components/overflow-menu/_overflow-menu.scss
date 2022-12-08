@@ -1,0 +1,156 @@
+@import '../../settings/prefix';
+
+@mixin overflow-menu {
+  .#{$prefix}-overflow-menu {
+    position: relative;
+    display: inline-block;
+  }
+
+  .#{$prefix}-overflow-menu-content {
+    position: absolute;
+    z-index: $z-index-overflow-menu;
+    top: 100%;
+    right: auto;
+    left: 0;
+    display: none;
+    min-width: $overflow-menu-size-container-min-width;
+    max-width: $overflow-menu-size-container-max-width;
+    flex-direction: column;
+    margin-top: $spacing-2x-small;
+  }
+
+  .#{$prefix}-overflow-menu-options {
+    display: flex;
+    overflow: hidden;
+    max-height: $overflow-menu-size-container-max-height;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: $overflow-menu-color-background;
+    border-radius: $overflow-menu-border-radius;
+    box-shadow: 0 2px 6px rgb(31 31 31 / 24%);
+    list-style: none;
+    overflow-y: auto;
+  }
+
+  .#{$prefix}-overflow-menu-options__item {
+    display: flex;
+    width: 100%;
+    height: $overflow-menu-size-item-height;
+    flex-shrink: 0;
+    align-items: center;
+  }
+
+  .#{$prefix}-overflow-menu-options__btn {
+    @include type-style('label-01');
+
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    padding-right: $overflow-menu-size-item-padding;
+    padding-left: $overflow-menu-size-item-padding;
+    color: $overflow-menu-color-text;
+    cursor: pointer;
+    gap: $overflow-menu-size-item-gap;
+    transition: all 200ms ease;
+
+    &:hover {
+      background-color: $overflow-menu-color-hover-background;
+    }
+
+    &:active {
+      background-color: $overflow-menu-color-active-background;
+    }
+
+    &:focus-visible {
+      box-shadow: inset 0 0 0 2px $overflow-menu-color-focus-border,
+        inset 0 0 0 3px $color-white;
+    }
+  }
+
+  .#{$prefix}-overflow-menu-options__item-label {
+    @include truncate;
+  }
+
+  .#{$prefix}-overflow-menu-options__item-prefix-icon,
+  .#{$prefix}-overflow-menu-options__item-suffix-icon {
+    @include icon-size('md');
+
+    flex-shrink: 0;
+  }
+
+  .#{$prefix}-overflow-menu-options__item-suffix-icon {
+    margin-left: auto;
+  }
+
+  .#{$prefix}-overflow-menu__header {
+    @include type-style('label-02');
+
+    display: flex;
+    width: 100%;
+    height: $overflow-menu-size-item-height;
+    flex-shrink: 0;
+    align-items: center;
+    padding-right: $overflow-menu-size-item-padding;
+    padding-left: $overflow-menu-size-item-padding;
+    color: $color-gray-60;
+
+    span {
+      @include truncate;
+    }
+  }
+
+  .#{$prefix}-overflow-menu__seperator {
+    width: 100%;
+    height: 0;
+    border-top: 1px solid $color-gray-10;
+  }
+
+  .#{$prefix}-overflow-menu-options__item--destructive
+    .#{$prefix}-overflow-menu-options__btn {
+    color: $overflow-menu-color-destructive-text;
+  }
+
+  .#{$prefix}-overflow-menu-options__item--disabled
+    .#{$prefix}-overflow-menu-options__btn {
+    color: $overflow-menu-color-disabled-text;
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: unset;
+    }
+
+    &:focus-visible {
+      box-shadow: unset;
+    }
+  }
+
+  .#{$prefix}-overflow-menu.#{$prefix}-overflow-menu--open
+    .#{$prefix}-overflow-menu-content {
+    display: flex;
+  }
+
+  .#{$prefix}-overflow-menu.#{$prefix}-overflow-menu--right
+    .#{$prefix}-overflow-menu-content {
+    right: 0;
+    left: auto;
+  }
+
+  .#{$prefix}-overflow-menu-options__btn .#{$prefix}-checkbox,
+  .#{$prefix}-overflow-menu-options__btn
+    .#{$prefix}-checkbox
+    .#{$prefix}-checkbox__label {
+    width: 100%;
+    height: 100%;
+  }
+
+  .#{$prefix}-form__helper-text {
+    @include type-style('helper-text-01');
+
+    width: 100%;
+    margin-top: $spacing-2x-small;
+    color: $color-gray-50;
+  }
+}
+
+@include overflow-menu;
