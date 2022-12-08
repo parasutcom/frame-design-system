@@ -1,0 +1,66 @@
+{
+  "overflow-menu": {
+    "color": {
+      "background": {
+        "value": "{color.gray.0.value}"
+      },
+      "text": {
+        "value": "{color.gray.90.value}"
+      },
+      "hover": {
+        "background": {
+          "value": "{color.gray.10.value}"
+        }
+      },
+      "active": {
+        "background": {
+          "value": "{color.gray.20.value}"
+        }
+      },
+      "focus": {
+        "border": {
+          "value": "{color.blue.60.value}"
+        }
+      },
+      "disabled": {
+        "text": {
+          "value": "{color.gray.40.value}"
+        }
+      },
+      "destructive": {
+        "text": {
+          "value": "{color.red.60.value}"
+        }
+      }
+    },
+    "size": {
+      "container": {
+        "min-width": {
+          "value": "144px"
+        },
+        "max-width": {
+          "value": "288px"
+        },
+        "max-height": {
+          "value": "300px"
+        }
+      },
+      "item": {
+        "height": {
+          "value": "{spacing.2x-large}"
+        },
+        "padding": {
+          "value": "{spacing.medium}"
+        },
+        "gap": {
+          "value": "{spacing.2x-small}"
+        }
+      }
+    },
+    "border": {
+      "radius": {
+        "value": "{radius.medium}"
+      }
+    }
+  }
+}
