@@ -18,10 +18,15 @@
 
     position: relative;
     display: inline-flex;
+    flex-grow: 1;
     align-items: center;
     color: $checkbox-color-text;
     cursor: pointer;
     gap: $checkbox-size-gap;
+  }
+
+  .#{$prefix}-checkbox__label-text {
+    @include truncate;
   }
 
   .#{$prefix}-checkbox__label-mark {
