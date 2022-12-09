@@ -68,6 +68,18 @@
     }
   }
 
+  .#{$prefix}-overflow-menu-options
+    .#{$prefix}-overflow-menu-options__item:first-child
+    .#{$prefix}-overflow-menu-options__btn {
+    border-radius: $overflow-menu-border-radius $overflow-menu-border-radius 0 0;
+  }
+
+  .#{$prefix}-overflow-menu-options
+    .#{$prefix}-overflow-menu-options__item:last-child
+    .#{$prefix}-overflow-menu-options__btn {
+    border-radius: 0 0 $overflow-menu-border-radius $overflow-menu-border-radius;
+  }
+
   .#{$prefix}-overflow-menu-options__item-label {
     @include truncate;
   }
