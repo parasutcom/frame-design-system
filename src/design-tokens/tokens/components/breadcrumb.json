@@ -1,0 +1,29 @@
+{
+  "breadcrumb": {
+    "color": {
+      "text": {
+        "value": "{color.gray.60.value}"
+      },
+      "hover": {
+        "text": {
+          "value": "{color.gray.70.value}"
+        }
+      },
+      "active": {
+        "text": {
+          "value": "{color.gray.80.value}"
+        }
+      },
+      "current": {
+        "text": {
+          "value": "{color.blue.60.value}"
+        }
+      }
+    },
+    "size": {
+      "gap": {
+        "value": "{spacing.3x-small}"
+      }
+    }
+  }
+}
