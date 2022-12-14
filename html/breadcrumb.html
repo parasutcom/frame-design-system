@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="../dist/css/main.css">
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
   <title>FDS | Breadcrumb</title>
   <style>
@@ -74,9 +75,248 @@
       </div>
       <div class="body">
         <table>
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Default</th>
+              <th>Truncate</th>
+            </tr>
+          </thead>
           <tbody>
             <tr>
-              <td>Coming soon...</td>
+              <td>Small</td>
+              <td>
+                <nav role="navigation" aria-label="breadcrumb">
+                  <ol class="fds-breadcrumb fds-breadcrumb--sm">
+                    <li class="fds-breadcrumb__item">
+                      <a href="#" class="fds-link">Breadcrumb 1</a>
+                    </li>
+                    <li class="fds-breadcrumb__item">
+                      <a href="#" class="fds-link">Breadcrumb 2</a>
+                    </li>
+                    <li class="fds-breadcrumb__item fds-breadcrumb__item--current">
+                      <a href="#" class="fds-link" aria-current="page">Breadcrumb 3</a>
+                    </li>
+                  </ol>
+                </nav>
+              </td>
+
+              <td>
+                <nav role="navigation" aria-label="breadcrumb">
+                  <ol class="fds-breadcrumb fds-breadcrumb--sm">
+                    <li class="fds-breadcrumb__item">
+                      <a href="#" class="fds-link">Breadcrumb 1</a>
+                    </li>
+                    <li class="fds-breadcrumb__item">
+                      <div class="fds-overflow-menu fds-overflow-menu-trigger fds-overflow-menu--open" x-data="{ open: false }">
+                        <button class="fds-btn fds-btn--ghost fds-btn--icon fds-btn--sm" @click="open = ! open">
+                          <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-ellipsis"></i></span>
+                        </button>
+                        <ul class="fds-overflow-menu-options" tabindex="-1" x-show="open" @click.outside="open = false" role="menu">
+                          <li class="fds-overflow-menu-options__item" role="none">
+                            <a href="#" class="fds-overflow-menu-options__btn">
+                              <span class="fds-overflow-menu-options__item-label">Breadcrumb 2</span>
+                            </a>
+                          </li>
+                          <li class="fds-overflow-menu-options__item" role="none">
+                            <a href="#" class="fds-overflow-menu-options__btn">
+                              <span class="fds-overflow-menu-options__item-label">Breadcrumb 3</span>
+                            </a>
+                          </li>
+                          <li class="fds-overflow-menu-options__item" role="none">
+                            <a href="#" class="fds-overflow-menu-options__btn">
+                              <span class="fds-overflow-menu-options__item-label">Breadcrumb 4</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="fds-breadcrumb__item">
+                      <a href="#" class="fds-link">Breadcrumb 5</a>
+                    </li>
+                    <li class="fds-breadcrumb__item fds-breadcrumb__item--current">
+                      <a href="#" class="fds-link" aria-current="page">Breadcrumb 6</a>
+                    </li>
+                  </ol>
+                </nav>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Default</td>
+              <td>
+                <nav role="navigation" aria-label="breadcrumb">
+                  <ol class="fds-breadcrumb">
+                    <li class="fds-breadcrumb__item">
+                      <a href="#" class="fds-link">Breadcrumb 1</a>
+                    </li>
+                    <li class="fds-breadcrumb__item">
+                      <a href="#" class="fds-link">Breadcrumb 2</a>
+                    </li>
+                    <li class="fds-breadcrumb__item fds-breadcrumb__item--current">
+                      <a href="#" class="fds-link" aria-current="page">Breadcrumb 3</a>
+                    </li>
+                  </ol>
+                </nav>
+              </td>
+
+              <td>
+                <nav role="navigation" aria-label="breadcrumb">
+                  <ol class="fds-breadcrumb">
+                    <li class="fds-breadcrumb__item">
+                      <a href="#" class="fds-link">Breadcrumb 1</a>
+                    </li>
+                    <li class="fds-breadcrumb__item">
+                      <div class="fds-overflow-menu fds-overflow-menu-trigger fds-overflow-menu--open" x-data="{ open: false }">
+                        <button class="fds-btn fds-btn--ghost fds-btn--icon fds-btn--sm" @click="open = ! open">
+                          <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-ellipsis"></i></span>
+                        </button>
+                        <ul class="fds-overflow-menu-options" tabindex="-1" x-show="open" @click.outside="open = false" role="menu">
+                          <li class="fds-overflow-menu-options__item" role="none">
+                            <a href="#" class="fds-overflow-menu-options__btn">
+                              <span class="fds-overflow-menu-options__item-label">Breadcrumb 2</span>
+                            </a>
+                          </li>
+                          <li class="fds-overflow-menu-options__item" role="none">
+                            <a href="#" class="fds-overflow-menu-options__btn">
+                              <span class="fds-overflow-menu-options__item-label">Breadcrumb 3</span>
+                            </a>
+                          </li>
+                          <li class="fds-overflow-menu-options__item" role="none">
+                            <a href="#" class="fds-overflow-menu-options__btn">
+                              <span class="fds-overflow-menu-options__item-label">Breadcrumb 4</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="fds-breadcrumb__item">
+                      <a href="#" class="fds-link">Breadcrumb 5</a>
+                    </li>
+                    <li class="fds-breadcrumb__item fds-breadcrumb__item--current">
+                      <a href="#" class="fds-link" aria-current="page">Breadcrumb 6</a>
+                    </li>
+                  </ol>
+                </nav>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Small Column</td>
+              <td>
+                <nav role="navigation" aria-label="breadcrumb">
+                  <ol class="fds-breadcrumb fds-breadcrumb--multiple fds-breadcrumb--sm">
+                    <li class="fds-breadcrumb__item">
+                      <a href="#" class="fds-link">Breadcrumb 1</a>
+                    </li>
+                    <li class="fds-breadcrumb__item">
+                      <a href="#" class="fds-link">Breadcrumb 2</a>
+                    </li>
+                    <li class="fds-breadcrumb__item fds-breadcrumb__item--current">
+                      <a href="#" class="fds-link" aria-current="page">Breadcrumb 3</a>
+                    </li>
+                  </ol>
+                </nav>
+              </td>
+
+              <td>
+                <nav role="navigation" aria-label="breadcrumb">
+                  <ol class="fds-breadcrumb fds-breadcrumb--multiple fds-breadcrumb--sm">
+                    <li class="fds-breadcrumb__item">
+                      <a href="#" class="fds-link">Breadcrumb 1</a>
+                    </li>
+                    <li class="fds-breadcrumb__item">
+                      <div class="fds-overflow-menu fds-overflow-menu-trigger fds-overflow-menu--open" x-data="{ open: false }">
+                        <button class="fds-btn fds-btn--ghost fds-btn--icon fds-btn--sm" @click="open = ! open">
+                          <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-ellipsis"></i></span>
+                        </button>
+                        <ul class="fds-overflow-menu-options" tabindex="-1" x-show="open" @click.outside="open = false" role="menu">
+                          <li class="fds-overflow-menu-options__item" role="none">
+                            <a href="#" class="fds-overflow-menu-options__btn">
+                              <span class="fds-overflow-menu-options__item-label">Breadcrumb 2</span>
+                            </a>
+                          </li>
+                          <li class="fds-overflow-menu-options__item" role="none">
+                            <a href="#" class="fds-overflow-menu-options__btn">
+                              <span class="fds-overflow-menu-options__item-label">Breadcrumb 3</span>
+                            </a>
+                          </li>
+                          <li class="fds-overflow-menu-options__item" role="none">
+                            <a href="#" class="fds-overflow-menu-options__btn">
+                              <span class="fds-overflow-menu-options__item-label">Breadcrumb 4</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="fds-breadcrumb__item">
+                      <a href="#" class="fds-link">Breadcrumb 5</a>
+                    </li>
+                    <li class="fds-breadcrumb__item fds-breadcrumb__item--current">
+                      <a href="#" class="fds-link" aria-current="page">Breadcrumb 6</a>
+                    </li>
+                  </ol>
+                </nav>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Default Column</td>
+              <td>
+                <nav role="navigation" aria-label="breadcrumb">
+                  <ol class="fds-breadcrumb fds-breadcrumb--multiple">
+                    <li class="fds-breadcrumb__item">
+                      <a href="#" class="fds-link">Breadcrumb 1</a>
+                    </li>
+                    <li class="fds-breadcrumb__item">
+                      <a href="#" class="fds-link">Breadcrumb 2</a>
+                    </li>
+                    <li class="fds-breadcrumb__item fds-breadcrumb__item--current">
+                      <a href="#" class="fds-link" aria-current="page">Breadcrumb 3</a>
+                    </li>
+                  </ol>
+                </nav>
+              </td>
+
+              <td>
+                <nav role="navigation" aria-label="breadcrumb">
+                  <ol class="fds-breadcrumb fds-breadcrumb--multiple">
+                    <li class="fds-breadcrumb__item">
+                      <a href="#" class="fds-link">Breadcrumb 1</a>
+                    </li>
+                    <li class="fds-breadcrumb__item">
+                      <div class="fds-overflow-menu fds-overflow-menu-trigger fds-overflow-menu--open" x-data="{ open: false }">
+                        <button class="fds-btn fds-btn--ghost fds-btn--icon fds-btn--sm" @click="open = ! open">
+                          <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-ellipsis"></i></span>
+                        </button>
+                        <ul class="fds-overflow-menu-options" tabindex="-1" x-show="open" @click.outside="open = false" role="menu">
+                          <li class="fds-overflow-menu-options__item" role="none">
+                            <a href="#" class="fds-overflow-menu-options__btn">
+                              <span class="fds-overflow-menu-options__item-label">Breadcrumb 2</span>
+                            </a>
+                          </li>
+                          <li class="fds-overflow-menu-options__item" role="none">
+                            <a href="#" class="fds-overflow-menu-options__btn">
+                              <span class="fds-overflow-menu-options__item-label">Breadcrumb 3</span>
+                            </a>
+                          </li>
+                          <li class="fds-overflow-menu-options__item" role="none">
+                            <a href="#" class="fds-overflow-menu-options__btn">
+                              <span class="fds-overflow-menu-options__item-label">Breadcrumb 4</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="fds-breadcrumb__item">
+                      <a href="#" class="fds-link">Breadcrumb 5</a>
+                    </li>
+                    <li class="fds-breadcrumb__item fds-breadcrumb__item--current">
+                      <a href="#" class="fds-link" aria-current="page">Breadcrumb 6</a>
+                    </li>
+                  </ol>
+                </nav>
+              </td>
             </tr>
           </tbody>
         </table>
