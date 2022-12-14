@@ -1,0 +1,87 @@
+@import '../../settings/prefix';
+
+@mixin breadcrumb {
+  .#{$prefix}-breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: $breadcrumb-size-gap;
+  }
+
+  .#{$prefix}-breadcrumb__item {
+    @include type-style('heading-04');
+
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: $breadcrumb-size-gap;
+  }
+
+  .#{$prefix}-breadcrumb__item:not(:last-child)::after {
+    @include icon-size('xs');
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-gray-70;
+    content: '\f054';
+    font-family: $font-family-icon;
+    font-weight: 300;
+  }
+
+  .#{$prefix}-breadcrumb__item .#{$prefix}-link {
+    color: $breadcrumb-color-text;
+
+    &:hover {
+      color: $breadcrumb-color-hover-text;
+      text-decoration: none;
+    }
+
+    &:active {
+      color: $breadcrumb-color-active-text;
+    }
+  }
+
+  .#{$prefix}-breadcrumb__item.#{$prefix}-breadcrumb__item--current
+    .#{$prefix}-link {
+    color: $breadcrumb-color-current-text;
+    cursor: default;
+  }
+
+  .#{$prefix}-breadcrumb.#{$prefix}-breadcrumb--sm
+    .#{$prefix}-breadcrumb__item {
+    @include type-style('label-01');
+  }
+
+  .#{$prefix}-breadcrumb.#{$prefix}-breadcrumb--multiple
+    .#{$prefix}-breadcrumb__item.#{$prefix}-breadcrumb__item--current {
+    @include type-style('heading-02');
+
+    flex-basis: 100%;
+  }
+
+  .#{$prefix}-breadcrumb.#{$prefix}-breadcrumb--sm.#{$prefix}-breadcrumb--multiple
+    .#{$prefix}-breadcrumb__item.#{$prefix}-breadcrumb__item--current {
+    @include type-style('heading-04');
+
+    flex-basis: 100%;
+  }
+
+  .#{$prefix}-breadcrumb .#{$prefix}-btn--ghost {
+    color: $color-gray-60;
+
+    &:hover {
+      background-color: $color-gray-10;
+      box-shadow: inset 0 0 0 1px $color-gray-10;
+    }
+
+    &:active {
+      background-color: $color-gray-20;
+      box-shadow: inset 0 0 0 1px $color-gray-20;
+    }
+  }
+}
+
+@include breadcrumb;
