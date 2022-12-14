@@ -42,7 +42,12 @@
           "value": "288px"
         },
         "max-height": {
-          "value": "300px"
+          "value": "180px"
+        },
+        "large": {
+          "max-height": {
+            "value": "260px"
+          }
         }
       },
       "item": {
