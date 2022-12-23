@@ -315,7 +315,7 @@
 
 
       <!-- FOOTER -->
-      <mj-section background-color="transparent" padding-top="32px">
+      <mj-section background-color="transparent" padding-top="32px" padding-right="32px" padding-left="32px">
         <mj-column width="100%">
 
           <mj-text mj-class="fds-email-label-02" color="#505F79">
