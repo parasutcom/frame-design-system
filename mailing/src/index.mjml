@@ -58,7 +58,7 @@
         padding-top: 4px;
       }
 
-      .fds-u-mr-4 {
+      .fds-u-mr-16 {
         margin-right: 16px;
       }
 
@@ -343,10 +343,10 @@
           <mj-text padding-top="8px">
             <a class="fds-footer-link" href="#">Paraşüt Blog</a>
             <span class="fds-color-cool-gray-60 fds-u-px-8">&#183;</span>
-            <a class="fds-footer-link fds-u-mr-4" href="#">Twitter</a>
-            <a class="fds-footer-link fds-u-mr-4" href="#">Youtube</a>
-            <a class="fds-footer-link fds-u-mr-4" href="#">Facebook</a>
-            <a class="fds-footer-link fds-u-mr-4" href="#">Instagram</a>
+            <a class="fds-footer-link fds-u-mr-16" href="#">Twitter</a>
+            <a class="fds-footer-link fds-u-mr-16" href="#">Youtube</a>
+            <a class="fds-footer-link fds-u-mr-16" href="#">Facebook</a>
+            <a class="fds-footer-link fds-u-mr-16" href="#">Instagram</a>
             <a class="fds-footer-link" href="#">LinkedIn</a>
           </mj-text>
 
