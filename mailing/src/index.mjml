@@ -133,7 +133,7 @@
 
   </mj-head>
   <mj-body>
-    <mj-wrapper padding="16px">
+    <mj-wrapper padding="16px" padding-top="80px">
       <!-- HEADER -->
       <mj-section background-color="#D4D9DF" border-radius="8px 8px 0 0" padding="20px 28px">
         <mj-column width="60%" padding="8px">
