@@ -1,0 +1,116 @@
+@import '../../settings/prefix';
+@import '../../tools/notification';
+
+@mixin notification {
+  .#{$prefix}-notification {
+    @include notification-base;
+  }
+
+  .#{$prefix}-notification__icon,
+  .#{$prefix}-notification__close-icon {
+    @include icon-size('md');
+
+    flex-shrink: 0;
+  }
+
+  .#{$prefix}-notification__content {
+    display: inline-flex;
+    flex-flow: column wrap;
+    flex-grow: 1;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: $spacing-3x-small;
+  }
+
+  .#{$prefix}-notification__title {
+    @include type-style('heading-06');
+  }
+
+  .#{$prefix}-notification__details,
+  .#{$prefix}-notification__details .#{$prefix}-list {
+    @include type-style('body-short-01');
+  }
+
+  .#{$prefix}-notification__message {
+    @include type-style('body-short-01');
+  }
+
+  .#{$prefix}-notification__close-button {
+    @include button-reset;
+
+    display: inline-flex;
+    width: calc($spacing-medium * 1.25);
+    height: calc($spacing-medium * 1.25);
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: $color-gray-100;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: all 200ms ease;
+    vertical-align: middle;
+
+    &:focus-visible {
+      box-shadow: inset 0 0 0 2px $color-blue-60, inset 0 0 0 3px $color-white;
+    }
+  }
+
+  .#{$prefix}-notification--inline .#{$prefix}-notification__content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .#{$prefix}-notification--toast {
+    min-width: $notification-size-min-width;
+    max-width: $notification-size-max-width;
+  }
+
+  .#{$prefix}-notification .#{$prefix}-list {
+    padding-left: $spacing-medium;
+  }
+
+  .#{$prefix}-notification .#{$prefix}-list .#{$prefix}-list__item {
+    color: inherit;
+  }
+
+  .#{$prefix}-notification .#{$prefix}-link {
+    @include type-style('label-02');
+  }
+
+  .#{$prefix}-notification--information {
+    @include notification-variant(
+      $notification-color-information-background,
+      $notification-color-information-text,
+      $notification-color-information-border
+    );
+  }
+
+  .#{$prefix}-notification--success {
+    @include notification-variant(
+      $notification-color-success-background,
+      $notification-color-success-text,
+      $notification-color-success-border
+    );
+  }
+
+  .#{$prefix}-notification--warning {
+    @include notification-variant(
+      $notification-color-warning-background,
+      $notification-color-warning-text,
+      $notification-color-warning-border
+    );
+  }
+
+  .#{$prefix}-notification--error {
+    @include notification-variant(
+      $notification-color-error-background,
+      $notification-color-error-text,
+      $notification-color-error-border
+    );
+  }
+}
+
+@include notification;
