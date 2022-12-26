@@ -1,0 +1,19 @@
+@mixin notification-base {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items: flex-start;
+  padding: $notification-size-padding;
+  gap: $notification-size-gap;
+}
+
+@mixin notification-variant($background-color, $text-color, $border-color) {
+  border-left: 2px solid $border-color;
+  background-color: $background-color;
+  color: $text-color;
+
+  .#{$prefix}-notification__icon {
+    color: $text-color;
+  }
+}
