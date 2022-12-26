@@ -1,0 +1,64 @@
+{
+  "notification": {
+    "color": {
+      "information": {
+        "background": {
+          "value": "{color.blue.0.value}"
+        },
+        "text": {
+          "value": "{color.blue.60.value}"
+        },
+        "border": {
+          "value": "{color.blue.60.value}"
+        }
+      },
+      "success": {
+        "background": {
+          "value": "{color.green.0.value}"
+        },
+        "text": {
+          "value": "{color.green.60.value}"
+        },
+        "border": {
+          "value": "{color.green.60.value}"
+        }
+      },
+      "warning": {
+        "background": {
+          "value": "{color.bronze.0.value}"
+        },
+        "text": {
+          "value": "{color.bronze.60.value}"
+        },
+        "border": {
+          "value": "{color.bronze.60.value}"
+        }
+      },
+      "error": {
+        "background": {
+          "value": "{color.red.0.value}"
+        },
+        "text": {
+          "value": "{color.red.60.value}"
+        },
+        "border": {
+          "value": "{color.red.60.value}"
+        }
+      }
+    },
+    "size": {
+      "min-width": {
+        "value": "288px"
+      },
+      "max-width": {
+        "value": "288px"
+      },
+      "padding": {
+        "value": "{spacing.medium}"
+      },
+      "gap": {
+        "value": "{spacing.medium}"
+      }
+    }
+  }
+}
