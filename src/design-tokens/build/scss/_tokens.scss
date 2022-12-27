@@ -1,5 +1,5 @@
 // Do not edit directly
-// Generated on Wed, 14 Dec 2022 14:09:07 GMT
+// Generated on Mon, 26 Dec 2022 08:05:32 GMT
 
 $badge-color-background: #e4e4e4;
 $badge-color-text: #5b5b5b;
@@ -101,6 +101,22 @@ $link-color-secondary-text: #5b5b5b;
 $link-color-secondary-active-text: #2b2b2b;
 $link-color-dark-text: #ffffff;
 $link-color-dark-active-text: #ffffff;
+$notification-color-information-background: #f0f4fa;
+$notification-color-information-text: #0f62fe;
+$notification-color-information-border: #0f62fe;
+$notification-color-success-background: #f0faf1;
+$notification-color-success-text: #15781d;
+$notification-color-success-border: #15781d;
+$notification-color-warning-background: #faf5f0;
+$notification-color-warning-text: #ad5f00;
+$notification-color-warning-border: #ad5f00;
+$notification-color-error-background: #faf0f1;
+$notification-color-error-text: #da1e28;
+$notification-color-error-border: #da1e28;
+$notification-size-min-width: 288px;
+$notification-size-max-width: 288px;
+$notification-size-padding: 16px;
+$notification-size-gap: 16px;
 $overflow-menu-color-background: #f2f2f2;
 $overflow-menu-color-text: #1f1f1f;
 $overflow-menu-color-hover-background: #e4e4e4;
