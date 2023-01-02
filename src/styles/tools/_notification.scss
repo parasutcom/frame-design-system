@@ -8,12 +8,28 @@
   gap: $notification-size-gap;
 }
 
-@mixin notification-variant($background-color, $text-color, $border-color) {
+@mixin notification-variant(
+  $background-color,
+  $text-color,
+  $border-color,
+  $hover-background-color,
+  $active-background-color
+) {
   border-left: 2px solid $border-color;
   background-color: $background-color;
   color: $text-color;
 
   .#{$prefix}-notification__icon {
     color: $text-color;
+  }
+
+  .#{$prefix}-notification__close-button {
+    &:hover {
+      background-color: $hover-background-color;
+    }
+
+    &:active {
+      background-color: $active-background-color;
+    }
   }
 }
