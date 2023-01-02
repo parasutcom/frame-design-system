@@ -10,6 +10,16 @@
         },
         "border": {
           "value": "{color.blue.60.value}"
+        },
+        "hover": {
+          "background": {
+            "value": "{color.blue.10.value}"
+          }
+        },
+        "active": {
+          "background": {
+            "value": "{color.blue.20.value}"
+          }
         }
       },
       "success": {
@@ -21,6 +31,16 @@
         },
         "border": {
           "value": "{color.green.60.value}"
+        },
+        "hover": {
+          "background": {
+            "value": "{color.green.10.value}"
+          }
+        },
+        "active": {
+          "background": {
+            "value": "{color.green.20.value}"
+          }
         }
       },
       "warning": {
@@ -32,6 +52,16 @@
         },
         "border": {
           "value": "{color.bronze.60.value}"
+        },
+        "hover": {
+          "background": {
+            "value": "{color.bronze.10.value}"
+          }
+        },
+        "active": {
+          "background": {
+            "value": "{color.bronze.20.value}"
+          }
         }
       },
       "error": {
@@ -43,6 +73,16 @@
         },
         "border": {
           "value": "{color.red.60.value}"
+        },
+        "hover": {
+          "background": {
+            "value": "{color.red.10.value}"
+          }
+        },
+        "active": {
+          "background": {
+            "value": "{color.red.20.value}"
+          }
         }
       }
     },
