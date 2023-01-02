@@ -44,7 +44,8 @@
     align-items: center;
     justify-content: center;
     background-color: transparent;
-    color: $color-gray-100;
+    border-radius: $radius-small;
+    color: $color-gray-90;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
@@ -78,13 +79,17 @@
 
   .#{$prefix}-notification .#{$prefix}-link {
     @include type-style('label-02');
+
+    color: inherit;
   }
 
   .#{$prefix}-notification--information {
     @include notification-variant(
       $notification-color-information-background,
       $notification-color-information-text,
-      $notification-color-information-border
+      $notification-color-information-border,
+      $notification-color-information-hover-background,
+      $notification-color-information-active-background
     );
   }
 
@@ -92,7 +97,9 @@
     @include notification-variant(
       $notification-color-success-background,
       $notification-color-success-text,
-      $notification-color-success-border
+      $notification-color-success-border,
+      $notification-color-success-hover-background,
+      $notification-color-success-active-background
     );
   }
 
@@ -100,7 +107,9 @@
     @include notification-variant(
       $notification-color-warning-background,
       $notification-color-warning-text,
-      $notification-color-warning-border
+      $notification-color-warning-border,
+      $notification-color-warning-hover-background,
+      $notification-color-warning-active-background
     );
   }
 
@@ -108,7 +117,9 @@
     @include notification-variant(
       $notification-color-error-background,
       $notification-color-error-text,
-      $notification-color-error-border
+      $notification-color-error-border,
+      $notification-color-error-hover-background,
+      $notification-color-error-active-background
     );
   }
 }
