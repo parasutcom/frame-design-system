@@ -11,7 +11,7 @@ function handleError (err) {
 
 const buildHtml = () => {
   return gulp
-    .src('src/index.mjml')
+    .src('src/*.mjml')
     .pipe(mjml(mjmlEngine, {validationLevel: 'strict'}))
     .pipe(gulp.dest('./dist/'));
 };
@@ -26,8 +26,8 @@ const browsersync = () => {
 };
 
 const watch = () => {
-  gulp.watch(['src/index.mjml'], gulp.series(buildHtml));
-  gulp.watch(['src/index.mjml']).on('change', browserSync.reload);
+  gulp.watch(['src/*.mjml'], gulp.series(buildHtml));
+  gulp.watch(['src/*.mjml']).on('change', browserSync.reload);
 };
 
 gulp.task(
