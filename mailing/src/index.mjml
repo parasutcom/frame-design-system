@@ -2,7 +2,7 @@
   <mj-head>
     <!-- FONTS -->
     <mj-font name="Inter" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" />
-    <mj-font name="Jetbrains Mono" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" />
+    <mj-font name="JetBrains Mono" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" />
 
     <!-- BREAKPOINT -->
     <mj-breakpoint width="484px" />
