@@ -58,7 +58,7 @@
         font-weight: 400 !important;
       }
 
-      .fds-table.fds-table--summary th, 
+      .fds-table.fds-table--summary th,
       .fds-table.fds-table--summary td {
         border: none !important;
       }
@@ -83,9 +83,6 @@
       .fds-table.fds-table--summary tbody tr td:last-child {
         font-family: 'JetBrains Mono', monospace !important;
         color: #3E3E3E !important;
-        font-size: 18px !important;
-        line-height: 24px !important;
-        font-weight: 500;
       }
 
       .fds-table.fds-table--truncate td {
@@ -98,9 +95,16 @@
       .fds-table.fds-table--vertical-top td {
         vertical-align: top !important;
       }
-      
+
       .fds-cell--amount {
         font-family: 'JetBrains Mono', monospace !important;
+      }
+
+      td.fds-cell--amount-01 {
+        font-family: 'JetBrains Mono', monospace !important;
+        font-size: 18px !important;
+        line-height: 24px !important;
+        font-weight: 500;
       }
 
       .fds-table tbody tr td.fds-cell--error,
@@ -199,7 +203,7 @@
         font-weight: 400;
         letter-spacing: 0.32px;
         text-align: left;
-        color: #505F79;
+        color: #505F79 !important;
         text-decoration: none;
       }
 
@@ -222,7 +226,7 @@
           line-height: 22px !important;
         }
 
-        .fds-table.fds-table--summary tbody tr td:last-child {
+        td.fds-cell--amount-01 {
           font-size: 16px !important;
         }
 

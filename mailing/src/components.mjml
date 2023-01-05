@@ -58,7 +58,7 @@
         font-weight: 400 !important;
       }
 
-      .fds-table.fds-table--summary th, 
+      .fds-table.fds-table--summary th,
       .fds-table.fds-table--summary td {
         border: none !important;
       }
@@ -83,9 +83,6 @@
       .fds-table.fds-table--summary tbody tr td:last-child {
         font-family: 'JetBrains Mono', monospace !important;
         color: #3E3E3E !important;
-        font-size: 18px !important;
-        line-height: 24px !important;
-        font-weight: 500;
       }
 
       .fds-table.fds-table--truncate td {
@@ -98,9 +95,16 @@
       .fds-table.fds-table--vertical-top td {
         vertical-align: top !important;
       }
-      
+
       .fds-cell--amount {
         font-family: 'JetBrains Mono', monospace !important;
+      }
+
+      td.fds-cell--amount-01 {
+        font-family: 'JetBrains Mono', monospace !important;
+        font-size: 18px !important;
+        line-height: 24px !important;
+        font-weight: 500;
       }
 
       .fds-table tbody tr td.fds-cell--error,
@@ -199,7 +203,7 @@
         font-weight: 400;
         letter-spacing: 0.32px;
         text-align: left;
-        color: #505F79;
+        color: #505F79 !important;
         text-decoration: none;
       }
 
@@ -222,7 +226,7 @@
           line-height: 22px !important;
         }
 
-        .fds-table.fds-table--summary tbody tr td:last-child {
+        td.fds-cell--amount-01 {
           font-size: 16px !important;
         }
 
@@ -331,7 +335,7 @@
             </tr>
             <tr>
               <td width="50%" align="left">Cell 1</td>
-              <td width="50%" align="right" class="fds-cell--amount-02">Cell 2</td>
+              <td width="50%" align="right" class="fds-cell--amount">Cell 2</td>
             </tr>
           </mj-table>
 
@@ -400,11 +404,11 @@
             <tbody>
               <tr>
                 <td width="70%" align="left">Hesabınızdaki toplam nakit</td>
-                <td width="30%" align="right">1.000,00 ₺</td>
+                <td width="30%" align="right" class="fds-cell--amount-01">1.000,00 ₺</td>
               </tr>
               <tr>
                 <td width="70%" align="left">Gecikmiş tahsilat</td>
-                <td width="30%" align="right" class="fds-cell--error">500,00 ₺</td>
+                <td width="30%" align="right" class="fds-cell--amount-01 fds-cell--error">500,00 ₺</td>
               </tr>
               <tr>
                 <td width="70%" align="left">Tahsil edilecek</td>
@@ -412,7 +416,7 @@
               </tr>
               <tr>
                 <td width="70%" align="left">Tahsil edilmiş</td>
-                <td width="30%" align="right" class="fds-cell--amount-01">460,00 ₺</td>
+                <td width="30%" align="right" class=" fds-cell--amount-01">460,00 ₺</td>
               </tr>
             </tbody>
           </mj-table>
