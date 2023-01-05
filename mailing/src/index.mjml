@@ -13,72 +13,188 @@
     <!-- TITLE -->
     <mj-title>Title goes here</mj-title>
 
-
-
     <mj-attributes>
       <!-- NORMALIZE -->
-      <mj-all padding="0" font-family="Inter, sans-serif" color="#344461" />
+      <mj-all padding="0" margin="0" font-family="Inter, sans-serif" color="#344461" />
       <mj-body background-color="#E5E9EC" width="636px" />
       <mj-section full-width="full-width" />
       <mj-table color="#344461" />
-      <mj-text font-family="Inter, sans-serif" font-size="16px" line-height="24px" font-weight="400" letter-spacing="0" />
-      <mj-divider border-width="1px" border-style="solid" border-color="#D4D9DF" />
-
-      <!-- TYPOGRAPHY -->
-      <mj-class name="fds-email-heading-01" font-family="Inter, sans-serif" font-size="24px" line-height="24px" font-weight="500" letter-spacing="-0.32px" color="#121D31"/>
-      <mj-class name="fds-email-body-01" font-family="Inter, sans-serif" font-size="16px" line-height="24px" font-weight="400" letter-spacing="0" />
-      <mj-class name="fds-email-label-01" font-family="Inter, sans-serif" font-size="16px" line-height="24px" font-weight="500" letter-spacing="0" />
-      <mj-class name="fds-email-label-02" font-family="Inter, sans-serif" font-size="14px" line-height="18px" font-weight="400" letter-spacing="0.32px" />
-      <mj-class name="fds-email-label-03" font-family="Inter, sans-serif" font-size="12px" line-height="14px" font-weight="400" letter-spacing="0.32px" />
-      <mj-class name="fds-email-amount-01" font-family="Jetbrains Mono, monospace" font-size="20px" line-height="24px" font-weight="500" letter-spacing="0" />
-      <mj-class name="fds-email-amount-02" font-family="Jetbrains Mono, monospace" font-size="16px" line-height="24px" font-weight="400" letter-spacing="0" />
+      <mj-text font-family="Inter, sans-serif" />
+      <mj-divider border-width="1px" border-style="solid" border-color="#D4D9DF" width="100%" />
 
       <!-- SPACING -->
       <mj-class name="fds-spacing--24" height="24px"/>
       <mj-class name="fds-spacing--32" height="32px"/>
 
       <!-- BUTTON -->
-      <mj-button font-size="16px" line-height="16px" font-weight="500" color="#ffffff" inner-padding="16px 16px" border-radius="4px" align="left" />
-      <mj-class name="fds-btn--secondary" background-color="#505F79" font-size="14px" inner-padding="8px 16px"/>
-      <mj-class name="fds-btn--primary" background-color="#0F62FE"/>
+      <mj-button font-size="15px" line-height="16px" font-weight="500" color="#ffffff" background-color="transparent"	 inner-padding="16px 16px" border-radius="4px" align="left" />
 
       <!-- CONTENT -->
-      <mj-class name="fds-content" padding="32px" background-color="#ffffff" border-radius="0 0 8px 8px" />
+      <mj-class name="fds-content" padding="32px" background-color="#ffffff" />
 
       <!-- HIGHLIGHT -->
       <mj-class name="fds-highlight" background-color="#E5E9EC" padding="16px 24px" border-radius="8px" color="#344461"/>
     </mj-attributes>
 
-    <mj-style inline="inline">
-      .fds-d-inline-block {
-        display: inline-block;
+    <mj-style>
+
+      img {
+        object-fit: cover !important;
       }
 
-      .fds-u-pt-4 {
-        padding-top: 4px;
+      .fds-table th,
+      .fds-table td {
+        font-size: 15px !important;
+        line-height: 18px !important;
+        padding: 8px;
+        border: 2px solid #D4D9DF;
       }
 
-      .fds-u-mr-16 {
-        margin-right: 16px;
+      .fds-table th {
+        font-weight: 500 !important;
       }
 
-      .fds-u-px-4 {
-        padding-right: 4px;
-        padding-left: 4px;
+      .fds-table td {
+        font-weight: 400 !important;
       }
 
-      .fds-u-px-8 {
-        padding-right: 8px;
-        padding-left: 8px;
+      .fds-table.fds-table--summary th, 
+      .fds-table.fds-table--summary td {
+        border: none !important;
       }
 
-      .fds-color-cool-gray-60 {
-        color: #505F79;
+      .fds-table.fds-table--summary thead th {
+        padding: 0 !important;
+        padding-bottom: 16px !important;
+        border-bottom: 2px solid #D4D9DF !important;
+        color: #121D31 !important;
+      }
+
+      .fds-table.fds-table--summary tbody tr:first-child td {
+        padding-top: 32px !important;
+      }
+
+      .fds-table.fds-table--summary tbody td {
+        padding: 12px 0 !important;
+        color: #505F79 !important;
+        font-weight: 500 !important;
+      }
+
+      .fds-table.fds-table--summary tbody tr td:last-child {
+        font-family: 'JetBrains Mono', monospace !important;
+        color: #3E3E3E !important;
+        font-size: 18px !important;
+        line-height: 24px !important;
+        font-weight: 500;
+      }
+
+      .fds-table.fds-table--truncate td {
+        overflow: hidden !important;
+        white-space: nowrap !important;
+        text-overflow: ellipsis !important;
+        max-width: 0 !important;
+      }
+
+      .fds-table.fds-table--vertical-top td {
+        vertical-align: top !important;
+      }
+      
+      .fds-cell--amount {
+        font-family: 'JetBrains Mono', monospace !important;
+      }
+
+      .fds-table tbody tr td.fds-cell--error,
+      .fds-table.fds-table--summary tbody tr td.fds-cell--error  {
+        color: #DA1E28 !important;
+      }
+
+      .fds-email-heading-01 div {
+        font-size: 22px !important;
+        line-height: 22px !important;
+        font-weight: 500;
+        letter-spacing: -0.32px;
+        color: #121D31 !important;
+      }
+
+      .fds-email-body-01 div {
+        font-size: 15px !important;
+        line-height: 24px !important;
+        font-weight: 400;
+      }
+
+      .fds-email-label-01 div {
+        font-size: 15px !important;
+        line-height: 18px !important;
+        font-weight: 500;
+      }
+
+      .fds-email-label-02 div {
+        font-size: 12px !important;
+        line-height: 18px !important;
+        font-weight: 400;
+        letter-spacing: 0.32px;
+      }
+
+      .fds-email-label-03 div {
+        font-size: 11px !important;
+        line-height: 14px !important;
+        font-weight: 400;
+        letter-spacing: 0.32px;
+      }
+
+      .fds-email-amount-01 div {
+        font-family: 'JetBrains Mono', monospace !important;
+        font-size: 18px !important;
+        line-height: 24px !important;
+        font-weight: 500;
+      }
+
+      .fds-email-amount-02 div {
+        font-family: 'JetBrains Mono', monospace !important;
+        font-size: 15px !important;
+        line-height: 24px !important;
+        font-weight: 400;
+      }
+
+      .fds-btn--primary p {
+        background-color: #0F62FE !important;
+        cursor: pointer;
+        letter-spacing: 0.32px !important;
+      }
+
+      .fds-btn--primary p:hover {
+        background-color: #003BCB !important;
+      }
+
+      .fds-btn--primary p:active {
+        background-color: #002599 !important;
+      }
+
+      .fds-btn--secondary p {
+        background-color: #505F79 !important;
+        cursor: pointer;
+        font-size: 14px !important;
+        letter-spacing: 0.32px !important;
+        padding: 8px 16px !important
+      }
+
+      .fds-btn--secondary p:hover {
+        background-color: #344461 !important;
+      }
+
+      .fds-btn--secondary p:active {
+        background-color: #202E49 !important;
+      }
+
+      .fds-text-link {
+        text-align: left;
+        color: inherit;
+        text-decoration: underline;
       }
 
       .fds-footer-link {
         font-family: Inter, sans-serif;
-        font-size: 14px;
+        font-size: 12px;
         line-height: 18px;
         font-weight: 400;
         letter-spacing: 0.32px;
@@ -87,273 +203,82 @@
         text-decoration: none;
       }
 
-      .fds-table-th {
-        font-family: Inter, sans-serif;
-        font-size: 16px;
-        line-height: 24px;
-        font-weight: 500;
-        letter-spacing: 0;
-        padding: 8px;
-        border: 2px solid #D4D9DF;
+      .fds-footer-link:hover  {
+        text-decoration: underline;
       }
 
-      .fds-table-td {
-        font-family: Inter, sans-serif;
-        font-size: 16px;
-        line-height: 24px;
-        font-weight: 400;
-        letter-spacing: 0;
-        padding: 8px;
-        border: 2px solid #D4D9DF;
+      .fds-inline-block {
+        display: inline-block !important;
       }
 
-      .fds-table-td--amount {
-        font-family: Jetbrains Mono, monospace;
+      .fds-u-pt-4 {
+        padding-top: 4px !important;
       }
 
-      .fds-highlight {
-        background-color: #E5E9EC;
-        padding:16px 24px;
-        border-radius:8px;
-        color: #344461;
-      }
+      @media only screen and (max-width: 484px) {
+        .fds-table th,
+        .fds-table td {
+          font-size: 13px !important;
+          line-height: 22px !important;
+        }
 
-      .fds-truncate {
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        max-width: 0;
-      }
+        .fds-table.fds-table--summary tbody tr td:last-child {
+          font-size: 16px !important;
+        }
 
-      .fds-text-link {
-        color: #344461;
+        .fds-email-heading-01 div {
+          font-size: 18px !important;
+          line-height: 18px !important;
+        }
+
+        .fds-email-body-01 div {
+          font-size: 13px !important;
+          line-height: 22px !important;
+        }
+
+        .fds-email-label-01 div {
+          font-size: 13px !important;
+          line-height: 22px !important;
+        }
+
+        .fds-email-label-02 div {
+          font-size: 11px !important;
+          line-height: 16px !important;
+        }
+
+        .fds-email-label-03 div {
+          font-size: 10px !important;
+          line-height: 12px !important;
+        }
+
+        .fds-email-amount-01 {
+          font-size: 16px !important;
+          line-height: 24px !important;
+        }
+
+        .fds-email-amount-02 div {
+          font-size: 13px !important;
+          line-height: 22px !important;
+        }
       }
     </mj-style>
-
-
   </mj-head>
+
   <mj-body>
-    <mj-wrapper padding="16px" padding-top="80px">
-      <!-- HEADER -->
-      <mj-section background-color="#D4D9DF" border-radius="8px 8px 0 0" padding="20px 28px">
-        <mj-column width="60%" padding="8px">
-          <mj-image align="left" width="150px" src="https://parasut-mailing.s3.amazonaws.com/parasut-logo-2x.png" alt="logo" href="#" />
-        </mj-column>
-        <mj-column width="40%" padding="8px">
-          <mj-text mj-class="fds-email-label-03" color="#505F79" align="left">
-            <span>Şirket adı: X Yazılım teknolojileri A.Ş</span><br>
-            <span class="fds-d-inline-block fds-u-pt-4">Şube: Sarıyer, Istanbul</span><br>
-            <span class="fds-d-inline-block fds-u-pt-4">Hesap ID: 234323432</span>
-          </mj-text>
-        </mj-column>
-      </mj-section>
-      <!-- END HEADER -->
-
-
-      <!-- CONTENT -->
-      <mj-section mj-class="fds-content">
+    <mj-wrapper padding="80px 16px">
+      <mj-section>
         <mj-column width="100%">
-
-          <mj-text mj-class="fds-email-heading-01">
-            Yeni bir müşteri notunuz var.
-          </mj-text>
-
-          <mj-spacer mj-class="fds-spacing--32" />
-
-          <mj-text mj-class="fds-email-body-01">
-            Son gerçekleştirdiğiniz stok çıkışı sonucunda aşağıdaki ürünleriniz kritik stok seviyesinin altına düşmüştür.
-          </mj-text>
-
-          <mj-spacer mj-class="fds-spacing--32" />
-
-          <mj-text mj-class="fds-email-body-01">
-            Mikro ürünlerinin lisans koşullarına <a class="fds-text-link" href="#">buradan</a> ulaşabilirsiniz.
-          </mj-text>
-
-          <mj-spacer mj-class="fds-spacing--32" />
-
-          <mj-table>
-            <tr>
-              <th width="50%" align="left" class="fds-table-th">Column 1</th>
-              <th width="50%" align="right" class="fds-table-th">Column 2</th>
-            </tr>
-            <tr>
-              <td width="50%" align="left" class="fds-table-th">Cell 1</td>
-              <td width="50%" align="right" class="fds-table-th fds-table-td--amount">Cell 2</td>
-            </tr>
-          </mj-table>
-
-          <mj-spacer mj-class="fds-spacing--32" />
-
-          <mj-table>
-            <tr>
-              <th width="33%" align="left" class="fds-table-th">Column 1</th>
-              <th width="33%" align="center" class="fds-table-th">Column 2</th>
-              <th width="33%" align="right" class="fds-table-th">Column 3</th>
-            </tr>
-            <tr>
-              <td width="33%" align="left" class="fds-table-td">Cell 1</td>
-              <td width="33%" align="center" class="fds-table-td">Cell 2</td>
-              <td width="33%" align="right" class="fds-table-td fds-table-td--amount">Cell 3</td>
-            </tr>
-          </mj-table>
-
-          <mj-spacer mj-class="fds-spacing--32" />
-
-          <mj-table>
-            <tr>
-              <th width="25%" align="left" class="fds-table-th">Column 1</th>
-              <th width="25%" align="center" class="fds-table-th">Column 2</th>
-              <th width="25%" align="center" class="fds-table-th">Column 3</th>
-              <th width="25%" align="right" class="fds-table-th">Column 4</th>
-            </tr>
-            <tr>
-              <td width="25%" align="left" class="fds-table-td">Cell 1</td>
-              <td width="25%" align="center" class="fds-table-td">Cell 2</td>
-              <td width="25%" align="center" class="fds-table-td">Cell 3</td>
-              <td width="25%" align="right" class="fds-table-td fds-table-td--amount">Cell 4</td>
-            </tr>
-          </mj-table>
-
-          <mj-spacer mj-class="fds-spacing--32" />
-
-          <mj-table>
-            <tr>
-              <th width="20%" align="left" class="fds-table-th">Column 1</th>
-              <th width="20%" align="center" class="fds-table-th">Column 2</th>
-              <th width="20%" align="center" class="fds-table-th">Column 3</th>
-              <th width="20%" align="center" class="fds-table-th">Column 4</th>
-              <th width="20%" align="right" class="fds-table-th">Column 5</th>
-            </tr>
-            <tr>
-              <td width="20%" align="left" class="fds-table-td">Cell 1</td>
-              <td width="20%" align="center" class="fds-table-td">Cell 2</td>
-              <td width="20%" align="center" class="fds-table-td">Cell 3</td>
-              <td width="20%" align="center" class="fds-table-td">Cell 4</td>
-              <td width="20%" align="right" class="fds-table-td fds-table-td--amount">Cell 5</td>
-            </tr>
-          </mj-table>
-
-
-          <mj-spacer mj-class="fds-spacing--32" />
-
-          <mj-table>
-            <tr>
-              <th width="33%" align="left" class="fds-table-th">Hata kodu</th>
-              <th width="33%" align="center" class="fds-table-th">Problem kaynağı</th>
-              <th width="33%" align="right" class="fds-table-th">Ne yapmalıyım?</th>
-            </tr>
-            <tr>
-              <td width="33%" align="left" class="fds-table-td" style="vertical-align: top;">1195</td>
-              <td width="33%" align="center" class="fds-table-td" style="vertical-align: top;">Sistem hatası</td>
-              <td width="33%" align="right" class="fds-table-td" style="vertical-align: top;">Faturayı 1-2 saat içinde tekrar göndermeyi deneyebilirsiniz</td>
-            </tr>
-          </mj-table>
-
-          <mj-spacer mj-class="fds-spacing--32" />
-
-          <mj-table>
-            <tr>
-              <th width="25%" align="left" class="fds-table-th">Kodu</th>
-              <th width="25%" align="center" class="fds-table-th">Adı</th>
-              <th width="25%" align="center" class="fds-table-th">Kritik Seviye</th>
-              <th width="25%" align="right" class="fds-table-th">Mevcut Stok</th>
-            </tr>
-            <tr>
-              <td width="25%" align="left" class="fds-table-td fds-truncate">1234567</td>
-              <td width="25%" align="center" class="fds-table-td fds-truncate">This sentence is very long</td>
-              <td width="25%" align="center" class="fds-table-td fds-table-td--amount fds-truncate">10,00</td>
-              <td width="25%" align="right" class="fds-table-td fds-table-td--amount fds-truncate">5,00</td>
-            </tr>
-          </mj-table>
-
-          <mj-spacer mj-class="fds-spacing--32" />
-
-          <mj-table>
-            <tr>
-              <td width="75%" align="right" class="fds-table-td">Ara Toplam</td>
-              <td width="25%" align="right" class="fds-table-td fds-table-td--amount">999,99₺</td>
-            </tr>
-            <tr>
-              <td width="75%" align="right" class="fds-table-td">Genel Toplam</td>
-              <td width="25%" align="right" class="fds-table-td fds-table-td--amount">10999,99₺</td>
-            </tr>
-          </mj-table>
-
-          <mj-spacer mj-class="fds-spacing--32" />
-
-
-          <mj-text mj-class="fds-email-body-01">
-            <div class="fds-highlight">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu fermentum augue, sit amet convallis augue. Integer eu iaculis sem, sed euismod eros. Nulla facilisi. Proin luctus odio nunc, sed laoreet est bibendum vitae. Sed a eleifend ex. Integer varius rhoncus euismod. Aliquam ac ultricies turpis, vitae eleifend ligula. Aliquam faucibus erat ut tincidunt cursus. Cras et ullamcorper velit. In hac habitasse platea dictumst. Nunc vitae dui quis risus elementum auctor.</div>
-          </mj-text>
-
-          <mj-spacer mj-class="fds-spacing--32" />
-
-          <mj-button href="#" mj-class="fds-btn--primary">
-            Primary button
-          </mj-button>
-
-          <mj-spacer mj-class="fds-spacing--32" />
-        </mj-column>
-
-
-        <mj-column width="100%" mj-class="fds-highlight">
-          <mj-text mj-class="fds-email-label-01">
-            Refer a friend!
-          </mj-text>
-          <mj-text mj-class="fds-email-body-01">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </mj-text>
-          <mj-button href="#" mj-class="fds-btn--secondary" padding-top="16px">
-            Primary button
-          </mj-button>
+          <mj-text css-class="fds-email-body-01"><a href="components.html" class="fds-text-link">Components</a></mj-text>
+          <mj-text css-class="fds-email-body-01"><a href="example01.html" class="fds-text-link">Example01</a></mj-text>
+          <mj-text css-class="fds-email-body-01"><a href="example02.html" class="fds-text-link">Example02</a></mj-text>
+          <mj-text css-class="fds-email-body-01"><a href="example03.html" class="fds-text-link">Example03</a></mj-text>
+          <mj-text css-class="fds-email-body-01"><a href="example04.html" class="fds-text-link">Example04</a></mj-text>
+          <mj-text css-class="fds-email-body-01"><a href="example05.html" class="fds-text-link">Example05</a></mj-text>
+          <mj-text css-class="fds-email-body-01"><a href="example06.html" class="fds-text-link">Example06</a></mj-text>
+          <mj-text css-class="fds-email-body-01"><a href="example07.html" class="fds-text-link">Example07</a></mj-text>
+          <mj-text css-class="fds-email-body-01"><a href="example08.html" class="fds-text-link">Example08</a></mj-text>
         </mj-column>
       </mj-section>
-      <!-- END CONTENT -->
-
-
-
-
-      <!-- FOOTER -->
-      <mj-section background-color="transparent" padding-top="32px" padding-right="32px" padding-left="32px">
-        <mj-column width="100%">
-
-          <mj-text mj-class="fds-email-label-02" color="#505F79">
-            Company Name kullanıcısı olduğunuz için bu iletiyi alıyorsunuz.
-          </mj-text>
-
-          <mj-text padding-top="8px">
-            <a class="fds-footer-link" href="#">İletişime geçin</a>
-            <span class="fds-color-cool-gray-60 fds-u-px-4">&#183;</span>
-            <a class="fds-footer-link" href="#">Gizlilik İlkeleri</a>
-            <span class="fds-color-cool-gray-60 fds-u-px-4">&#183;</span>
-            <a class="fds-footer-link" href="#">İletişim Tercihleri</a>
-          </mj-text>
-
-          <mj-spacer mj-class="fds-spacing--24" />
-
-          <mj-divider/>
-
-          <mj-spacer mj-class="fds-spacing--24" />
-
-          <mj-text mj-class="fds-email-label-02" color="#505F79">
-            Company Name Maslak Mah. AOS 55. Sok. 42 Maslak 34485
-          </mj-text>
-
-          <mj-text padding-top="8px">
-            <a class="fds-footer-link" href="#">Paraşüt Blog</a>
-            <span class="fds-color-cool-gray-60 fds-u-px-8">&#183;</span>
-            <a class="fds-footer-link fds-u-mr-16" href="#">Twitter</a>
-            <a class="fds-footer-link fds-u-mr-16" href="#">Youtube</a>
-            <a class="fds-footer-link fds-u-mr-16" href="#">Facebook</a>
-            <a class="fds-footer-link fds-u-mr-16" href="#">Instagram</a>
-            <a class="fds-footer-link" href="#">LinkedIn</a>
-          </mj-text>
-
-          <mj-image align="center" padding-top="42px" width="100px" src="https://parasut-mailing.s3.amazonaws.com/parasut-logo-2x.png" alt="logo" href="#" />
-        </mj-column>
-      </mj-section>
-      <!-- END FOOTER -->
     </mj-wrapper>
   </mj-body>
 </mjml>
