@@ -71,8 +71,9 @@
 
   .#{$prefix}-calendar__select {
     display: flex;
+    height: $spacing-2x-large;
     align-items: center;
-    padding: $spacing-2x-small;
+    padding: $spacing-3x-small;
     cursor: pointer;
     transition: all 200ms ease;
 
