@@ -1,0 +1,46 @@
+{
+  "toggle": {
+    "color": {
+      "background": {
+        "value": "{color.gray.20}"
+      },
+      "text": {
+        "value": "{color.gray.90}"
+      },
+      "active": {
+        "background": {
+          "value": "{color.blue.60.value}"
+        }
+      },
+      "focus": {
+        "border": {
+          "value": "{color.blue.60.value}"
+        }
+      },
+      "disabled": {
+        "background": {
+          "value": "{color.gray.40.value}"
+        },
+        "text": {
+          "value": "{color.gray.40.value}"
+        }
+      }
+    },
+    "size": {
+      "height": {
+        "value": "{spacing.large}"
+      },
+      "width": {
+        "value": "{spacing.3x-large}"
+      },
+      "gap": {
+        "value": "{spacing.medium}"
+      }
+    },
+    "border": {
+      "radius": {
+        "value": "{radius.pill}"
+      }
+    }
+  }
+}

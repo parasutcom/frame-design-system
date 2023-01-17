@@ -1,0 +1,105 @@
+@import '../../settings/prefix';
+
+@mixin toggle {
+  .#{$prefix}-toggle {
+    position: relative;
+    display: inline-block;
+    user-select: none;
+  }
+
+  .#{$prefix}-toggle__input {
+    @include visually-hidden;
+  }
+
+  .#{$prefix}-toggle__label {
+    position: relative;
+    display: inline-flex;
+    flex-grow: 1;
+    align-items: center;
+    cursor: pointer;
+    gap: $toggle-size-gap;
+  }
+
+  .#{$prefix}-toggle__label-mark {
+    position: relative;
+    width: $toggle-size-width;
+    height: $toggle-size-height;
+    flex-shrink: 0;
+    background-color: $toggle-color-background;
+    border-radius: $toggle-border-radius;
+    transition: all 200ms ease;
+  }
+
+  .#{$prefix}-toggle__label-mark::before {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: calc($spacing-medium * 1.125);
+    height: calc($spacing-medium * 1.125);
+    background-color: $color-white;
+    border-radius: $radius-pill;
+    content: '';
+    transition: all 200ms ease;
+  }
+
+  .#{$prefix}-toggle__label-text {
+    @include type-style('label-02');
+    @include truncate;
+
+    color: $toggle-color-text;
+  }
+
+  .#{$prefix}-toggle.#{$prefix}-toggle--lg .#{$prefix}-toggle__label-mark {
+    width: calc($spacing-medium * 3.5);
+    height: calc($spacing-medium * 2);
+  }
+
+  .#{$prefix}-toggle.#{$prefix}-toggle--lg
+    .#{$prefix}-toggle__label-mark::before {
+    width: calc($spacing-medium * 1.625);
+    height: calc($spacing-medium * 1.625);
+  }
+
+  .#{$prefix}-toggle__input:checked
+    + .#{$prefix}-toggle__label
+    .#{$prefix}-toggle__label-mark {
+    background-color: $toggle-color-active-background;
+  }
+
+  .#{$prefix}-toggle__input:checked
+    + .#{$prefix}-toggle__label
+    .#{$prefix}-toggle__label-mark::before {
+    transform: translateX($spacing-large);
+  }
+
+  .#{$prefix}-toggle__input:focus-visible
+    + .#{$prefix}-toggle__label
+    .#{$prefix}-toggle__label-mark {
+    box-shadow: 0 0 0 2px $toggle-color-focus-border,
+      inset 0 0 0 1px $color-white;
+  }
+
+  .#{$prefix}-toggle__input:disabled + .#{$prefix}-toggle__label {
+    cursor: not-allowed;
+  }
+
+  .#{$prefix}-toggle__input:disabled
+    + .#{$prefix}-toggle__label
+    .#{$prefix}-toggle__label-mark::before {
+    background-color: $toggle-color-disabled-background;
+  }
+
+  .#{$prefix}-toggle__input:checked:disabled
+    + .#{$prefix}-toggle__label
+    .#{$prefix}-toggle__label-mark {
+    background-color: $toggle-color-background;
+  }
+
+  .#{$prefix}-toggle__input:disabled
+    + .#{$prefix}-toggle__label
+    .#{$prefix}-toggle__label-text {
+    color: $toggle-color-disabled-text;
+  }
+}
+
+@include toggle;
