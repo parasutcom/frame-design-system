@@ -1,0 +1,56 @@
+{
+  "calendar": {
+    "color": {
+      "background": {
+        "value": "{color.gray.0}"
+      },
+      "text": {
+        "value": "{color.gray.90.value}"
+      },
+      "hover": {
+        "background": {
+          "value": "{color.gray.20.value}"
+        }
+      },
+      "active": {
+        "background": {
+          "value": "{color.gray.30.value}"
+        }
+      },
+      "focus": {
+        "border": {
+          "value": "{color.blue.60.value}"
+        }
+      },
+      "selected": {
+        "background": {
+          "value": "{color.blue.60.value}"
+        },
+        "text": {
+          "value": "{color.white.value}"
+        }
+      },
+      "disabled": {
+        "text": {
+          "value": "{color.gray.40.value}"
+        }
+      }
+    },
+    "size": {
+      "width": {
+        "value": "288px"
+      },
+      "height": {
+        "value": "336px"
+      },
+      "padding": {
+        "value": "{spacing.3x-small}"
+      }
+    },
+    "border": {
+      "radius": {
+        "value": "{radius.medium}"
+      }
+    }
+  }
+}

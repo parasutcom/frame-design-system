@@ -1,5 +1,5 @@
 // Do not edit directly
-// Generated on Tue, 17 Jan 2023 06:52:20 GMT
+// Generated on Tue, 17 Jan 2023 08:54:07 GMT
 
 $badge-color-background: #e4e4e4;
 $badge-color-text: #5b5b5b;
@@ -74,6 +74,18 @@ $button-size-small-width: 32px;
 $button-size-large-height: 48px;
 $button-size-large-width: 48px;
 $button-border-radius: 4px;
+$calendar-color-background: #f2f2f2;
+$calendar-color-text: #1f1f1f;
+$calendar-color-hover-background: #d5d5d5;
+$calendar-color-active-background: #b8b8b8;
+$calendar-color-focus-border: #0f62fe;
+$calendar-color-selected-background: #0f62fe;
+$calendar-color-selected-text: #ffffff;
+$calendar-color-disabled-text: #9e9e9e;
+$calendar-size-width: 288px;
+$calendar-size-height: 336px;
+$calendar-size-padding: 4px;
+$calendar-border-radius: 4px;
 $checkbox-color-background: #ffffff;
 $checkbox-color-text: #1f1f1f;
 $checkbox-color-border: #1f1f1f;
@@ -364,3 +376,4 @@ $spacing-x-large: 32px;
 $spacing-2x-large: 40px;
 $spacing-3x-large: 48px;
 $z-index-overflow-menu: 7000;
+$z-index-calendar: 8000;
