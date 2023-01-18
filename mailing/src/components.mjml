@@ -190,6 +190,21 @@
         background-color: #202E49 !important;
       }
 
+      .fds-btn--ghost p {
+        background-color: transparent !important;
+        color: #5A6168 !important;
+        cursor: pointer !important;
+        letter-spacing: 0.32px !important;
+      }
+
+      .fds-btn--ghost p:hover {
+        background-color: #EBEFF2 !important;
+      }
+
+      .fds-btn--ghost p:active {
+        background-color: #DCE1E5 !important;
+      }
+
       .fds-text-link {
         text-align: left;
         color: inherit !important;
@@ -325,6 +340,24 @@
           <mj-spacer mj-class="fds-spacing--32" />
 
           <mj-button css-class="fds-btn--secondary">Secondary Button</mj-button>
+
+          <mj-spacer mj-class="fds-spacing--32" />
+
+          <mj-button css-class="fds-btn--ghost">Ghost Button</mj-button>
+
+          <mj-spacer mj-class="fds-spacing--32" />
+
+        </mj-column>
+
+        <mj-column width="50%">
+          <mj-button align="left" css-class="fds-btn--primary">Primary Button</mj-button>
+        </mj-column>
+
+        <mj-column width="50%">
+          <mj-button align="right" css-class="fds-btn--ghost">Ghost Button</mj-button>
+        </mj-column>
+
+        <mj-column width="100%">
 
           <mj-spacer mj-class="fds-spacing--32" />
 
