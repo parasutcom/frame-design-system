@@ -333,8 +333,8 @@
 
         <mj-column width="100%">
           <mj-text>
-            <a href="#" target="_blank" style="display: inline-block; padding-right: 8px !important"><img width="150" height="40" align="left" src="https://mcusercontent.com/542129b0d23244e20a9c0dd7e/images/7d055cdb-a2f7-a814-0a62-0a6f1a8f8a7a.png" alt="app-store"></a>
-            <a href="#" target="_blank" style="display: inline-block;"><img width="150" height="40" align="left" src="https://mcusercontent.com/542129b0d23244e20a9c0dd7e/images/0418c228-ddab-ad0a-c425-b44eb79de35b.png" alt="google-play"></a>
+            <a href="#" target="_blank" style="display: inline-block; padding-right: 8px !important"><img width="150" height="40" align="left" src="https://mcusercontent.com/542129b0d23244e20a9c0dd7e/images/b77bea17-c8e8-513c-722d-c370c4b39ab5.png" alt="app-store"></a>
+            <a href="#" target="_blank" style="display: inline-block;"><img width="150" height="40" align="left" src="https://mcusercontent.com/542129b0d23244e20a9c0dd7e/images/0ad0b256-bf9c-14f3-1735-6ae1f18cb861.png" alt="google-play"></a>
           </mj-text>
         </mj-column>
 
