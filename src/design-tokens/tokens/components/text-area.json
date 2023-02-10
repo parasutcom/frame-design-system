@@ -1,0 +1,35 @@
+{
+  "text-area": {
+    "color": {
+      "text": {
+        "value": "{color.gray.90.value}"
+      },
+      "disabled": {
+        "text": {
+          "value": "{color.gray.40.value}"
+        },
+        "background": {
+          "value": "{color.gray.20.value}"
+        }
+      }
+    },
+    "size": {
+      "height": {
+        "value": "108px"
+      },
+      "padding": {
+        "value": "{spacing.2x-small}"
+      },
+      "small": {
+        "height": {
+          "value": "68px"
+        }
+      },
+      "large": {
+        "height": {
+          "value": "188px"
+        }
+      }
+    }
+  }
+}
