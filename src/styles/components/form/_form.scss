@@ -1,52 +1,154 @@
-@import '../../settings/prefix';
-@import '../../tools/spacing';
-@import '../../tools/typography';
-@import '../../tools/colors';
+@import '../../../design-tokens/build/scss/tokens';
 
 @mixin form {
-  .#{$prefix}-fieldset {
-    margin-bottom: space('32');
-  }
-
   .#{$prefix}-form-item {
     display: flex;
-    flex: 1 1 auto;
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .#{$prefix}-label {
+  .#{$prefix}-form-item__field-wrapper {
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding-right: $spacing-2x-small;
+    padding-left: $spacing-2x-small;
+    border-radius: $input-border-radius;
+    box-shadow: inset 0 0 0 1px $input-color-border;
+    cursor: text;
+    transition: all 200ms ease;
+
+    &:hover {
+      box-shadow: inset 0 0 0 1px $input-color-hover-border;
+    }
+
+    &:focus-within,
+    &:active {
+      box-shadow: inset 0 0 0 2px $input-color-focus-border;
+    }
+  }
+
+  .#{$prefix}-form-item__field-wrapper--outline-white {
+    background-color: $input-color-outline-white-background;
+  }
+
+  .#{$prefix}-form-item__field-wrapper--outline {
+    background-color: $input-color-outline-background;
+  }
+
+  .#{$prefix}-form-item__field-wrapper[data-invalid]:not(:focus-within) {
+    box-shadow: inset 0 0 0 1px $input-color-error-border;
+  }
+
+  .#{$prefix}-form-item__field-wrapper[data-warning]:not(:focus-within) {
+    box-shadow: inset 0 0 0 1px $input-color-warning-border;
+  }
+
+  .#{$prefix}-form-item__prefix,
+  .#{$prefix}-form-item__suffix {
+    display: block;
+    color: $color-gray-90;
+    user-select: none;
+  }
+
+  .#{$prefix}-form-item__prefix {
+    margin-left: $spacing-2x-small;
+  }
+
+  .#{$prefix}-form-item__suffix {
+    margin-right: $spacing-2x-small;
+  }
+
+  .#{$prefix}-form-item__prefix-icon,
+  .#{$prefix}-form-item__suffix-icon {
+    @include icon-size('sm');
+
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .#{$prefix}-form-item__prefix-text,
+  .#{$prefix}-form-item__suffix-text {
+    @include type-style('label-01');
+  }
+
+  .#{$prefix}-form-item__error-icon {
+    color: $input-color-error-text;
+  }
+
+  .#{$prefix}-form-item__warning-icon {
+    color: $input-color-warning-text;
+  }
+
+  .#{$prefix}-form-item__label-wrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: $spacing-medium;
+  }
+
+  .#{$prefix}-form-item__label {
     @include type-style('label-02');
 
     display: inline-block;
-    margin-bottom: space('8');
-    color: color(gray, 90);
+    color: $color-gray-90;
   }
 
-  .#{$prefix}-form__helper-text {
+  .#{$prefix}-form-item__counter {
     @include type-style('helper-text-01');
 
+    display: inline-block;
+    color: $color-gray-90;
+  }
+
+  .#{$prefix}-form-item__helper-text {
+    @include type-style('helper-text-01');
+
+    display: inline-block;
     width: 100%;
-    margin-top: space('8');
-    color: color(gray, 50);
+    margin-top: $spacing-2x-small;
+    color: $color-gray-50;
   }
 
-  .#{$prefix}-label--disabled,
-  .#{$prefix}-form__helper-text--disabled {
-    color: color(gray, 30);
+  .#{$prefix}-form-item__field-wrapper[data-invalid]
+    ~ .#{$prefix}-form-item__helper-text,
+  .#{$prefix}-form-item__helper-text--invalid {
+    color: $input-color-error-text;
   }
 
-  fieldset[disabled] .#{$prefix}-label,
-  fieldset[disabled] .#{$prefix}-form__helper-text {
-    color: color(gray, 30);
+  .#{$prefix}-form-item__field-wrapper[data-warning]
+    ~ .#{$prefix}-form-item__helper-text,
+  .#{$prefix}-form-item__helper-text--warning {
+    color: $input-color-warning-text;
   }
 
-  .#{$prefix}-form__helper-text--error {
-    color: color(red, 60);
+  .#{$prefix}-form-item__label--disabled,
+  .#{$prefix}-form-item__counter--disabled,
+  .#{$prefix}-form-item__helper-text--disabled {
+    color: $color-gray-40;
   }
 
-  .#{$prefix}-form__helper-text--warning {
-    color: color(bronze, 60);
+  .#{$prefix}-form-item__field-wrapper[data-disabled],
+  .#{$prefix}-form-item__field-wrapper[data-disabled].#{$prefix}-form-item__field-wrapper[data-invalid],
+  .#{$prefix}-form-item__field-wrapper[data-disabled].#{$prefix}-form-item__field-wrapper[data-warning] {
+    background-color: $input-color-disabled-background;
+    box-shadow: inset 0 0 0 1px $input-color-disabled-border;
+    cursor: not-allowed;
+  }
+
+  .#{$prefix}-form-item__field-wrapper[data-disabled]
+    .#{$prefix}-form-item__error-icon,
+  .#{$prefix}-form-item__field-wrapper[data-disabled]
+    .#{$prefix}-form-item__warning-icon,
+  .#{$prefix}-form-item__field-wrapper[data-disabled]
+    .#{$prefix}-form-item__prefix,
+  .#{$prefix}-form-item__field-wrapper[data-disabled]
+    .#{$prefix}-form-item__suffix {
+    color: $input-color-disabled-text;
   }
 }
 

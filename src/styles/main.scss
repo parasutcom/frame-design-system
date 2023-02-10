@@ -10,24 +10,24 @@
 @import 'objects/grid';
 
 // Components
-// @import 'components/form/form';
-// @import 'components/form/text-input';
-@import 'components/icon/icon';
 @import 'components/badge/badge';
 @import 'components/breadcrumb/breadcrumb';
 @import 'components/button/button';
-@import 'components/calendar/calendar';
 @import 'components/button-group/button-group';
+@import 'components/calendar/calendar';
 @import 'components/checkbox/checkbox';
 @import 'components/content-switcher/content-switcher';
-@import 'components/list/list';
+@import 'components/form/form';
+@import 'components/icon/icon';
 @import 'components/link/link';
+@import 'components/list/list';
 @import 'components/notification/notification';
-@import 'components/tag/tag';
-@import 'components/toggle/toggle';
 @import 'components/overflow-menu/overflow-menu';
 @import 'components/pagination/pagination';
 @import 'components/radio-button/radio-button';
+@import 'components/tag/tag';
+@import 'components/text-input/text-input';
+@import 'components/toggle/toggle';
 
 // Utilities
 @import 'utilities/animation';

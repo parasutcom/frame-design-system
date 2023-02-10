@@ -1,0 +1,83 @@
+@import '../../../design-tokens/build/scss/tokens';
+@import '../../tools/button';
+@import '../../tools/input';
+
+@mixin text-input {
+  .#{$prefix}-text-input {
+    @include input-reset;
+    @include type-style('label-01');
+
+    width: 100%;
+    min-height: $input-size-height;
+    flex: 1 1;
+    padding-right: $input-size-padding;
+    padding-left: $input-size-padding;
+    color: $input-color-text;
+  }
+
+  .#{$prefix}-text-input::placeholder {
+    color: $color-gray-60;
+    opacity: 1;
+  }
+
+  .#{$prefix}-text-input:disabled::placeholder {
+    color: $input-color-disabled-text;
+  }
+
+  .#{$prefix}-text-input--sm {
+    min-height: $input-size-small-height;
+  }
+
+  .#{$prefix}-text-input--lg {
+    min-height: $input-size-small-height;
+  }
+
+  .#{$prefix}-text-input--amount {
+    @include type-style('amount-01');
+  }
+
+  .#{$prefix}-text-input__visibility-toggle {
+    @include button-reset;
+
+    display: flex;
+    width: calc($spacing-medium * 1.125);
+    height: calc($spacing-medium * 1.125);
+    align-items: center;
+    justify-content: center;
+    margin-right: $spacing-2x-small;
+    background-color: transparent;
+    border-radius: $radius-small;
+    color: $color-gray-90;
+    cursor: pointer;
+    text-align: center;
+    transition: all 200ms ease;
+    vertical-align: middle;
+
+    &:focus-visible {
+      box-shadow: 0 0 0 2px $color-blue-60;
+    }
+  }
+
+  .#{$prefix}-text-input__visibility-toggle-icon {
+    @include icon-size('sm');
+
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .#{$prefix}-form-item__field-wrapper[data-disabled]
+    .#{$prefix}-text-input:disabled {
+    color: $input-color-disabled-text;
+  }
+
+  .#{$prefix}-form-item__field-wrapper[data-disabled]
+    .#{$prefix}-text-input:disabled
+    ~ .#{$prefix}-text-input__visibility-toggle {
+    color: $color-gray-40;
+    cursor: not-allowed;
+  }
+}
+
+@include text-input;
