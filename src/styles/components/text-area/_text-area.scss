@@ -1,0 +1,57 @@
+@import '../../../design-tokens/build/scss/tokens';
+@import '../../tools/input';
+
+@mixin text-area {
+  .#{$prefix}-text-area {
+    @include input-reset;
+    @include type-style('label-01');
+
+    overflow: auto;
+    width: 100%;
+    min-height: $text-area-size-height;
+    flex: 1 1;
+    padding-top: $spacing-medium;
+    padding-right: $text-area-size-padding;
+    padding-left: $text-area-size-padding;
+    margin-right: -$spacing-2x-small;
+    color: $text-area-color-text;
+    overflow-wrap: break-word;
+    resize: vertical;
+  }
+
+  .#{$prefix}-text-area::placeholder {
+    color: $color-gray-60;
+    opacity: 1;
+  }
+
+  .#{$prefix}-text-area:disabled::placeholder {
+    color: $text-area-color-disabled-text;
+  }
+
+  .#{$prefix}-text-area--sm {
+    min-height: $text-area-size-small-height;
+  }
+
+  .#{$prefix}-text-area--lg {
+    min-height: $text-area-size-large-height;
+  }
+
+  .#{$prefix}-form-item__field-wrapper[data-invalid] .#{$prefix}-text-area,
+  .#{$prefix}-form-item__field-wrapper[data-warning] .#{$prefix}-text-area {
+    padding-right: 42px;
+    margin-right: -34px;
+  }
+
+  .#{$prefix}-text-area + .#{$prefix}-form-item__suffix {
+    align-self: flex-start;
+    margin-top: $spacing-medium;
+  }
+
+  .#{$prefix}-form-item__field-wrapper[data-disabled]
+    .#{$prefix}-text-area:disabled {
+    color: $text-area-color-disabled-text;
+    resize: none;
+  }
+}
+
+@include text-area;
