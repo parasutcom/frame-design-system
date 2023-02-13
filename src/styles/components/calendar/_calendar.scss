@@ -4,6 +4,9 @@
   .#{$prefix}-calendar {
     position: absolute;
     z-index: $z-index-calendar;
+    top: 100%;
+    right: auto;
+    left: 0;
     display: none;
     overflow: hidden;
     width: $calendar-size-width;
