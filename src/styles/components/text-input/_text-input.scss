@@ -29,11 +29,30 @@
   }
 
   .#{$prefix}-text-input--lg {
-    min-height: $input-size-small-height;
+    min-height: $input-size-large-height;
   }
 
   .#{$prefix}-text-input--amount {
     @include type-style('amount-01');
+  }
+
+  .#{$prefix}-time-input {
+    z-index: 1;
+    margin-right: -34px;
+    line-height: $input-size-height;
+  }
+
+  .#{$prefix}-time-input.#{$prefix}-text-input--sm {
+    line-height: $input-size-small-height;
+  }
+
+  .#{$prefix}-time-input.#{$prefix}-text-input--lg {
+    line-height: $input-size-large-height;
+  }
+
+  .#{$prefix}-form-item__field-wrapper[data-invalid] .#{$prefix}-time-input,
+  .#{$prefix}-form-item__field-wrapper[data-warning] .#{$prefix}-time-input {
+    margin-right: -60px;
   }
 
   .#{$prefix}-text-input__visibility-toggle {

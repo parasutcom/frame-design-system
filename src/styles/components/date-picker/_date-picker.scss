@@ -1,0 +1,16 @@
+@import '../../../design-tokens/build/scss/tokens';
+
+@mixin date-picker {
+  .#{$prefix}-date-picker {
+    display: flex;
+    gap: $spacing-2x-small;
+  }
+
+  .#{$prefix}-date-picker-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@include date-picker;
