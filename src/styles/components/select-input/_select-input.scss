@@ -1,0 +1,68 @@
+@import '../../../design-tokens/build/scss/tokens';
+@import '../../tools/text-truncate';
+@import '../../tools/input';
+
+@mixin select-input {
+  .#{$prefix}-select-input {
+    @include input-reset;
+    @include truncate;
+    @include type-style('label-01');
+
+    z-index: 1;
+    display: inline-flex;
+    width: 100%;
+    min-height: $input-size-height;
+    flex: 1 1;
+    align-items: center;
+    padding-right: 42px;
+    padding-left: $input-size-padding;
+    margin-right: -34px;
+    color: $input-color-text;
+    cursor: pointer;
+    line-height: $input-size-height;
+  }
+
+  .#{$prefix}-select-input--sm {
+    min-height: $input-size-small-height;
+    line-height: $input-size-small-height;
+  }
+
+  .#{$prefix}-select-input--lg {
+    min-height: $input-size-large-height;
+    line-height: $input-size-large-height;
+  }
+
+  .#{$prefix}-select-input__label {
+    @include truncate;
+
+    user-select: none;
+  }
+
+  .#{$prefix}-select-input__arrow {
+    transition: all 200ms ease;
+  }
+
+  .#{$prefix}-select-input__arrow.#{$prefix}-select-input__arrow--open {
+    transform: rotate(180deg);
+  }
+
+  .#{$prefix}-form-item__field-wrapper[data-disabled]
+    .#{$prefix}-select-input:disabled {
+    color: $input-color-disabled-text;
+  }
+
+  .#{$prefix}-multi-select {
+    display: flex;
+    align-items: center;
+    margin-right: $spacing-2x-small;
+    gap: $spacing-3x-small;
+  }
+
+  .#{$prefix}-form-item__field-wrapper[data-invalid] .#{$prefix}-select-input,
+  .#{$prefix}-form-item__field-wrapper[data-warning] .#{$prefix}-select-input {
+    padding-right: 68px;
+    margin-right: -60px;
+  }
+}
+
+@include select-input;
