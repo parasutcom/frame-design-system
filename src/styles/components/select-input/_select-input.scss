@@ -9,7 +9,7 @@
     @include type-style('label-01');
 
     z-index: 1;
-    display: flex;
+    display: inline-flex;
     width: 100%;
     min-height: $input-size-height;
     flex: 1 1;
