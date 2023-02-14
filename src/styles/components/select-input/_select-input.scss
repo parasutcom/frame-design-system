@@ -9,9 +9,11 @@
     @include type-style('label-01');
 
     z-index: 1;
+    display: flex;
     width: 100%;
     min-height: $input-size-height;
     flex: 1 1;
+    align-items: center;
     padding-right: 42px;
     padding-left: $input-size-padding;
     margin-right: -34px;
@@ -31,20 +33,29 @@
   }
 
   .#{$prefix}-select-input__label {
+    @include truncate;
+
     user-select: none;
   }
 
-  .fds-select-input__arrow {
+  .#{$prefix}-select-input__arrow {
     transition: all 200ms ease;
   }
 
-  .fds-select-input__arrow.#{$prefix}-select-input__arrow--open {
+  .#{$prefix}-select-input__arrow.#{$prefix}-select-input__arrow--open {
     transform: rotate(180deg);
   }
 
   .#{$prefix}-form-item__field-wrapper[data-disabled]
     .#{$prefix}-select-input:disabled {
     color: $input-color-disabled-text;
+  }
+
+  .#{$prefix}-multi-select {
+    display: flex;
+    align-items: center;
+    margin-right: $spacing-2x-small;
+    gap: $spacing-3x-small;
   }
 
   .#{$prefix}-form-item__field-wrapper[data-invalid] .#{$prefix}-select-input,
