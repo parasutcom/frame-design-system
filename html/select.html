@@ -439,6 +439,7 @@
                           </div>
                         </div>
                       </div>
+                      <div class="fds-form-item__helper-text">Error message goes here</div>
                     </div>
                   </div>
                 </form>
@@ -453,6 +454,264 @@
                     <div class="fds-overflow-menu fds-overflow-menu-trigger fds-overflow-menu--open" x-data="{ open: false }">
                       <div class="fds-form-item__field-wrapper fds-form-item__field-wrapper--outline" data-disabled="true">
                         <button type="button" class="fds-select-input" @click="open = ! open" disabled>
+                          <span class="fds-select-input__label">Option</span>
+                        </button>
+                        <ul class="fds-overflow-menu-options" tabindex="-1" x-show="open" @click.outside="open = false" role="menu">
+                          <li class="fds-overflow-menu-options__item" role="none">
+                            <a href="#" class="fds-overflow-menu-options__btn">
+                              <span class="fds-overflow-menu-options__item-label">Option 1</span>
+                            </a>
+                          </li>
+                          <li class="fds-overflow-menu-options__item" role="none">
+                            <a href="#" class="fds-overflow-menu-options__btn">
+                              <span class="fds-overflow-menu-options__item-label">Option 2</span>
+                            </a>
+                          </li>
+                          <li class="fds-overflow-menu-options__item" role="none">
+                            <a href="#" class="fds-overflow-menu-options__btn">
+                              <span class="fds-overflow-menu-options__item-label">Option 3</span>
+                            </a>
+                          </li>
+                          <li class="fds-overflow-menu-options__item" role="none">
+                            <a href="#" class="fds-overflow-menu-options__btn">
+                              <span class="fds-overflow-menu-options__item-label">Option 4</span>
+                            </a>
+                          </li>
+                        </ul>
+                        <div class="fds-form-item__suffix fds-select-input__arrow" :class="{ 'fds-select-input__arrow--open': open }">
+                          <div class="fds-form-item__suffix-icon">
+                            <i class="fa-light fa-chevron-down"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="5">
+                <hr style="border-top: 1px solid #ddd;">
+              </td>
+            </tr>
+
+            <tr>
+              <td>Multiselect</td>
+              <td>
+                <form action="">
+                  <div class="fds-form-item">
+                    <div class="fds-form-item__label-wrapper">
+                      <label for="select" class="fds-form-item__label">Label</label>
+                    </div>
+                    <div class="fds-overflow-menu fds-overflow-menu-trigger fds-overflow-menu--open" x-data="{ open: false }">
+                      <div class="fds-form-item__field-wrapper fds-form-item__field-wrapper--outline">
+                        <button type="button" class="fds-select-input" @click="open = ! open">
+                          <div class="fds-multi-select">
+                            <div class="fds-tag fds-tag--interactive">
+                              <span class="fds-tag__label">Tag Label</span>
+                              <span class="fds-tag__btn-close">
+                                <span class="fds-icon fds-tag__icon">
+                                  <i class="fa-light fa-xmark"></i>
+                                </span>
+                              </span>
+                            </div>
+                            <div class="fds-tag fds-tag--interactive">
+                              <span class="fds-tag__label">Tag Label</span>
+                              <span class="fds-tag__btn-close">
+                                <span class="fds-icon fds-tag__icon">
+                                  <i class="fa-light fa-xmark"></i>
+                                </span>
+                              </span>
+                            </div>
+                          </div>
+                          <span class="fds-select-input__label">Option</span>
+                        </button>
+                        <ul class="fds-overflow-menu-options" tabindex="-1" x-show="open" @click.outside="open = false" role="menu">
+                          <li class="fds-overflow-menu-options__item" role="none">
+                            <a href="#" class="fds-overflow-menu-options__btn">
+                              <span class="fds-overflow-menu-options__item-label">Option 1</span>
+                            </a>
+                          </li>
+                          <li class="fds-overflow-menu-options__item" role="none">
+                            <a href="#" class="fds-overflow-menu-options__btn">
+                              <span class="fds-overflow-menu-options__item-label">Option 2</span>
+                            </a>
+                          </li>
+                          <li class="fds-overflow-menu-options__item" role="none">
+                            <a href="#" class="fds-overflow-menu-options__btn">
+                              <span class="fds-overflow-menu-options__item-label">Option 3</span>
+                            </a>
+                          </li>
+                          <li class="fds-overflow-menu-options__item" role="none">
+                            <a href="#" class="fds-overflow-menu-options__btn">
+                              <span class="fds-overflow-menu-options__item-label">Option 4</span>
+                            </a>
+                          </li>
+                        </ul>
+                        <div class="fds-form-item__suffix fds-select-input__arrow" :class="{ 'fds-select-input__arrow--open': open }">
+                          <div class="fds-form-item__suffix-icon">
+                            <i class="fa-light fa-chevron-down"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </td>
+
+              <td>
+                <form action="">
+                  <div class="fds-form-item">
+                    <div class="fds-form-item__label-wrapper">
+                      <label for="select" class="fds-form-item__label">Label</label>
+                    </div>
+                    <div class="fds-overflow-menu fds-overflow-menu-trigger fds-overflow-menu--open" x-data="{ open: false }">
+                      <div class="fds-form-item__field-wrapper fds-form-item__field-wrapper--outline">
+                        <button type="button" class="fds-select-input fds-select-input--lg" @click="open = ! open">
+                          <div class="fds-multi-select">
+                            <div class="fds-tag fds-tag--interactive">
+                              <span class="fds-tag__label">Tag Label</span>
+                              <span class="fds-tag__btn-close">
+                                <span class="fds-icon fds-tag__icon">
+                                  <i class="fa-light fa-xmark"></i>
+                                </span>
+                              </span>
+                            </div>
+                            <div class="fds-tag fds-tag--interactive">
+                              <span class="fds-tag__label">Tag Label</span>
+                              <span class="fds-tag__btn-close">
+                                <span class="fds-icon fds-tag__icon">
+                                  <i class="fa-light fa-xmark"></i>
+                                </span>
+                              </span>
+                            </div>
+                          </div>
+                          <span class="fds-select-input__label">Option</span>
+                        </button>
+                        <ul class="fds-overflow-menu-options" tabindex="-1" x-show="open" @click.outside="open = false" role="menu">
+                          <li class="fds-overflow-menu-options__item" role="none">
+                            <a href="#" class="fds-overflow-menu-options__btn">
+                              <span class="fds-overflow-menu-options__item-label">Option 1</span>
+                            </a>
+                          </li>
+                          <li class="fds-overflow-menu-options__item" role="none">
+                            <a href="#" class="fds-overflow-menu-options__btn">
+                              <span class="fds-overflow-menu-options__item-label">Option 2</span>
+                            </a>
+                          </li>
+                          <li class="fds-overflow-menu-options__item" role="none">
+                            <a href="#" class="fds-overflow-menu-options__btn">
+                              <span class="fds-overflow-menu-options__item-label">Option 3</span>
+                            </a>
+                          </li>
+                          <li class="fds-overflow-menu-options__item" role="none">
+                            <a href="#" class="fds-overflow-menu-options__btn">
+                              <span class="fds-overflow-menu-options__item-label">Option 4</span>
+                            </a>
+                          </li>
+                        </ul>
+                        <div class="fds-form-item__suffix fds-select-input__arrow" :class="{ 'fds-select-input__arrow--open': open }">
+                          <div class="fds-form-item__suffix-icon">
+                            <i class="fa-light fa-chevron-down"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </td>
+
+              <td>
+                <form action="">
+                  <div class="fds-form-item">
+                    <div class="fds-form-item__label-wrapper">
+                      <label for="select" class="fds-form-item__label">Label</label>
+                    </div>
+                    <div class="fds-overflow-menu fds-overflow-menu-trigger fds-overflow-menu--open" x-data="{ open: false }">
+                      <div class="fds-form-item__field-wrapper fds-form-item__field-wrapper--outline" data-invalid="true">
+                        <button type="button" class="fds-select-input fds-select-input--lg" @click="open = ! open">
+                          <div class="fds-multi-select">
+                            <div class="fds-tag fds-tag--interactive">
+                              <span class="fds-tag__label">Tag Label</span>
+                              <span class="fds-tag__btn-close">
+                                <span class="fds-icon fds-tag__icon">
+                                  <i class="fa-light fa-xmark"></i>
+                                </span>
+                              </span>
+                            </div>
+                            <div class="fds-tag fds-tag--interactive">
+                              <span class="fds-tag__label">Tag Label</span>
+                              <span class="fds-tag__btn-close">
+                                <span class="fds-icon fds-tag__icon">
+                                  <i class="fa-light fa-xmark"></i>
+                                </span>
+                              </span>
+                            </div>
+                          </div>
+                          <span class="fds-select-input__label">Option</span>
+                        </button>
+                        <ul class="fds-overflow-menu-options" tabindex="-1" x-show="open" @click.outside="open = false" role="menu">
+                          <li class="fds-overflow-menu-options__item" role="none">
+                            <a href="#" class="fds-overflow-menu-options__btn">
+                              <span class="fds-overflow-menu-options__item-label">Option 1</span>
+                            </a>
+                          </li>
+                          <li class="fds-overflow-menu-options__item" role="none">
+                            <a href="#" class="fds-overflow-menu-options__btn">
+                              <span class="fds-overflow-menu-options__item-label">Option 2</span>
+                            </a>
+                          </li>
+                          <li class="fds-overflow-menu-options__item" role="none">
+                            <a href="#" class="fds-overflow-menu-options__btn">
+                              <span class="fds-overflow-menu-options__item-label">Option 3</span>
+                            </a>
+                          </li>
+                          <li class="fds-overflow-menu-options__item" role="none">
+                            <a href="#" class="fds-overflow-menu-options__btn">
+                              <span class="fds-overflow-menu-options__item-label">Option 4</span>
+                            </a>
+                          </li>
+                        </ul>
+                        <div class="fds-form-item__suffix fds-select-input__arrow" :class="{ 'fds-select-input__arrow--open': open }">
+                          <div class="fds-form-item__suffix-icon">
+                            <i class="fa-light fa-chevron-down"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="fds-form-item__helper-text">Error message goes here</div>
+                    </div>
+                  </div>
+                </form>
+              </td>
+
+              <td>
+                <form action="">
+                  <div class="fds-form-item">
+                    <div class="fds-form-item__label-wrapper">
+                      <label for="select" class="fds-form-item__label">Label</label>
+                    </div>
+                    <div class="fds-overflow-menu fds-overflow-menu-trigger fds-overflow-menu--open" x-data="{ open: false }">
+                      <div class="fds-form-item__field-wrapper fds-form-item__field-wrapper--outline" data-disabled="true">
+                        <button type="button" class="fds-select-input fds-select-input--lg" @click="open = ! open" disabled>
+                          <div class="fds-multi-select">
+                            <div class="fds-tag fds-tag--interactive fds-tag--disabled">
+                              <span class="fds-tag__label">Tag Label</span>
+                              <span class="fds-tag__btn-close">
+                                <span class="fds-icon fds-tag__icon">
+                                  <i class="fa-light fa-xmark"></i>
+                                </span>
+                              </span>
+                            </div>
+                            <div class="fds-tag fds-tag--interactive fds-tag--disabled">
+                              <span class="fds-tag__label">Tag Label</span>
+                              <span class="fds-tag__btn-close">
+                                <span class="fds-icon fds-tag__icon">
+                                  <i class="fa-light fa-xmark"></i>
+                                </span>
+                              </span>
+                            </div>
+                          </div>
                           <span class="fds-select-input__label">Option</span>
                         </button>
                         <ul class="fds-overflow-menu-options" tabindex="-1" x-show="open" @click.outside="open = false" role="menu">
