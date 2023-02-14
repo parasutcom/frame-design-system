@@ -1,4 +1,5 @@
 @import '../../settings/prefix';
+@import '../../tools/icon';
 
 @mixin badge {
   .#{$prefix}-badge {
