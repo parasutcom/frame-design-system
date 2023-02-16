@@ -150,6 +150,12 @@
     .#{$prefix}-form-item__suffix {
     color: $input-color-disabled-text;
   }
+
+  fieldset[disabled] .#{$prefix}-form-item__helper-text,
+  fieldset[disabled] .#{$prefix}-form-item__label,
+  fieldset[disabled] .#{$prefix}-form-item__counter {
+    color: $input-color-disabled-text;
+  }
 }
 
 @include form;
