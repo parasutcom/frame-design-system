@@ -75,8 +75,9 @@
   .#{$prefix}-toggle__input:focus-visible
     + .#{$prefix}-toggle__label
     .#{$prefix}-toggle__label-mark {
-    box-shadow: 0 0 0 2px $toggle-color-focus-border,
-      inset 0 0 0 1px $color-white;
+    outline: 2px solid $toggle-color-focus-border;
+    outline-offset: 1px;
+    transition: none;
   }
 
   .#{$prefix}-toggle__input:disabled + .#{$prefix}-toggle__label {
