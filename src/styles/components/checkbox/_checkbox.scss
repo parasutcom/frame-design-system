@@ -2,6 +2,21 @@
 @import '../../tools/visually-hidden';
 
 @mixin checkbox {
+  .#{$prefix}-checkbox-group {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: $spacing-2x-small;
+  }
+
+  .#{$prefix}-checkbox-group--horizontal {
+    flex-direction: row;
+    align-items: center;
+    gap: $spacing-medium;
+  }
+
   .#{$prefix}-checkbox {
     position: relative;
     display: inline-flex;
@@ -14,48 +29,54 @@
   }
 
   .#{$prefix}-checkbox__label {
-    @include type-style('label-01');
-
     position: relative;
     display: inline-flex;
     flex-grow: 1;
     align-items: center;
-    color: $checkbox-color-text;
     cursor: pointer;
     gap: $checkbox-size-gap;
-  }
-
-  .#{$prefix}-checkbox__label-text {
-    @include truncate;
   }
 
   .#{$prefix}-checkbox__label-mark {
     position: relative;
     width: $checkbox-size-width;
     height: $checkbox-size-height;
+    flex-shrink: 0;
     background-color: $checkbox-color-background;
     border-radius: $checkbox-border-radius;
     box-shadow: inset 0 0 0 1px $checkbox-color-border;
     color: $color-white;
+    transition: all 200ms ease;
   }
 
-  .#{$prefix}-checkbox__label-mark::after {
+  .#{$prefix}-checkbox__label-mark::before {
     @include icon-size('xs');
 
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     content: '\f00c';
     font-family: $font-family-icon;
-    opacity: 0;
+    opacity: 1;
+  }
+
+  .#{$prefix}-checkbox__label-text {
+    @include type-style('label-01');
+    @include truncate;
+
+    color: $checkbox-color-text;
   }
 
   .#{$prefix}-checkbox__input:indeterminate
     + .#{$prefix}-checkbox__label
     .#{$prefix}-checkbox__label-mark {
-    box-shadow: inset 0 0 0 8px $checkbox-color-border;
+    background-color: $checkbox-color-active-background;
   }
 
   .#{$prefix}-checkbox__input:indeterminate
     + .#{$prefix}-checkbox__label
-    .#{$prefix}-checkbox__label-mark::after {
+    .#{$prefix}-checkbox__label-mark::before {
     content: '\f068';
     opacity: 1;
   }
@@ -63,12 +84,12 @@
   .#{$prefix}-checkbox__input:checked
     + .#{$prefix}-checkbox__label
     .#{$prefix}-checkbox__label-mark {
-    box-shadow: inset 0 0 0 8px $checkbox-color-border;
+    background-color: $checkbox-color-active-background;
   }
 
   .#{$prefix}-checkbox__input:checked
     + .#{$prefix}-checkbox__label
-    .#{$prefix}-checkbox__label-mark::after {
+    .#{$prefix}-checkbox__label-mark::before {
     opacity: 1;
   }
 
@@ -77,10 +98,10 @@
     .#{$prefix}-checkbox__label-mark {
     outline: 2px solid $checkbox-color-focus-border;
     outline-offset: 1px;
+    transition: none;
   }
 
   .#{$prefix}-checkbox__input:disabled + .#{$prefix}-checkbox__label {
-    color: $checkbox-color-disabled-text;
     cursor: not-allowed;
   }
 
@@ -96,7 +117,13 @@
   .#{$prefix}-checkbox__input:indeterminate:disabled
     + .#{$prefix}-checkbox__label
     .#{$prefix}-checkbox__label-mark {
-    box-shadow: inset 0 0 0 8px $checkbox-color-disabled-border;
+    background-color: $checkbox-color-disabled-background;
+    color: $checkbox-color-disabled-text;
+  }
+
+  .#{$prefix}-checkbox__input:disabled
+    + .#{$prefix}-checkbox__label
+    .#{$prefix}-checkbox__label-text {
     color: $checkbox-color-disabled-text;
   }
 }
