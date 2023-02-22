@@ -1,0 +1,93 @@
+@import '../../../design-tokens/build/scss/tokens';
+@import '../../tools/button';
+
+@mixin tab {
+  .#{$prefix}-tablist {
+    position: relative;
+    display: flex;
+    width: 100%;
+  }
+
+  .#{$prefix}-tablist__tab {
+    @include button-reset;
+    @include truncate;
+    @include type-style('label-01');
+
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid transparent;
+    background-color: transparent;
+    color: $tab-color-text;
+    cursor: pointer;
+    gap: $tab-size-gap;
+    padding-block: $tab-size-padding-block;
+    padding-inline: $tab-size-padding-inline;
+    text-align: center;
+  }
+
+  .#{$prefix}-tablist__tab:hover {
+    border-bottom: 2px solid $tab-color-hover-border;
+  }
+
+  .#{$prefix}-tablist__tab:focus-visible {
+    outline: 2px solid $tab-color-focus-border;
+    outline-offset: -2px;
+    transition: none;
+  }
+
+  .#{$prefix}-tablist__tab--disabled {
+    border-bottom: 2px solid $tab-color-disabled-border;
+    color: $tab-color-disabled-text;
+    cursor: not-allowed;
+  }
+
+  .#{$prefix}-tablist__tab--solid {
+    background-color: $tab-color-solid-background;
+  }
+
+  .#{$prefix}-tablist__tab--selected,
+  .#{$prefix}-tablist__tab--selected:hover {
+    border-bottom: 2px solid $tab-color-selected-border;
+    color: $tab-color-selected-text;
+  }
+
+  .#{$prefix}-tablist__tab .#{$prefix}-tablist__tab-tag {
+    color: $tab-color-text;
+  }
+
+  .#{$prefix}-tablist__tab .#{$prefix}-tablist__tab-tag .#{$prefix}-tag__label {
+    color: inherit;
+  }
+
+  .#{$prefix}-tablist__tab--selected .#{$prefix}-tablist__tab-tag {
+    background-color: $tab-color-selected-background;
+    box-shadow: inset 0 0 0 1px $tab-color-selected-border;
+    color: $color-white;
+  }
+  .#{$prefix}-tab-panel {
+    padding: $spacing-medium;
+  }
+
+  .#{$prefix}-tab-panel[hidden] {
+    display: none;
+  }
+
+  .#{$prefix}-tablist__tab--solid.#{$prefix}-tablist__tab--disabled {
+    border-bottom: 2px solid $tab-color-solid-disabled-border;
+    background-color: $tab-color-solid-disabled-background;
+  }
+
+  .#{$prefix}-tablist__tab--disabled .#{$prefix}-tablist__tab-tag {
+    background-color: $tab-color-solid-disabled-background;
+    box-shadow: inset 0 0 0 1px $tab-color-disabled-border;
+    color: $tab-color-disabled-text;
+    cursor: not-allowed;
+  }
+
+  .#{$prefix}-tablist__tab--solid.#{$prefix}-tablist__tab--disabled
+    .#{$prefix}-tablist__tab-tag {
+    background-color: $color-gray-10;
+  }
+}
+
+@include tab;
