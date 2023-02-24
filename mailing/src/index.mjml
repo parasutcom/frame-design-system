@@ -23,6 +23,7 @@
       <mj-divider border-width="1px" border-style="solid" border-color="#D4D9DF" width="100%" />
 
       <!-- SPACING -->
+      <mj-class name="fds-spacing--16" height="16px"/>
       <mj-class name="fds-spacing--24" height="24px"/>
       <mj-class name="fds-spacing--32" height="32px"/>
 
