@@ -14,13 +14,13 @@
     @include type-style('label-01');
 
     display: flex;
+    height: $tab-size-height;
     align-items: center;
     border-bottom: 2px solid transparent;
     background-color: transparent;
     color: $tab-color-text;
     cursor: pointer;
     gap: $tab-size-gap;
-    padding-block: $tab-size-padding-block;
     padding-inline: $tab-size-padding-inline;
     text-align: center;
   }

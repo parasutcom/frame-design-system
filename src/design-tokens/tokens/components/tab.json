@@ -48,6 +48,9 @@
       }
     },
     "size": {
+      "height": {
+        "value": "{spacing.2x-large}"
+      },
       "padding": {
         "inline": {
           "value": "{spacing.2x-small}"
