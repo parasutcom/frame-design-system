@@ -1,6 +1,7 @@
 {
   "z-index": {
     "overflow-menu": { "value": "7000"},
-    "calendar": { "value": "8000"}
+    "calendar": { "value": "8000"},
+    "tooltip": { "value": "9000"}
   }
 }
