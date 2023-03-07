@@ -1,0 +1,235 @@
+@import '../../../design-tokens/build/scss/tokens';
+
+@mixin tooltip {
+  .#{$prefix}-tooltip-container {
+    position: relative;
+    display: inline-flex;
+  }
+
+  .#{$prefix}-tooltip {
+    position: absolute;
+    z-index: $z-index-tooltip;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+  }
+
+  .#{$prefix}-tooltip__content {
+    @include type-style('label-01');
+
+    position: absolute;
+    z-index: $z-index-tooltip;
+    width: max-content;
+    max-width: $tooltip-size-max-width;
+    padding: $tooltip-size-padding;
+    background-color: $tooltip-color-background;
+    border-radius: $tooltip-border-radius;
+    color: $tooltip-color-text;
+    pointer-events: auto;
+    visibility: hidden;
+  }
+
+  .#{$prefix}-tooltip__content::before {
+    position: absolute;
+    z-index: $z-index-overflow-menu;
+    content: '';
+    visibility: hidden;
+  }
+
+  .#{$prefix}-tooltip__caret {
+    position: absolute;
+    z-index: $z-index-tooltip;
+    width: $spacing-2x-small;
+    height: $spacing-2x-small;
+    background-color: $tooltip-color-background;
+    border-radius: $radius-small;
+    transform: rotate(45deg);
+    visibility: hidden;
+  }
+
+  .#{$prefix}-tooltip--open .#{$prefix}-tooltip__content,
+  .#{$prefix}-tooltip--open .#{$prefix}-tooltip__content::before,
+  .#{$prefix}-tooltip--open .#{$prefix}-tooltip__caret {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  // TOP PLACEMENT
+  .#{$prefix}-tooltip--top .#{$prefix}-tooltip__content {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, calc(-100% - $tooltip-size-offset));
+  }
+
+  .#{$prefix}-tooltip--top-start .#{$prefix}-tooltip__content {
+    top: 0;
+    left: 0;
+    transform: translate(
+      calc(-2 * $tooltip-size-offset),
+      calc(-100% - $tooltip-size-offset)
+    );
+  }
+
+  .#{$prefix}-tooltip--top-end .#{$prefix}-tooltip__content {
+    top: 0;
+    right: 0;
+    transform: translate(
+      calc(2 * $tooltip-size-offset),
+      calc(-100% - $tooltip-size-offset)
+    );
+  }
+
+  .#{$prefix}-tooltip--top .#{$prefix}-tooltip__content::before,
+  .#{$prefix}-tooltip--top-start .#{$prefix}-tooltip__content::before,
+  .#{$prefix}-tooltip--top-end .#{$prefix}-tooltip__content::before {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: $tooltip-size-offset;
+    transform: translateY(100%);
+  }
+
+  .#{$prefix}-tooltip--top .#{$prefix}-tooltip__caret,
+  .#{$prefix}-tooltip--top-start .#{$prefix}-tooltip__caret,
+  .#{$prefix}-tooltip--top-end .#{$prefix}-tooltip__caret {
+    top: 0;
+    left: 50%;
+    margin-top: calc(-1 * ($spacing-3x-small + 1px));
+    transform: translate(-50%, calc(-1 * $tooltip-size-offset)) rotate(45deg);
+  }
+
+  // BOTTOM PLACEMENT
+  .#{$prefix}-tooltip--bottom .#{$prefix}-tooltip__content {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, calc(100% + $tooltip-size-offset));
+  }
+
+  .#{$prefix}-tooltip--bottom-start .#{$prefix}-tooltip__content {
+    bottom: 0;
+    left: 0;
+    transform: translate(
+      calc(-2 * $tooltip-size-offset),
+      calc(100% + $tooltip-size-offset)
+    );
+  }
+
+  .#{$prefix}-tooltip--bottom-end .#{$prefix}-tooltip__content {
+    right: 0;
+    bottom: 0;
+    transform: translate(
+      calc(2 * $tooltip-size-offset),
+      calc(100% + $tooltip-size-offset)
+    );
+  }
+
+  .#{$prefix}-tooltip--bottom .#{$prefix}-tooltip__content::before,
+  .#{$prefix}-tooltip--bottom-start .#{$prefix}-tooltip__content::before,
+  .#{$prefix}-tooltip--bottom-end .#{$prefix}-tooltip__content::before {
+    top: 0;
+    right: 0;
+    left: 0;
+    height: $tooltip-size-offset;
+    transform: translateY(-100%);
+  }
+
+  .#{$prefix}-tooltip--bottom .#{$prefix}-tooltip__caret,
+  .#{$prefix}-tooltip--bottom-start .#{$prefix}-tooltip__caret,
+  .#{$prefix}-tooltip--bottom-end .#{$prefix}-tooltip__caret {
+    bottom: 0;
+    left: 50%;
+    margin-bottom: calc(-1 * ($spacing-3x-small + 1px));
+    transform: translate(-50%, $tooltip-size-offset) rotate(45deg);
+  }
+
+  // LEFT PLACEMENT
+  .#{$prefix}-tooltip--left .#{$prefix}-tooltip__content {
+    top: 50%;
+    left: 0;
+    transform: translate(calc(-100% - $tooltip-size-offset), -50%);
+  }
+
+  .#{$prefix}-tooltip--left-start .#{$prefix}-tooltip__content {
+    top: 0;
+    left: 0;
+    transform: translate(
+      calc(-100% - $tooltip-size-offset),
+      calc(-2 * $tooltip-size-offset)
+    );
+  }
+
+  .#{$prefix}-tooltip--left-end .#{$prefix}-tooltip__content {
+    bottom: 0;
+    left: 0;
+    transform: translate(
+      calc(-100% - $tooltip-size-offset),
+      calc(2 * $tooltip-size-offset)
+    );
+  }
+
+  .#{$prefix}-tooltip--left .#{$prefix}-tooltip__content::before,
+  .#{$prefix}-tooltip--left-start .#{$prefix}-tooltip__content::before,
+  .#{$prefix}-tooltip--left-end .#{$prefix}-tooltip__content::before {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: $tooltip-size-offset;
+    transform: translateX(100%);
+  }
+
+  .#{$prefix}-tooltip--left .#{$prefix}-tooltip__caret,
+  .#{$prefix}-tooltip--left-start .#{$prefix}-tooltip__caret,
+  .#{$prefix}-tooltip--left-end .#{$prefix}-tooltip__caret {
+    top: 50%;
+    left: 0;
+    margin-left: calc(-1 * ($spacing-3x-small + 1px));
+    transform: translate(calc(-1 * $tooltip-size-offset), -50%) rotate(45deg);
+  }
+
+  // RIGHT PLACEMENT
+  .#{$prefix}-tooltip--right .#{$prefix}-tooltip__content {
+    top: 50%;
+    right: 0;
+    transform: translate(calc(100% + $tooltip-size-offset), -50%);
+  }
+
+  .#{$prefix}-tooltip--right-start .#{$prefix}-tooltip__content {
+    top: 0;
+    right: 0;
+    transform: translate(
+      calc(100% + $tooltip-size-offset),
+      calc(-2 * $tooltip-size-offset)
+    );
+  }
+
+  .#{$prefix}-tooltip--right-end .#{$prefix}-tooltip__content {
+    right: 0;
+    bottom: 0;
+    transform: translate(
+      calc(100% + $tooltip-size-offset),
+      calc(2 * $tooltip-size-offset)
+    );
+  }
+
+  .#{$prefix}-tooltip--right .#{$prefix}-tooltip__content::before,
+  .#{$prefix}-tooltip--right-start .#{$prefix}-tooltip__content::before,
+  .#{$prefix}-tooltip--right-end .#{$prefix}-tooltip__content::before {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: $tooltip-size-offset;
+    transform: translateX(-100%);
+  }
+
+  .#{$prefix}-tooltip--right .#{$prefix}-tooltip__caret,
+  .#{$prefix}-tooltip--right-start .#{$prefix}-tooltip__caret,
+  .#{$prefix}-tooltip--right-end .#{$prefix}-tooltip__caret {
+    top: 50%;
+    right: 0;
+    margin-right: calc(-1 * ($spacing-3x-small + 1px));
+    transform: translate($tooltip-size-offset, -50%) rotate(45deg);
+  }
+}
+@include tooltip;
