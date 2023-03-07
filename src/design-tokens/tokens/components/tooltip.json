@@ -1,0 +1,28 @@
+{
+  "tooltip": {
+    "color": {
+      "background": {
+        "value": "{color.gray.70.value}"
+      },
+      "text": {
+        "value": "{color.white.value}"
+      }
+    },
+    "size": {
+      "max-width": {
+        "value": "256px"
+      },
+      "padding": {
+        "value": "{spacing.medium}"
+      },
+      "offset": {
+        "value": "{spacing.2x-small}"
+      }
+    },
+    "border": {
+      "radius": {
+        "value": "{radius.x-large}"
+      }
+    }
+  }
+}
