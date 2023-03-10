@@ -16,6 +16,11 @@
     gap: $spacing-medium;
   }
 
+  .#{$prefix}-radio-button__inner-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
   .#{$prefix}-radio-button {
     position: relative;
     display: inline-flex;
@@ -41,6 +46,7 @@
     width: calc($radio-button-size-width * 1.125);
     height: calc($radio-button-size-height * 1.125);
     flex-shrink: 0;
+    align-self: flex-start;
     background-color: $radio-button-color-background;
     border-radius: $radio-button-border-radius;
     box-shadow: inset 0 0 0 1px $radio-button-color-border;
