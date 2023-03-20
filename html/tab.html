@@ -95,7 +95,7 @@
               <td>Default variant</td>
               <td>
                 <div x-data="{ activeTab: 1 }">
-                  <div role="tablist" class="fds-tablist fds-tablist--solid" x-on:keydown.arrow-left="activeTab = Math.max(activeTab - 1, 1)" x-on:keydown.arrow-right="activeTab = Math.min(activeTab + 1, 4)">
+                  <div role="tablist" class="fds-tablist" x-on:keydown.arrow-left="activeTab = Math.max(activeTab - 1, 1)" x-on:keydown.arrow-right="activeTab = Math.min(activeTab + 1, 4)">
                     <button type="button" role="tab" :aria-controls="tabpanel-1" x-bind:aria-selected="{{ activeTab === 1 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 1 ? 0 : -1" id="tabpanel-1-tab" class="fds-tablist__tab" x-on:click="activeTab = 1" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 1 }">
                       <span class="fds-tablist__tab-label">Tab label 1</span>
                     </button>
@@ -131,7 +131,7 @@
 
               <td>
                 <div x-data="{ activeTab: 1 }">
-                  <div role="tablist" class="fds-tablist fds-tablist--solid" x-on:keydown.arrow-left="activeTab = Math.max(activeTab - 1, 1)" x-on:keydown.arrow-right="activeTab = Math.min(activeTab + 1, 4)">
+                  <div role="tablist" class="fds-tablist" x-on:keydown.arrow-left="activeTab = Math.max(activeTab - 1, 1)" x-on:keydown.arrow-right="activeTab = Math.min(activeTab + 1, 4)">
                     <button type="button" role="tab" :aria-controls="tabpanel-1" x-bind:aria-selected="{{ activeTab === 1 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 1 ? 0 : -1" id="tabpanel-1-tab" class="fds-tablist__tab" x-on:click="activeTab = 1" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 1 }">
                       <span class="fds-tablist__tab-label">Tab label 1</span>
                     </button>
@@ -170,7 +170,7 @@
               <td>Default variant with tag</td>
               <td>
                 <div x-data="{ activeTab: 1 }">
-                  <div role="tablist" class="fds-tablist fds-tablist--solid" x-on:keydown.arrow-left="activeTab = Math.max(activeTab - 1, 1)" x-on:keydown.arrow-right="activeTab = Math.min(activeTab + 1, 4)">
+                  <div role="tablist" class="fds-tablist" x-on:keydown.arrow-left="activeTab = Math.max(activeTab - 1, 1)" x-on:keydown.arrow-right="activeTab = Math.min(activeTab + 1, 4)">
                     <button type="button" role="tab" :aria-controls="tabpanel-1" x-bind:aria-selected="{{ activeTab === 1 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 1 ? 0 : -1" id="tabpanel-1-tab" class="fds-tablist__tab" x-on:click="activeTab = 1" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 1 }">
                       <span class="fds-tablist__tab-label">Tab label 1</span>
                       <div class="fds-tag fds-tag--interactive fds-tablist__tab-tag">
@@ -217,7 +217,7 @@
               </td>
               <td>
                 <div x-data="{ activeTab: 1 }">
-                  <div role="tablist" class="fds-tablist fds-tablist--solid" x-on:keydown.arrow-left="activeTab = Math.max(activeTab - 1, 1)" x-on:keydown.arrow-right="activeTab = Math.min(activeTab + 1, 4)">
+                  <div role="tablist" class="fds-tablist" x-on:keydown.arrow-left="activeTab = Math.max(activeTab - 1, 1)" x-on:keydown.arrow-right="activeTab = Math.min(activeTab + 1, 4)">
                     <button type="button" role="tab" :aria-controls="tabpanel-1" x-bind:aria-selected="{{ activeTab === 1 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 1 ? 0 : -1" id="tabpanel-1-tab" class="fds-tablist__tab" x-on:click="activeTab = 1" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 1 }">
                       <span class="fds-tablist__tab-label">Tab label 1</span>
                       <div class="fds-tag fds-tag--interactive fds-tablist__tab-tag">
@@ -277,16 +277,16 @@
               <td>
                 <div x-data="{ activeTab: 1 }">
                   <div role="tablist" class="fds-tablist fds-tablist--solid" x-on:keydown.arrow-left="activeTab = Math.max(activeTab - 1, 1)" x-on:keydown.arrow-right="activeTab = Math.min(activeTab + 1, 4)">
-                    <button type="button" role="tab" :aria-controls="tabpanel-1" x-bind:aria-selected="{{ activeTab === 1 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 1 ? 0 : -1" id="tabpanel-1-tab" class="fds-tablist__tab fds-tablist__tab--solid" x-on:click="activeTab = 1" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 1 }">
+                    <button type="button" role="tab" :aria-controls="tabpanel-1" x-bind:aria-selected="{{ activeTab === 1 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 1 ? 0 : -1" id="tabpanel-1-tab" class="fds-tablist__tab" x-on:click="activeTab = 1" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 1 }">
                       <span class="fds-tablist__tab-label">Tab label 1</span>
                     </button>
-                    <button type="button" role="tab" :aria-controls="tabpanel-2" x-bind:aria-selected="{{ activeTab === 2 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 2 ? 0 : -1" id="tabpanel-2-tab" class="fds-tablist__tab fds-tablist__tab--solid" x-on:click="activeTab = 2" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 2 }">
+                    <button type="button" role="tab" :aria-controls="tabpanel-2" x-bind:aria-selected="{{ activeTab === 2 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 2 ? 0 : -1" id="tabpanel-2-tab" class="fds-tablist__tab" x-on:click="activeTab = 2" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 2 }">
                       <span class="fds-tablist__tab-label">Tab label 2</span>
                     </button>
-                    <button type="button" role="tab" :aria-controls="tabpanel-3" x-bind:aria-selected="{{ activeTab === 3 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 3 ? 0 : -1" id="tabpanel-3-tab" class="fds-tablist__tab fds-tablist__tab--solid" x-on:click="activeTab = 3" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 3 }">
+                    <button type="button" role="tab" :aria-controls="tabpanel-3" x-bind:aria-selected="{{ activeTab === 3 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 3 ? 0 : -1" id="tabpanel-3-tab" class="fds-tablist__tab" x-on:click="activeTab = 3" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 3 }">
                       <span class="fds-tablist__tab-label">Tab label 3</span>
                     </button>
-                    <button type="button" role="tab" :aria-controls="tabpanel-4" x-bind:aria-selected="{{ activeTab === 4 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 4 ? 0 : -1" id="tabpanel-4-tab" class="fds-tablist__tab fds-tablist__tab--solid" x-on:click="activeTab = 4" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 4 }">
+                    <button type="button" role="tab" :aria-controls="tabpanel-4" x-bind:aria-selected="{{ activeTab === 4 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 4 ? 0 : -1" id="tabpanel-4-tab" class="fds-tablist__tab" x-on:click="activeTab = 4" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 4 }">
                       <span class="fds-tablist__tab-label">Tab label 4</span>
                     </button>
                   </div>
@@ -313,16 +313,16 @@
               <td>
                 <div x-data="{ activeTab: 1 }">
                   <div role="tablist" class="fds-tablist fds-tablist--solid" x-on:keydown.arrow-left="activeTab = Math.max(activeTab - 1, 1)" x-on:keydown.arrow-right="activeTab = Math.min(activeTab + 1, 4)">
-                    <button type="button" role="tab" :aria-controls="tabpanel-1" x-bind:aria-selected="{{ activeTab === 1 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 1 ? 0 : -1" id="tabpanel-1-tab" class="fds-tablist__tab fds-tablist__tab--solid" x-on:click="activeTab = 1" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 1 }">
+                    <button type="button" role="tab" :aria-controls="tabpanel-1" x-bind:aria-selected="{{ activeTab === 1 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 1 ? 0 : -1" id="tabpanel-1-tab" class="fds-tablist__tab" x-on:click="activeTab = 1" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 1 }">
                       <span class="fds-tablist__tab-label">Tab label 1</span>
                     </button>
-                    <button type="button" role="tab" :aria-controls="tabpanel-2" x-bind:aria-selected="{{ activeTab === 2 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 2 ? 0 : -1" id="tabpanel-2-tab" class="fds-tablist__tab fds-tablist__tab--solid" x-on:click="activeTab = 2" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 2 }">
+                    <button type="button" role="tab" :aria-controls="tabpanel-2" x-bind:aria-selected="{{ activeTab === 2 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 2 ? 0 : -1" id="tabpanel-2-tab" class="fds-tablist__tab" x-on:click="activeTab = 2" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 2 }">
                       <span class="fds-tablist__tab-label">Tab label 2</span>
                     </button>
-                    <button type="button" role="tab" :aria-controls="tabpanel-3" x-bind:aria-selected="{{ activeTab === 3 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 3 ? 0 : -1" id="tabpanel-3-tab" class="fds-tablist__tab fds-tablist__tab--solid fds-tablist__tab--disabled" x-on:click="activeTab = 3" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 3 }" disabled>
+                    <button type="button" role="tab" :aria-controls="tabpanel-3" x-bind:aria-selected="{{ activeTab === 3 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 3 ? 0 : -1" id="tabpanel-3-tab" class="fds-tablist__tab fds-tablist__tab--disabled" x-on:click="activeTab = 3" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 3 }" disabled>
                       <span class="fds-tablist__tab-label">Tab label 3</span>
                     </button>
-                    <button type="button" role="tab" :aria-controls="tabpanel-4" x-bind:aria-selected="{{ activeTab === 4 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 4 ? 0 : -1" id="tabpanel-4-tab" class="fds-tablist__tab fds-tablist__tab--solid fds-tablist__tab--disabled" x-on:click="activeTab = 4" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 4 }" disabled>
+                    <button type="button" role="tab" :aria-controls="tabpanel-4" x-bind:aria-selected="{{ activeTab === 4 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 4 ? 0 : -1" id="tabpanel-4-tab" class="fds-tablist__tab fds-tablist__tab--disabled" x-on:click="activeTab = 4" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 4 }" disabled>
                       <span class="fds-tablist__tab-label">Tab label 4</span>
                     </button>
                   </div>
@@ -352,25 +352,25 @@
               <td>
                 <div x-data="{ activeTab: 1 }">
                   <div role="tablist" class="fds-tablist fds-tablist--solid" x-on:keydown.arrow-left="activeTab = Math.max(activeTab - 1, 1)" x-on:keydown.arrow-right="activeTab = Math.min(activeTab + 1, 4)">
-                    <button type="button" role="tab" :aria-controls="tabpanel-1" x-bind:aria-selected="{{ activeTab === 1 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 1 ? 0 : -1" id="tabpanel-1-tab" class="fds-tablist__tab fds-tablist__tab--solid" x-on:click="activeTab = 1" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 1 }">
+                    <button type="button" role="tab" :aria-controls="tabpanel-1" x-bind:aria-selected="{{ activeTab === 1 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 1 ? 0 : -1" id="tabpanel-1-tab" class="fds-tablist__tab" x-on:click="activeTab = 1" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 1 }">
                       <span class="fds-tablist__tab-label">Tab label 1</span>
                       <div class="fds-tag fds-tag--interactive fds-tablist__tab-tag">
                         <span class="fds-tag__label">58</span>
                       </div>
                     </button>
-                    <button type="button" role="tab" :aria-controls="tabpanel-2" x-bind:aria-selected="{{ activeTab === 2 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 2 ? 0 : -1" id="tabpanel-2-tab" class="fds-tablist__tab fds-tablist__tab--solid" x-on:click="activeTab = 2" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 2 }">
+                    <button type="button" role="tab" :aria-controls="tabpanel-2" x-bind:aria-selected="{{ activeTab === 2 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 2 ? 0 : -1" id="tabpanel-2-tab" class="fds-tablist__tab" x-on:click="activeTab = 2" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 2 }">
                       <span class="fds-tablist__tab-label">Tab label 2</span>
                       <div class="fds-tag fds-tag--interactive fds-tablist__tab-tag">
                         <span class="fds-tag__label">12</span>
                       </div>
                     </button>
-                    <button type="button" role="tab" :aria-controls="tabpanel-3" x-bind:aria-selected="{{ activeTab === 3 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 3 ? 0 : -1" id="tabpanel-3-tab" class="fds-tablist__tab fds-tablist__tab--solid" x-on:click="activeTab = 3" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 3 }">
+                    <button type="button" role="tab" :aria-controls="tabpanel-3" x-bind:aria-selected="{{ activeTab === 3 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 3 ? 0 : -1" id="tabpanel-3-tab" class="fds-tablist__tab" x-on:click="activeTab = 3" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 3 }">
                       <span class="fds-tablist__tab-label">Tab label 3</span>
                       <div class="fds-tag fds-tag--interactive fds-tablist__tab-tag">
                         <span class="fds-tag__label">23</span>
                       </div>
                     </button>
-                    <button type="button" role="tab" :aria-controls="tabpanel-4" x-bind:aria-selected="{{ activeTab === 4 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 4 ? 0 : -1" id="tabpanel-4-tab" class="fds-tablist__tab fds-tablist__tab--solid" x-on:click="activeTab = 4" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 4 }">
+                    <button type="button" role="tab" :aria-controls="tabpanel-4" x-bind:aria-selected="{{ activeTab === 4 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 4 ? 0 : -1" id="tabpanel-4-tab" class="fds-tablist__tab" x-on:click="activeTab = 4" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 4 }">
                       <span class="fds-tablist__tab-label">Tab label 4</span>
                       <div class="fds-tag fds-tag--interactive fds-tablist__tab-tag">
                         <span class="fds-tag__label">4</span>
