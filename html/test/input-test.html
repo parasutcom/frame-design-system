@@ -95,35 +95,33 @@
               </nav>
             </div>
           </div>
-          <div class="fds-row">
+          <div class="fds-row" x-data="{ activeTab: 1 }">
             <div class="fds-sm:col-span-12">
-              <div x-data="{ activeTab: 1 }">
-                <div role="tablist" class="fds-tablist" x-on:keydown.arrow-left="activeTab = Math.max(activeTab - 1, 1)" x-on:keydown.arrow-right="activeTab = Math.min(activeTab + 1, 4)">
-                  <button type="button" role="tab" :aria-controls="tabpanel-1" x-bind:aria-selected="{{ activeTab === 1 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 1 ? 0 : -1" id="tabpanel-1-tab" class="fds-tablist__tab fds-tablist__tab--selected" x-on:click="activeTab = 1" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 1 }" tabindex="0">
-                    <span class="fds-tablist__tab-label">Firma Bilgileri</span>
-                  </button>
-                  <button type="button" role="tab" :aria-controls="tabpanel-2" x-bind:aria-selected="{{ activeTab === 2 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 2 ? 0 : -1" id="tabpanel-2-tab" class="fds-tablist__tab" x-on:click="activeTab = 2" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 2 }" tabindex="-1">
-                    <span class="fds-tablist__tab-label">Adres Bilgileri</span>
-                  </button>
-                  <button type="button" role="tab" :aria-controls="tabpanel-3" x-bind:aria-selected="{{ activeTab === 3 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 3 ? 0 : -1" id="tabpanel-3-tab" class="fds-tablist__tab" x-on:click="activeTab = 3" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 3 }" tabindex="-1">
-                    <span class="fds-tablist__tab-label">Şirket Bilgileri</span>
-                  </button>
-                  <button type="button" role="tab" :aria-controls="tabpanel-4" x-bind:aria-selected="{{ activeTab === 4 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 4 ? 0 : -1" id="tabpanel-4-tab" class="fds-tablist__tab" x-on:click="activeTab = 4" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 4 }" tabindex="-1">
-                    <span class="fds-tablist__tab-label">Banka Bilgileri</span>
-                  </button>
-                  <button type="button" role="tab" :aria-controls="tabpanel-5" x-bind:aria-selected="{{ activeTab === 5 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 5 ? 0 : -1" id="tabpanel-5-tab" class="fds-tablist__tab fds-tablist__tab--disabled" x-on:click="activeTab = 5" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 5 }" tabindex="-1">
-                    <span class="fds-tablist__tab-label">Devir Bilgileri</span>
-                    <div class="fds-tag fds-tag--interactive fds-tablist__tab-tag">
-                      <span class="fds-tag__label">12</span>
-                    </div>
-                  </button>
-                  <button type="button" role="tab" :aria-controls="tabpanel-6" x-bind:aria-selected="{{ activeTab === 6 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 6 ? 0 : -1" id="tabpanel-6-tab" class="fds-tablist__tab" x-on:click="activeTab = 6" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 6 }" tabindex="-1">
-                    <span class="fds-tablist__tab-label">Öğrenim bilgileri</span>
-                    <div class="fds-tag fds-tag--interactive fds-tablist__tab-tag">
-                      <span class="fds-tag__label">58</span>
-                    </div>
-                  </button>
-                </div>
+              <div role="tablist" class="fds-tablist" x-on:keydown.arrow-left="activeTab = Math.max(activeTab - 1, 1)" x-on:keydown.arrow-right="activeTab = Math.min(activeTab + 1, 4)">
+                <button type="button" role="tab" :aria-controls="tabpanel-1" x-bind:aria-selected="{{ activeTab === 1 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 1 ? 0 : -1" id="tabpanel-1-tab" class="fds-tablist__tab fds-tablist__tab--selected" x-on:click="activeTab = 1" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 1 }" tabindex="0">
+                  <span class="fds-tablist__tab-label">Firma Bilgileri</span>
+                </button>
+                <button type="button" role="tab" :aria-controls="tabpanel-2" x-bind:aria-selected="{{ activeTab === 2 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 2 ? 0 : -1" id="tabpanel-2-tab" class="fds-tablist__tab" x-on:click="activeTab = 2" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 2 }" tabindex="-1">
+                  <span class="fds-tablist__tab-label">Adres Bilgileri</span>
+                </button>
+                <button type="button" role="tab" :aria-controls="tabpanel-3" x-bind:aria-selected="{{ activeTab === 3 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 3 ? 0 : -1" id="tabpanel-3-tab" class="fds-tablist__tab" x-on:click="activeTab = 3" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 3 }" tabindex="-1">
+                  <span class="fds-tablist__tab-label">Şirket Bilgileri</span>
+                </button>
+                <button type="button" role="tab" :aria-controls="tabpanel-4" x-bind:aria-selected="{{ activeTab === 4 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 4 ? 0 : -1" id="tabpanel-4-tab" class="fds-tablist__tab" x-on:click="activeTab = 4" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 4 }" tabindex="-1">
+                  <span class="fds-tablist__tab-label">Banka Bilgileri</span>
+                </button>
+                <button type="button" role="tab" :aria-controls="tabpanel-5" x-bind:aria-selected="{{ activeTab === 5 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 5 ? 0 : -1" id="tabpanel-5-tab" class="fds-tablist__tab fds-tablist__tab--disabled" x-on:click="activeTab = 5" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 5 }" tabindex="-1">
+                  <span class="fds-tablist__tab-label">Devir Bilgileri</span>
+                  <div class="fds-tag fds-tag--interactive fds-tablist__tab-tag">
+                    <span class="fds-tag__label">12</span>
+                  </div>
+                </button>
+                <button type="button" role="tab" :aria-controls="tabpanel-6" x-bind:aria-selected="{{ activeTab === 6 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 6 ? 0 : -1" id="tabpanel-6-tab" class="fds-tablist__tab" x-on:click="activeTab = 6" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 6 }" tabindex="-1">
+                  <span class="fds-tablist__tab-label">Öğrenim bilgileri</span>
+                  <div class="fds-tag fds-tag--interactive fds-tablist__tab-tag">
+                    <span class="fds-tag__label">58</span>
+                  </div>
+                </button>
               </div>
             </div>
             <div class="fds-sm:col-span-7">
@@ -286,35 +284,33 @@
               </nav>
             </div>
           </div>
-          <div class="fds-row">
+          <div class="fds-row" x-data="{ activeTab: 1 }">
             <div class="fds-sm:col-span-12">
-              <div x-data="{ activeTab: 1 }">
-                <div role="tablist" class="fds-tablist fds-tablist--solid" x-on:keydown.arrow-left="activeTab = Math.max(activeTab - 1, 1)" x-on:keydown.arrow-right="activeTab = Math.min(activeTab + 1, 4)">
-                  <button type="button" role="tab" :aria-controls="tabpanel-1" x-bind:aria-selected="{{ activeTab === 1 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 1 ? 0 : -1" id="tabpanel-1-tab" class="fds-tablist__tab fds-tablist__tab--selected" x-on:click="activeTab = 1" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 1 }" tabindex="0">
-                    <span class="fds-tablist__tab-label">Firma Bilgileri</span>
-                  </button>
-                  <button type="button" role="tab" :aria-controls="tabpanel-2" x-bind:aria-selected="{{ activeTab === 2 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 2 ? 0 : -1" id="tabpanel-2-tab" class="fds-tablist__tab" x-on:click="activeTab = 2" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 2 }" tabindex="-1">
-                    <span class="fds-tablist__tab-label">Adres Bilgileri</span>
-                  </button>
-                  <button type="button" role="tab" :aria-controls="tabpanel-3" x-bind:aria-selected="{{ activeTab === 3 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 3 ? 0 : -1" id="tabpanel-3-tab" class="fds-tablist__tab" x-on:click="activeTab = 3" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 3 }" tabindex="-1">
-                    <span class="fds-tablist__tab-label">Şirket Bilgileri</span>
-                  </button>
-                  <button type="button" role="tab" :aria-controls="tabpanel-4" x-bind:aria-selected="{{ activeTab === 4 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 4 ? 0 : -1" id="tabpanel-4-tab" class="fds-tablist__tab" x-on:click="activeTab = 4" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 4 }" tabindex="-1">
-                    <span class="fds-tablist__tab-label">Banka Bilgileri</span>
-                  </button>
-                  <button type="button" role="tab" :aria-controls="tabpanel-5" x-bind:aria-selected="{{ activeTab === 5 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 5 ? 0 : -1" id="tabpanel-5-tab" class="fds-tablist__tab fds-tablist__tab--disabled" x-on:click="activeTab = 5" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 5 }" tabindex="-1">
-                    <span class="fds-tablist__tab-label">Devir Bilgileri</span>
-                    <div class="fds-tag fds-tag--interactive fds-tablist__tab-tag">
-                      <span class="fds-tag__label">12</span>
-                    </div>
-                  </button>
-                  <button type="button" role="tab" :aria-controls="tabpanel-6" x-bind:aria-selected="{{ activeTab === 6 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 6 ? 0 : -1" id="tabpanel-6-tab" class="fds-tablist__tab" x-on:click="activeTab = 6" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 6 }" tabindex="-1">
-                    <span class="fds-tablist__tab-label">Öğrenim bilgileri</span>
-                    <div class="fds-tag fds-tag--interactive fds-tablist__tab-tag">
-                      <span class="fds-tag__label">58</span>
-                    </div>
-                  </button>
-                </div>
+              <div role="tablist" class="fds-tablist fds-tablist--solid" x-on:keydown.arrow-left="activeTab = Math.max(activeTab - 1, 1)" x-on:keydown.arrow-right="activeTab = Math.min(activeTab + 1, 4)">
+                <button type="button" role="tab" :aria-controls="tabpanel-1" x-bind:aria-selected="{{ activeTab === 1 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 1 ? 0 : -1" id="tabpanel-1-tab" class="fds-tablist__tab fds-tablist__tab--selected" x-on:click="activeTab = 1" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 1 }" tabindex="0">
+                  <span class="fds-tablist__tab-label">Firma Bilgileri</span>
+                </button>
+                <button type="button" role="tab" :aria-controls="tabpanel-2" x-bind:aria-selected="{{ activeTab === 2 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 2 ? 0 : -1" id="tabpanel-2-tab" class="fds-tablist__tab" x-on:click="activeTab = 2" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 2 }" tabindex="-1">
+                  <span class="fds-tablist__tab-label">Adres Bilgileri</span>
+                </button>
+                <button type="button" role="tab" :aria-controls="tabpanel-3" x-bind:aria-selected="{{ activeTab === 3 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 3 ? 0 : -1" id="tabpanel-3-tab" class="fds-tablist__tab" x-on:click="activeTab = 3" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 3 }" tabindex="-1">
+                  <span class="fds-tablist__tab-label">Şirket Bilgileri</span>
+                </button>
+                <button type="button" role="tab" :aria-controls="tabpanel-4" x-bind:aria-selected="{{ activeTab === 4 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 4 ? 0 : -1" id="tabpanel-4-tab" class="fds-tablist__tab" x-on:click="activeTab = 4" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 4 }" tabindex="-1">
+                  <span class="fds-tablist__tab-label">Banka Bilgileri</span>
+                </button>
+                <button type="button" role="tab" :aria-controls="tabpanel-5" x-bind:aria-selected="{{ activeTab === 5 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 5 ? 0 : -1" id="tabpanel-5-tab" class="fds-tablist__tab fds-tablist__tab--disabled" x-on:click="activeTab = 5" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 5 }" tabindex="-1">
+                  <span class="fds-tablist__tab-label">Devir Bilgileri</span>
+                  <div class="fds-tag fds-tag--interactive fds-tablist__tab-tag">
+                    <span class="fds-tag__label">12</span>
+                  </div>
+                </button>
+                <button type="button" role="tab" :aria-controls="tabpanel-6" x-bind:aria-selected="{{ activeTab === 6 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 6 ? 0 : -1" id="tabpanel-6-tab" class="fds-tablist__tab" x-on:click="activeTab = 6" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 6 }" tabindex="-1">
+                  <span class="fds-tablist__tab-label">Öğrenim bilgileri</span>
+                  <div class="fds-tag fds-tag--interactive fds-tablist__tab-tag">
+                    <span class="fds-tag__label">58</span>
+                  </div>
+                </button>
               </div>
             </div>
             <div class="fds-sm:col-span-7">
