@@ -6,6 +6,7 @@
     position: relative;
     display: flex;
     width: 100%;
+    overflow-x: auto;
   }
 
   .#{$prefix}-tablist__tab {
@@ -15,6 +16,7 @@
 
     display: flex;
     height: $tab-size-height;
+    flex-shrink: 0;
     align-items: center;
     border-bottom: 2px solid transparent;
     background-color: transparent;
