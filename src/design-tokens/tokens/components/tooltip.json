@@ -13,7 +13,7 @@
         "value": "256px"
       },
       "padding": {
-        "value": "{spacing.medium}"
+        "value": "{spacing.x-small}"
       },
       "offset": {
         "value": "{spacing.2x-small}"

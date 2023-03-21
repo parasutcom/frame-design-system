@@ -16,6 +16,45 @@
     pointer-events: none;
   }
 
+  .#{$prefix}-tooltip__btn {
+    @include button-reset;
+
+    display: inline-flex;
+    width: calc($spacing-medium * 1.25);
+    height: calc($spacing-medium * 1.25);
+    align-items: center;
+    justify-content: center;
+    background-color: $color-gray-70;
+    border-radius: $radius-small;
+    color: $color-white;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    visibility: hidden;
+
+    &:hover {
+      background-color: $color-gray-90;
+    }
+
+    &:active {
+      background-color: $color-gray-100;
+    }
+
+    &:focus-visible {
+      box-shadow: 0 0 0 2px $color-blue-60;
+    }
+  }
+
+  .#{$prefix}-tooltip__icon {
+    @include icon-size('xs');
+
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
   .#{$prefix}-tooltip__content {
     @include type-style('label-01');
 
@@ -51,7 +90,8 @@
 
   .#{$prefix}-tooltip--open .#{$prefix}-tooltip__content,
   .#{$prefix}-tooltip--open .#{$prefix}-tooltip__content::before,
-  .#{$prefix}-tooltip--open .#{$prefix}-tooltip__caret {
+  .#{$prefix}-tooltip--open .#{$prefix}-tooltip__caret,
+  .#{$prefix}-tooltip--open .#{$prefix}-tooltip__btn {
     opacity: 1;
     visibility: visible;
   }

@@ -269,13 +269,18 @@
             <tr>
               <td>Short</td>
               <td>
-                <div class="fds-tooltip-container fds-tooltip--top-start" x-data="{ isTooltipOpen: false }" x-bind:class="{ 'fds-tooltip--open': isTooltipOpen }" x-on:mouseover="isTooltipOpen = true" x-on:mouseleave="isTooltipOpen = false">
+                <div class="fds-tooltip-container fds-tooltip--top-start fds-tooltip--open" x-data="{ isTooltipOpen: false }" x-bind:class="{ 'fds-tooltip--open': isTooltipOpen }" x-on:mouseover="isTooltipOpen = true" x-on:mouseleave="isTooltipOpen = false">
                   <button class="fds-btn fds-btn--primary fds-btn--sm" aria-describedby="tooltip">
                     <span class="fds-btn__label">Primary button</span>
                   </button>
                   <div class="fds-tooltip" role="tooltip" id="tooltip" x-bind:aria-hidden="!isTooltipOpen">
                     <div class="fds-tooltip__content">
                       This is some tooltip text.
+                      <button class="fds-tooltip__btn">
+                        <span class="fds-tooltip__icon">
+                          <i class="fa-light fa-copy"></i>
+                        </span>
+                      </button>
                     </div>
                     <span class="fds-tooltip__caret"></span>
                   </div>
