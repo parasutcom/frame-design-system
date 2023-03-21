@@ -1,5 +1,5 @@
 // Do not edit directly
-// Generated on Mon, 06 Mar 2023 08:55:58 GMT
+// Generated on Tue, 21 Mar 2023 06:24:53 GMT
 
 $badge-color-background: #e4e4e4;
 $badge-color-text: #5b5b5b;
@@ -270,6 +270,12 @@ $toggle-size-height: 24px;
 $toggle-size-width: 48px;
 $toggle-size-gap: 16px;
 $toggle-border-radius: 999px;
+$tooltip-color-background: #3e3e3e;
+$tooltip-color-text: #ffffff;
+$tooltip-size-max-width: 256px;
+$tooltip-size-padding: 12px;
+$tooltip-size-offset: 8px;
+$tooltip-border-radius: 8px;
 $animation-duration-x-fast: 0.25s;
 $animation-duration-fast: 0.5s;
 $animation-duration-medium: 1s;
@@ -406,6 +412,7 @@ $font-letter-spacing-extra-wide: 0.32px;
 $radius-small: 2px;
 $radius-medium: 4px;
 $radius-large: 6px;
+$radius-x-large: 8px;
 $radius-pill: 999px;
 $radius-circle: 50%;
 $spacing-4x-small: 2px;
@@ -419,3 +426,4 @@ $spacing-2x-large: 40px;
 $spacing-3x-large: 48px;
 $z-index-overflow-menu: 7000;
 $z-index-calendar: 8000;
+$z-index-tooltip: 9000;
