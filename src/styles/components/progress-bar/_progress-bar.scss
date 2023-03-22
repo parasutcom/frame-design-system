@@ -23,6 +23,10 @@
     color: $color-gray-90;
   }
 
+  .#{$prefix}-progress-bar__counter {
+    margin-left: auto;
+  }
+
   .#{$prefix}-progress-bar__track {
     position: relative;
     width: 100%;
