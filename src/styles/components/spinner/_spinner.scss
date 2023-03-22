@@ -7,11 +7,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: $spinner-size-gap;
+    gap: $spinner-size-vertical-gap;
   }
 
   .#{$prefix}-spinner--horizontal {
     flex-direction: row;
+    gap: $spinner-size-horizontal-gap;
   }
 
   .#{$prefix}-spinner__animation {
