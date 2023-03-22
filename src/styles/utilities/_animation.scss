@@ -1,5 +1,5 @@
 @import '../tools/animation';
 
-.fds-animation--spin {
+.#{$prefix}-animation--spin {
   @include animation-spin;
 }
