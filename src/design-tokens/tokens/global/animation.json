@@ -11,7 +11,7 @@
         "value": "1s"
       },
       "slow": {
-        "value": "1.5s"
+        "value": "1.25s"
       },
       "x-slow": {
         "value": "2s"

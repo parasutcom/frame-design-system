@@ -4,7 +4,7 @@
 @mixin animation-spin(
   $delay: $animation-delay-x-short,
   $direction: normal,
-  $duration: $animation-duration-medium,
+  $duration: $animation-duration-slow,
   $iteration: infinite,
   $timing-function: $animation-timing-linear
 ) {
