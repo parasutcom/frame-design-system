@@ -1,0 +1,53 @@
+@import '../../../design-tokens/build/scss/tokens';
+@import '../../tools/animation';
+
+@mixin spinner {
+  .#{$prefix}-spinner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: $spinner-size-vertical-gap;
+  }
+
+  .#{$prefix}-spinner--horizontal {
+    flex-direction: row;
+    gap: $spinner-size-horizontal-gap;
+  }
+
+  .#{$prefix}-spinner__animation {
+    @include animation-spin;
+    @include icon-size('4xl');
+
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .#{$prefix}-spinner--primary .#{$prefix}-spinner__animation {
+    color: $spinner-color-primary-text;
+  }
+
+  .#{$prefix}-spinner--secondary .#{$prefix}-spinner__animation {
+    color: $spinner-color-secondary-text;
+  }
+
+  .#{$prefix}-spinner--sm .#{$prefix}-spinner__animation {
+    @include icon-size('md');
+  }
+
+  .#{$prefix}-spinner__text {
+    @include type-style('label-01');
+  }
+
+  .#{$prefix}-spinner--primary .#{$prefix}-spinner__text {
+    color: $spinner-color-text;
+  }
+
+  .#{$prefix}-spinner--secondary .#{$prefix}-spinner__text {
+    color: $spinner-color-secondary-text;
+  }
+}
+
+@include spinner;
