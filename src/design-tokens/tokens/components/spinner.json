@@ -16,8 +16,15 @@
       }
     },
     "size": {
-      "gap": {
-        "value": "{spacing.2x-small}"
+      "horizontal": {
+        "gap": {
+          "value": "{spacing.x-small}"
+        }
+      },
+      "vertical": {
+        "gap": {
+          "value": "{spacing.2x-small}"
+        }
       }
     }
   }
