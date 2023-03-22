@@ -1,0 +1,24 @@
+{
+  "spinner": {
+    "color": {
+      "text": {
+        "value": "{color.gray.90.value}"
+      },
+      "primary": {
+        "text": {
+          "value": "{color.blue.60.value}"
+        }
+      },
+      "secondary": {
+        "text": {
+          "value": "{color.gray.40.value}"
+        }
+      }
+    },
+    "size": {
+      "gap": {
+        "value": "{spacing.2x-small}"
+      }
+    }
+  }
+}
