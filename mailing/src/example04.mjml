@@ -1,121 +1,79 @@
 <mjml>
   <mj-head>
-    <!-- FONTS -->
-    <mj-font name="Inter" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" />
-    <mj-font name="JetBrains Mono" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" />
-
-    <!-- BREAKPOINT -->
-    <mj-breakpoint width="484px" />
+    <!-- TITLE -->
+    <mj-title>Title goes here</mj-title>
 
     <!-- PREVIEW -->
     <mj-preview>Preview goes here</mj-preview>
 
-    <!-- TITLE -->
-    <mj-title>Title goes here</mj-title>
+    <!-- FONTS -->
+    <mj-style>
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/inter/v12/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/inter/v12/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      @font-face {
+        font-family: 'JetBrains Mono';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/jetbrainsmono/v17/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxDcwgknk-4.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      @font-face {
+        font-family: 'JetBrains Mono';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/jetbrainsmono/v17/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxDcwgknk-4.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+    </mj-style>
+
+
+    <!-- BREAKPOINT -->
+    <mj-breakpoint width="484px" />
 
     <mj-attributes>
       <!-- NORMALIZE -->
-      <mj-all padding="0" margin="0" font-family="Inter, sans-serif" color="#344461" />
+      <mj-all padding="0" margin="0" font-family="Inter, Helvetica, Arial, sans-serif" color="#344461" />
       <mj-body background-color="#E5E9EC" width="636px" />
       <mj-section full-width="full-width" />
-      <mj-table color="#344461" />
       <mj-text font-family="Inter, sans-serif" />
       <mj-divider border-width="1px" border-style="solid" border-color="#D4D9DF" width="100%" />
 
       <!-- SPACING -->
-      <mj-class name="fds-spacing--16" height="16px"/>
-      <mj-class name="fds-spacing--24" height="24px"/>
-      <mj-class name="fds-spacing--32" height="32px"/>
-
-      <!-- BUTTON -->
-      <mj-button font-size="15px" line-height="16px" font-weight="500" color="#ffffff" background-color="transparent"	 inner-padding="16px 16px" border-radius="4px" align="left" />
-
-      <!-- CONTENT -->
-      <mj-class name="fds-content" padding="32px" background-color="#ffffff" />
+      <mj-class name="fds-spacing--16" height="16px" />
+      <mj-class name="fds-spacing--24" height="24px" />
+      <mj-class name="fds-spacing--32" height="32px" />
 
       <!-- HIGHLIGHT -->
-      <mj-class name="fds-highlight" background-color="#E5E9EC" padding="16px 24px" border-radius="8px" color="#344461"/>
+      <mj-class name="fds-highlight" background-color="#E5E9EC" padding="16px 24px" border-radius="8px" color="#344461" />
     </mj-attributes>
 
     <mj-style>
-
       img {
         object-fit: cover !important;
       }
 
-      .fds-table th,
-      .fds-table td {
-        font-size: 15px !important;
-        line-height: 18px !important;
-        padding: 8px;
-        border: 2px solid #D4D9DF;
-      }
-
-      .fds-table th {
-        font-weight: 500 !important;
-      }
-
-      .fds-table td {
-        font-weight: 400 !important;
-      }
-
-      .fds-table.fds-table--summary th,
-      .fds-table.fds-table--summary td {
-        border: none !important;
-      }
-
-      .fds-table.fds-table--summary thead th {
-        padding: 0 !important;
-        padding-bottom: 16px !important;
-        border-bottom: 2px solid #D4D9DF !important;
-        color: #121D31 !important;
-      }
-
-      .fds-table.fds-table--summary tbody tr:first-child td {
-        padding-top: 32px !important;
-      }
-
-      .fds-table.fds-table--summary tbody td {
-        padding: 12px 0 !important;
-        color: #505F79 !important;
-        font-weight: 500 !important;
-      }
-
-      .fds-table.fds-table--summary tbody tr td:last-child {
-        font-family: 'JetBrains Mono', monospace !important;
-        color: #3E3E3E !important;
-      }
-
-      .fds-table.fds-table--truncate td {
-        overflow: hidden !important;
-        white-space: nowrap !important;
-        text-overflow: ellipsis !important;
-        max-width: 0 !important;
-      }
-
-      .fds-table.fds-table--vertical-top td {
-        vertical-align: top !important;
-      }
-
-      .fds-cell--amount {
-        font-family: 'JetBrains Mono', monospace !important;
-      }
-
-      td.fds-cell--amount-01 {
-        font-family: 'JetBrains Mono', monospace !important;
-        font-size: 18px !important;
-        line-height: 24px !important;
-        font-weight: 500;
-      }
-
-      .fds-table tbody tr td.fds-cell--error,
-      .fds-table.fds-table--summary tbody tr td.fds-cell--error  {
-        color: #DA1E28 !important;
-      }
-
       .fds-email-heading-01 div {
         font-size: 22px !important;
-        line-height: 22px !important;
+        line-height: 26px !important;
         font-weight: 500;
         letter-spacing: -0.32px;
         color: #121D31 !important;
@@ -161,39 +119,9 @@
         font-weight: 400;
       }
 
-      .fds-btn--primary p {
-        background-color: #0F62FE !important;
-        cursor: pointer;
-        letter-spacing: 0.32px !important;
-      }
-
-      .fds-btn--primary p:hover {
-        background-color: #003BCB !important;
-      }
-
-      .fds-btn--primary p:active {
-        background-color: #002599 !important;
-      }
-
-      .fds-btn--secondary p {
-        background-color: #505F79 !important;
-        cursor: pointer;
-        font-size: 14px !important;
-        letter-spacing: 0.32px !important;
-        padding: 8px 16px !important
-      }
-
-      .fds-btn--secondary p:hover {
-        background-color: #344461 !important;
-      }
-
-      .fds-btn--secondary p:active {
-        background-color: #202E49 !important;
-      }
-
       .fds-text-link {
-        text-align: left;
-        color: inherit;
+        text-align: left !important;
+        color: #344461 !important;
         text-decoration: underline;
       }
 
@@ -203,13 +131,34 @@
         line-height: 18px;
         font-weight: 400;
         letter-spacing: 0.32px;
-        text-align: left;
+        text-align: left !important;
         color: #505F79 !important;
         text-decoration: none;
       }
 
-      .fds-footer-link:hover  {
+      .fds-footer-link:hover {
         text-decoration: underline;
+      }
+
+      .fds-table th,
+      .fds-table td {
+        font-size: 15px !important;
+        line-height: 24px !important;
+      }
+
+      .fds-table th {
+        font-weight: 500 !important;
+      }
+
+      .fds-table td {
+        font-weight: 400 !important;
+      }
+
+      .fds-table.fds-table--truncate td {
+        overflow: hidden !important;
+        white-space: nowrap !important;
+        text-overflow: ellipsis !important;
+        max-width: 0 !important;
       }
 
       .fds-inline-block {
@@ -221,16 +170,6 @@
       }
 
       @media only screen and (max-width: 484px) {
-        .fds-table th,
-        .fds-table td {
-          font-size: 13px !important;
-          line-height: 22px !important;
-        }
-
-        td.fds-cell--amount-01 {
-          font-size: 16px !important;
-        }
-
         .fds-email-heading-01 div {
           font-size: 18px !important;
           line-height: 18px !important;
@@ -271,14 +210,14 @@
 
   <mj-body>
     <mj-wrapper padding="80px 16px">
-      <!-- HEADER -->
+      <!-- START HEADER -->
       <mj-section background-color="#D4D9DF" border-radius="8px 8px 0 0" padding="20px 24px">
         <mj-column width="60%" padding="8px">
-          <mj-image align="left" width="150px" src="https://parasut-mailing.s3.amazonaws.com/parasut-logo-2x.png" alt="logo" href="#" />
+          <mj-image align="left" width="150px" src="https://parasut-mailing.s3.amazonaws.com/parasut-logo-2x.png" alt="brand_logo" href="#" />
         </mj-column>
         <mj-column width="40%" padding="8px">
           <mj-text css-class="fds-email-label-03" color="#505F79" align="left">
-            <span>Şirket adı: X Yazılım teknolojileri A.Ş</span>
+            <span class="fds-inline-block">Şirket adı: X Yazılım teknolojileri A.Ş</span>
             <span class="fds-inline-block fds-u-pt-4">Şube: Sarıyer, Istanbul</span>
             <span class="fds-inline-block fds-u-pt-4">Hesap ID: 234323432</span>
           </mj-text>
@@ -286,10 +225,10 @@
       </mj-section>
       <!-- END HEADER -->
 
-      <!-- CONTENT -->
-      <mj-section mj-class="fds-content" border-radius="0 0 8px 8px">
+      <!-- START CONTENT -->
+      <mj-section padding="32px" background-color="#ffffff">
         <mj-column width="100%">
-          <mj-text css-class="fds-email-heading-01">Lisanslama işleminiz başarıyla gerçekleşti.</mj-text>
+          <mj-text css-class="fds-email-heading-01" color="#121D31">Lisanslama işleminiz başarıyla gerçekleşti.</mj-text>
 
           <mj-spacer mj-class="fds-spacing--32" />
 
@@ -297,21 +236,21 @@
 
           <mj-spacer mj-class="fds-spacing--32" />
 
-          <mj-table css-class="fds-table">
+          <mj-table css-class="fds-table" table-layout="auto" container-background-color="#ffffff" padding="0">
             <tr>
-              <th width="33%" align="left">Ürün</th>
-              <th width="33%" align="center">Son geçerlilik</th>
-              <th width="33%" align="right">Tutar</th>
+              <th width="33%" align="left" style="padding: 8px; border: 2px solid #D4D9DF; text-align: left !important">Ürün</th>
+              <th width="33%" align="center" style="padding: 8px; border: 2px solid #D4D9DF; text-align: center !important;">Son geçerlilik	</th>
+              <th width="33%" align="right" style="padding: 8px; border: 2px solid #D4D9DF; text-align: right !important;">Tutar</th>
             </tr>
             <tr>
-              <td width="33%" align="left">Jump V16 Ana Lisans</td>
-              <td width="33%" align="center">—</td>
-              <td width="33%" align="right" class="fds-cell--amount">130.999,00 ₺</td>
+              <td width="33%" align="left" style="padding: 8px; border: 2px solid #D4D9DF; text-align: left !important">Jump V16 Ana Lisans</td>
+              <td width="33%" align="center" style="padding: 8px; border: 2px solid #D4D9DF; text-align: center !important;">—</td>
+              <td width="33%" align="right" style="padding: 8px; border: 2px solid #D4D9DF; font-family: 'JetBrains Mono', monospace !important; text-align: right !important;">130.999,00 ₺</td>
             </tr>
             <tr>
-              <td width="33%" align="left">Jump V16 Ana Lisans Deneme Yıllık</td>
-              <td width="33%" align="center">29.11.2023</td>
-              <td width="33%" align="right" class="fds-cell--amount">130.999,00 ₺</td>
+              <td width="33%" align="left" style="padding: 8px; border: 2px solid #D4D9DF; text-align: left !important">Jump V16 Ana Lisans Deneme Yıllık	</td>
+              <td width="33%" align="center" style="padding: 8px; border: 2px solid #D4D9DF; text-align: center !important;">29.11.2023</td>
+              <td width="33%" align="right" style="padding: 8px; border: 2px solid #D4D9DF; font-family: 'JetBrains Mono', monospace !important; text-align: right !important;">130.999,00 ₺</td>
             </tr>
           </mj-table>
 
@@ -319,36 +258,24 @@
 
           <mj-text css-class="fds-email-body-01">Mikro ürünlerinin lisans koşullarına <a href="#" class="fds-text-link">buradan</a> ulaşabilirsiniz.</mj-text>
 
-          <mj-spacer mj-class="fds-spacing--32" />
+        </mj-column>
+      </mj-section>
 
+      <mj-section padding="32px" padding-top="0" background-color="#ffffff" border-radius="0 0 8px 8px">
+        <mj-column width="50%">
+          <mj-button href="#" css-class="fds-btn--primary" font-family="Inter, sans-serif" font-size="15px" line-height="16px" font-weight="500" color="#ffffff" background-color="#0F62FE" container-background-color="#ffffff" inner-padding="16px" border-radius="4px" align="left">Faturaya git</mj-button>
         </mj-column>
 
-        <mj-column width="50%" padding="24px" background-color="#F7F9FA">
-          <mj-text css-class="fds-email-label-01">This is a promotional section header</mj-text>
-          <mj-text css-class="fds-email-body-01" padding-top="8px">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</mj-text>
-          <mj-button css-class="fds-btn--secondary" padding-top="16px">Secondary Button</mj-button>
+        <mj-column width="50%">
+          <mj-button href="#" css-class="fds-btn--ghost" font-family="Inter, sans-serif" font-size="15px" line-height="16px" font-weight="500" color="#5A6168" background-color="transparent" container-background-color="#ffffff" inner-padding="16px" border-radius="4px" align="right">Neden yenilemeliyim?</mj-button>
         </mj-column>
-
-        <mj-column width="50%" padding="24px" background-color="#F7F9FA">
-          <mj-image fluid-on-mobile="true" height="140px" border-radius="8px" src="https://mcusercontent.com/542129b0d23244e20a9c0dd7e/images/82c1b653-e216-56b8-0db4-45f40485956a.jpg" />
-        </mj-column>
-
-        <mj-column width="100%">
-          <mj-spacer mj-class="fds-spacing--32" />
-
-          <mj-image fluid-on-mobile="true" width="540px" height="152px" border-radius="8px" src="https://mcusercontent.com/542129b0d23244e20a9c0dd7e/images/39abec24-d568-10d8-c5ce-d349a1d4e66c.png" />
-
-        </mj-column>
-
       </mj-section>
       <!-- END CONTENT -->
 
-      <!-- FOOTER -->
-      <mj-section background-color="transparent" padding-top="32px" padding-right="32px" padding-left="32px">
+      <!-- START FOOTER -->
+      <mj-section padding="32px" background-color="transparent">
         <mj-column width="100%">
-          <mj-text css-class="fds-email-label-02" color="#505F79">
-            Company Name kullanıcısı olduğunuz için bu iletiyi alıyorsunuz.
-          </mj-text>
+          <mj-text css-class="fds-email-label-02" color="#505F79">Company Name kullanıcısı olduğunuz için bu iletiyi alıyorsunuz.</mj-text>
 
           <mj-text color="#505F79" padding-top="8px">
             <a class="fds-footer-link" href="#">İletişime geçin</a>
@@ -359,26 +286,20 @@
           </mj-text>
 
           <mj-spacer mj-class="fds-spacing--24" />
-        </mj-column>
 
-        <mj-column width="100%">
           <mj-text>
             <a href="#" target="_blank" style="display: inline-block; padding-right: 8px !important; padding-bottom: 8px !important;"><img width="150" height="40" align="left" src="https://mcusercontent.com/542129b0d23244e20a9c0dd7e/images/b77bea17-c8e8-513c-722d-c370c4b39ab5.png" alt="app-store"></a>
             <a href="#" target="_blank" style="display: inline-block; padding-right: 8px !important; padding-bottom: 8px !important;"><img width="150" height="40" align="left" src="https://mcusercontent.com/542129b0d23244e20a9c0dd7e/images/0ad0b256-bf9c-14f3-1735-6ae1f18cb861.png" alt="google-play"></a>
             <a href="#" target="_blank" style="display: inline-block; padding-bottom: 8px !important;"><img width="150" height="40" align="left" src="https://mcusercontent.com/542129b0d23244e20a9c0dd7e/images/705830c3-75a7-ff22-069e-55ad2ad8b8a5.png" alt="app-gallery"></a>
           </mj-text>
-        </mj-column>
 
-        <mj-column width="100%">
           <mj-spacer mj-class="fds-spacing--16" />
 
-          <mj-divider/>
+          <mj-divider />
 
           <mj-spacer mj-class="fds-spacing--24" />
 
-          <mj-text css-class="fds-email-label-02" color="#505F79">
-            Company Name Maslak Mah. AOS 55. Sok. 42 Maslak 34485
-          </mj-text>
+          <mj-text css-class="fds-email-label-02" color="#505F79">Company Name Maslak Mah. AOS 55. Sok. 42 Maslak 34485</mj-text>
 
           <mj-text color="#505F79" padding-top="8px">
             <a class="fds-footer-link" href="#">Paraşüt Blog</a>

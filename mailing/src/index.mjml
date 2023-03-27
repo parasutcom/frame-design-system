@@ -1,121 +1,79 @@
 <mjml>
   <mj-head>
-    <!-- FONTS -->
-    <mj-font name="Inter" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" />
-    <mj-font name="JetBrains Mono" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" />
-
-    <!-- BREAKPOINT -->
-    <mj-breakpoint width="484px" />
+    <!-- TITLE -->
+    <mj-title>Title goes here</mj-title>
 
     <!-- PREVIEW -->
     <mj-preview>Preview goes here</mj-preview>
 
-    <!-- TITLE -->
-    <mj-title>Title goes here</mj-title>
+    <!-- FONTS -->
+    <mj-style>
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/inter/v12/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/inter/v12/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      @font-face {
+        font-family: 'JetBrains Mono';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/jetbrainsmono/v17/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxDcwgknk-4.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      @font-face {
+        font-family: 'JetBrains Mono';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/jetbrainsmono/v17/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxDcwgknk-4.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+    </mj-style>
+
+
+    <!-- BREAKPOINT -->
+    <mj-breakpoint width="484px" />
 
     <mj-attributes>
       <!-- NORMALIZE -->
-      <mj-all padding="0" margin="0" font-family="Inter, sans-serif" color="#344461" />
+      <mj-all padding="0" margin="0" font-family="Inter, Helvetica, Arial, sans-serif" color="#344461" />
       <mj-body background-color="#E5E9EC" width="636px" />
       <mj-section full-width="full-width" />
-      <mj-table color="#344461" />
       <mj-text font-family="Inter, sans-serif" />
       <mj-divider border-width="1px" border-style="solid" border-color="#D4D9DF" width="100%" />
 
       <!-- SPACING -->
-      <mj-class name="fds-spacing--16" height="16px"/>
-      <mj-class name="fds-spacing--24" height="24px"/>
-      <mj-class name="fds-spacing--32" height="32px"/>
-
-      <!-- BUTTON -->
-      <mj-button font-size="15px" line-height="16px" font-weight="500" color="#ffffff" background-color="transparent"	 inner-padding="16px 16px" border-radius="4px" align="left" />
-
-      <!-- CONTENT -->
-      <mj-class name="fds-content" padding="32px" background-color="#ffffff" />
+      <mj-class name="fds-spacing--16" height="16px" />
+      <mj-class name="fds-spacing--24" height="24px" />
+      <mj-class name="fds-spacing--32" height="32px" />
 
       <!-- HIGHLIGHT -->
-      <mj-class name="fds-highlight" background-color="#E5E9EC" padding="16px 24px" border-radius="8px" color="#344461"/>
+      <mj-class name="fds-highlight" background-color="#E5E9EC" padding="16px 24px" border-radius="8px" color="#344461" />
     </mj-attributes>
 
     <mj-style>
-
       img {
         object-fit: cover !important;
       }
 
-      .fds-table th,
-      .fds-table td {
-        font-size: 15px !important;
-        line-height: 18px !important;
-        padding: 8px;
-        border: 2px solid #D4D9DF;
-      }
-
-      .fds-table th {
-        font-weight: 500 !important;
-      }
-
-      .fds-table td {
-        font-weight: 400 !important;
-      }
-
-      .fds-table.fds-table--summary th,
-      .fds-table.fds-table--summary td {
-        border: none !important;
-      }
-
-      .fds-table.fds-table--summary thead th {
-        padding: 0 !important;
-        padding-bottom: 16px !important;
-        border-bottom: 2px solid #D4D9DF !important;
-        color: #121D31 !important;
-      }
-
-      .fds-table.fds-table--summary tbody tr:first-child td {
-        padding-top: 32px !important;
-      }
-
-      .fds-table.fds-table--summary tbody td {
-        padding: 12px 0 !important;
-        color: #505F79 !important;
-        font-weight: 500 !important;
-      }
-
-      .fds-table.fds-table--summary tbody tr td:last-child {
-        font-family: 'JetBrains Mono', monospace !important;
-        color: #3E3E3E !important;
-      }
-
-      .fds-table.fds-table--truncate td {
-        overflow: hidden !important;
-        white-space: nowrap !important;
-        text-overflow: ellipsis !important;
-        max-width: 0 !important;
-      }
-
-      .fds-table.fds-table--vertical-top td {
-        vertical-align: top !important;
-      }
-
-      .fds-cell--amount {
-        font-family: 'JetBrains Mono', monospace !important;
-      }
-
-      td.fds-cell--amount-01 {
-        font-family: 'JetBrains Mono', monospace !important;
-        font-size: 18px !important;
-        line-height: 24px !important;
-        font-weight: 500;
-      }
-
-      .fds-table tbody tr td.fds-cell--error,
-      .fds-table.fds-table--summary tbody tr td.fds-cell--error  {
-        color: #DA1E28 !important;
-      }
-
       .fds-email-heading-01 div {
         font-size: 22px !important;
-        line-height: 22px !important;
+        line-height: 26px !important;
         font-weight: 500;
         letter-spacing: -0.32px;
         color: #121D31 !important;
@@ -161,39 +119,9 @@
         font-weight: 400;
       }
 
-      .fds-btn--primary p {
-        background-color: #0F62FE !important;
-        cursor: pointer;
-        letter-spacing: 0.32px !important;
-      }
-
-      .fds-btn--primary p:hover {
-        background-color: #003BCB !important;
-      }
-
-      .fds-btn--primary p:active {
-        background-color: #002599 !important;
-      }
-
-      .fds-btn--secondary p {
-        background-color: #505F79 !important;
-        cursor: pointer;
-        font-size: 14px !important;
-        letter-spacing: 0.32px !important;
-        padding: 8px 16px !important
-      }
-
-      .fds-btn--secondary p:hover {
-        background-color: #344461 !important;
-      }
-
-      .fds-btn--secondary p:active {
-        background-color: #202E49 !important;
-      }
-
       .fds-text-link {
-        text-align: left;
-        color: inherit;
+        text-align: left !important;
+        color: #344461 !important;
         text-decoration: underline;
       }
 
@@ -203,13 +131,34 @@
         line-height: 18px;
         font-weight: 400;
         letter-spacing: 0.32px;
-        text-align: left;
+        text-align: left !important;
         color: #505F79 !important;
         text-decoration: none;
       }
 
-      .fds-footer-link:hover  {
+      .fds-footer-link:hover {
         text-decoration: underline;
+      }
+
+      .fds-table th,
+      .fds-table td {
+        font-size: 15px !important;
+        line-height: 24px !important;
+      }
+
+      .fds-table th {
+        font-weight: 500 !important;
+      }
+
+      .fds-table td {
+        font-weight: 400 !important;
+      }
+
+      .fds-table.fds-table--truncate td {
+        overflow: hidden !important;
+        white-space: nowrap !important;
+        text-overflow: ellipsis !important;
+        max-width: 0 !important;
       }
 
       .fds-inline-block {
@@ -221,16 +170,6 @@
       }
 
       @media only screen and (max-width: 484px) {
-        .fds-table th,
-        .fds-table td {
-          font-size: 13px !important;
-          line-height: 22px !important;
-        }
-
-        td.fds-cell--amount-01 {
-          font-size: 16px !important;
-        }
-
         .fds-email-heading-01 div {
           font-size: 18px !important;
           line-height: 18px !important;
@@ -274,14 +213,12 @@
       <mj-section>
         <mj-column width="100%">
           <mj-text css-class="fds-email-body-01"><a href="components.html" class="fds-text-link">Components</a></mj-text>
-          <mj-text css-class="fds-email-body-01"><a href="example01.html" class="fds-text-link">Example01</a></mj-text>
-          <mj-text css-class="fds-email-body-01"><a href="example02.html" class="fds-text-link">Example02</a></mj-text>
-          <mj-text css-class="fds-email-body-01"><a href="example03.html" class="fds-text-link">Example03</a></mj-text>
-          <mj-text css-class="fds-email-body-01"><a href="example04.html" class="fds-text-link">Example04</a></mj-text>
-          <mj-text css-class="fds-email-body-01"><a href="example05.html" class="fds-text-link">Example05</a></mj-text>
-          <mj-text css-class="fds-email-body-01"><a href="example06.html" class="fds-text-link">Example06</a></mj-text>
-          <mj-text css-class="fds-email-body-01"><a href="example07.html" class="fds-text-link">Example07</a></mj-text>
-          <mj-text css-class="fds-email-body-01"><a href="example08.html" class="fds-text-link">Example08</a></mj-text>
+          <mj-text css-class="fds-email-body-01"><a href="example01.html" class="fds-text-link">Example 01</a></mj-text>
+          <mj-text css-class="fds-email-body-01"><a href="example02.html" class="fds-text-link">Example 02</a></mj-text>
+          <mj-text css-class="fds-email-body-01"><a href="example03.html" class="fds-text-link">Example 03</a></mj-text>
+          <mj-text css-class="fds-email-body-01"><a href="example04.html" class="fds-text-link">Example 04</a></mj-text>
+          <mj-text css-class="fds-email-body-01"><a href="example05.html" class="fds-text-link">Example 05</a></mj-text>
+          <mj-text css-class="fds-email-body-01"><a href="example06.html" class="fds-text-link">Example 06</a></mj-text>
         </mj-column>
       </mj-section>
     </mj-wrapper>
