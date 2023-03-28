@@ -38,9 +38,13 @@
   }
 
   .#{$prefix}-tablist__tab--disabled {
-    border-bottom: 2px solid $tab-color-disabled-border;
+    border-bottom: unset;
     color: $tab-color-disabled-text;
     cursor: not-allowed;
+  }
+
+  .#{$prefix}-tablist__tab--disabled:hover {
+    border-bottom: none;
   }
 
   .#{$prefix}-tablist__tab--selected,
@@ -75,13 +79,13 @@
   }
 
   .#{$prefix}-tablist--solid .#{$prefix}-tablist__tab--disabled {
-    border-bottom: 2px solid $tab-color-solid-disabled-border;
+    border-bottom: unset;
     background-color: $tab-color-solid-disabled-background;
   }
 
   .#{$prefix}-tablist__tab--disabled .#{$prefix}-tablist__tab-tag {
-    background-color: $tab-color-solid-disabled-background;
-    box-shadow: inset 0 0 0 1px $tab-color-disabled-border;
+    background-color: $color-gray-10;
+    box-shadow: inset 0 0 0 1px $color-gray-10;
     color: $tab-color-disabled-text;
     cursor: not-allowed;
   }
