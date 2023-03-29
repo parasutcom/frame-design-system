@@ -130,14 +130,22 @@
   .#{$prefix}-form-item__label--disabled,
   .#{$prefix}-form-item__counter--disabled,
   .#{$prefix}-form-item__helper-text--disabled {
-    color: $color-gray-40;
+    color: $color-gray-30;
   }
 
-  .#{$prefix}-form-item__field-wrapper[data-disabled],
-  .#{$prefix}-form-item__field-wrapper[data-disabled].#{$prefix}-form-item__field-wrapper[data-invalid],
-  .#{$prefix}-form-item__field-wrapper[data-disabled].#{$prefix}-form-item__field-wrapper[data-warning] {
-    background-color: $input-color-disabled-background;
-    box-shadow: inset 0 0 0 1px $input-color-disabled-border;
+  .#{$prefix}-form-item__field-wrapper--outline-white[data-disabled],
+  .#{$prefix}-form-item__field-wrapper--outline-white[data-disabled].#{$prefix}-form-item__field-wrapper--outline-white[data-invalid],
+  .#{$prefix}-form-item__field-wrapper--outline-white[data-disabled].#{$prefix}-form-item__field-wrapper--outline-white[data-warning] {
+    background-color: $input-color-outline-white-disabled-background;
+    box-shadow: inset 0 0 0 1px $input-color-outline-white-disabled-border;
+    cursor: not-allowed;
+  }
+
+  .#{$prefix}-form-item__field-wrapper--outline[data-disabled],
+  .#{$prefix}-form-item__field-wrapper--outline[data-disabled].#{$prefix}-form-item__field-wrapper--outline[data-invalid],
+  .#{$prefix}-form-item__field-wrapper--outline[data-disabled].#{$prefix}-form-item__field-wrapper--outline[data-warning] {
+    background-color: $input-color-outline-disabled-background;
+    box-shadow: inset 0 0 0 1px $input-color-outline-disabled-border;
     cursor: not-allowed;
   }
 

@@ -6,10 +6,7 @@
       },
       "disabled": {
         "text": {
-          "value": "{color.gray.40.value}"
-        },
-        "background": {
-          "value": "{color.gray.20.value}"
+          "value": "{color.gray.30.value}"
         }
       }
     },

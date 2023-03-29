@@ -16,7 +16,7 @@
   }
 
   .#{$prefix}-text-input::placeholder {
-    color: $color-gray-60;
+    color: $color-gray-50;
     opacity: 1;
   }
 
@@ -94,7 +94,7 @@
   .#{$prefix}-form-item__field-wrapper[data-disabled]
     .#{$prefix}-text-input:disabled
     ~ .#{$prefix}-text-input__visibility-toggle {
-    color: $color-gray-40;
+    color: $color-gray-30;
     cursor: not-allowed;
   }
 }
