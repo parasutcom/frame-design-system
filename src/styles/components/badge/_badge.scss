@@ -32,6 +32,15 @@
 
   .#{$prefix}-badge__icon {
     @include icon-size('xl');
+
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .#{$prefix}-badge.#{$prefix}-badge--lg .#{$prefix}-badge__icon {
+    @include icon-size('3xl');
   }
 
   .#{$prefix}-badge__image {
