@@ -1,0 +1,15 @@
+@mixin range-selector {
+  .#{$prefix}-range-selector {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: $spacing-3x-small;
+  }
+
+  .#{$prefix}-range-selector .#{$prefix}-form-item__field-wrapper {
+    width: auto;
+    padding-inline: 0;
+  }
+}
+
+@include range-selector;
