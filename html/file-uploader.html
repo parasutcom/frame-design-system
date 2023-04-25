@@ -85,9 +85,417 @@
       </div>
       <div class="body">
         <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Drag&Drop</th>
+              <th>Input</th>
+            </tr>
+          </thead>
           <tbody>
             <tr>
-              <td>Coming soon...</td>
+              <td>Default</td>
+              <td>
+                <div class="fds-file-container">
+                  <div class="fds-form-item">
+                    <div class="fds-file-drag">
+                      <div class="fds-file-drag__zone">
+                        <div class="fds-badge">
+                          <span class="fds-badge__icon">
+                            <i class="fa-regular fa-upload"></i>
+                          </span>
+                        </div>
+                        <span class="fds-file-drag__placeholder">Drag or select your file</span>
+                        <span class="fds-file-drag__placeholder">or </span>
+                        <button class="fds-btn fds-btn--outline fds-btn--sm">
+                          <span class="fds-btn__label">Browse file</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="fds-form-item__helper-text">
+                      <span class="fds-icon fds-icon--sm"><i class="fa-solid fa-circle-info"></i></span>
+                      Info text goes here
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="fds-file-container">
+                  <div class="fds-form-item">
+                    <div class="fds-form-item__label-wrapper">
+                      <label for="textinput" class="fds-form-item__label">Label</label>
+                    </div>
+                    <div class="fds-file-input">
+                      <div class="fds-file-input__zone">
+                        <div class="fds-file-input__placeholder-wrapper">
+                          <span class="fds-file-input__placeholder">No file selected</span>
+                          <span class="fds-file-input__assistive-text">Upload or drag here</span>
+                        </div>
+                        <button class="fds-btn fds-btn--outline fds-btn--sm">
+                          <span class="fds-btn__label">Browse file</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="fds-form-item__helper-text">Info text goes here</div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Dragging</td>
+              <td>
+                <div class="fds-file-container">
+                  <div class="fds-form-item">
+                    <div class="fds-file-drag fds-file-drag-dropping">
+                      <div class="fds-file-drop__zone">
+                        <div class="fds-badge">
+                          <span class="fds-badge__icon">
+                            <i class="fa-regular fa-upload"></i>
+                          </span>
+                        </div>
+                        <span class="fds-file-drag__placeholder">Drop here</span>
+                      </div>
+                      <div class="fds-file-drag__zone">
+                        <div class="fds-badge">
+                          <span class="fds-badge__icon">
+                            <i class="fa-regular fa-upload"></i>
+                          </span>
+                        </div>
+                        <span class="fds-file-drag__placeholder">Drag or select your file</span>
+                        <span class="fds-file-drag__placeholder">or </span>
+                        <button class="fds-btn fds-btn--outline fds-btn--sm">
+                          <span class="fds-btn__label">Browse file</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="fds-form-item__helper-text">
+                      <span class="fds-icon fds-icon--sm"><i class="fa-solid fa-circle-info"></i></span>
+                      Info text goes here
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="fds-file-container">
+                  <div class="fds-form-item">
+                    <div class="fds-form-item__label-wrapper">
+                      <label for="textinput" class="fds-form-item__label">Label</label>
+                    </div>
+                    <div class="fds-file-input fds-file-input-dropping">
+                      <div class="fds-file-drop__zone">
+                        <span class="fds-file-drag__placeholder">Drop here</span>
+                      </div>
+                      <div class="fds-file-input__zone">
+                        <div class="fds-file-input__placeholder-wrapper">
+                          <span class="fds-file-input__placeholder">No file selected</span>
+                          <span class="fds-file-input__assistive-text">Upload or drag here</span>
+                        </div>
+                        <button class="fds-btn fds-btn--outline fds-btn--sm">
+                          <span class="fds-btn__label">Browse file</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="fds-form-item__helper-text">Info text goes here</div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Busy</td>
+              <td>
+                <div class="fds-file-container">
+                  <div class="fds-form-item">
+                    <div class="fds-file-drag">
+                      <div class="fds-file-overlay__zone">
+                        <div role="status" aria-label="Loading process" class="fds-spinner fds-spinner--primary">
+                          <div class="fds-spinner__animation">
+                            <i class="fa-regular fa-spinner-third"></i>
+                          </div>
+                          <div class="fds-spinner__text">Uploading...</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="fds-form-item__helper-text">
+                      <span class="fds-icon fds-icon--sm"><i class="fa-solid fa-circle-info"></i></span>
+                      Info text goes here
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="fds-file-container">
+                  <div class="fds-form-item">
+                    <div class="fds-form-item__label-wrapper">
+                      <label for="textinput" class="fds-form-item__label">Label</label>
+                    </div>
+                    <div class="fds-file-input">
+                      <div class="fds-file-overlay__zone">
+                        <div role="status" aria-label="Loading process" class="fds-spinner fds-spinner--sm fds-spinner--primary">
+                          <div class="fds-spinner__animation">
+                            <i class="fa-regular fa-spinner-third"></i>
+                          </div>
+                        </div>
+                        <div class="fds-file-uploaded-item-name">fisfatura_uzunisim.png</div>
+                        <button class="fds-file__close-button">
+                          <span class="fds-file__close-icon">
+                            <i class="fa-light fa-xmark"></i>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="fds-form-item__helper-text">Info text goes here</div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Disabled</td>
+              <td>
+                <div class="fds-file-container">
+                  <div class="fds-form-item">
+                    <div class="fds-file-drag fds-file-drag--disabled">
+                      <div class="fds-file-drag__zone">
+                        <div class="fds-badge">
+                          <span class="fds-badge__icon">
+                            <i class="fa-regular fa-upload"></i>
+                          </span>
+                        </div>
+                        <span class="fds-file-drag__placeholder">Drag or select your file</span>
+                        <span class="fds-file-drag__placeholder">or </span>
+                        <button class="fds-btn fds-btn--outline fds-btn--sm fds-btn--disabled" disabled>
+                          <span class="fds-btn__label">Browse file</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="fds-form-item__helper-text">
+                      <span class="fds-icon fds-icon--sm"><i class="fa-solid fa-circle-info"></i></span>
+                      Info text goes here
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="fds-file-container">
+                  <div class="fds-form-item">
+                    <div class="fds-form-item__label-wrapper">
+                      <label for="textinput" class="fds-form-item__label">Label</label>
+                    </div>
+                    <div class="fds-file-input fds-file-input--disabled">
+                      <div class="fds-file-input__zone">
+                        <div class="fds-file-input__placeholder-wrapper">
+                          <span class="fds-file-input__placeholder">No file selected</span>
+                          <span class="fds-file-input__assistive-text">Upload or drag here</span>
+                        </div>
+                        <button class="fds-btn fds-btn--outline fds-btn--sm fds-btn--disabled">
+                          <span class="fds-btn__label">Browse file</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="fds-form-item__helper-text">Info text goes here</div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Invalid</td>
+              <td>
+                <div class="fds-file-container">
+                  <div class="fds-form-item">
+                    <div class="fds-file-drag fds-file-drag--invalid">
+                      <div class="fds-file-drag__zone">
+                        <div class="fds-badge">
+                          <span class="fds-badge__icon">
+                            <i class="fa-regular fa-upload"></i>
+                          </span>
+                        </div>
+                        <span class="fds-file-drag__placeholder">Drag or select your file</span>
+                        <span class="fds-file-drag__placeholder">or </span>
+                        <button class="fds-btn fds-btn--outline fds-btn--sm">
+                          <span class="fds-btn__label">Browse file</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="fds-form-item__helper-text fds-form-item__helper-text--invalid">
+                      <span class="fds-icon fds-icon--sm"><i class="fa-solid fa-circle-info"></i></span>
+                      Error message goes here
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="fds-file-container">
+                  <div class="fds-form-item">
+                    <div class="fds-form-item__label-wrapper">
+                      <label for="textinput" class="fds-form-item__label">Label</label>
+                    </div>
+                    <div class="fds-file-input fds-file-input--invalid">
+                      <div class="fds-file-input__zone">
+                        <div class="fds-file-input__placeholder-wrapper">
+                          <span class="fds-file-input__placeholder">No file selected</span>
+                          <span class="fds-file-input__assistive-text">Upload or drag here</span>
+                        </div>
+                        <button class="fds-btn fds-btn--outline fds-btn--sm">
+                          <span class="fds-btn__label">Browse file</span>
+                        </button>
+                        <div class="fds-form-item__suffix">
+                          <div class="fds-form-item__suffix-icon fds-form-item__error-icon">
+                            <i class="fa-solid fa-exclamation-circle"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="fds-form-item__helper-text fds-form-item__helper-text--invalid">Error text goes here</div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Uploaded</td>
+              <td>
+                <div class="fds-file-container">
+                  <div class="fds-form-item">
+                    <div class="fds-file-drag">
+                      <div class="fds-file-uploaded-container">
+                        <div class="fds-file-uploaded-item">
+                          <div class="fds-badge fds-badge--lg">
+                            <span class="fds-badge__icon">
+                              <i class="fa-light fa-file"></i>
+                            </span>
+                          </div>
+                          <div class="fds-file-uploaded-item-info">
+                            <p class="fds-file-uploaded-item-name">fisfatura_uzunisims...</p>
+                            <span class="fds-file-uploaded-item-size">1.28KB</span>
+                          </div>
+                          <div class="fds-file-uploaded-item-actions">
+                            <button class="fds-btn fds-btn--ghost fds-btn--sm">
+                              <span class="fds-btn__label">Remove</span>
+                            </button>
+                            <button class="fds-btn fds-btn--outline fds-btn--sm">
+                              <span class="fds-btn__label">Change file</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="fds-form-item__helper-text">
+                      <span class="fds-icon fds-icon--sm"><i class="fa-solid fa-circle-info"></i></span>
+                      Info message goes here
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="fds-file-container">
+                  <div class="fds-form-item">
+                    <div class="fds-form-item__label-wrapper">
+                      <label for="textinput" class="fds-form-item__label">Label</label>
+                    </div>
+                    <div class="fds-file-input">
+                      <div class="fds-file-uploaded-container">
+                        <div class="fds-badge">
+                          <span class="fds-badge__icon">
+                            <i class="fa-regular fa-file"></i>
+                          </span>
+                        </div>
+                        <div class="fds-file-uploaded-item-info">
+                          <p class="fds-file-uploaded-item-name">fisfatura_uzunisims...</p>
+                          <span class="fds-file-uploaded-item-size">1.28KB</span>
+                        </div>
+                        <div class="fds-file-uploaded-item-actions">
+                          <button class="fds-file__search-button">
+                            <span class="fds-file__search-icon">
+                              <i class="fa-light fa-magnifying-glass"></i>
+                            </span>
+                          </button>
+                          <button class="fds-file__delete-button">
+                            <span class="fds-file__delete-icon">
+                              <i class="fa-light fa-trash-can"></i>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="fds-form-item__helper-text">Info text goes here</div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Uploaded disabled</td>
+              <td>
+                <div class="fds-file-container">
+                  <div class="fds-form-item">
+                    <div class="fds-file-drag fds-file-drag--disabled">
+                      <div class="fds-file-uploaded-container">
+                        <div class="fds-file-uploaded-item">
+                          <div class="fds-badge fds-badge--lg">
+                            <span class="fds-badge__icon">
+                              <i class="fa-light fa-file"></i>
+                            </span>
+                          </div>
+                          <div class="fds-file-uploaded-item-info">
+                            <p class="fds-file-uploaded-item-name">fisfatura_uzunisims...</p>
+                            <span class="fds-file-uploaded-item-size">1.28KB</span>
+                          </div>
+                          <div class="fds-file-uploaded-item-actions">
+                            <button class="fds-btn fds-btn--ghost fds-btn--sm fds-btn--disabled">
+                              <span class="fds-btn__label">Remove</span>
+                            </button>
+                            <button class="fds-btn fds-btn--outline fds-btn--sm fds-btn--disabled">
+                              <span class="fds-btn__label">Change file</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="fds-form-item__helper-text">
+                      <span class="fds-icon fds-icon--sm"><i class="fa-solid fa-circle-info"></i></span>
+                      Info message goes here
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="fds-file-container">
+                  <div class="fds-form-item">
+                    <div class="fds-form-item__label-wrapper">
+                      <label for="textinput" class="fds-form-item__label">Label</label>
+                    </div>
+                    <div class="fds-file-input fds-file-input--disabled">
+                      <div class="fds-file-uploaded-container">
+                        <div class="fds-badge">
+                          <span class="fds-badge__icon">
+                            <i class="fa-regular fa-file"></i>
+                          </span>
+                        </div>
+                        <div class="fds-file-uploaded-item-info">
+                          <p class="fds-file-uploaded-item-name">fisfatura_uzunisims...</p>
+                          <span class="fds-file-uploaded-item-size">1.28KB</span>
+                        </div>
+                        <div class="fds-file-uploaded-item-actions">
+                          <button class="fds-file__search-button">
+                            <span class="fds-file__search-icon">
+                              <i class="fa-light fa-magnifying-glass"></i>
+                            </span>
+                          </button>
+                          <button class="fds-file__delete-button">
+                            <span class="fds-file__delete-icon">
+                              <i class="fa-light fa-trash-can"></i>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="fds-form-item__helper-text">Info text goes here</div>
+                  </div>
+                </div>
+              </td>
             </tr>
           </tbody>
         </table>
