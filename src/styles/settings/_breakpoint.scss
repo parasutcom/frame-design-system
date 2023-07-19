@@ -4,6 +4,10 @@ $fds-grid-gutter: 32px;
 $fds-grid-gutter--condensed: 2px;
 $fds-grid-column-size: 1fr;
 $fds-grid-breakpoints: (
+  xs: (
+    width: 0,
+    margin: 16px,
+  ),
   sm: (
     width: 600px,
     margin: 16px,
