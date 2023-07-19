@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../dist/css/main.css">
+
+  <title>500 — Sunucuda bir hata oluştu</title>
+
+  <style>
+    :root {
+      --gray-0: #fafafa;
+      --gray-5: #f2f2f2;
+      --gray-50: #848484;
+      --gray-60: #5b5b5b;
+      --gray-90: #1f1f1f;
+      --red-10: #fcdbde;
+      --red-60: #da1e28;
+    }
+
+    .fds-page-container {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-color: var(--gray-0);
+    }
+
+    .fds-content-wrapper {
+      width: 100%;
+      margin: auto;
+      padding-block: 32px;
+    }
+
+    .fds-content-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 500px;
+      margin-inline: auto;
+    }
+
+    .fds-icon-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 88px;
+      height: 88px;
+      border-radius: 8px;
+      margin-bottom: 32px;
+      background-color: var(--gray-5);
+      color: var(--gray-60);
+    }
+
+    .fds-icon-wrapper[page-error="true"] {
+      background-color: var(--red-10);
+      color: var(--red-60);
+    }
+
+    .fds-icon-wrapper [class^="fa"] {
+			font-size: 42px;
+		}
+
+    .fds-error-title {
+			font-family: "Inter", "Arial", sans-serif;
+			font-size: 28px;
+			font-weight: 400;
+			line-height: 32px;
+			letter-spacing: 0;
+			color: var(--gray-90);
+			margin-bottom: 12px;
+			text-align: center;
+		}
+
+    .fds-error-message {
+			font-family: "Inter", "Arial", sans-serif;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 20px;
+			letter-spacing: 0;
+			color: var(--gray-90);
+			text-align: center;
+		}
+
+    .fds-error-code {
+			font-family: "Inter", "Arial", sans-serif;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 20px;
+			letter-spacing: 0;
+			color: var(--gray-60);
+			margin-block: 16px;
+		}
+
+    .fds-footer-wrapper {
+      width: 100%;
+      height: 80px;
+      background-color: var(--gray-5);
+    }
+
+    .fds-logo-wrapper {
+      display: flex;
+      justify-content: flex-start;
+      margin-block: 12px;
+    }
+
+    .fds-logo {
+			display: inline-flex;
+			text-decoration: none;
+		}
+
+    .fds-logo-image {
+			width: 136px;
+      max-width: 100%;
+			height: auto;
+		}
+
+    .fds-company-name {
+			font-family: "Inter", "Arial", sans-serif;
+			font-size: 14px;
+      line-height: 16px;
+			font-weight: 500;
+			letter-spacing: 0.32px;
+			color: var(--gray-50);
+			text-align: center;
+      margin-block: 32px;
+		}
+
+    .fds-company-contact {
+			font-family: "Inter", "Arial", sans-serif;
+			font-size: 14px;
+      line-height: 16px;
+			font-weight: 400;
+			letter-spacing: 0.32px;
+			color: var(--gray-50);
+			text-align: right;
+      margin-block: 32px;
+		}
+
+    @media screen and (max-width: 900px) {
+      .fds-footer-wrapper {
+        height: auto;
+      }
+
+      .fds-logo-wrapper {
+        justify-content: center;
+        margin-block: 12px;
+      }
+
+      .fds-company-name {
+        margin-block: 0 12px;
+      }
+
+      .fds-company-contact {
+        margin-block: 0 12px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="fds-page-container">
+    <div class="fds-content-wrapper">
+      <div class="fds-grid-container fds-grid-container--full-width">
+        <div class="fds-row">
+          <div class="fds-xs:col-span-12 fds-sm:col-span-12">
+            <div class="fds-content-body">
+              <div class="fds-icon-wrapper" page-error="true">
+                <i class="fa-duotone fa-cloud-xmark"></i>
+              </div>
+              <h1 class="fds-error-title">Sunucuda bir hata oluştu</h1>
+              <p class="fds-error-message">İsteğinizi gerçekleştirirken sunucuda beklenmeyen bir hata oluştu. Sayfayı yenileyip tekrar deneyebilir, eğer hata düzelmez ise destek ekibimiz ile iletişime geçebilirsiniz.</p>
+              <p class="fds-error-code">Hata kodu: 500</p>
+              <button class="fds-btn fds-btn--primary fds-btn--lg">Sayfayı yenile</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fds-footer-wrapper">
+      <div class="fds-grid-container fds-grid-container--full-width">
+        <div class="fds-row">
+          <div class="fds-xs:col-span-12 fds-sm:col-span-12 fds-md:col-span-3">
+            <div class="fds-logo-wrapper">
+              <a href="#" class="fds-logo">
+                <img class="fds-logo-image" src="https://mcusercontent.com/542129b0d23244e20a9c0dd7e/images/ad7b03d0-3e59-89cb-92cb-d5256483bc95.png" alt="company_logo">
+              </a>
+            </div>
+          </div>
+          <div class="fds-xs:col-span-12 fds-sm:col-span-12 fds-md:col-span-6">
+            <p class="fds-company-name">&copy; {year} {company-name} Yazılım Teknolojileri A.Ş.</p>
+          </div>
+          <div class="fds-xs:col-span-12 fds-sm:col-span-12 fds-md:col-span-3">
+            <p class="fds-company-contact">company@email.com <span>&#183;</span> (000) 000 00 00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
