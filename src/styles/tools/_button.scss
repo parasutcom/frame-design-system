@@ -27,6 +27,7 @@
   text-align: center;
   text-decoration: none;
   transition: all 200ms ease;
+  user-select: none;
   vertical-align: middle;
 
   &:focus-visible {
