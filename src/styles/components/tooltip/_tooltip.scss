@@ -84,7 +84,7 @@
     height: $spacing-2x-small;
     background-color: $tooltip-color-background;
     border-radius: $radius-small;
-    transform: rotate(45deg);
+    rotate: 45deg;
     visibility: hidden;
   }
 
@@ -100,25 +100,20 @@
   .#{$prefix}-tooltip--top .#{$prefix}-tooltip__content {
     top: 0;
     left: 50%;
-    transform: translate(-50%, calc(-100% - $tooltip-size-offset));
+    translate: -50% calc(-100% - $tooltip-size-offset);
   }
 
   .#{$prefix}-tooltip--top-start .#{$prefix}-tooltip__content {
     top: 0;
     left: 0;
-    transform: translate(
-      calc(-2 * $tooltip-size-offset),
-      calc(-100% - $tooltip-size-offset)
-    );
+    translate: calc(-2 * $tooltip-size-offset)
+      calc(-100% - $tooltip-size-offset);
   }
 
   .#{$prefix}-tooltip--top-end .#{$prefix}-tooltip__content {
     top: 0;
     right: 0;
-    transform: translate(
-      calc(2 * $tooltip-size-offset),
-      calc(-100% - $tooltip-size-offset)
-    );
+    translate: calc(2 * $tooltip-size-offset) calc(-100% - $tooltip-size-offset);
   }
 
   .#{$prefix}-tooltip--top .#{$prefix}-tooltip__content::before,
@@ -137,32 +132,27 @@
     top: 0;
     left: 50%;
     margin-top: calc(-1 * ($spacing-3x-small + 1px));
-    transform: translate(-50%, calc(-1 * $tooltip-size-offset)) rotate(45deg);
+    rotate: 45deg;
+    translate: -50% calc(-1 * $tooltip-size-offset);
   }
 
   // BOTTOM PLACEMENT
   .#{$prefix}-tooltip--bottom .#{$prefix}-tooltip__content {
     bottom: 0;
     left: 50%;
-    transform: translate(-50%, calc(100% + $tooltip-size-offset));
+    translate: -50% calc(100% + $tooltip-size-offset);
   }
 
   .#{$prefix}-tooltip--bottom-start .#{$prefix}-tooltip__content {
     bottom: 0;
     left: 0;
-    transform: translate(
-      calc(-2 * $tooltip-size-offset),
-      calc(100% + $tooltip-size-offset)
-    );
+    translate: calc(-2 * $tooltip-size-offset) calc(100% + $tooltip-size-offset);
   }
 
   .#{$prefix}-tooltip--bottom-end .#{$prefix}-tooltip__content {
     right: 0;
     bottom: 0;
-    transform: translate(
-      calc(2 * $tooltip-size-offset),
-      calc(100% + $tooltip-size-offset)
-    );
+    translate: calc(2 * $tooltip-size-offset) calc(100% + $tooltip-size-offset);
   }
 
   .#{$prefix}-tooltip--bottom .#{$prefix}-tooltip__content::before,
@@ -181,32 +171,28 @@
     bottom: 0;
     left: 50%;
     margin-bottom: calc(-1 * ($spacing-3x-small + 1px));
-    transform: translate(-50%, $tooltip-size-offset) rotate(45deg);
+    rotate: 45deg;
+    translate: -50% $tooltip-size-offset;
   }
 
   // LEFT PLACEMENT
   .#{$prefix}-tooltip--left .#{$prefix}-tooltip__content {
     top: 50%;
     left: 0;
-    transform: translate(calc(-100% - $tooltip-size-offset), -50%);
+    translate: calc(-100% - $tooltip-size-offset) -50%;
   }
 
   .#{$prefix}-tooltip--left-start .#{$prefix}-tooltip__content {
     top: 0;
     left: 0;
-    transform: translate(
-      calc(-100% - $tooltip-size-offset),
-      calc(-2 * $tooltip-size-offset)
-    );
+    translate: calc(-100% - $tooltip-size-offset)
+      calc(-2 * $tooltip-size-offset);
   }
 
   .#{$prefix}-tooltip--left-end .#{$prefix}-tooltip__content {
     bottom: 0;
     left: 0;
-    transform: translate(
-      calc(-100% - $tooltip-size-offset),
-      calc(2 * $tooltip-size-offset)
-    );
+    translate: calc(-100% - $tooltip-size-offset) calc(2 * $tooltip-size-offset);
   }
 
   .#{$prefix}-tooltip--left .#{$prefix}-tooltip__content::before,
@@ -225,32 +211,27 @@
     top: 50%;
     left: 0;
     margin-left: calc(-1 * ($spacing-3x-small + 1px));
-    transform: translate(calc(-1 * $tooltip-size-offset), -50%) rotate(45deg);
+    rotate: 45deg;
+    translate: calc(-1 * $tooltip-size-offset) -50%;
   }
 
   // RIGHT PLACEMENT
   .#{$prefix}-tooltip--right .#{$prefix}-tooltip__content {
     top: 50%;
     right: 0;
-    transform: translate(calc(100% + $tooltip-size-offset), -50%);
+    translate: calc(100% + $tooltip-size-offset) -50%;
   }
 
   .#{$prefix}-tooltip--right-start .#{$prefix}-tooltip__content {
     top: 0;
     right: 0;
-    transform: translate(
-      calc(100% + $tooltip-size-offset),
-      calc(-2 * $tooltip-size-offset)
-    );
+    translate: calc(100% + $tooltip-size-offset) calc(-2 * $tooltip-size-offset);
   }
 
   .#{$prefix}-tooltip--right-end .#{$prefix}-tooltip__content {
     right: 0;
     bottom: 0;
-    transform: translate(
-      calc(100% + $tooltip-size-offset),
-      calc(2 * $tooltip-size-offset)
-    );
+    translate: calc(100% + $tooltip-size-offset) calc(2 * $tooltip-size-offset);
   }
 
   .#{$prefix}-tooltip--right .#{$prefix}-tooltip__content::before,
@@ -269,7 +250,8 @@
     top: 50%;
     right: 0;
     margin-right: calc(-1 * ($spacing-3x-small + 1px));
-    transform: translate($tooltip-size-offset, -50%) rotate(45deg);
+    rotate: 45deg;
+    translate: calc($tooltip - size-offset) -50%;
   }
 }
 @include tooltip;

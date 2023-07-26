@@ -43,7 +43,7 @@
   }
 
   .#{$prefix}-select-input__arrow.#{$prefix}-select-input__arrow--open {
-    transform: rotate(180deg);
+    rotate: 180deg;
   }
 
   .#{$prefix}-form-item__field-wrapper[data-disabled]
