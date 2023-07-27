@@ -2,7 +2,7 @@
   "overflow-menu": {
     "color": {
       "background": {
-        "value": "{color.gray.0.value}"
+        "value": "{color.gray.5.value}"
       },
       "text": {
         "value": "{color.gray.90.value}"

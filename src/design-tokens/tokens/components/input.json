@@ -53,14 +53,14 @@
       },
       "outline": {
         "background": {
-          "value": "{color.gray.0.value}"
+          "value": "{color.gray.5.value}"
         },
         "disabled": {
           "background": {
-            "value": "{color.gray.0.value}"
+            "value": "{color.gray.5.value}"
           },
           "border": {
-            "value": "{color.gray.0.value}"
+            "value": "{color.gray.5.value}"
           }
         }
       }

@@ -7,7 +7,7 @@
       "semantic": {
         "success": {
           "background": {
-            "value": "{color.green.0.value}"
+            "value": "{color.green.5.value}"
           },
           "text": {
             "value": "{color.green.60.value}"
@@ -18,7 +18,7 @@
         },
         "pending": {
           "background": {
-            "value": "{color.bronze.0.value}"
+            "value": "{color.bronze.5.value}"
           },
           "text": {
             "value": "{color.bronze.60.value}"
@@ -29,7 +29,7 @@
         },
         "error": {
           "background": {
-            "value": "{color.red.0.value}"
+            "value": "{color.red.5.value}"
           },
           "text": {
             "value": "{color.red.60.value}"
@@ -40,7 +40,7 @@
         },
         "purple": {
           "background": {
-            "value": "{color.purple.0.value}"
+            "value": "{color.purple.5.value}"
           },
           "text": {
             "value": "{color.purple.60.value}"
@@ -91,13 +91,13 @@
         },
         "disabled": {
           "background": {
-            "value": "{color.gray.0.value}"
+            "value": "{color.gray.5.value}"
           },
           "text": {
             "value": "{color.gray.30.value}"
           },
           "border": {
-            "value": "{color.gray.0.value}"
+            "value": "{color.gray.5.value}"
           }
         }
       }
