@@ -1,0 +1,81 @@
+@mixin modal {
+  .#{$prefix}-modal {
+    position: fixed;
+    z-index: $z-index-modal;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: rgb(0 0 0 / 50%);
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    visibility: hidden;
+  }
+
+  .#{$prefix}-modal.#{$prefix}-modal--open {
+    opacity: 1;
+    visibility: inherit;
+  }
+
+  .#{$prefix}-modal-container {
+    display: flex;
+    width: $modal-size-width;
+    height: auto;
+    max-height: calc(100vh - #{$spacing-3x-large} * 2);
+    flex-direction: column;
+    background-color: $modal-color-background;
+    border-radius: $modal-border-radius;
+    box-shadow: 0 2px 6px 0 rgb(31 31 31 / 12%);
+    margin-block: $spacing-3x-large;
+    margin-inline: $spacing-3x-large;
+  }
+  .#{$prefix}-modal-container--sm {
+    width: $modal-size-small-width;
+  }
+
+  .#{$prefix}-modal-container--lg {
+    width: $modal-size-large-width;
+  }
+
+  .#{$prefix}-modal-header {
+    padding: $spacing-large;
+  }
+
+  .#{$prefix}-modal-header__label {
+    @include type-style('helper-text-01');
+
+    margin-bottom: $spacing-3x-small;
+    color: $color-gray-60;
+  }
+
+  .#{$prefix}-modal-header__heading {
+    @include type-style('heading-04');
+
+    color: $color-gray-90;
+  }
+
+  .#{$prefix}-modal-message {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $spacing-large;
+    gap: $spacing-4x-small;
+  }
+
+  .#{$prefix}-modal-content {
+    overflow-y: auto;
+    padding-block: $spacing-2x-small;
+    padding-inline: $spacing-large;
+  }
+
+  .#{$prefix}-modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: $spacing-large;
+    gap: $spacing-medium;
+  }
+}
+
+@include modal;
