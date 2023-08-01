@@ -1,0 +1,29 @@
+{
+  "modal": {
+    "color": {
+      "background": {
+        "value": "{color.white.value}"
+      }
+    },
+    "size": {
+      "width": {
+        "value": "600px"
+      },
+      "small": {
+        "width": {
+          "value": "400px"
+        }
+      },
+      "large": {
+        "width": {
+          "value": "900px"
+        }
+      }
+    },
+    "border": {
+      "radius": {
+        "value": "{radius.medium}"
+      }
+    }
+  }
+}
