@@ -105,7 +105,6 @@
                 <div class="fds-modal" :class="{ 'fds-modal--open': modalOpen }">
                   <div class="fds-modal-container fds-modal-container--sm" role="dialog" aria-modal="true" tabindex="-1">
                     <div class="fds-modal-header">
-                      <p class="fds-modal-header__label">Optional label</p>
                       <h4 class="fds-modal-header__heading">Modal header text</h4>
                     </div>
 
@@ -137,7 +136,7 @@
                     </div>
 
                     <div class="fds-modal-content">
-                      <p class="body-long-02" style="margin-bottom: 24px;">This is commonly used in both the Expressive and the Productive type theme layouts for long paragraphs with more than four lines. It is a good size for comfortable, long-form reading. We also use this for longer body copy in components such as Accordion or Structured List. We always left-align this type; we never center it.</p>
+                      <p class="body-long-02">This is a body paragraph text. You can give details or directions about the subject.</p>
 
                       <form action="">
                         <div class="fds-form-item" style="margin-bottom: 16px;">
@@ -161,6 +160,13 @@
                           <div class="fds-form-item__helper-text">Helper text goes here</div>
                         </div>
                       </form>
+                      <div class="fds-implication">
+                        <h5 class="fds-implication__heading">This is an implication text field label</h5>
+                        <ul class="fds-list fds-list--unordered fds-list--bulleted" role="list">
+                          <li class="fds-list__item">This is an implication detail text.</li>
+                          <li class="fds-list__item">Implication text field should contain up to 3 or 4 list text.</li>
+                        </ul>
+                      </div>
                     </div>
                     <div class="fds-modal-footer">
                       <button class="fds-btn fds-btn--outline" @click="modalOpen = false">
@@ -213,7 +219,7 @@
                     </div>
 
                     <div class="fds-modal-content">
-                      <p class="body-long-02" style="margin-bottom: 24px;">This is commonly used in both the Expressive and the Productive type theme layouts for long paragraphs with more than four lines. It is a good size for comfortable, long-form reading. We also use this for longer body copy in components such as Accordion or Structured List. We always left-align this type; we never center it.</p>
+                      <p class="body-long-02">This is a body paragraph text. You can give details or directions about the subject. You can also highlight the action by making the text bold, or ask user a validation for they can complete. This text can be 2 or 3 sentence long.</p>
 
                       <form action="">
                         <div class="fds-form-item" style="margin-bottom: 16px;">
@@ -237,6 +243,15 @@
                           <div class="fds-form-item__helper-text">Helper text goes here</div>
                         </div>
                       </form>
+                      <div class="fds-implication">
+                        <h5 class="fds-implication__heading">This is an implication text field label</h5>
+                        <ul class="fds-list fds-list--unordered fds-list--bulleted" role="list">
+                          <li class="fds-list__item">This is an implication detail text. Each text line can be 1-2 sentence long like this.</li>
+                          <li class="fds-list__item">Implication text field should contain up to 3 or 4 list text.</li>
+                          <li class="fds-list__item">If you need to highlight a word you can make it bold.</li>
+                          <li class="fds-list__item">You can remove an each text layer if you don’t need it.</li>
+                        </ul>
+                      </div>
                     </div>
                     <div class="fds-modal-footer">
                       <button class="fds-btn fds-btn--outline" @click="modalOpen = false">
@@ -289,7 +304,7 @@
                     </div>
 
                     <div class="fds-modal-content">
-                      <p class="body-long-02" style="margin-bottom: 24px;">This is commonly used in both the Expressive and the Productive type theme layouts for long paragraphs with more than four lines. It is a good size for comfortable, long-form reading. We also use this for longer body copy in components such as Accordion or Structured List. We always left-align this type; we never center it.</p>
+                      <p class="body-long-02">This is a body paragraph text. You can give details or directions about the subject. You can also highlight the action by making the text bold, or ask user a validation for they can complete. This text can be 2 or 3 sentence long.</p>
 
                       <form action="">
                         <div class="fds-form-item" style="margin-bottom: 16px;">
@@ -313,6 +328,15 @@
                           <div class="fds-form-item__helper-text">Helper text goes here</div>
                         </div>
                       </form>
+                      <div class="fds-implication">
+                        <h5 class="fds-implication__heading">This is an implication text field label</h5>
+                        <ul class="fds-list fds-list--unordered fds-list--bulleted" role="list">
+                          <li class="fds-list__item">This is an implication detail text. Each text line can be 1-2 sentence long like this.</li>
+                          <li class="fds-list__item">Implication text field should contain up to 3 or 4 list text.</li>
+                          <li class="fds-list__item">If you need to highlight a word you can make it bold.</li>
+                          <li class="fds-list__item">You can remove an each text layer if you don’t need it.</li>
+                        </ul>
+                      </div>
                     </div>
                     <div class="fds-modal-footer">
                       <button class="fds-btn fds-btn--outline" @click="modalOpen = false">
@@ -326,9 +350,9 @@
                 </div>
               </td>
             </tr>
-            <tr>
-              <td>Process</td>
 
+            <tr>
+              <td>Passive</td>
               <td x-data="{ modalOpen: false }" @keydown.escape="modalOpen = false">
                 <button class="fds-btn fds-btn--primary fds-btn--sm" @click="modalOpen = true">
                   <span class="fds-btn__label">Open Modal</span>
@@ -339,14 +363,202 @@
                       <h4 class="fds-modal-header__heading">Modal header text</h4>
                     </div>
 
+                    <div class="fds-modal-message">
+                      <div role="alert" class="fds-notification fds-notification--error">
+                        <div class="fds-icon fds-notification__icon">
+                          <i class="fa-solid fa-circle-minus"></i>
+                        </div>
+                        <div class="fds-notification__content">
+                          <div class="fds-notification__details">
+                            <ul class="fds-list fds-list--unordered fds-list--bulleted">
+                              <li class="fds-list__item">A error notification message goes here</li>
+                              <li class="fds-list__item">A error notification message goes here</li>
+                              <li class="fds-list__item">A error notification message goes here</li>
+                              <li class="fds-list__item">A error notification message goes here</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div role="alert" class="fds-notification fds-notification--warning">
+                        <div class="fds-notification__content">
+                          <div class="fds-notification__details">
+                            <ul class="fds-list fds-list--unordered fds-list--bulleted">
+                              <li class="fds-list__item">A warning notification message goes here</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
                     <div class="fds-modal-content">
+                      <p class="body-long-02">This is a body paragraph text. You can give details or directions about the subject. You can also highlight the action by making the text bold, or ask user a validation for they can complete. This text can be 2 or 3 sentence long.</p>
+
+                      <div class="fds-implication">
+                        <h5 class="fds-implication__heading">This is an implication text field label</h5>
+                        <ul class="fds-list fds-list--unordered fds-list--bulleted" role="list">
+                          <li class="fds-list__item">This is an implication detail text.</li>
+                          <li class="fds-list__item">Implication text field should contain up to 3 or 4 list text.</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="fds-modal-footer">
+                      <button class="fds-btn fds-btn--outline" @click="modalOpen = false">
+                        <span class="fds-btn__label">Outline button</span>
+                      </button>
+                      <button class="fds-btn fds-btn--primary">
+                        <span class="fds-btn__label">Primary button</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </td>
+
+              <td x-data="{ modalOpen: false }" @keydown.escape="modalOpen = false">
+                <button class="fds-btn fds-btn--primary fds-btn--sm" @click="modalOpen = true">
+                  <span class="fds-btn__label">Open Modal</span>
+                </button>
+                <div class="fds-modal" :class="{ 'fds-modal--open': modalOpen }">
+                  <div class="fds-modal-container" role="dialog" aria-modal="true" tabindex="-1">
+                    <div class="fds-modal-header">
+                      <p class="fds-modal-header__label">Optional label</p>
+                      <h4 class="fds-modal-header__heading">Modal header text</h4>
+                    </div>
+
+                    <div class="fds-modal-message">
+                      <div role="alert" class="fds-notification fds-notification--error">
+                        <div class="fds-icon fds-notification__icon">
+                          <i class="fa-solid fa-circle-minus"></i>
+                        </div>
+                        <div class="fds-notification__content">
+                          <div class="fds-notification__details">
+                            <ul class="fds-list fds-list--unordered fds-list--bulleted">
+                              <li class="fds-list__item">A error notification message goes here</li>
+                              <li class="fds-list__item">A error notification message goes here</li>
+                              <li class="fds-list__item">A error notification message goes here</li>
+                              <li class="fds-list__item">A error notification message goes here</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div role="alert" class="fds-notification fds-notification--warning">
+                        <div class="fds-notification__content">
+                          <div class="fds-notification__details">
+                            <ul class="fds-list fds-list--unordered fds-list--bulleted">
+                              <li class="fds-list__item">A warning notification message goes here</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="fds-modal-content">
+                      <p class="body-long-02">This is a body paragraph text. You can give details or directions about the subject. You can also highlight the action by making the text bold, or ask user a validation for they can complete. This text can be 2 or 3 sentence long.</p>
+
+                      <div class="fds-implication">
+                        <h5 class="fds-implication__heading">This is an implication text field label</h5>
+                        <ul class="fds-list fds-list--unordered fds-list--bulleted" role="list">
+                          <li class="fds-list__item">This is an implication detail text. Each text line can be 1-2 sentence long like this.</li>
+                          <li class="fds-list__item">Implication text field should contain up to 3 or 4 list text.</li>
+                          <li class="fds-list__item">If you need to highlight a word you can make it bold.</li>
+                          <li class="fds-list__item">You can remove an each text layer if you don’t need it.</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="fds-modal-footer">
+                      <button class="fds-btn fds-btn--outline" @click="modalOpen = false">
+                        <span class="fds-btn__label">Outline button</span>
+                      </button>
+                      <button class="fds-btn fds-btn--primary">
+                        <span class="fds-btn__label">Primary button</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </td>
+
+              <td x-data="{ modalOpen: false }" @keydown.escape="modalOpen = false">
+                <button class="fds-btn fds-btn--primary fds-btn--sm" @click="modalOpen = true">
+                  <span class="fds-btn__label">Open Modal</span>
+                </button>
+                <div class="fds-modal" :class="{ 'fds-modal--open': modalOpen }">
+                  <div class="fds-modal-container fds-modal-container--lg" role="dialog" aria-modal="true" tabindex="-1">
+                    <div class="fds-modal-header">
+                      <p class="fds-modal-header__label">Optional label</p>
+                      <h4 class="fds-modal-header__heading">Modal header text</h4>
+                    </div>
+
+                    <div class="fds-modal-message">
+                      <div role="alert" class="fds-notification fds-notification--error">
+                        <div class="fds-icon fds-notification__icon">
+                          <i class="fa-solid fa-circle-minus"></i>
+                        </div>
+                        <div class="fds-notification__content">
+                          <div class="fds-notification__details">
+                            <ul class="fds-list fds-list--unordered fds-list--bulleted">
+                              <li class="fds-list__item">A error notification message goes here</li>
+                              <li class="fds-list__item">A error notification message goes here</li>
+                              <li class="fds-list__item">A error notification message goes here</li>
+                              <li class="fds-list__item">A error notification message goes here</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div role="alert" class="fds-notification fds-notification--warning">
+                        <div class="fds-notification__content">
+                          <div class="fds-notification__details">
+                            <ul class="fds-list fds-list--unordered fds-list--bulleted">
+                              <li class="fds-list__item">A warning notification message goes here</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="fds-modal-content">
+                      <p class="body-long-02">This is a body paragraph text. You can give details or directions about the subject. You can also highlight the action by making the text bold, or ask user a validation for they can complete. This text can be 2 or 3 sentence long.</p>
+
+                      <div class="fds-implication">
+                        <h5 class="fds-implication__heading">This is an implication text field label</h5>
+                        <ul class="fds-list fds-list--unordered fds-list--bulleted" role="list">
+                          <li class="fds-list__item">This is an implication detail text. Each text line can be 1-2 sentence long like this.</li>
+                          <li class="fds-list__item">Implication text field should contain up to 3 or 4 list text.</li>
+                          <li class="fds-list__item">If you need to highlight a word you can make it bold.</li>
+                          <li class="fds-list__item">You can remove an each text layer if you don’t need it.</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="fds-modal-footer">
+                      <button class="fds-btn fds-btn--outline" @click="modalOpen = false">
+                        <span class="fds-btn__label">Outline button</span>
+                      </button>
+                      <button class="fds-btn fds-btn--primary">
+                        <span class="fds-btn__label">Primary button</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Process</td>
+              <td x-data="{ modalOpen: false }" @keydown.escape="modalOpen = false">
+                <button class="fds-btn fds-btn--primary fds-btn--sm" @click="modalOpen = true">
+                  <span class="fds-btn__label">Open Modal</span>
+                </button>
+                <div class="fds-modal" :class="{ 'fds-modal--open': modalOpen }">
+                  <div class="fds-modal-container fds-modal-container--sm" role="dialog" aria-modal="true" tabindex="-1">
+                    <div class="fds-modal-header">
+                      <h4 class="fds-modal-header__heading">Modal header text</h4>
+                    </div>
+
+                    <div class="fds-modal-content">                      
                       <div class="fds-progress-bar fds-progress-bar--lg">
                         <div class="fds-progress-bar__track" role="progressbar" aria-labelledby="progress-bar-8" aria-valuemin="0" aria-valuemax="100" aria-valuenow="30">
                           <div class="fds-progress-bar__value" style="width: 30%;"></div>
                         </div>
                       </div>
-
-                      <p class="body-short-01" style="margin-top: 24px;">This is a body paragraph text. You can give details or directions about the subject.</p>
+                      <p class="body-long-02">This is a body paragraph text. You can give details or directions about the subject.</p>
                     </div>
                     <div class="fds-modal-footer">
                       <button class="fds-btn fds-btn--outline" @click="modalOpen = false">
@@ -364,17 +576,17 @@
                 <div class="fds-modal" :class="{ 'fds-modal--open': modalOpen }">
                   <div class="fds-modal-container" role="dialog" aria-modal="true" tabindex="-1">
                     <div class="fds-modal-header">
+                      <p class="fds-modal-header__label">Optional label</p>
                       <h4 class="fds-modal-header__heading">Modal header text</h4>
                     </div>
 
-                    <div class="fds-modal-content">
+                    <div class="fds-modal-content">                      
                       <div class="fds-progress-bar fds-progress-bar--lg">
                         <div class="fds-progress-bar__track" role="progressbar" aria-labelledby="progress-bar-8" aria-valuemin="0" aria-valuemax="100" aria-valuenow="30">
                           <div class="fds-progress-bar__value" style="width: 30%;"></div>
                         </div>
                       </div>
-
-                      <p class="body-short-01" style="margin-top: 24px;">This is a body paragraph text. You can give details or directions about the subject.</p>
+                      <p class="body-long-02">This is a body paragraph text. You can give details or directions about the subject. You can also highlight the action by making the text bold, or ask user a validation for they can complete. This text can be 2 or 3 sentence long.</p>
                     </div>
                     <div class="fds-modal-footer">
                       <button class="fds-btn fds-btn--outline" @click="modalOpen = false">
@@ -392,17 +604,17 @@
                 <div class="fds-modal" :class="{ 'fds-modal--open': modalOpen }">
                   <div class="fds-modal-container fds-modal-container--lg" role="dialog" aria-modal="true" tabindex="-1">
                     <div class="fds-modal-header">
+                      <p class="fds-modal-header__label">Optional label</p>
                       <h4 class="fds-modal-header__heading">Modal header text</h4>
                     </div>
 
-                    <div class="fds-modal-content">
+                    <div class="fds-modal-content">                      
                       <div class="fds-progress-bar fds-progress-bar--lg">
                         <div class="fds-progress-bar__track" role="progressbar" aria-labelledby="progress-bar-8" aria-valuemin="0" aria-valuemax="100" aria-valuenow="30">
                           <div class="fds-progress-bar__value" style="width: 30%;"></div>
                         </div>
                       </div>
-
-                      <p class="body-short-01" style="margin-top: 24px;">This is a body paragraph text. You can give details or directions about the subject.</p>
+                      <p class="body-long-02">This is a body paragraph text. You can give details or directions about the subject. You can also highlight the action by making the text bold, or ask user a validation for they can complete. This text can be 2 or 3 sentence long.</p>
                     </div>
                     <div class="fds-modal-footer">
                       <button class="fds-btn fds-btn--outline" @click="modalOpen = false">
@@ -412,6 +624,106 @@
                   </div>
                 </div>
               </td>
+            </tr>
+
+            <tr>
+              <td>Result</td>
+              <td></td>
+              <td x-data="{ modalOpen: false }" @keydown.escape="modalOpen = false">
+                <button class="fds-btn fds-btn--primary fds-btn--sm" @click="modalOpen = true">
+                  <span class="fds-btn__label">Open Modal</span>
+                </button>
+                <div class="fds-modal" :class="{ 'fds-modal--open': modalOpen }">
+                  <div class="fds-modal-container" role="dialog" aria-modal="true" tabindex="-1">
+                    <div class="fds-modal-header">
+                      <p class="fds-modal-header__label">Optional label</p>
+                      <h4 class="fds-modal-header__heading">Fatura bilgilerini onaylayın</h4>
+                    </div>
+
+                    <div class="fds-modal-message">
+                      <div role="alert" class="fds-notification fds-notification--warning">
+                        <div class="fds-notification__content">
+                          <div class="fds-notification__details">
+                            <p class="fds-notification__message">Faturanız aşağıdaki ek bilgilerler e-Arşiv sisteminde kaydedilip resmileştirilecek.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="fds-modal-content">
+                      <table>
+                        <tr>
+                          <td style="padding: 0; width: 25%; height: auto; padding-block: 8px;"><label class="label-02">Müşteri</label></td>
+                          <td style="padding: 0; width: 75%; height: auto; padding-block: 8px;"><span class="label-01">Devlet Malzeme Ofisi</span></td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 0; width: 25%; height: auto; padding-block: 8px;"><label class="label-02">Düzenleme tarihi</label></td>
+                          <td style="padding: 0; width: 75%; height: auto; padding-block: 8px;"><span class="label-01">03.08.2023</span></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #E6E6E6;">
+                          <td style="padding: 0; width: 25%; height: auto; padding-block: 8px;"><label class="label-02">Genel toplam</label></td>
+                          <td style="padding: 0; width: 60%; height: auto; padding-block: 8px;"><span class="amount-01">1.111,00</span></td>
+                          <td style="padding: 0; width: 15%; height: auto; padding-block: 16px;">
+                            <button class="fds-btn fds-btn--outline fds-btn--icon fds-btn--sm">
+                              <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-magnifying-glass"></i></span>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #E6E6E6;">
+                          <td style="padding: 0; width: 25%; height: auto; padding-block: 16px;"><label class="label-02">Fatura senaryosu</label></td>
+                          <td style="padding: 0; width: 60%; height: auto; padding-block: 16px;"><span class="label-01">Ticari e-Fatura</span></td>
+                          <td style="padding: 0; width: 15%; height: auto; padding-block: 16px;">
+                            <button class="fds-btn fds-btn--outline fds-btn--icon fds-btn--sm">
+                              <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-pen"></i></span>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #E6E6E6;">
+                          <td style="padding: 0; width: 25%; height: auto; padding-block: 16px;"><label class="label-02">Alıcı</label></td>
+                          <td style="padding: 0; width: 75%; height: auto; padding-block: 16px;"><span class="label-01">234567- Devlet Malzeme Ofisi</span></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #E6E6E6;">
+                          <td style="padding: 0; width: 25%; height: auto; padding-block: 16px;"><label class="label-02">Sipariş bilgileri</label></td>
+                          <td style="padding: 0; width: 60%; height: auto; padding-block: 16px;"><span class="label-01">12345678 / 24 Nisan 2023</span></td>
+                          <td style="padding: 0; width: 15%; height: auto; padding-block: 16px;">
+                            <button class="fds-btn fds-btn--outline fds-btn--icon fds-btn--sm">
+                              <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-magnifying-glass"></i></span>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #E6E6E6;">
+                          <td style="padding: 0; width: 25%; height: auto; padding-block: 16px;"><label class="label-02">DMO ürün no</label></td>
+                          <td style="padding: 0; width: 60%; height: auto; padding-block: 16px;"><span class="label-01">Masa - 2345678</span></td>
+                          <td style="padding: 0; width: 15%; height: auto; padding-block: 16px;">
+                            <button class="fds-btn fds-btn--outline fds-btn--icon fds-btn--sm">
+                              <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-pen"></i></span>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #E6E6E6;">
+                          <td style="padding: 0; width: 25%; height: auto; padding-block: 16px;"><label class="label-02">Fatura notu</label></td>
+                          <td style="padding: 0; width: 60%; height: auto; padding-block: 16px;"><span class="label-01">notcuk</span></td>
+                          <td style="padding: 0; width: 15%; height: auto; padding-block: 16px;">
+                            <button class="fds-btn fds-btn--outline fds-btn--icon fds-btn--sm">
+                              <span class="fds-icon fds-btn__icon"><i class="fa-regular fa-magnifying-glass"></i></span>
+                            </button>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="fds-modal-footer">
+                      <button class="fds-btn fds-btn--outline" @click="modalOpen = false">
+                        <span class="fds-btn__label">Vazgeç</span>
+                      </button>
+                      <button class="fds-btn fds-btn--primary">
+                        <span class="fds-btn__label">Gönder</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </td>
+
+              <td></td>
             </tr>
           </tbody>
         </table>
