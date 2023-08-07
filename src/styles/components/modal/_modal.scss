@@ -10,6 +10,7 @@
     background-color: rgb(0 0 0 / 50%);
     inset: 0;
     opacity: 0;
+    overflow-y: scroll;
     transition: opacity 0.3s ease-in-out;
     visibility: hidden;
   }
@@ -23,7 +24,6 @@
     display: flex;
     width: $modal-size-width;
     height: auto;
-    max-height: calc(100vh - #{$spacing-3x-large} * 2);
     flex-direction: column;
     background-color: $modal-color-background;
     border-radius: $modal-border-radius;
@@ -69,7 +69,6 @@
     flex-direction: column;
     color: $color-gray-90;
     gap: $spacing-large;
-    overflow-y: auto;
     padding-inline: $spacing-large;
   }
 
