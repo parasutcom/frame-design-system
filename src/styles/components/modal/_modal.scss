@@ -28,9 +28,20 @@
     background-color: $modal-color-background;
     border-radius: $modal-border-radius;
     box-shadow: 0 2px 6px 0 rgb(31 31 31 / 12%);
-    margin-block: $spacing-3x-large;
-    margin-inline: $spacing-3x-large;
+    margin-block: $spacing-medium;
+    margin-inline: $spacing-medium;
+
+    @media (min-width: $modal-size-small-width) {
+      margin-block: $spacing-large;
+      margin-inline: $spacing-large;
+    }
+
+    @media (min-width: $modal-size-width) {
+      margin-block: $spacing-2x-large;
+      margin-inline: $spacing-2x-large;
+    }
   }
+
   .#{$prefix}-modal-container--sm {
     width: $modal-size-small-width;
   }
