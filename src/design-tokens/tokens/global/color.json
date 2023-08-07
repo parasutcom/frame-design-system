@@ -113,6 +113,7 @@
       "100": { "value": "#1d0133"}
     },
     "white": { "value": "#ffffff"},
-    "black": { "value": "#000000"}
+    "black": { "value": "#000000"},
+    "overlay": { "value": "rgba(43, 43, 43, 0.70)"}
   }
 }
