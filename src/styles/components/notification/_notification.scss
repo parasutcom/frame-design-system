@@ -26,8 +26,7 @@
     @include type-style('heading-06');
   }
 
-  .#{$prefix}-notification__details,
-  .#{$prefix}-notification__details .#{$prefix}-list {
+  .#{$prefix}-notification__details {
     @include type-style('body-short-01');
   }
 

@@ -1,6 +1,6 @@
 @mixin list {
   .#{$prefix}-list {
-    @include type-style('label-01');
+    @include type-style('body-short-01');
 
     display: flex;
     flex-direction: column;
