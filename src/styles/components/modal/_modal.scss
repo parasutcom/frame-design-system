@@ -1,0 +1,114 @@
+@mixin modal {
+  .#{$prefix}-modal {
+    position: fixed;
+    z-index: $z-index-modal;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: $color-overlay;
+    inset: 0;
+    opacity: 0;
+    overflow-y: scroll;
+    transition: opacity 0.1s ease-in-out;
+    visibility: hidden;
+  }
+
+  .#{$prefix}-modal.#{$prefix}-modal--open {
+    opacity: 1;
+    visibility: inherit;
+  }
+
+  .#{$prefix}-modal-container {
+    display: flex;
+    width: $modal-size-width;
+    height: auto;
+    flex-direction: column;
+    background-color: $modal-color-background;
+    border-radius: $modal-border-radius;
+    box-shadow: 0 2px 6px 0 rgb(31 31 31 / 12%);
+    margin-block: $spacing-medium;
+    margin-inline: $spacing-medium;
+
+    @media (min-width: $modal-size-small-width) {
+      margin-block: $spacing-large;
+      margin-inline: $spacing-large;
+    }
+
+    @media (min-width: $modal-size-width) {
+      margin-block: $spacing-2x-large;
+      margin-inline: $spacing-2x-large;
+    }
+  }
+
+  .#{$prefix}-modal-container--sm {
+    width: $modal-size-small-width;
+  }
+
+  .#{$prefix}-modal-container--lg {
+    width: $modal-size-large-width;
+  }
+
+  .#{$prefix}-modal-header {
+    padding-block: $spacing-medium;
+    padding-inline: $spacing-large;
+  }
+
+  .#{$prefix}-modal-header__label {
+    @include type-style('helper-text-01');
+
+    margin-bottom: $spacing-3x-small;
+    color: $color-gray-60;
+  }
+
+  .#{$prefix}-modal-header__heading {
+    @include type-style('heading-04');
+
+    color: $color-gray-90;
+  }
+
+  .#{$prefix}-modal-message {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $spacing-large;
+    gap: $spacing-4x-small;
+  }
+
+  .#{$prefix}-modal-content {
+    display: flex;
+    flex-direction: column;
+    color: $color-gray-90;
+    gap: $spacing-large;
+    padding-inline: $spacing-large;
+  }
+
+  .#{$prefix}-modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: $spacing-medium;
+    padding-block: $spacing-medium;
+    padding-inline: $spacing-large;
+  }
+
+  .#{$prefix}-implication {
+    background-color: $color-gray-5;
+    border-radius: $radius-x-large;
+    padding-block: $spacing-medium;
+    padding-inline: $spacing-large;
+  }
+
+  .#{$prefix}-implication__heading {
+    @include type-style('heading-05');
+
+    margin-bottom: $spacing-2x-small;
+    color: $color-gray-80;
+  }
+
+  .#{$prefix}-implication .#{$prefix}-list {
+    padding-left: $spacing-large;
+  }
+}
+
+@include modal;

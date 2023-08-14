@@ -2,6 +2,7 @@
   "z-index": {
     "overflow-menu": { "value": "7000"},
     "calendar": { "value": "8000"},
-    "tooltip": { "value": "9000"}
+    "tooltip": { "value": "9000"},
+    "modal": { "value": "9900"}
   }
 }
