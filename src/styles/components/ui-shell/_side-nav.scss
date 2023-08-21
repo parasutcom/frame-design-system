@@ -185,6 +185,48 @@
     .#{$prefix}-side-nav__link-icon.#{$prefix}-side-nav__submenu-icon {
     display: none;
   }
+
+  // DARK
+
+  .#{$prefix}-side-nav--dark {
+    background-color: $color-antrasit-gray-90;
+  }
+
+  .#{$prefix}-side-nav--dark .#{$prefix}-side-nav__link {
+    color: $color-antrasit-gray-0;
+
+    &:hover {
+      background-color: $color-antrasit-gray-80;
+    }
+
+    &:active {
+      background-color: $color-antrasit-gray-70;
+    }
+  }
+
+  .#{$prefix}-side-nav--dark .#{$prefix}-side-nav__link-icon {
+    color: $color-antrasit-gray-40;
+  }
+
+  .#{$prefix}-side-nav--dark .#{$prefix}-side-nav__submenu-icon {
+    color: $color-antrasit-gray-30;
+  }
+
+  .#{$prefix}-side-nav--dark .#{$prefix}-side-nav__link--selected,
+  .#{$prefix}-side-nav--dark .#{$prefix}-side-nav__link--selected:hover {
+    background-color: $color-antrasit-gray-60;
+  }
+
+  .#{$prefix}-side-nav--dark
+    .#{$prefix}-side-nav__link--selected
+    .#{$prefix}-side-nav__link-icon {
+    color: $color-antrasit-gray-20;
+  }
+
+  .#{$prefix}-side-nav--dark .#{$prefix}-side-nav__link--submenu-active,
+  .#{$prefix}-side-nav--dark .#{$prefix}-side-nav__link--submenu-active:hover {
+    background-color: $color-antrasit-gray-60;
+  }
 }
 
 @include side-nav;
