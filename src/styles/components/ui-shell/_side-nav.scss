@@ -227,6 +227,12 @@
   .#{$prefix}-side-nav--dark .#{$prefix}-side-nav__link--submenu-active:hover {
     background-color: $color-antrasit-gray-60;
   }
+
+  .#{$prefix}-side-nav--dark
+    .#{$prefix}-side-nav__link--submenu-active
+    .#{$prefix}-side-nav__link-icon {
+    color: $color-antrasit-gray-20;
+  }
 }
 
 @include side-nav;
