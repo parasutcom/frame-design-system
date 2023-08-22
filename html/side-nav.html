@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../dist/css/main.css">
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <title>FDS | Side Navigation </title>
+  <style>
+    table {
+      width: 100%;
+      background-color: white;
+      border-collapse: collapse;
+      vertical-align: baseline;
+    }
+    thead {
+      border-bottom: 1px solid #e5e5e5;
+    }
+    th, td {
+      padding: 16px 24px;
+      text-align: left;
+    }
+
+    td {
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="main">
+      <div class="body" style="padding: 0; display: flex; width: 100vw; background-color: #f2f2f2;" x-data="{ isCollapsed: false }">
+        <nav class="fds-side-nav" :class="{ 'fds-side-nav--collapsed': isCollapsed }">
+          <div class="fds-side-nav__header">
+            <a href="#" class="fds-side-nav__logo">
+              <img src="https://mcusercontent.com/542129b0d23244e20a9c0dd7e/images/6448ae70-4e7e-bfff-8eb7-cf06f1b972a5.png" alt="brand_logo" class="fds-side-nav__logo-image">
+            </a>
+          </div>
+          <div class="fds-side-nav__content" x-data="{ selectedLink: null, subMenuOpen: false, selectedSubMenu: null }">
+            <ul class="fds-side-nav__items fds-side-nav__items--top">
+              <li class="fds-side-nav__item" x-data="{ isOpen: false }">
+                <a href="#" class="fds-side-nav__link" :class="{ 'fds-side-nav__link--selected': selectedLink === 'parent1' }" @click="selectedLink = 'parent1'; subMenuOpen = false">
+                  <div class="fds-side-nav__link-icon">
+                    <i class="fa-duotone fa-newspaper"></i>
+                  </div>
+                  <span class="fds-side-nav__link-text">Güncel durum</span>
+                </a>
+              </li>
+              <li class="fds-side-nav__item" x-data="{ isOpen: false }">
+                <button class="fds-side-nav__link fds-side-nav__link--has-submenu" :class="{ 'fds-side-nav__link--submenu-active': selectedSubMenu === 'subMenu1' }" @click="selectedSubMenu === 'subMenu1' ? selectedSubMenu = null : selectedSubMenu = 'subMenu1'; isOpen = !isOpen;">
+                  <div class="fds-side-nav__link-icon">
+                    <i class="fa-duotone fa-shopping-cart"></i>
+                  </div>
+                  <span class="fds-side-nav__link-text">Satışlar</span>
+                  <div class="fds-side-nav__link-icon fds-side-nav__submenu-icon">
+                    <i class="fa-regular fa-chevron-down"></i>
+                  </div>
+                </button>
+                <ul class="fds-side-nav__submenu" x-show="isOpen && selectedSubMenu === 'subMenu1'">
+                  <li class="fds-side-nav__submenu-item">
+                    <a href="#" class="fds-side-nav__link" :class="{ 'fds-side-nav__link--selected': selectedLink === 'child1' }" @click="selectedLink = 'child1'">
+                      <span class="fds-side-nav__link-text">Teklifler</span>
+                    </a>
+                  </li>
+                  <li class="fds-side-nav__submenu-item">
+                    <a href="#" class="fds-side-nav__link" :class="{ 'fds-side-nav__link--selected': selectedLink === 'child2' }" @click="selectedLink = 'child2'">
+                      <span class="fds-side-nav__link-text">Faturalar</span>
+                    </a>
+                  </li>
+                  <li class="fds-side-nav__submenu-item">
+                    <a href="#" class="fds-side-nav__link" :class="{ 'fds-side-nav__link--selected': selectedLink === 'child3' }" @click="selectedLink = 'child3'">
+                      <span class="fds-side-nav__link-text">Müşteriler</span>
+                    </a>
+                  </li>
+                  <li class="fds-side-nav__submenu-item">
+                    <a href="#" class="fds-side-nav__link" :class="{ 'fds-side-nav__link--selected': selectedLink === 'child4' }" @click="selectedLink = 'child4'">
+                      <span class="fds-side-nav__link-text">Satışlar raporu</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="fds-side-nav__item" x-data="{ isOpen: false }">
+                <button class="fds-side-nav__link fds-side-nav__link--has-submenu" :class="{ 'fds-side-nav__link--submenu-active': selectedSubMenu === 'subMenu2' }" @click="selectedSubMenu === 'subMenu2' ? selectedSubMenu = null : selectedSubMenu = 'subMenu2'; isOpen = !isOpen">
+                  <div class="fds-side-nav__link-icon">
+                    <i class="fa-duotone fa-money-bill-wave"></i>
+                  </div>
+                  <span class="fds-side-nav__link-text">Giderler</span>
+                  <div class="fds-side-nav__link-icon fds-side-nav__submenu-icon">
+                    <i class="fa-regular fa-chevron-down"></i>
+                  </div>
+                </button>
+                <ul class="fds-side-nav__submenu" x-show="isOpen && selectedSubMenu === 'subMenu2'">
+                  <li class="fds-side-nav__submenu-item">
+                    <a href="#" class="fds-side-nav__link" :class="{ 'fds-side-nav__link--selected': selectedLink === 'child5' }" @click="selectedLink = 'child5'">
+                      <span class="fds-side-nav__link-text">Gider listesi</span>
+                    </a>
+                  </li>
+                  <li class="fds-side-nav__submenu-item">
+                    <a href="#" class="fds-side-nav__link" :class="{ 'fds-side-nav__link--selected': selectedLink === 'child6' }" @click="selectedLink = 'child6'">
+                      <span class="fds-side-nav__link-text">Tedarikçiler</span>
+                    </a>
+                  </li>
+                  <li class="fds-side-nav__submenu-item">
+                    <a href="#" class="fds-side-nav__link" :class="{ 'fds-side-nav__link--selected': selectedLink === 'child7' }" @click="selectedLink = 'child7'">
+                      <span class="fds-side-nav__link-text">Çalışanlar</span>
+                    </a>
+                  </li>
+                  <li class="fds-side-nav__submenu-item">
+                    <a href="#" class="fds-side-nav__link" :class="{ 'fds-side-nav__link--selected': selectedLink === 'child8' }" @click="selectedLink = 'child8'">
+                      <span class="fds-side-nav__link-text">KDV raporu</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="fds-side-nav__item" x-data="{ isOpen: false }">
+                <a href="#" class="fds-side-nav__link" :class="{ 'fds-side-nav__link--selected': selectedLink === 'parent2' }" @click="selectedLink = 'parent2'; subMenuOpen = false">
+                  <div class="fds-side-nav__link-icon">
+                    <i class="fa-duotone fa-wallet"></i>
+                  </div>
+                  <span class="fds-side-nav__link-text">Nakit</span>
+                </a>
+              </li>
+              <li class="fds-side-nav__item" x-data="{ isOpen: false }">
+                <a href="#" class="fds-side-nav__link" :class="{ 'fds-side-nav__link--selected': selectedLink === 'parent3' }" @click="selectedLink = 'parent3'; subMenuOpen = false">
+                  <div class="fds-side-nav__link-icon">
+                    <i class="fa-duotone fa-cubes-stacked"></i>
+                  </div>
+                  <span class="fds-side-nav__link-text">Stok</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="fds-side-nav__items fds-side-nav__items--bottom">
+              <li class="fds-side-nav__item">
+                <a href="#" class="fds-side-nav__link">
+                  <div class="fds-side-nav__link-icon">
+                    <i class="fa-regular fa-grid-2-plus"></i>
+                  </div>
+                  <span class="fds-side-nav__link-text">Applications</span>
+                </a>
+              </li>
+              <li class="fds-side-nav__item">
+                <a href="#" class="fds-side-nav__link">
+                  <div class="fds-side-nav__link-icon">
+                    <i class="fa-duotone fa-store"></i>
+                  </div>
+                  <span class="fds-side-nav__link-text">Marketplace</span>
+                </a>
+              </li>
+              <li class="fds-side-nav__item">
+                <a href="#" class="fds-side-nav__link">
+                  <div class="fds-side-nav__link-icon">
+                    <i class="fa-duotone fa-gear"></i>
+                  </div>
+                  <span class="fds-side-nav__link-text">Settings</span>
+                </a>
+              </li>
+              <li class="fds-side-nav__item">
+                <a href="#" class="fds-side-nav__link" @click="isCollapsed = !isCollapsed">
+                  <div class="fds-side-nav__link-icon">
+                    <i class="fa-duotone fa-arrow-left-to-line"></i>
+                  </div>
+                  <span class="fds-side-nav__link-text">Collapse menu</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <nav class="fds-side-nav fds-side-nav--dark" :class="{ 'fds-side-nav--collapsed': isCollapsed }">
+          <div class="fds-side-nav__header">
+            <a href="#" class="fds-side-nav__logo">
+              <img src="https://mcusercontent.com/542129b0d23244e20a9c0dd7e/images/6448ae70-4e7e-bfff-8eb7-cf06f1b972a5.png" alt="brand_logo" class="fds-side-nav__logo-image">
+            </a>
+          </div>
+          <div class="fds-side-nav__content" x-data="{ selectedLink: null, subMenuOpen: false, selectedSubMenu: null }">
+            <ul class="fds-side-nav__items fds-side-nav__items--top">
+              <li class="fds-side-nav__item" x-data="{ isOpen: false }">
+                <a href="#" class="fds-side-nav__link" :class="{ 'fds-side-nav__link--selected': selectedLink === 'parent1' }" @click="selectedLink = 'parent1'; subMenuOpen = false">
+                  <div class="fds-side-nav__link-icon">
+                    <i class="fa-duotone fa-newspaper"></i>
+                  </div>
+                  <span class="fds-side-nav__link-text">Güncel durum</span>
+                </a>
+              </li>
+              <li class="fds-side-nav__item" x-data="{ isOpen: false }">
+                <button class="fds-side-nav__link fds-side-nav__link--has-submenu" :class="{ 'fds-side-nav__link--submenu-active': selectedSubMenu === 'subMenu1' }" @click="selectedSubMenu === 'subMenu1' ? selectedSubMenu = null : selectedSubMenu = 'subMenu1'; isOpen = !isOpen;">
+                  <div class="fds-side-nav__link-icon">
+                    <i class="fa-duotone fa-shopping-cart"></i>
+                  </div>
+                  <span class="fds-side-nav__link-text">Satışlar</span>
+                  <div class="fds-side-nav__link-icon fds-side-nav__submenu-icon">
+                    <i class="fa-regular fa-chevron-down"></i>
+                  </div>
+                </button>
+                <ul class="fds-side-nav__submenu" x-show="isOpen && selectedSubMenu === 'subMenu1'">
+                  <li class="fds-side-nav__submenu-item">
+                    <a href="#" class="fds-side-nav__link" :class="{ 'fds-side-nav__link--selected': selectedLink === 'child1' }" @click="selectedLink = 'child1'">
+                      <span class="fds-side-nav__link-text">Teklifler</span>
+                    </a>
+                  </li>
+                  <li class="fds-side-nav__submenu-item">
+                    <a href="#" class="fds-side-nav__link" :class="{ 'fds-side-nav__link--selected': selectedLink === 'child2' }" @click="selectedLink = 'child2'">
+                      <span class="fds-side-nav__link-text">Faturalar</span>
+                    </a>
+                  </li>
+                  <li class="fds-side-nav__submenu-item">
+                    <a href="#" class="fds-side-nav__link" :class="{ 'fds-side-nav__link--selected': selectedLink === 'child3' }" @click="selectedLink = 'child3'">
+                      <span class="fds-side-nav__link-text">Müşteriler</span>
+                    </a>
+                  </li>
+                  <li class="fds-side-nav__submenu-item">
+                    <a href="#" class="fds-side-nav__link" :class="{ 'fds-side-nav__link--selected': selectedLink === 'child4' }" @click="selectedLink = 'child4'">
+                      <span class="fds-side-nav__link-text">Satışlar raporu</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="fds-side-nav__item" x-data="{ isOpen: false }">
+                <button class="fds-side-nav__link fds-side-nav__link--has-submenu" :class="{ 'fds-side-nav__link--submenu-active': selectedSubMenu === 'subMenu2' }" @click="selectedSubMenu === 'subMenu2' ? selectedSubMenu = null : selectedSubMenu = 'subMenu2'; isOpen = !isOpen">
+                  <div class="fds-side-nav__link-icon">
+                    <i class="fa-duotone fa-money-bill-wave"></i>
+                  </div>
+                  <span class="fds-side-nav__link-text">Giderler</span>
+                  <div class="fds-side-nav__link-icon fds-side-nav__submenu-icon">
+                    <i class="fa-regular fa-chevron-down"></i>
+                  </div>
+                </button>
+                <ul class="fds-side-nav__submenu" x-show="isOpen && selectedSubMenu === 'subMenu2'">
+                  <li class="fds-side-nav__submenu-item">
+                    <a href="#" class="fds-side-nav__link" :class="{ 'fds-side-nav__link--selected': selectedLink === 'child5' }" @click="selectedLink = 'child5'">
+                      <span class="fds-side-nav__link-text">Gider listesi</span>
+                    </a>
+                  </li>
+                  <li class="fds-side-nav__submenu-item">
+                    <a href="#" class="fds-side-nav__link" :class="{ 'fds-side-nav__link--selected': selectedLink === 'child6' }" @click="selectedLink = 'child6'">
+                      <span class="fds-side-nav__link-text">Tedarikçiler</span>
+                    </a>
+                  </li>
+                  <li class="fds-side-nav__submenu-item">
+                    <a href="#" class="fds-side-nav__link" :class="{ 'fds-side-nav__link--selected': selectedLink === 'child7' }" @click="selectedLink = 'child7'">
+                      <span class="fds-side-nav__link-text">Çalışanlar</span>
+                    </a>
+                  </li>
+                  <li class="fds-side-nav__submenu-item">
+                    <a href="#" class="fds-side-nav__link" :class="{ 'fds-side-nav__link--selected': selectedLink === 'child8' }" @click="selectedLink = 'child8'">
+                      <span class="fds-side-nav__link-text">KDV raporu</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="fds-side-nav__item" x-data="{ isOpen: false }">
+                <a href="#" class="fds-side-nav__link" :class="{ 'fds-side-nav__link--selected': selectedLink === 'parent2' }" @click="selectedLink = 'parent2'; subMenuOpen = false">
+                  <div class="fds-side-nav__link-icon">
+                    <i class="fa-duotone fa-wallet"></i>
+                  </div>
+                  <span class="fds-side-nav__link-text">Nakit</span>
+                </a>
+              </li>
+              <li class="fds-side-nav__item" x-data="{ isOpen: false }">
+                <a href="#" class="fds-side-nav__link" :class="{ 'fds-side-nav__link--selected': selectedLink === 'parent3' }" @click="selectedLink = 'parent3'; subMenuOpen = false">
+                  <div class="fds-side-nav__link-icon">
+                    <i class="fa-duotone fa-cubes-stacked"></i>
+                  </div>
+                  <span class="fds-side-nav__link-text">Stok</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="fds-side-nav__items fds-side-nav__items--bottom">
+              <li class="fds-side-nav__item">
+                <a href="#" class="fds-side-nav__link">
+                  <div class="fds-side-nav__link-icon">
+                    <i class="fa-regular fa-grid-2-plus"></i>
+                  </div>
+                  <span class="fds-side-nav__link-text">Applications</span>
+                </a>
+              </li>
+              <li class="fds-side-nav__item">
+                <a href="#" class="fds-side-nav__link">
+                  <div class="fds-side-nav__link-icon">
+                    <i class="fa-duotone fa-store"></i>
+                  </div>
+                  <span class="fds-side-nav__link-text">Marketplace</span>
+                </a>
+              </li>
+              <li class="fds-side-nav__item">
+                <a href="#" class="fds-side-nav__link">
+                  <div class="fds-side-nav__link-icon">
+                    <i class="fa-duotone fa-gear"></i>
+                  </div>
+                  <span class="fds-side-nav__link-text">Settings</span>
+                </a>
+              </li>
+              <li class="fds-side-nav__item">
+                <a href="#" class="fds-side-nav__link" @click="isCollapsed = !isCollapsed">
+                  <div class="fds-side-nav__link-icon">
+                    <i class="fa-duotone fa-arrow-left-to-line"></i>
+                  </div>
+                  <span class="fds-side-nav__link-text">Collapse menu</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div style="padding: 24px; flex-grow: 1;">
+          <nav role="navigation" aria-label="breadcrumb">
+            <ol class="fds-breadcrumb">
+              <li class="fds-breadcrumb__item">
+                <a href="#" class="fds-link">Teklifler</a>
+              </li>
+              <li class="fds-breadcrumb__item fds-breadcrumb__item--current">
+                <a href="#" class="fds-link" aria-current="page">Yeni</a>
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
