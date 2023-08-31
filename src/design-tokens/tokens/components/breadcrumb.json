@@ -14,6 +14,11 @@
           "value": "{color.gray.80.value}"
         }
       },
+      "focus": {
+        "border": {
+          "value": "{color.blue.60.value}"
+        }
+      },
       "current": {
         "text": {
           "value": "{color.blue.60.value}"

@@ -1,87 +1,91 @@
-@import '../../settings/prefix';
+.#{$prefix}-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: $breadcrumb-size-gap;
+}
 
-@mixin breadcrumb {
-  .#{$prefix}-breadcrumb {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-start;
-    gap: $breadcrumb-size-gap;
-  }
+.#{$prefix}-breadcrumb__item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: $breadcrumb-size-gap;
 
-  .#{$prefix}-breadcrumb__item {
-    @include type-style('heading-04');
-
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: $breadcrumb-size-gap;
-  }
-
-  .#{$prefix}-breadcrumb__item:not(:last-child)::after {
+  &:not(:last-child)::after {
     @include icon-size('xs');
 
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: $color-gray-70;
+    color: $breadcrumb-color-text;
     content: '\f054';
     font-family: $font-family-icon;
     font-weight: 300;
   }
+}
 
-  .#{$prefix}-breadcrumb__item .#{$prefix}-link {
-    color: $breadcrumb-color-text;
+.#{$prefix}-breadcrumb__link {
+  @include type-style('heading-04');
 
-    &:hover {
-      color: $breadcrumb-color-hover-text;
-      text-decoration: none;
-    }
+  display: inline-flex;
+  color: $breadcrumb-color-text;
+  cursor: pointer;
+  text-decoration: none;
 
-    &:active {
-      color: $breadcrumb-color-active-text;
-    }
+  &:hover {
+    color: $breadcrumb-color-hover-text;
   }
 
-  .#{$prefix}-breadcrumb__item.#{$prefix}-breadcrumb__item--current
-    .#{$prefix}-link {
-    color: $breadcrumb-color-current-text;
-    cursor: default;
+  &:active {
+    color: $breadcrumb-color-active-text;
   }
 
-  .#{$prefix}-breadcrumb.#{$prefix}-breadcrumb--sm
-    .#{$prefix}-breadcrumb__item {
-    @include type-style('label-01');
-  }
-
-  .#{$prefix}-breadcrumb.#{$prefix}-breadcrumb--multiple
-    .#{$prefix}-breadcrumb__item.#{$prefix}-breadcrumb__item--current {
-    @include type-style('heading-02');
-
-    flex-basis: 100%;
-  }
-
-  .#{$prefix}-breadcrumb.#{$prefix}-breadcrumb--sm.#{$prefix}-breadcrumb--multiple
-    .#{$prefix}-breadcrumb__item.#{$prefix}-breadcrumb__item--current {
-    @include type-style('heading-04');
-
-    flex-basis: 100%;
-  }
-
-  .#{$prefix}-breadcrumb .#{$prefix}-btn--ghost {
-    color: $color-gray-60;
-
-    &:hover {
-      background-color: $color-gray-10;
-      box-shadow: inset 0 0 0 1px $color-gray-10;
-    }
-
-    &:active {
-      background-color: $color-gray-20;
-      box-shadow: inset 0 0 0 1px $color-gray-20;
-    }
+  &:focus-visible {
+    box-shadow: 0 0 0 2px $link-color-focus-border;
   }
 }
 
-@include breadcrumb;
+.#{$prefix}-breadcrumb__link--current {
+  color: $breadcrumb-color-current-text;
+  cursor: default;
+
+  &:hover {
+    color: $breadcrumb-color-current-text;
+  }
+
+  &:active {
+    color: $breadcrumb-color-current-text;
+  }
+}
+
+.#{$prefix}-breadcrumb--sm .#{$prefix}-breadcrumb__link {
+  @include type-style('label-01');
+}
+
+.#{$prefix}-breadcrumb--multiple .#{$prefix}-breadcrumb__item:last-child {
+  flex-basis: 100%;
+}
+
+.#{$prefix}-breadcrumb--multiple .#{$prefix}-breadcrumb__link--current {
+  @include type-style('heading-02');
+}
+
+.#{$prefix}-breadcrumb--sm.#{$prefix}-breadcrumb--multiple
+  .#{$prefix}-breadcrumb__link--current {
+  @include type-style('heading-04');
+}
+
+.#{$prefix}-breadcrumb .#{$prefix}-btn--ghost {
+  color: $color-gray-60;
+
+  &:hover {
+    background-color: $color-gray-10;
+    box-shadow: inset 0 0 0 1px $color-gray-10;
+  }
+
+  &:active {
+    background-color: $color-gray-20;
+    box-shadow: inset 0 0 0 1px $color-gray-20;
+  }
+}
