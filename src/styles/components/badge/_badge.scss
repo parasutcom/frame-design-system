@@ -1,54 +1,37 @@
-@import '../../settings/prefix';
-@import '../../tools/icon';
+@import '../../tools/text-truncate';
 
-@mixin badge {
-  .#{$prefix}-badge {
-    @include type-style('label-02');
+.#{$prefix}-badge {
+  @include type-style('label-02');
 
-    display: inline-flex;
-    overflow: hidden;
-    width: $badge-size-width;
-    height: $badge-size-height;
-    flex-shrink: 0;
-    align-items: center;
-    justify-content: center;
-    padding: $badge-size-padding;
-    background-color: $badge-color-background;
-    border-radius: $badge-border-radius;
-    color: $badge-color-text;
-  }
-
-  .#{$prefix}-badge--lg {
-    width: $badge-size-large-width;
-    height: $badge-size-large-height;
-  }
-
-  .#{$prefix}-badge__label {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-transform: uppercase;
-    white-space: nowrap;
-  }
-
-  .#{$prefix}-badge__icon {
-    @include icon-size('xl');
-
-    display: inline-flex;
-    flex-shrink: 0;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .#{$prefix}-badge.#{$prefix}-badge--lg .#{$prefix}-badge__icon {
-    @include icon-size('3xl');
-  }
-
-  .#{$prefix}-badge__image {
-    height: 100%;
-    aspect-ratio: 1 / 1;
-    border-radius: calc($badge-border-radius / 2);
-    object-fit: cover;
-  }
+  display: inline-flex;
+  overflow: hidden;
+  width: $badge-size-width;
+  height: $badge-size-height;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  padding: $badge-size-padding;
+  background-color: $badge-color-background;
+  border-radius: $badge-border-radius;
+  color: $badge-color-text;
 }
 
-@include badge;
+.#{$prefix}-badge--lg {
+  width: $badge-size-large-width;
+  height: $badge-size-large-height;
+}
+
+.#{$prefix}-badge__label {
+  @include truncate;
+
+  text-transform: uppercase;
+}
+
+.#{$prefix}-badge__image {
+  width: 100%;
+  max-width: $spacing-x-large;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  border-radius: calc($badge-border-radius / 2);
+  object-fit: cover;
+}
