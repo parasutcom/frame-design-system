@@ -11,17 +11,15 @@
       },
       "secondary": {
         "text": {
-          "value": "{color.gray.40.value}"
+          "value": "{color.gray.30.value}"
         }
       }
     },
     "size": {
-      "horizontal": {
-        "gap": {
-          "value": "{spacing.x-small}"
-        }
+      "gap": {
+        "value": "{spacing.x-small}"
       },
-      "vertical": {
+      "small": {
         "gap": {
           "value": "{spacing.2x-small}"
         }
