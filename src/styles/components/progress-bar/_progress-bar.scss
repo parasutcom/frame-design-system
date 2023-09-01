@@ -1,54 +1,54 @@
-@import '../../../design-tokens/build/scss/tokens';
-
-@mixin progress-bar {
-  .#{$prefix}-progress-bar {
-    position: relative;
-    display: block;
-    width: 100%;
-  }
-
-  .#{$prefix}-progress-bar__label-wrapper {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: $spacing-medium;
-  }
-
-  .#{$prefix}-progress-bar__label,
-  .#{$prefix}-progress-bar__counter {
-    @include type-style('label-01');
-
-    display: inline-block;
-    color: $color-gray-90;
-  }
-
-  .#{$prefix}-progress-bar__counter {
-    margin-left: auto;
-  }
-
-  .#{$prefix}-progress-bar__track {
-    position: relative;
-    width: 100%;
-    height: $spacing-2x-small;
-    background-color: $color-blue-10;
-    border-radius: $radius-pill;
-  }
-
-  .#{$prefix}-progress-bar--sm .#{$prefix}-progress-bar__track {
-    height: $spacing-3x-small;
-  }
-
-  .#{$prefix}-progress-bar--lg .#{$prefix}-progress-bar__track {
-    height: $spacing-medium;
-  }
-
-  .#{$prefix}-progress-bar__value {
-    display: block;
-    height: 100%;
-    background-color: $color-blue-60;
-    border-radius: $radius-pill;
-  }
+.#{$prefix}-progress-bar {
+  position: relative;
+  display: block;
+  width: 100%;
 }
 
-@include progress-bar;
+.#{$prefix}-progress-bar__label-wrapper {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: $spacing-medium;
+}
+
+.#{$prefix}-progress-bar__label,
+.#{$prefix}-progress-bar__counter {
+  @include type-style('label-01');
+
+  display: inline-block;
+  color: $color-gray-90;
+}
+
+.#{$prefix}-progress-bar__label {
+  @include truncate;
+
+  margin-right: $spacing-medium;
+}
+
+.#{$prefix}-progress-bar__counter {
+  margin-left: auto;
+}
+
+.#{$prefix}-progress-bar__track {
+  position: relative;
+  width: 100%;
+  height: $spacing-2x-small;
+  background-color: $color-blue-10;
+  border-radius: $radius-pill;
+}
+
+.#{$prefix}-progress-bar--sm .#{$prefix}-progress-bar__track {
+  height: $spacing-3x-small;
+}
+
+.#{$prefix}-progress-bar--lg .#{$prefix}-progress-bar__track {
+  height: $spacing-medium;
+}
+
+.#{$prefix}-progress-bar__value {
+  display: block;
+  height: 100%;
+  background-color: $color-blue-60;
+  border-radius: $radius-pill;
+}
