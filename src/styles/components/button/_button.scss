@@ -1,185 +1,169 @@
-@import '../../../design-tokens/build/scss/tokens';
-@import '../../settings/prefix';
-@import '../../tools/text-truncate';
 @import '../../tools/button';
-@import '../../tools/icon';
 
-@mixin button {
-  .#{$prefix}-btn {
-    @include button-base;
+.#{$prefix}-btn {
+  @include button-base;
+}
+
+.#{$prefix}-btn--full-width {
+  width: 100%;
+}
+
+.#{$prefix}-btn--icon {
+  width: $button-size-width;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.#{$prefix}-btn--sm {
+  height: $button-size-small-height;
+}
+
+.#{$prefix}-btn--lg {
+  height: $button-size-large-height;
+}
+
+.#{$prefix}-btn--icon.#{$prefix}-btn--sm {
+  width: $button-size-small-width;
+}
+
+.#{$prefix}-btn--icon.#{$prefix}-btn--lg {
+  width: $button-size-large-width;
+}
+
+.#{$prefix}-btn__label {
+  @include truncate;
+
+  flex-grow: 1;
+}
+
+.#{$prefix}-btn--busy .#{$prefix}-btn__label,
+.#{$prefix}-btn--busy > .#{$prefix}-icon {
+  opacity: 0;
+}
+
+.#{$prefix}-btn--busy .#{$prefix}-spinner {
+  position: absolute;
+  inset: 0;
+}
+
+.#{$prefix}-btn--primary {
+  @include button-variant(
+    $button-color-primary-background,
+    $button-color-primary-text,
+    $button-color-primary-border,
+    $button-color-primary-hover-background,
+    $button-color-primary-hover-border,
+    $button-color-primary-active-background,
+    $button-color-primary-active-border
+  );
+}
+
+.#{$prefix}-btn--secondary {
+  @include button-variant(
+    $button-color-secondary-background,
+    $button-color-secondary-text,
+    $button-color-secondary-border,
+    $button-color-secondary-hover-background,
+    $button-color-secondary-hover-border,
+    $button-color-secondary-active-background,
+    $button-color-secondary-active-border
+  );
+}
+
+.#{$prefix}-btn--outline {
+  @include button-variant(
+    transparent,
+    $button-color-outline-text,
+    $button-color-outline-border,
+    $button-color-outline-hover-background,
+    $button-color-outline-hover-border,
+    $button-color-outline-active-background,
+    $button-color-outline-active-border
+  );
+
+  &:hover {
+    color: $button-color-outline-hover-text;
   }
 
-  .#{$prefix}-btn--full-width {
-    width: 100%;
+  &:active {
+    color: $button-color-outline-active-text;
   }
 
-  .#{$prefix}-btn--icon {
-    width: $button-size-width;
-    padding-right: 0;
-    padding-left: 0;
-  }
-
-  .#{$prefix}-btn--sm {
-    height: $button-size-small-height;
-  }
-
-  .#{$prefix}-btn--lg {
-    height: $button-size-large-height;
-  }
-
-  .#{$prefix}-btn--icon.#{$prefix}-btn--sm {
-    width: $button-size-small-width;
-  }
-
-  .#{$prefix}-btn--icon.#{$prefix}-btn--lg {
-    width: $button-size-large-width;
-  }
-
-  .#{$prefix}-btn__label {
-    @include truncate;
-
-    flex-grow: 1;
-  }
-
-  .#{$prefix}-btn__icon {
-    @include icon-size('md');
-
-    flex-shrink: 0;
-  }
-
-  .#{$prefix}-btn.#{$prefix}-btn__busy {
-    .#{$prefix}-btn__label {
-      padding-right: calc($spacing-medium * 0.75);
-      padding-left: calc($spacing-medium * 0.75);
-      opacity: 0;
-    }
-
-    .#{$prefix}-btn__icon {
-      position: absolute;
-    }
-  }
-
-  .#{$prefix}-btn--primary {
-    @include button-variant(
-      $button-color-primary-background,
-      $button-color-primary-text,
-      $button-color-primary-border,
-      $button-color-primary-hover-background,
-      $button-color-primary-hover-border,
-      $button-color-primary-active-background,
-      $button-color-primary-active-border
-    );
-  }
-
-  .#{$prefix}-btn--secondary {
-    @include button-variant(
-      $button-color-secondary-background,
-      $button-color-secondary-text,
-      $button-color-secondary-border,
-      $button-color-secondary-hover-background,
-      $button-color-secondary-hover-border,
-      $button-color-secondary-active-background,
-      $button-color-secondary-active-border
-    );
-  }
-
-  .#{$prefix}-btn--outline {
-    @include button-variant(
-      transparent,
-      $button-color-outline-text,
-      $button-color-outline-border,
-      $button-color-outline-hover-background,
-      $button-color-outline-hover-border,
-      $button-color-outline-active-background,
-      $button-color-outline-active-border
-    );
-
-    &:hover {
-      color: $button-color-outline-hover-text;
-    }
-
-    &:active {
-      color: $button-color-outline-active-text;
-    }
-
-    &:disabled,
-    &:hover:disabled,
-    &:focus-visible:disabled,
-    &.#{$prefix}-btn--disabled,
-    &.#{$prefix}-btn--disabled:hover,
-    &.#{$prefix}-btn--disabled:focus-visible {
-      background-color: transparent;
-      box-shadow: inset 0 0 0 1px $button-color-outline-disabled-border;
-      color: $button-color-outline-disabled-text;
-    }
-  }
-
-  .#{$prefix}-btn--ghost {
-    @include button-variant(
-      transparent,
-      $button-color-ghost-text,
-      transparent,
-      $button-color-ghost-hover-background,
-      $button-color-ghost-hover-border,
-      $button-color-ghost-active-background,
-      $button-color-ghost-active-border
-    );
-
-    &:disabled,
-    &:hover:disabled,
-    &:focus-visible:disabled,
-    &.#{$prefix}-btn--disabled,
-    &.#{$prefix}-btn--disabled:hover,
-    &.#{$prefix}-btn--disabled:focus-visible {
-      background-color: transparent;
-      box-shadow: inset 0 0 0 1px transparent;
-      color: $button-color-ghost-disabled-text;
-    }
-  }
-
-  .#{$prefix}-btn--destructive {
-    @include button-variant(
-      $button-color-destructive-background,
-      $button-color-destructive-text,
-      $button-color-destructive-border,
-      $button-color-destructive-hover-background,
-      $button-color-destructive-hover-border,
-      $button-color-destructive-active-background,
-      $button-color-destructive-active-border
-    );
-  }
-
-  .#{$prefix}-btn--destructive-outline {
-    @include button-variant(
-      transparent,
-      $button-color-destructive-outline-text,
-      $button-color-destructive-outline-border,
-      $button-color-destructive-outline-hover-background,
-      $button-color-destructive-outline-hover-border,
-      $button-color-destructive-outline-active-background,
-      $button-color-destructive-outline-active-border
-    );
-
-    &:hover {
-      color: $button-color-destructive-outline-hover-text;
-    }
-
-    &:active {
-      color: $button-color-destructive-outline-active-text;
-    }
-
-    &:disabled,
-    &:hover:disabled,
-    &:focus-visible:disabled,
-    &.#{$prefix}-btn--disabled,
-    &.#{$prefix}-btn--disabled:hover,
-    &.#{$prefix}-btn--disabled:focus-visible {
-      background-color: transparent;
-      box-shadow: inset 0 0 0 1px
-        $button-color-destructive-outline-disabled-border;
-      color: $button-color-destructive-outline-disabled-text;
-    }
+  &:disabled,
+  &:hover:disabled,
+  &:focus-visible:disabled,
+  &.#{$prefix}-btn--disabled,
+  &.#{$prefix}-btn--disabled:hover,
+  &.#{$prefix}-btn--disabled:focus-visible {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 1px $button-color-outline-disabled-border;
+    color: $button-color-outline-disabled-text;
   }
 }
 
-@include button;
+.#{$prefix}-btn--ghost {
+  @include button-variant(
+    transparent,
+    $button-color-ghost-text,
+    transparent,
+    $button-color-ghost-hover-background,
+    $button-color-ghost-hover-border,
+    $button-color-ghost-active-background,
+    $button-color-ghost-active-border
+  );
+
+  &:disabled,
+  &:hover:disabled,
+  &:focus-visible:disabled,
+  &.#{$prefix}-btn--disabled,
+  &.#{$prefix}-btn--disabled:hover,
+  &.#{$prefix}-btn--disabled:focus-visible {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 1px transparent;
+    color: $button-color-ghost-disabled-text;
+  }
+}
+
+.#{$prefix}-btn--destructive {
+  @include button-variant(
+    $button-color-destructive-background,
+    $button-color-destructive-text,
+    $button-color-destructive-border,
+    $button-color-destructive-hover-background,
+    $button-color-destructive-hover-border,
+    $button-color-destructive-active-background,
+    $button-color-destructive-active-border
+  );
+}
+
+.#{$prefix}-btn--destructive-outline {
+  @include button-variant(
+    transparent,
+    $button-color-destructive-outline-text,
+    $button-color-destructive-outline-border,
+    $button-color-destructive-outline-hover-background,
+    $button-color-destructive-outline-hover-border,
+    $button-color-destructive-outline-active-background,
+    $button-color-destructive-outline-active-border
+  );
+
+  &:hover {
+    color: $button-color-destructive-outline-hover-text;
+  }
+
+  &:active {
+    color: $button-color-destructive-outline-active-text;
+  }
+
+  &:disabled,
+  &:hover:disabled,
+  &:focus-visible:disabled,
+  &.#{$prefix}-btn--disabled,
+  &.#{$prefix}-btn--disabled:hover,
+  &.#{$prefix}-btn--disabled:focus-visible {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 1px
+      $button-color-destructive-outline-disabled-border;
+    color: $button-color-destructive-outline-disabled-text;
+  }
+}
