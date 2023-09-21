@@ -1,36 +1,32 @@
-@import '../../settings/prefix';
-
-@mixin button-group {
-  .#{$prefix}-btn-group {
-    display: inline-flex;
-    gap: 1px;
-
-    .#{$prefix}-btn {
-      border-radius: 0;
-    }
-  }
-
-  .#{$prefix}-btn-group .#{$prefix}-btn:first-child,
-  .#{$prefix}-btn-group .#{$prefix}-btn.#{$prefix}-btn__first {
-    border-radius: $button-border-radius 0 0 $button-border-radius;
-  }
-
-  .#{$prefix}-btn-group .#{$prefix}-btn:last-child,
-  .#{$prefix}-btn-group .#{$prefix}-btn.#{$prefix}-btn__last {
-    border-radius: 0 $button-border-radius $button-border-radius 0;
-  }
-
-  .#{$prefix}-btn.#{$prefix}-btn__first.#{$prefix}-btn__first {
-    border-radius: $button-border-radius 0 0 $button-border-radius;
-  }
-
-  .#{$prefix}-btn.#{$prefix}-btn__middle.#{$prefix}-btn__middle {
-    border-radius: 0;
-  }
-
-  .#{$prefix}-btn.#{$prefix}-btn__last.#{$prefix}-btn__last {
-    border-radius: 0 $button-border-radius $button-border-radius 0;
-  }
+.#{$prefix}-btn-group {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  gap: 1px;
 }
 
-@include button-group;
+.#{$prefix}-btn-group .#{$prefix}-btn {
+  border-radius: 0;
+}
+
+.#{$prefix}-btn-group .#{$prefix}-btn:first-child {
+  border-radius: $button-border-radius 0 0 $button-border-radius;
+}
+
+.#{$prefix}-btn-group .#{$prefix}-btn:last-child {
+  border-radius: 0 $button-border-radius $button-border-radius 0;
+}
+
+.#{$prefix}-btn-group
+  .#{$prefix}-btn-group__btn.#{$prefix}-btn-group__btn--first {
+  border-radius: $button-border-radius 0 0 $button-border-radius;
+}
+
+.#{$prefix}-btn-group
+  .#{$prefix}-btn-group__btn.#{$prefix}-btn-group__btn--inner {
+  border-radius: 0;
+}
+
+.#{$prefix}-btn-group
+  .#{$prefix}-btn-group__btn.#{$prefix}-btn-group__btn--last {
+  border-radius: 0 $button-border-radius $button-border-radius 0;
+}
