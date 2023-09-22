@@ -31,8 +31,11 @@
         }
       },
       "disabled": {
+        "background": {
+          "value": "{color.gray.10.value}"
+        },
         "text": {
-          "value": "{color.gray.40.value}"
+          "value": "{color.gray.30.value}"
         }
       }
     },
