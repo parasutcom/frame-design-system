@@ -20,6 +20,7 @@
   "main": "index.js",
   "scripts": {
     "tokens:build": "cd src/design-tokens && style-dictionary build --config ./config.json",
+    "commit": "commit",
     "lint": "npm-run-all -s lint:*",
     "lint:styles": "stylelint '**/*.scss'",
     "format:code": "prettier --write '**/*.{js,md,scss}'",
@@ -34,6 +35,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@commitlint/prompt-cli": "^17.7.1",
     "browser-sync": "^2.27.11",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
