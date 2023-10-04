@@ -7,18 +7,18 @@
   gap: 1px;
 }
 
-.#{$prefix}-content-switcher-btn {
+.#{$prefix}-content-switcher__btn {
   @include button-base;
 
   height: 100%;
   border-radius: 0;
 }
 
-.#{$prefix}-content-switcher-btn:first-child {
+.#{$prefix}-content-switcher__btn:first-child {
   border-radius: $button-border-radius 0 0 $button-border-radius;
 }
 
-.#{$prefix}-content-switcher-btn:last-child {
+.#{$prefix}-content-switcher__btn:last-child {
   border-radius: 0 $button-border-radius $button-border-radius 0;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .#{$prefix}-content-switcher--solid {
-  .#{$prefix}-content-switcher-btn {
+  .#{$prefix}-content-switcher__btn {
     @include button-variant(
       $button-color-secondary-background,
       $button-color-secondary-text,
@@ -52,9 +52,9 @@
     &:disabled,
     &:hover:disabled,
     &:focus-visible:disabled,
-    &.#{$prefix}-content-switcher-btn--disabled,
-    &.#{$prefix}-content-switcher-btn--disabled:hover,
-    &.#{$prefix}-content-switcher-btn--disabled:focus-visible {
+    &.#{$prefix}-content-switcher__btn--disabled,
+    &.#{$prefix}-content-switcher__btn--disabled:hover,
+    &.#{$prefix}-content-switcher__btn--disabled:focus-visible {
       background-color: $button-color-disabled-background;
       box-shadow: inset 0 0 0 1px $button-color-disabled-border;
       color: $button-color-disabled-text;
@@ -64,7 +64,7 @@
 }
 
 .#{$prefix}-content-switcher--outline {
-  .#{$prefix}-content-switcher-btn {
+  .#{$prefix}-content-switcher__btn {
     @include button-variant(
       transparent,
       $button-color-outline-text,
@@ -91,9 +91,9 @@
     &:disabled,
     &:hover:disabled,
     &:focus-visible:disabled,
-    &.#{$prefix}-content-switcher-btn--disabled,
-    &.#{$prefix}-content-switcher-btn--disabled:hover,
-    &.#{$prefix}-content-switcher-btn--disabled:focus-visible {
+    &.#{$prefix}-content-switcher__btn--disabled,
+    &.#{$prefix}-content-switcher__btn--disabled:hover,
+    &.#{$prefix}-content-switcher__btn--disabled:focus-visible {
       background-color: transparent;
       box-shadow: inset 0 0 0 1px $button-color-outline-disabled-border;
       color: $button-color-outline-disabled-text;
@@ -102,8 +102,8 @@
   }
 }
 
-.#{$prefix}-content-switcher-btn.#{$prefix}-content-switcher-btn--selected,
-.#{$prefix}-content-switcher-btn.#{$prefix}-content-switcher-btn--selected:hover {
+.#{$prefix}-content-switcher__btn.#{$prefix}-content-switcher__btn--selected,
+.#{$prefix}-content-switcher__btn.#{$prefix}-content-switcher__btn--selected:hover {
   background-color: $button-color-outline-active-background;
   box-shadow: inset 0 0 0 1px $button-color-outline-active-border;
   color: $button-color-outline-active-text;
