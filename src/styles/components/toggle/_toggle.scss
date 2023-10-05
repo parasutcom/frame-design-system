@@ -86,20 +86,20 @@
 
   .#{$prefix}-toggle__input:disabled
     + .#{$prefix}-toggle__label
-    .#{$prefix}-toggle__label-mark::before {
+    .#{$prefix}-toggle__label-mark {
     background-color: $toggle-color-disabled-background;
+  }
+
+  .#{$prefix}-toggle__input:disabled
+    + .#{$prefix}-toggle__label
+    .#{$prefix}-toggle__label-mark::before {
+    background-color: $toggle-color-disabled-text;
   }
 
   .#{$prefix}-toggle__input:checked:disabled
     + .#{$prefix}-toggle__label
     .#{$prefix}-toggle__label-mark {
-    background-color: $toggle-color-background;
-  }
-
-  .#{$prefix}-toggle__input:disabled
-    + .#{$prefix}-toggle__label
-    .#{$prefix}-toggle__label-text {
-    color: $toggle-color-disabled-text;
+    background-color: $toggle-color-disabled-background;
   }
 }
 
