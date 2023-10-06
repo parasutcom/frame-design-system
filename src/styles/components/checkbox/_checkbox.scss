@@ -124,6 +124,7 @@
     + .#{$prefix}-checkbox__label
     .#{$prefix}-checkbox__label-mark {
     background-color: $checkbox-color-disabled-background;
+    box-shadow: unset;
     color: $checkbox-color-disabled-text;
   }
 
