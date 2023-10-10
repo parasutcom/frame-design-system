@@ -34,13 +34,13 @@
         },
         "disabled": {
           "background": {
-            "value": "{color.gray.20.value}"
+            "value": "{color.gray.10.value}"
           },
           "text": {
-            "value": "{color.gray.40.value}"
+            "value": "{color.gray.30.value}"
           },
           "border": {
-            "value": "{color.gray.20.value}"
+            "value": "{color.gray.10.value}"
           }
         }
       },
@@ -75,7 +75,7 @@
             "value": "{color.white.value}"
           },
           "text": {
-            "value": "{color.gray.40.value}"
+            "value": "{color.gray.30.value}"
           },
           "border": {
             "value": "{color.white.value}"
