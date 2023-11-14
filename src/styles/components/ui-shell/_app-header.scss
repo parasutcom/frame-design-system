@@ -1,0 +1,34 @@
+.#{$prefix}-app-header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $color-gray-5;
+  padding-block: $spacing-medium;
+  padding-inline: $spacing-large;
+}
+
+.#{$prefix}-user-profile {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-medium;
+}
+
+.#{$prefix}-user-credentials {
+  display: inline-flex;
+  flex-direction: column;
+  gap: $spacing-3x-small;
+  text-align: right;
+}
+
+.#{$prefix}-user-name {
+  @include type-style('heading-05');
+
+  color: $color-gray-90;
+}
+
+.#{$prefix}-user-company {
+  @include type-style('label-01');
+
+  color: $color-gray-60;
+}
