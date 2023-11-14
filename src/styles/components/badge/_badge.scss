@@ -1,16 +1,10 @@
-@import '../../tools/text-truncate';
-
 .#{$prefix}-badge {
-  @include type-style('label-02');
-
   display: inline-flex;
   overflow: hidden;
   width: $badge-size-width;
-  height: $badge-size-height;
-  flex-shrink: 0;
+  height: $badge-size-width;
   align-items: center;
   justify-content: center;
-  padding: $badge-size-padding;
   background-color: $badge-color-background;
   border-radius: $badge-border-radius;
   color: $badge-color-text;
@@ -21,9 +15,18 @@
   height: $badge-size-large-height;
 }
 
-.#{$prefix}-badge__label {
-  @include truncate;
+.#{$prefix}-badge--circle {
+  border-radius: $radius-circle;
+}
 
+.#{$prefix}-badge__letter {
+  @include type-style('label-02');
+
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
   text-transform: uppercase;
 }
 
@@ -34,4 +37,16 @@
   aspect-ratio: 1 / 1;
   border-radius: calc($badge-border-radius / 2);
   object-fit: cover;
+}
+
+.#{$prefix}-badge--lg .#{$prefix}-badge__image {
+  max-width: $spacing-2x-large;
+}
+
+.#{$prefix}-badge--circle .#{$prefix}-badge__image {
+  max-width: $spacing-2x-large;
+}
+
+.#{$prefix}-badge--lg.#{$prefix}-badge--circle .#{$prefix}-badge__image {
+  max-width: $spacing-3x-large;
 }
