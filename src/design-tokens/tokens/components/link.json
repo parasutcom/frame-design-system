@@ -1,14 +1,6 @@
 {
   "link": {
     "color": {
-      "text": {
-        "value": "{color.blue.60.value}"
-      },
-      "active": {
-        "text": {
-          "value": "{color.blue.80.value}"
-        }
-      },
       "focus": {
         "border": {
           "value": "{color.blue.60.value}"
@@ -16,7 +8,17 @@
       },
       "disabled": {
         "text": {
-          "value": "{color.gray.40.value}"
+          "value": "{color.gray.30.value}"
+        }
+      },
+      "primary": {
+        "text": {
+          "value": "{color.blue.60.value}"
+        },
+        "active": {
+          "text": {
+            "value": "{color.blue.80.value}"
+          }
         }
       },
       "secondary": {

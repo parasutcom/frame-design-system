@@ -1,68 +1,63 @@
-@import '../../../design-tokens/build/scss/tokens';
-@import '../../settings/prefix';
+.#{$prefix}-link {
+  padding: 0;
+  border: 0;
+  appearance: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: none;
+  outline: none;
+  text-decoration: none;
 
-@mixin link {
-  .#{$prefix}-link {
-    padding: 0;
-    border: 0;
-    margin: 0;
-    appearance: none;
-    background: none;
-    color: $link-color-text;
-    cursor: pointer;
-    font-size: inherit;
-    font-weight: inherit;
-    text-align: inherit;
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 0 2px $link-color-focus-border;
+  }
+
+  &:disabled,
+  &:hover:disabled,
+  &:focus-visible:disabled,
+  &.#{$prefix}-link--disabled,
+  &.#{$prefix}-link--disabled:hover,
+  &.#{$prefix}-link--disabled:focus-visible {
+    color: $link-color-disabled-text;
+    cursor: not-allowed;
     text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-      text-underline-offset: $spacing-3x-small;
-    }
-
-    &:focus-visible {
-      box-shadow: 0 0 0 2px $link-color-focus-border;
-    }
-
-    &:active {
-      color: $link-color-active-text;
-    }
-
-    &:disabled,
-    &:hover:disabled,
-    &:focus-visible:disabled,
-    &.#{$prefix}-link--disabled,
-    &.#{$prefix}-link--disabled:hover,
-    &.#{$prefix}-link--disabled:focus-visible {
-      color: $link-color-disabled-text;
-      cursor: not-allowed;
-      text-decoration: none;
-    }
-
-    .#{$prefix}-icon {
-      width: inherit;
-      height: inherit;
-      color: inherit;
-      font-size: inherit;
-      vertical-align: baseline;
-    }
-  }
-
-  .#{$prefix}-link--secondary {
-    color: $link-color-secondary-text;
-
-    &:active {
-      color: $link-color-secondary-active-text;
-    }
-  }
-
-  .#{$prefix}-link--dark {
-    color: $link-color-dark-text;
-
-    &:active {
-      color: $link-color-dark-active-text;
-    }
   }
 }
 
-@include link;
+.#{$prefix}-link--primary {
+  color: $link-color-primary-text;
+
+  &:active {
+    color: $link-color-primary-active-text;
+  }
+}
+
+.#{$prefix}-link--secondary {
+  color: $link-color-secondary-text;
+
+  &:active {
+    color: $link-color-secondary-active-text;
+  }
+}
+
+.#{$prefix}-link--dark {
+  color: $link-color-dark-text;
+
+  &:active {
+    color: $link-color-dark-active-text;
+  }
+}
+
+.#{$prefix}-link--standalone {
+  @include type-style('body-short-01');
+}
+
+.#{$prefix}-link__icon {
+  display: inline-flex;
+}
