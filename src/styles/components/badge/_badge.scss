@@ -3,6 +3,7 @@
   overflow: hidden;
   width: $badge-size-width;
   height: $badge-size-width;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
   background-color: $badge-color-background;
