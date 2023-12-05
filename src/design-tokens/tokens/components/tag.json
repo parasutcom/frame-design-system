@@ -76,19 +76,6 @@
         "border": {
           "value": "{color.gray.10.value}"
         },
-        "hover": {
-          "background": {
-            "value": "{color.gray.20.value}"
-          },
-          "border": {
-            "value": "{color.gray.20.value}"
-          }
-        },
-        "focus": {
-          "border": {
-            "value": "{color.blue.60.value}"
-          }
-        },
         "disabled": {
           "background": {
             "value": "{color.gray.5.value}"
@@ -105,9 +92,6 @@
     "size": {
       "height": {
         "value": "{spacing.large}"
-      },
-      "padding": {
-        "value": "{spacing.3x-small}"
       }
     },
     "border": {
