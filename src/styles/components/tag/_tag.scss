@@ -2,143 +2,133 @@
 @import '../../tools/button';
 @import '../../tools/tag';
 
-@mixin tag {
-  .#{$prefix}-tag {
-    @include tag-base;
-  }
+.#{$prefix}-tag {
+  @include tag-base;
+}
 
-  .#{$prefix}-tag__label {
-    @include truncate;
+.#{$prefix}-tag__label {
+  padding-right: calc($spacing-3x-small * 1.5);
+  padding-left: calc($spacing-3x-small * 1.5);
+  color: $tag-color-text;
+}
 
-    flex-grow: 1;
-    padding-right: $tag-size-padding;
-    padding-left: $tag-size-padding;
-    color: $tag-color-text;
-  }
+.#{$prefix}-icon + .#{$prefix}-tag__label {
+  padding-left: $spacing-3x-small;
+}
 
-  .#{$prefix}-tag__icon {
-    @include icon-size('sm');
+.#{$prefix}-tag__btn-close {
+  @include button-reset;
 
-    flex-shrink: 0;
-  }
+  display: inline-flex;
+  width: calc($spacing-medium * 1.25);
+  height: calc($spacing-medium * 1.25);
+  align-items: center;
+  justify-content: center;
+  border-radius: $radius-circle;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 200ms ease;
+  vertical-align: middle;
 
-  .#{$prefix}-tag__btn-close {
-    @include button-reset;
+  @include button-variant(
+    transparent,
+    currentcolor,
+    transparent,
+    $color-gray-20,
+    $color-gray-20,
+    $color-gray-30,
+    $color-gray-30
+  );
 
-    display: inline-flex;
-    width: calc($spacing-medium * 1.125);
-    height: calc($spacing-medium * 1.125);
-    align-items: center;
-    justify-content: center;
-    border-radius: $radius-circle;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    transition: all 200ms ease;
-    vertical-align: middle;
-
-    @include button-variant(
-      transparent,
-      currentcolor,
-      transparent,
-      $color-gray-20,
-      $color-gray-20,
-      $color-gray-30,
-      $color-gray-30
-    );
-
-    &:focus-visible {
-      box-shadow: inset 0 0 0 2px $color-blue-60, inset 0 0 0 3px $color-white;
-    }
-  }
-
-  .#{$prefix}-tag--semantic.#{$prefix}-tag--success {
-    @include tag-variant(
-      $tag-color-semantic-success-background,
-      $tag-color-semantic-success-text,
-      $tag-color-semantic-success-border
-    );
-  }
-
-  .#{$prefix}-tag--semantic.#{$prefix}-tag--pending {
-    @include tag-variant(
-      $tag-color-semantic-pending-background,
-      $tag-color-semantic-pending-text,
-      $tag-color-semantic-pending-border
-    );
-  }
-
-  .#{$prefix}-tag--semantic.#{$prefix}-tag--error {
-    @include tag-variant(
-      $tag-color-semantic-error-background,
-      $tag-color-semantic-error-text,
-      $tag-color-semantic-error-border
-    );
-  }
-
-  .#{$prefix}-tag--semantic.#{$prefix}-tag--purple {
-    @include tag-variant(
-      $tag-color-semantic-purple-background,
-      $tag-color-semantic-purple-text,
-      $tag-color-semantic-purple-border
-    );
-  }
-
-  .#{$prefix}-tag--semantic.#{$prefix}-tag--information {
-    @include tag-variant(
-      $tag-color-semantic-information-background,
-      $tag-color-semantic-information-text,
-      $tag-color-semantic-information-border
-    );
-
-    .#{$prefix}-tag__label {
-      color: $tag-color-semantic-information-text;
-    }
-  }
-
-  .#{$prefix}-tag--semantic.#{$prefix}-tag--transparent {
-    background-color: transparent;
-    box-shadow: inset 0 0 0 1px transparent;
-  }
-
-  .#{$prefix}-tag--semantic.#{$prefix}-tag--information.#{$prefix}-tag--transparent {
-    color: $tag-color-semantic-information-dark-text;
-
-    .#{$prefix}-tag__label {
-      color: $tag-color-semantic-information-dark-text;
-    }
-  }
-
-  .#{$prefix}-tag--interactive {
-    @include tag-variant(
-      $tag-color-interactive-background,
-      $tag-color-interactive-text,
-      $tag-color-interactive-border
-    );
-
-    &:disabled,
-    &:hover:disabled,
-    &:focus-visible:disabled,
-    &.#{$prefix}-tag--disabled,
-    &.#{$prefix}-tag--disabled:hover,
-    &.#{$prefix}-tag--disabled:focus-visible {
-      background-color: $tag-color-interactive-disabled-background;
-      box-shadow: inset 0 0 0 1px $tag-color-interactive-disabled-border;
-      color: $tag-color-interactive-disabled-text;
-      cursor: not-allowed;
-
-      .#{$prefix}-tag__btn-close {
-        background-color: $color-gray-10;
-        box-shadow: inset 0 0 0 1px transparent;
-        color: $color-gray-30;
-        cursor: not-allowed;
-      }
-
-      .#{$prefix}-tag__label {
-        color: $tag-color-interactive-disabled-text;
-      }
-    }
+  &:focus-visible {
+    box-shadow: inset 0 0 0 2px $color-blue-60;
   }
 }
 
-@include tag;
+.#{$prefix}-tag--semantic.#{$prefix}-tag--success {
+  @include tag-variant(
+    $tag-color-semantic-success-background,
+    $tag-color-semantic-success-text,
+    $tag-color-semantic-success-border
+  );
+}
+
+.#{$prefix}-tag--semantic.#{$prefix}-tag--pending {
+  @include tag-variant(
+    $tag-color-semantic-pending-background,
+    $tag-color-semantic-pending-text,
+    $tag-color-semantic-pending-border
+  );
+}
+
+.#{$prefix}-tag--semantic.#{$prefix}-tag--error {
+  @include tag-variant(
+    $tag-color-semantic-error-background,
+    $tag-color-semantic-error-text,
+    $tag-color-semantic-error-border
+  );
+}
+
+.#{$prefix}-tag--semantic.#{$prefix}-tag--purple {
+  @include tag-variant(
+    $tag-color-semantic-purple-background,
+    $tag-color-semantic-purple-text,
+    $tag-color-semantic-purple-border
+  );
+}
+
+.#{$prefix}-tag--semantic.#{$prefix}-tag--information {
+  @include tag-variant(
+    $tag-color-semantic-information-background,
+    $tag-color-semantic-information-text,
+    $tag-color-semantic-information-border
+  );
+
+  .#{$prefix}-tag__label {
+    color: $tag-color-semantic-information-text;
+  }
+}
+
+.#{$prefix}-tag--semantic.#{$prefix}-tag--transparent {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1px transparent;
+}
+
+.#{$prefix}-tag--semantic.#{$prefix}-tag--information.#{$prefix}-tag--transparent {
+  color: $tag-color-semantic-information-dark-text;
+
+  .#{$prefix}-tag__label {
+    color: $tag-color-semantic-information-dark-text;
+  }
+}
+
+.#{$prefix}-tag--interactive {
+  @include tag-variant(
+    $tag-color-interactive-background,
+    $tag-color-interactive-text,
+    $tag-color-interactive-border
+  );
+
+  &:disabled,
+  &:hover:disabled,
+  &:focus-visible:disabled,
+  &.#{$prefix}-tag--disabled,
+  &.#{$prefix}-tag--disabled:hover,
+  &.#{$prefix}-tag--disabled:focus-visible {
+    background-color: $tag-color-interactive-disabled-background;
+    box-shadow: inset 0 0 0 1px $tag-color-interactive-disabled-border;
+    color: $tag-color-interactive-disabled-text;
+    cursor: not-allowed;
+
+    .#{$prefix}-tag__label {
+      color: $tag-color-interactive-disabled-text;
+    }
+
+    .#{$prefix}-tag__btn-close {
+      background-color: $color-gray-10;
+      box-shadow: inset 0 0 0 1px transparent;
+      color: $color-gray-30;
+      cursor: not-allowed;
+    }
+  }
+}
