@@ -19,11 +19,11 @@
   background-color: $background-color;
   color: $text-color;
 
-  .#{$prefix}-notification__icon {
+  .#{$prefix}-icon {
     color: $text-color;
   }
 
-  .#{$prefix}-notification__close-button {
+  .#{$prefix}-notification__btn-close {
     &:hover {
       background-color: $hover-background-color;
     }

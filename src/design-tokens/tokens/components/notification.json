@@ -87,12 +87,6 @@
       }
     },
     "size": {
-      "min-width": {
-        "value": "288px"
-      },
-      "max-width": {
-        "value": "288px"
-      },
       "padding": {
         "value": "{spacing.medium}"
       },
