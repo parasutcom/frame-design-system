@@ -1,48 +1,38 @@
-@mixin list {
-  .#{$prefix}-list {
-    @include type-style('body-short-01');
+.#{$prefix}-list {
+  @include type-style('body-short-01');
 
-    display: flex;
-    flex-direction: column;
-    gap: $spacing-2x-small;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-2x-small;
+  margin-inline-start: $spacing-medium;
+}
 
-  .#{$prefix}-list__item {
-    color: $color-gray-90;
-  }
+.#{$prefix}-list__item {
+  position: relative;
+  color: $color-gray-90;
+}
 
-  .#{$prefix}-list--nested {
-    margin-top: $spacing-2x-small;
-    margin-left: $spacing-medium;
-  }
-
-  .#{$prefix}-list--unordered {
-    &.#{$prefix}-list--bulleted {
-      list-style-type: disc;
-    }
-
-    &.#{$prefix}-list--dashed > .#{$prefix}-list__item {
-      &::before {
-        position: absolute;
-        left: -$spacing-medium;
-        content: '\002013';
-      }
-    }
-
-    .#{$prefix}-list__item {
-      position: relative;
-    }
-  }
-
-  .#{$prefix}-list--ordered {
-    &.#{$prefix}-list--lettered {
-      list-style-type: lower-latin;
-    }
-
-    &.#{$prefix}-list--number {
-      list-style-type: decimal;
-    }
+.#{$prefix}-list.#{$prefix}-list--dashed > .#{$prefix}-list__item {
+  &::before {
+    position: absolute;
+    content: '\002013';
+    inset-inline-start: calc(-1 * $spacing-medium);
   }
 }
 
-@include list;
+.#{$prefix}-list.#{$prefix}-list--bulleted > .#{$prefix}-list__item {
+  list-style-type: disc;
+}
+
+.#{$prefix}-list.#{$prefix}-list--lettered > .#{$prefix}-list__item {
+  list-style-type: lower-latin;
+}
+
+.#{$prefix}-list.#{$prefix}-list--number > .#{$prefix}-list__item {
+  list-style-type: decimal;
+}
+
+.#{$prefix}-list--nested {
+  margin-block-start: $spacing-2x-small;
+  margin-inline-start: $spacing-medium;
+}
