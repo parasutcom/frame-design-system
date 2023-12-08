@@ -114,19 +114,19 @@
                     </button>
                   </div>
 
-                  <div role="tabpanel" aria-labelledby="tabpanel-1" id="tabpanel-1-tab" tabindex="0" class="fds-tab-panel"  x-show="activeTab === 1">
+                  <div role="tabpanel" aria-labelledby="tabpanel-1" id="tabpanel-1-tab" tabindex="0" class="fds-tab-content"  x-show="activeTab === 1">
                     <p class="heading-06">This is Tabel Panel 1</p>
                     <p class="body-long-01" style="margin-top: 8px">Tab 1 Selected</p>
                   </div>
-                  <div role="tabpanel" aria-labelledby="tabpanel-2" id="tabpanel-2-tab" tabindex="0" class="fds-tab-panel"  x-show="activeTab === 2">
+                  <div role="tabpanel" aria-labelledby="tabpanel-2" id="tabpanel-2-tab" tabindex="0" class="fds-tab-content"  x-show="activeTab === 2">
                     <p class="heading-06">This is Tabel Panel 2</p>
                     <p class="body-long-01" style="margin-top: 8px">Tab 2 Selected</p>
                   </div>
-                  <div role="tabpanel" aria-labelledby="tabpanel-3" id="tabpanel-3-tab" tabindex="0" class="fds-tab-panel"  x-show="activeTab === 3">
+                  <div role="tabpanel" aria-labelledby="tabpanel-3" id="tabpanel-3-tab" tabindex="0" class="fds-tab-content"  x-show="activeTab === 3">
                     <p class="heading-06">This is Tabel Panel 3</p>
                     <p class="body-long-01" style="margin-top: 8px">Tab 3 Selected</p>
                   </div>
-                  <div role="tabpanel" aria-labelledby="tabpanel-4" id="tabpanel-4-tab" tabindex="0" class="fds-tab-panel"  x-show="activeTab === 4">
+                  <div role="tabpanel" aria-labelledby="tabpanel-4" id="tabpanel-4-tab" tabindex="0" class="fds-tab-content"  x-show="activeTab === 4">
                     <p class="heading-06">This is Tabel Panel 4</p>
                     <p class="body-long-01" style="margin-top: 8px">Tab 4 Selected</p>
                   </div>
@@ -150,19 +150,19 @@
                     </button>
                   </div>
 
-                  <div role="tabpanel" aria-labelledby="tabpanel-1" id="tabpanel-1-tab" tabindex="0" class="fds-tab-panel"  x-show="activeTab === 1">
+                  <div role="tabpanel" aria-labelledby="tabpanel-1" id="tabpanel-1-tab" tabindex="0" class="fds-tab-content"  x-show="activeTab === 1">
                     <p class="heading-06">This is Tabel Panel 1</p>
                     <p class="body-long-01" style="margin-top: 8px">Tab 1 Selected</p>
                   </div>
-                  <div role="tabpanel" aria-labelledby="tabpanel-2" id="tabpanel-2-tab" tabindex="0" class="fds-tab-panel"  x-show="activeTab === 2">
+                  <div role="tabpanel" aria-labelledby="tabpanel-2" id="tabpanel-2-tab" tabindex="0" class="fds-tab-content"  x-show="activeTab === 2">
                     <p class="heading-06">This is Tabel Panel 2</p>
                     <p class="body-long-01" style="margin-top: 8px">Tab 2 Selected</p>
                   </div>
-                  <div role="tabpanel" aria-labelledby="tabpanel-3" id="tabpanel-3-tab" tabindex="0" class="fds-tab-panel"  x-show="activeTab === 3">
+                  <div role="tabpanel" aria-labelledby="tabpanel-3" id="tabpanel-3-tab" tabindex="0" class="fds-tab-content"  x-show="activeTab === 3">
                     <p class="heading-06">This is Tabel Panel 3</p>
                     <p class="body-long-01" style="margin-top: 8px">Tab 3 Selected</p>
                   </div>
-                  <div role="tabpanel" aria-labelledby="tabpanel-4" id="tabpanel-4-tab" tabindex="0" class="fds-tab-panel"  x-show="activeTab === 4">
+                  <div role="tabpanel" aria-labelledby="tabpanel-4" id="tabpanel-4-tab" tabindex="0" class="fds-tab-content"  x-show="activeTab === 4">
                     <p class="heading-06">This is Tabel Panel 4</p>
                     <p class="body-long-01" style="margin-top: 8px">Tab 4 Selected</p>
                   </div>
@@ -177,43 +177,43 @@
                   <div role="tablist" class="fds-tablist" x-on:keydown.arrow-left="activeTab = Math.max(activeTab - 1, 1)" x-on:keydown.arrow-right="activeTab = Math.min(activeTab + 1, 4)">
                     <button type="button" role="tab" :aria-controls="tabpanel-1" x-bind:aria-selected="{{ activeTab === 1 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 1 ? 0 : -1" id="tabpanel-1-tab" class="fds-tablist__tab" x-on:click="activeTab = 1" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 1 }">
                       <span class="fds-tablist__tab-label">Tab label 1</span>
-                      <div class="fds-tag fds-tag--interactive fds-tablist__tab-tag">
+                      <div class="fds-tag fds-tag--interactive fds-tablist__tag">
                         <span class="fds-tag__label">58</span>
                       </div>
                     </button>
                     <button type="button" role="tab" :aria-controls="tabpanel-2" x-bind:aria-selected="{{ activeTab === 2 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 2 ? 0 : -1" id="tabpanel-2-tab" class="fds-tablist__tab" x-on:click="activeTab = 2" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 2 }">
                       <span class="fds-tablist__tab-label">Tab label 2</span>
-                      <div class="fds-tag fds-tag--interactive fds-tablist__tab-tag">
+                      <div class="fds-tag fds-tag--interactive fds-tablist__tag">
                         <span class="fds-tag__label">12</span>
                       </div>
                     </button>
                     <button type="button" role="tab" :aria-controls="tabpanel-3" x-bind:aria-selected="{{ activeTab === 3 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 3 ? 0 : -1" id="tabpanel-3-tab" class="fds-tablist__tab" x-on:click="activeTab = 3" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 3 }">
                       <span class="fds-tablist__tab-label">Tab label 3</span>
-                      <div class="fds-tag fds-tag--interactive fds-tablist__tab-tag">
+                      <div class="fds-tag fds-tag--interactive fds-tablist__tag">
                         <span class="fds-tag__label">23</span>
                       </div>
                     </button>
                     <button type="button" role="tab" :aria-controls="tabpanel-4" x-bind:aria-selected="{{ activeTab === 4 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 4 ? 0 : -1" id="tabpanel-4-tab" class="fds-tablist__tab" x-on:click="activeTab = 4" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 4 }">
                       <span class="fds-tablist__tab-label">Tab label 4</span>
-                      <div class="fds-tag fds-tag--interactive fds-tablist__tab-tag">
+                      <div class="fds-tag fds-tag--interactive fds-tablist__tag">
                         <span class="fds-tag__label">4</span>
                       </div>
                     </button>
                   </div>
 
-                  <div role="tabpanel" aria-labelledby="tabpanel-1" id="tabpanel-1-tab" tabindex="0" class="fds-tab-panel"  x-show="activeTab === 1">
+                  <div role="tabpanel" aria-labelledby="tabpanel-1" id="tabpanel-1-tab" tabindex="0" class="fds-tab-content"  x-show="activeTab === 1">
                     <p class="heading-06">This is Tabel Panel 1</p>
                     <p class="body-long-01" style="margin-top: 8px">Tab 1 Selected</p>
                   </div>
-                  <div role="tabpanel" aria-labelledby="tabpanel-2" id="tabpanel-2-tab" tabindex="0" class="fds-tab-panel"  x-show="activeTab === 2">
+                  <div role="tabpanel" aria-labelledby="tabpanel-2" id="tabpanel-2-tab" tabindex="0" class="fds-tab-content"  x-show="activeTab === 2">
                     <p class="heading-06">This is Tabel Panel 2</p>
                     <p class="body-long-01" style="margin-top: 8px">Tab 2 Selected</p>
                   </div>
-                  <div role="tabpanel" aria-labelledby="tabpanel-3" id="tabpanel-3-tab" tabindex="0" class="fds-tab-panel"  x-show="activeTab === 3">
+                  <div role="tabpanel" aria-labelledby="tabpanel-3" id="tabpanel-3-tab" tabindex="0" class="fds-tab-content"  x-show="activeTab === 3">
                     <p class="heading-06">This is Tabel Panel 3</p>
                     <p class="body-long-01" style="margin-top: 8px">Tab 3 Selected</p>
                   </div>
-                  <div role="tabpanel" aria-labelledby="tabpanel-4" id="tabpanel-4-tab" tabindex="0" class="fds-tab-panel"  x-show="activeTab === 4">
+                  <div role="tabpanel" aria-labelledby="tabpanel-4" id="tabpanel-4-tab" tabindex="0" class="fds-tab-content"  x-show="activeTab === 4">
                     <p class="heading-06">This is Tabel Panel 4</p>
                     <p class="body-long-01" style="margin-top: 8px">Tab 4 Selected</p>
                   </div>
@@ -224,43 +224,43 @@
                   <div role="tablist" class="fds-tablist" x-on:keydown.arrow-left="activeTab = Math.max(activeTab - 1, 1)" x-on:keydown.arrow-right="activeTab = Math.min(activeTab + 1, 4)">
                     <button type="button" role="tab" :aria-controls="tabpanel-1" x-bind:aria-selected="{{ activeTab === 1 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 1 ? 0 : -1" id="tabpanel-1-tab" class="fds-tablist__tab" x-on:click="activeTab = 1" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 1 }">
                       <span class="fds-tablist__tab-label">Tab label 1</span>
-                      <div class="fds-tag fds-tag--interactive fds-tablist__tab-tag">
+                      <div class="fds-tag fds-tag--interactive fds-tablist__tag">
                         <span class="fds-tag__label">58</span>
                       </div>
                     </button>
                     <button type="button" role="tab" :aria-controls="tabpanel-2" x-bind:aria-selected="{{ activeTab === 2 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 2 ? 0 : -1" id="tabpanel-2-tab" class="fds-tablist__tab" x-on:click="activeTab = 2" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 2 }">
                       <span class="fds-tablist__tab-label">Tab label 2</span>
-                      <div class="fds-tag fds-tag--interactive fds-tablist__tab-tag">
+                      <div class="fds-tag fds-tag--interactive fds-tablist__tag">
                         <span class="fds-tag__label">12</span>
                       </div>
                     </button>
                     <button type="button" role="tab" :aria-controls="tabpanel-3" x-bind:aria-selected="{{ activeTab === 3 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 3 ? 0 : -1" id="tabpanel-3-tab" class="fds-tablist__tab fds-tablist__tab--disabled" x-on:click="activeTab = 3" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 3 }" disabled>
                       <span class="fds-tablist__tab-label">Tab label 3</span>
-                      <div class="fds-tag fds-tag--interactive fds-tablist__tab-tag">
+                      <div class="fds-tag fds-tag--interactive fds-tablist__tag">
                         <span class="fds-tag__label">23</span>
                       </div>
                     </button>
                     <button type="button" role="tab" :aria-controls="tabpanel-4" x-bind:aria-selected="{{ activeTab === 4 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 4 ? 0 : -1" id="tabpanel-4-tab" class="fds-tablist__tab fds-tablist__tab--disabled" x-on:click="activeTab = 4" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 4 }" disabled>
                       <span class="fds-tablist__tab-label">Tab label 4</span>
-                      <div class="fds-tag fds-tag--interactive fds-tablist__tab-tag">
+                      <div class="fds-tag fds-tag--interactive fds-tablist__tag">
                         <span class="fds-tag__label">4</span>
                       </div>
                     </button>
                   </div>
 
-                  <div role="tabpanel" aria-labelledby="tabpanel-1" id="tabpanel-1-tab" tabindex="0" class="fds-tab-panel"  x-show="activeTab === 1">
+                  <div role="tabpanel" aria-labelledby="tabpanel-1" id="tabpanel-1-tab" tabindex="0" class="fds-tab-content"  x-show="activeTab === 1">
                     <p class="heading-06">This is Tabel Panel 1</p>
                     <p class="body-long-01" style="margin-top: 8px">Tab 1 Selected</p>
                   </div>
-                  <div role="tabpanel" aria-labelledby="tabpanel-2" id="tabpanel-2-tab" tabindex="0" class="fds-tab-panel"  x-show="activeTab === 2">
+                  <div role="tabpanel" aria-labelledby="tabpanel-2" id="tabpanel-2-tab" tabindex="0" class="fds-tab-content"  x-show="activeTab === 2">
                     <p class="heading-06">This is Tabel Panel 2</p>
                     <p class="body-long-01" style="margin-top: 8px">Tab 2 Selected</p>
                   </div>
-                  <div role="tabpanel" aria-labelledby="tabpanel-3" id="tabpanel-3-tab" tabindex="0" class="fds-tab-panel"  x-show="activeTab === 3">
+                  <div role="tabpanel" aria-labelledby="tabpanel-3" id="tabpanel-3-tab" tabindex="0" class="fds-tab-content"  x-show="activeTab === 3">
                     <p class="heading-06">This is Tabel Panel 3</p>
                     <p class="body-long-01" style="margin-top: 8px">Tab 3 Selected</p>
                   </div>
-                  <div role="tabpanel" aria-labelledby="tabpanel-4" id="tabpanel-4-tab" tabindex="0" class="fds-tab-panel"  x-show="activeTab === 4">
+                  <div role="tabpanel" aria-labelledby="tabpanel-4" id="tabpanel-4-tab" tabindex="0" class="fds-tab-content"  x-show="activeTab === 4">
                     <p class="heading-06">This is Tabel Panel 4</p>
                     <p class="body-long-01" style="margin-top: 8px">Tab 4 Selected</p>
                   </div>
@@ -295,19 +295,19 @@
                     </button>
                   </div>
 
-                  <div role="tabpanel" aria-labelledby="tabpanel-1" id="tabpanel-1-tab" tabindex="0" class="fds-tab-panel"  x-show="activeTab === 1">
+                  <div role="tabpanel" aria-labelledby="tabpanel-1" id="tabpanel-1-tab" tabindex="0" class="fds-tab-content"  x-show="activeTab === 1">
                     <p class="heading-06">This is Tabel Panel 1</p>
                     <p class="body-long-01" style="margin-top: 8px">Tab 1 Selected</p>
                   </div>
-                  <div role="tabpanel" aria-labelledby="tabpanel-2" id="tabpanel-2-tab" tabindex="0" class="fds-tab-panel"  x-show="activeTab === 2">
+                  <div role="tabpanel" aria-labelledby="tabpanel-2" id="tabpanel-2-tab" tabindex="0" class="fds-tab-content"  x-show="activeTab === 2">
                     <p class="heading-06">This is Tabel Panel 2</p>
                     <p class="body-long-01" style="margin-top: 8px">Tab 2 Selected</p>
                   </div>
-                  <div role="tabpanel" aria-labelledby="tabpanel-3" id="tabpanel-3-tab" tabindex="0" class="fds-tab-panel"  x-show="activeTab === 3">
+                  <div role="tabpanel" aria-labelledby="tabpanel-3" id="tabpanel-3-tab" tabindex="0" class="fds-tab-content"  x-show="activeTab === 3">
                     <p class="heading-06">This is Tabel Panel 3</p>
                     <p class="body-long-01" style="margin-top: 8px">Tab 3 Selected</p>
                   </div>
-                  <div role="tabpanel" aria-labelledby="tabpanel-4" id="tabpanel-4-tab" tabindex="0" class="fds-tab-panel"  x-show="activeTab === 4">
+                  <div role="tabpanel" aria-labelledby="tabpanel-4" id="tabpanel-4-tab" tabindex="0" class="fds-tab-content"  x-show="activeTab === 4">
                     <p class="heading-06">This is Tabel Panel 4</p>
                     <p class="body-long-01" style="margin-top: 8px">Tab 4 Selected</p>
                   </div>
@@ -331,19 +331,19 @@
                     </button>
                   </div>
 
-                  <div role="tabpanel" aria-labelledby="tabpanel-1" id="tabpanel-1-tab" tabindex="0" class="fds-tab-panel"  x-show="activeTab === 1">
+                  <div role="tabpanel" aria-labelledby="tabpanel-1" id="tabpanel-1-tab" tabindex="0" class="fds-tab-content"  x-show="activeTab === 1">
                     <p class="heading-06">This is Tabel Panel 1</p>
                     <p class="body-long-01" style="margin-top: 8px">Tab 1 Selected</p>
                   </div>
-                  <div role="tabpanel" aria-labelledby="tabpanel-2" id="tabpanel-2-tab" tabindex="0" class="fds-tab-panel"  x-show="activeTab === 2">
+                  <div role="tabpanel" aria-labelledby="tabpanel-2" id="tabpanel-2-tab" tabindex="0" class="fds-tab-content"  x-show="activeTab === 2">
                     <p class="heading-06">This is Tabel Panel 2</p>
                     <p class="body-long-01" style="margin-top: 8px">Tab 2 Selected</p>
                   </div>
-                  <div role="tabpanel" aria-labelledby="tabpanel-3" id="tabpanel-3-tab" tabindex="0" class="fds-tab-panel"  x-show="activeTab === 3">
+                  <div role="tabpanel" aria-labelledby="tabpanel-3" id="tabpanel-3-tab" tabindex="0" class="fds-tab-content"  x-show="activeTab === 3">
                     <p class="heading-06">This is Tabel Panel 3</p>
                     <p class="body-long-01" style="margin-top: 8px">Tab 3 Selected</p>
                   </div>
-                  <div role="tabpanel" aria-labelledby="tabpanel-4" id="tabpanel-4-tab" tabindex="0" class="fds-tab-panel"  x-show="activeTab === 4">
+                  <div role="tabpanel" aria-labelledby="tabpanel-4" id="tabpanel-4-tab" tabindex="0" class="fds-tab-content"  x-show="activeTab === 4">
                     <p class="heading-06">This is Tabel Panel 4</p>
                     <p class="body-long-01" style="margin-top: 8px">Tab 4 Selected</p>
                   </div>
@@ -358,43 +358,43 @@
                   <div role="tablist" class="fds-tablist fds-tablist--solid" x-on:keydown.arrow-left="activeTab = Math.max(activeTab - 1, 1)" x-on:keydown.arrow-right="activeTab = Math.min(activeTab + 1, 4)">
                     <button type="button" role="tab" :aria-controls="tabpanel-1" x-bind:aria-selected="{{ activeTab === 1 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 1 ? 0 : -1" id="tabpanel-1-tab" class="fds-tablist__tab" x-on:click="activeTab = 1" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 1 }">
                       <span class="fds-tablist__tab-label">Tab label 1</span>
-                      <div class="fds-tag fds-tag--interactive fds-tablist__tab-tag">
+                      <div class="fds-tag fds-tag--interactive fds-tablist__tag">
                         <span class="fds-tag__label">58</span>
                       </div>
                     </button>
                     <button type="button" role="tab" :aria-controls="tabpanel-2" x-bind:aria-selected="{{ activeTab === 2 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 2 ? 0 : -1" id="tabpanel-2-tab" class="fds-tablist__tab" x-on:click="activeTab = 2" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 2 }">
                       <span class="fds-tablist__tab-label">Tab label 2</span>
-                      <div class="fds-tag fds-tag--interactive fds-tablist__tab-tag">
+                      <div class="fds-tag fds-tag--interactive fds-tablist__tag">
                         <span class="fds-tag__label">12</span>
                       </div>
                     </button>
                     <button type="button" role="tab" :aria-controls="tabpanel-3" x-bind:aria-selected="{{ activeTab === 3 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 3 ? 0 : -1" id="tabpanel-3-tab" class="fds-tablist__tab" x-on:click="activeTab = 3" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 3 }">
                       <span class="fds-tablist__tab-label">Tab label 3</span>
-                      <div class="fds-tag fds-tag--interactive fds-tablist__tab-tag">
+                      <div class="fds-tag fds-tag--interactive fds-tablist__tag">
                         <span class="fds-tag__label">23</span>
                       </div>
                     </button>
                     <button type="button" role="tab" :aria-controls="tabpanel-4" x-bind:aria-selected="{{ activeTab === 4 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 4 ? 0 : -1" id="tabpanel-4-tab" class="fds-tablist__tab" x-on:click="activeTab = 4" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 4 }">
                       <span class="fds-tablist__tab-label">Tab label 4</span>
-                      <div class="fds-tag fds-tag--interactive fds-tablist__tab-tag">
+                      <div class="fds-tag fds-tag--interactive fds-tablist__tag">
                         <span class="fds-tag__label">4</span>
                       </div>
                     </button>
                   </div>
 
-                  <div role="tabpanel" aria-labelledby="tabpanel-1" id="tabpanel-1-tab" tabindex="0" class="fds-tab-panel"  x-show="activeTab === 1">
+                  <div role="tabpanel" aria-labelledby="tabpanel-1" id="tabpanel-1-tab" tabindex="0" class="fds-tab-content"  x-show="activeTab === 1">
                     <p class="heading-06">This is Tabel Panel 1</p>
                     <p class="body-long-01" style="margin-top: 8px">Tab 1 Selected</p>
                   </div>
-                  <div role="tabpanel" aria-labelledby="tabpanel-2" id="tabpanel-2-tab" tabindex="0" class="fds-tab-panel"  x-show="activeTab === 2">
+                  <div role="tabpanel" aria-labelledby="tabpanel-2" id="tabpanel-2-tab" tabindex="0" class="fds-tab-content"  x-show="activeTab === 2">
                     <p class="heading-06">This is Tabel Panel 2</p>
                     <p class="body-long-01" style="margin-top: 8px">Tab 2 Selected</p>
                   </div>
-                  <div role="tabpanel" aria-labelledby="tabpanel-3" id="tabpanel-3-tab" tabindex="0" class="fds-tab-panel"  x-show="activeTab === 3">
+                  <div role="tabpanel" aria-labelledby="tabpanel-3" id="tabpanel-3-tab" tabindex="0" class="fds-tab-content"  x-show="activeTab === 3">
                     <p class="heading-06">This is Tabel Panel 3</p>
                     <p class="body-long-01" style="margin-top: 8px">Tab 3 Selected</p>
                   </div>
-                  <div role="tabpanel" aria-labelledby="tabpanel-4" id="tabpanel-4-tab" tabindex="0" class="fds-tab-panel"  x-show="activeTab === 4">
+                  <div role="tabpanel" aria-labelledby="tabpanel-4" id="tabpanel-4-tab" tabindex="0" class="fds-tab-content"  x-show="activeTab === 4">
                     <p class="heading-06">This is Tabel Panel 4</p>
                     <p class="body-long-01" style="margin-top: 8px">Tab 4 Selected</p>
                   </div>
@@ -405,43 +405,43 @@
                   <div role="tablist" class="fds-tablist fds-tablist--solid" x-on:keydown.arrow-left="activeTab = Math.max(activeTab - 1, 1)" x-on:keydown.arrow-right="activeTab = Math.min(activeTab + 1, 4)">
                     <button type="button" role="tab" :aria-controls="tabpanel-1" x-bind:aria-selected="{{ activeTab === 1 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 1 ? 0 : -1" id="tabpanel-1-tab" class="fds-tablist__tab fds-tablist__tab--solid" x-on:click="activeTab = 1" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 1 }">
                       <span class="fds-tablist__tab-label">Tab label 1</span>
-                      <div class="fds-tag fds-tag--interactive fds-tablist__tab-tag">
+                      <div class="fds-tag fds-tag--interactive fds-tablist__tag">
                         <span class="fds-tag__label">58</span>
                       </div>
                     </button>
                     <button type="button" role="tab" :aria-controls="tabpanel-2" x-bind:aria-selected="{{ activeTab === 2 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 2 ? 0 : -1" id="tabpanel-2-tab" class="fds-tablist__tab fds-tablist__tab--solid" x-on:click="activeTab = 2" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 2 }">
                       <span class="fds-tablist__tab-label">Tab label 2</span>
-                      <div class="fds-tag fds-tag--interactive fds-tablist__tab-tag">
+                      <div class="fds-tag fds-tag--interactive fds-tablist__tag">
                         <span class="fds-tag__label">12</span>
                       </div>
                     </button>
                     <button type="button" role="tab" :aria-controls="tabpanel-3" x-bind:aria-selected="{{ activeTab === 3 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 3 ? 0 : -1" id="tabpanel-3-tab" class="fds-tablist__tab fds-tablist__tab--solid fds-tablist__tab--disabled" x-on:click="activeTab = 3" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 3 }" disabled>
                       <span class="fds-tablist__tab-label">Tab label 3</span>
-                      <div class="fds-tag fds-tag--interactive fds-tablist__tab-tag">
+                      <div class="fds-tag fds-tag--interactive fds-tablist__tag">
                         <span class="fds-tag__label">23</span>
                       </div>
                     </button>
                     <button type="button" role="tab" :aria-controls="tabpanel-4" x-bind:aria-selected="{{ activeTab === 4 ? 'true' : 'false' }}" x-bind:tabindex="activeTab === 4 ? 0 : -1" id="tabpanel-4-tab" class="fds-tablist__tab fds-tablist__tab--solid fds-tablist__tab--disabled" x-on:click="activeTab = 4" x-bind:class="{ 'fds-tablist__tab--selected': activeTab === 4 }" disabled>
                       <span class="fds-tablist__tab-label">Tab label 4</span>
-                      <div class="fds-tag fds-tag--interactive fds-tablist__tab-tag">
+                      <div class="fds-tag fds-tag--interactive fds-tablist__tag">
                         <span class="fds-tag__label">4</span>
                       </div>
                     </button>
                   </div>
 
-                  <div role="tabpanel" aria-labelledby="tabpanel-1" id="tabpanel-1-tab" tabindex="0" class="fds-tab-panel"  x-show="activeTab === 1">
+                  <div role="tabpanel" aria-labelledby="tabpanel-1" id="tabpanel-1-tab" tabindex="0" class="fds-tab-content"  x-show="activeTab === 1">
                     <p class="heading-06">This is Tabel Panel 1</p>
                     <p class="body-long-01" style="margin-top: 8px">Tab 1 Selected</p>
                   </div>
-                  <div role="tabpanel" aria-labelledby="tabpanel-2" id="tabpanel-2-tab" tabindex="0" class="fds-tab-panel"  x-show="activeTab === 2">
+                  <div role="tabpanel" aria-labelledby="tabpanel-2" id="tabpanel-2-tab" tabindex="0" class="fds-tab-content"  x-show="activeTab === 2">
                     <p class="heading-06">This is Tabel Panel 2</p>
                     <p class="body-long-01" style="margin-top: 8px">Tab 2 Selected</p>
                   </div>
-                  <div role="tabpanel" aria-labelledby="tabpanel-3" id="tabpanel-3-tab" tabindex="0" class="fds-tab-panel"  x-show="activeTab === 3">
+                  <div role="tabpanel" aria-labelledby="tabpanel-3" id="tabpanel-3-tab" tabindex="0" class="fds-tab-content"  x-show="activeTab === 3">
                     <p class="heading-06">This is Tabel Panel 3</p>
                     <p class="body-long-01" style="margin-top: 8px">Tab 3 Selected</p>
                   </div>
-                  <div role="tabpanel" aria-labelledby="tabpanel-4" id="tabpanel-4-tab" tabindex="0" class="fds-tab-panel"  x-show="activeTab === 4">
+                  <div role="tabpanel" aria-labelledby="tabpanel-4" id="tabpanel-4-tab" tabindex="0" class="fds-tab-content"  x-show="activeTab === 4">
                     <p class="heading-06">This is Tabel Panel 4</p>
                     <p class="body-long-01" style="margin-top: 8px">Tab 4 Selected</p>
                   </div>
