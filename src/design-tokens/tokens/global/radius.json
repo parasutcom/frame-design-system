@@ -1,10 +1,9 @@
 {
   "radius": {
-    "small": { "value" : "2px" },
-    "medium": { "value" : "4px" },
-    "large": { "value" : "6px" },
-    "x-large": { "value" : "8px" },
-    "pill": { "value" : "999px" },
-    "circle": { "value" : "50%" }
+    "small": { "value": "2px" },
+    "medium": { "value": "4px" },
+    "large": { "value": "6px" },
+    "x-large": { "value": "8px" },
+    "pill": { "value": "999px" }
   }
 }
