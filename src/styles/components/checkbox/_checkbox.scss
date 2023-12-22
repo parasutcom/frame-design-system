@@ -1,138 +1,119 @@
-@import '../../settings/prefix';
 @import '../../tools/visually-hidden';
 
-@mixin checkbox {
-  .#{$prefix}-checkbox-group {
-    position: relative;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: $spacing-2x-small;
-  }
-
-  .#{$prefix}-checkbox-group--horizontal {
-    flex-direction: row;
-    align-items: center;
-    gap: $spacing-medium;
-  }
-
-  .#{$prefix}-checkbox__inner-wrapper {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .#{$prefix}-checkbox {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    user-select: none;
-  }
-
-  .#{$prefix}-checkbox__input {
-    @include visually-hidden;
-  }
-
-  .#{$prefix}-checkbox__label {
-    position: relative;
-    display: inline-flex;
-    flex-grow: 1;
-    align-items: center;
-    cursor: pointer;
-    gap: $checkbox-size-gap;
-  }
-
-  .#{$prefix}-checkbox__label-mark {
-    position: relative;
-    width: $checkbox-size-width;
-    height: $checkbox-size-height;
-    flex-shrink: 0;
-    align-self: flex-start;
-    background-color: $checkbox-color-background;
-    border-radius: $checkbox-border-radius;
-    box-shadow: inset 0 0 0 1px $checkbox-color-border;
-    color: $color-white;
-    transition: all 200ms ease;
-  }
-
-  .#{$prefix}-checkbox__label-mark::before {
-    @include icon-size('xs');
-
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    content: '\f00c';
-    font-family: $font-family-icon;
-    opacity: 1;
-  }
-
-  .#{$prefix}-checkbox__label-text {
-    @include type-style('label-01');
-    @include truncate;
-
-    color: $checkbox-color-text;
-  }
-
-  .#{$prefix}-checkbox__input:indeterminate
-    + .#{$prefix}-checkbox__label
-    .#{$prefix}-checkbox__label-mark {
-    background-color: $checkbox-color-active-background;
-  }
-
-  .#{$prefix}-checkbox__input:indeterminate
-    + .#{$prefix}-checkbox__label
-    .#{$prefix}-checkbox__label-mark::before {
-    content: '\f068';
-    opacity: 1;
-  }
-
-  .#{$prefix}-checkbox__input:checked
-    + .#{$prefix}-checkbox__label
-    .#{$prefix}-checkbox__label-mark {
-    background-color: $checkbox-color-active-background;
-  }
-
-  .#{$prefix}-checkbox__input:checked
-    + .#{$prefix}-checkbox__label
-    .#{$prefix}-checkbox__label-mark::before {
-    opacity: 1;
-  }
-
-  .#{$prefix}-checkbox__input:focus-visible
-    + .#{$prefix}-checkbox__label
-    .#{$prefix}-checkbox__label-mark {
-    outline: 2px solid $checkbox-color-focus-border;
-    outline-offset: 1px;
-    transition: none;
-  }
-
-  .#{$prefix}-checkbox__input:disabled + .#{$prefix}-checkbox__label {
-    cursor: not-allowed;
-  }
-
-  .#{$prefix}-checkbox__input:disabled
-    + .#{$prefix}-checkbox__label
-    .#{$prefix}-checkbox__label-mark {
-    box-shadow: inset 0 0 0 1px $checkbox-color-disabled-border;
-  }
-
-  .#{$prefix}-checkbox__input:checked:disabled
-    + .#{$prefix}-checkbox__label
-    .#{$prefix}-checkbox__label-mark,
-  .#{$prefix}-checkbox__input:indeterminate:disabled
-    + .#{$prefix}-checkbox__label
-    .#{$prefix}-checkbox__label-mark {
-    background-color: $checkbox-color-disabled-background;
-    box-shadow: unset;
-    color: $checkbox-color-disabled-text;
-  }
-
-  .#{$prefix}-checkbox__input:disabled
-    + .#{$prefix}-checkbox__label
-    .#{$prefix}-checkbox__label-text {
-    color: $checkbox-color-disabled-text;
-  }
+.#{$prefix}-checkbox-group {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: $spacing-2x-small;
 }
 
-@include checkbox;
+.#{$prefix}-checkbox-group--horizontal {
+  flex-direction: row;
+  align-items: center;
+  gap: $spacing-medium;
+}
+
+.#{$prefix}-checkbox {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.#{$prefix}-checkbox__input {
+  @include visually-hidden;
+}
+
+.#{$prefix}-checkbox__label {
+  position: relative;
+  display: inline-flex;
+  flex-grow: 1;
+  align-items: center;
+  cursor: pointer;
+  gap: $checkbox-size-gap;
+}
+
+.#{$prefix}-checkbox__label-mark {
+  position: relative;
+  width: $checkbox-size-width;
+  height: $checkbox-size-height;
+  flex-shrink: 0;
+  align-self: flex-start;
+  background-color: $checkbox-color-background;
+  border-radius: $checkbox-border-radius;
+  box-shadow: inset 0 0 0 1px $checkbox-color-border;
+  color: $color-white;
+  transition: all 200ms ease;
+}
+
+.#{$prefix}-checkbox__label-mark::before {
+  @include icon-size('xs');
+
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: '\f00c';
+  font-family: $font-family-icon;
+  opacity: 1;
+}
+
+.#{$prefix}-checkbox__label-text {
+  @include type-style('label-01');
+  @include truncate;
+
+  color: $checkbox-color-text;
+}
+
+.#{$prefix}-checkbox__input:indeterminate
+  + .#{$prefix}-checkbox__label
+  .#{$prefix}-checkbox__label-mark {
+  background-color: $checkbox-color-active-background;
+}
+
+.#{$prefix}-checkbox__input:indeterminate
+  + .#{$prefix}-checkbox__label
+  .#{$prefix}-checkbox__label-mark::before {
+  content: '\f068';
+}
+
+.#{$prefix}-checkbox__input:focus-visible
+  + .#{$prefix}-checkbox__label
+  .#{$prefix}-checkbox__label-mark {
+  outline: 2px solid $checkbox-color-focus-border;
+  transition: none;
+}
+
+.#{$prefix}-checkbox__input:disabled + .#{$prefix}-checkbox__label {
+  cursor: not-allowed;
+}
+
+.#{$prefix}-checkbox__input:disabled
+  + .#{$prefix}-checkbox__label
+  .#{$prefix}-checkbox__label-mark {
+  box-shadow: inset 0 0 0 1px $checkbox-color-disabled-border;
+}
+
+.#{$prefix}-checkbox__input:disabled
+  + .#{$prefix}-checkbox__label
+  .#{$prefix}-checkbox__label-text {
+  color: $checkbox-color-disabled-text;
+}
+
+.#{$prefix}-checkbox__input:checked
+  + .#{$prefix}-checkbox__label
+  .#{$prefix}-checkbox__label-mark {
+  background-color: $checkbox-color-active-background;
+}
+
+.#{$prefix}-checkbox__input:checked:disabled
+  + .#{$prefix}-checkbox__label
+  .#{$prefix}-checkbox__label-mark,
+.#{$prefix}-checkbox__input:indeterminate:disabled
+  + .#{$prefix}-checkbox__label
+  .#{$prefix}-checkbox__label-mark {
+  background-color: $checkbox-color-disabled-background;
+  box-shadow: unset;
+  color: $checkbox-color-disabled-text;
+}
