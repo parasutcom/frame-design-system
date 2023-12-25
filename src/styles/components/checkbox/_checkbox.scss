@@ -14,6 +14,11 @@
   gap: $spacing-medium;
 }
 
+.#{$prefix}-checkbox__inner-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .#{$prefix}-checkbox {
   position: relative;
   display: inline-flex;
