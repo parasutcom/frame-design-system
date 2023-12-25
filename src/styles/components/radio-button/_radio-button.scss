@@ -1,116 +1,111 @@
-@import '../../settings/prefix';
+@import '../../tools/visually-hidden';
 
-@mixin radio-button {
-  .#{$prefix}-radio-button-group {
-    position: relative;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: $spacing-2x-small;
-  }
-
-  .#{$prefix}-radio-button-group--horizontal {
-    flex-direction: row;
-    align-items: center;
-    gap: $spacing-medium;
-  }
-
-  .#{$prefix}-radio-button__inner-wrapper {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .#{$prefix}-radio-button {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    user-select: none;
-  }
-
-  .#{$prefix}-radio-button__input {
-    @include visually-hidden;
-  }
-
-  .#{$prefix}-radio-button__label {
-    position: relative;
-    display: inline-flex;
-    flex-grow: 1;
-    align-items: center;
-    cursor: pointer;
-    gap: $radio-button-size-gap;
-  }
-
-  .#{$prefix}-radio-button__label-mark {
-    position: relative;
-    width: calc($radio-button-size-width * 1.125);
-    height: calc($radio-button-size-height * 1.125);
-    flex-shrink: 0;
-    align-self: flex-start;
-    background-color: $radio-button-color-background;
-    border-radius: $radio-button-border-radius;
-    box-shadow: inset 0 0 0 1px $radio-button-color-border;
-    color: $radio-button-color-text;
-    transition: all 200ms ease;
-  }
-
-  .#{$prefix}-radio-button__label-mark::before {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    display: block;
-    width: $spacing-2x-small;
-    height: $spacing-2x-small;
-    background-color: $radio-button-color-text;
-    border-radius: $radio-button-border-radius;
-    content: '';
-    opacity: 0;
-    transition: all 200ms ease;
-  }
-
-  .#{$prefix}-radio-button__label-text {
-    @include type-style('label-01');
-    @include truncate;
-
-    color: $radio-button-color-text;
-  }
-
-  .#{$prefix}-radio-button__input:checked
-    + .#{$prefix}-radio-button__label
-    .#{$prefix}-radio-button__label-mark::before {
-    opacity: 1;
-  }
-
-  .#{$prefix}-radio-button__input:focus-visible
-    + .#{$prefix}-radio-button__label
-    .#{$prefix}-radio-button__label-mark {
-    outline: 2px solid $radio-button-color-focus-border;
-    outline-offset: 1px;
-    transition: none;
-  }
-
-  .#{$prefix}-radio-button__input:disabled + .#{$prefix}-radio-button__label {
-    cursor: not-allowed;
-  }
-
-  .#{$prefix}-radio-button__input:disabled
-    + .#{$prefix}-radio-button__label
-    .#{$prefix}-radio-button__label-mark {
-    box-shadow: inset 0 0 0 1px $radio-button-color-disabled-border;
-  }
-
-  .#{$prefix}-radio-button__input:checked:disabled {
-    + .#{$prefix}-radio-button__label
-      .#{$prefix}-radio-button__label-mark::before {
-      background-color: $radio-button-color-disabled-text;
-    }
-  }
-
-  .#{$prefix}-radio-button__input:disabled
-    + .#{$prefix}-radio-button__label
-    .#{$prefix}-radio-button__label-text {
-    color: $radio-button-color-disabled-text;
-  }
+.#{$prefix}-radio-button-group {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: $spacing-2x-small;
 }
 
-@include radio-button;
+.#{$prefix}-radio-button-group--horizontal {
+  flex-direction: row;
+  align-items: center;
+  gap: $spacing-medium;
+}
+
+.#{$prefix}-radio-button__inner-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.#{$prefix}-radio-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.#{$prefix}-radio-button__input {
+  @include visually-hidden;
+}
+
+.#{$prefix}-radio-button__label {
+  position: relative;
+  display: inline-flex;
+  flex-grow: 1;
+  align-items: center;
+  cursor: pointer;
+  gap: $radio-button-size-gap;
+}
+
+.#{$prefix}-radio-button__label-mark {
+  position: relative;
+  width: calc($radio-button-size-width * 1.125);
+  height: calc($radio-button-size-height * 1.125);
+  flex-shrink: 0;
+  align-self: flex-start;
+  background-color: $radio-button-color-background;
+  border-radius: $radio-button-border-radius;
+  box-shadow: inset 0 0 0 1px $radio-button-color-border;
+  color: $radio-button-color-text;
+  transition: all 200ms ease;
+}
+
+.#{$prefix}-radio-button__label-mark::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  display: block;
+  width: $spacing-2x-small;
+  height: $spacing-2x-small;
+  background-color: $radio-button-color-text;
+  border-radius: $radio-button-border-radius;
+  content: '';
+  opacity: 0;
+  transition: all 200ms ease;
+}
+
+.#{$prefix}-radio-button__label-text {
+  @include type-style('label-01');
+  @include truncate;
+
+  color: $radio-button-color-text;
+}
+
+.#{$prefix}-radio-button__input:focus-visible
+  + .#{$prefix}-radio-button__label
+  .#{$prefix}-radio-button__label-mark {
+  outline: 2px solid $radio-button-color-focus-border;
+  outline-offset: -1px;
+  transition: none;
+}
+
+.#{$prefix}-radio-button__input:disabled + .#{$prefix}-radio-button__label {
+  cursor: not-allowed;
+}
+
+.#{$prefix}-radio-button__input:disabled
+  + .#{$prefix}-radio-button__label
+  .#{$prefix}-radio-button__label-mark {
+  box-shadow: inset 0 0 0 1px $radio-button-color-disabled-border;
+}
+
+.#{$prefix}-radio-button__input:disabled
+  + .#{$prefix}-radio-button__label
+  .#{$prefix}-radio-button__label-text {
+  color: $radio-button-color-disabled-text;
+}
+
+.#{$prefix}-radio-button__input:checked
+  + .#{$prefix}-radio-button__label
+  .#{$prefix}-radio-button__label-mark::before {
+  opacity: 1;
+}
+
+.#{$prefix}-radio-button__input:checked:disabled {
+  + .#{$prefix}-radio-button__label
+    .#{$prefix}-radio-button__label-mark::before {
+    background-color: $radio-button-color-disabled-text;
+  }
+}
