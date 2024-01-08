@@ -1,160 +1,141 @@
-@import '../../settings/prefix';
+.#{$prefix}-overflow-menu {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
 
-@mixin overflow-menu {
-  .#{$prefix}-overflow-menu {
-    position: relative;
-    display: inline-block;
-    width: 100%;
+.#{$prefix}-overflow-menu__options {
+  position: absolute;
+  z-index: $z-index-overflow-menu;
+  top: 100%;
+  right: auto;
+  left: 0;
+  display: none;
+  overflow: hidden;
+  min-width: $overflow-menu-size-container-min-width;
+  max-width: $overflow-menu-size-container-max-width;
+  max-height: $overflow-menu-size-container-max-height;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: $spacing-2x-small;
+  background-color: $overflow-menu-color-background;
+  border-radius: $overflow-menu-border-radius;
+  box-shadow: 0 2px 6px rgb(31 31 31 / 24%);
+  overflow-y: auto;
+}
+
+.#{$prefix}-overflow-menu__options--lg {
+  max-height: $overflow-menu-size-container-large-max-height;
+}
+
+.#{$prefix}-overflow-menu__option {
+  display: inline-flex;
+  width: 100%;
+  height: $overflow-menu-size-item-height;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+.#{$prefix}-overflow-menu__option-btn {
+  @include type-style('label-01');
+
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  color: $overflow-menu-color-text;
+  cursor: pointer;
+  gap: $overflow-menu-size-item-gap;
+  padding-inline: $overflow-menu-size-item-padding;
+
+  &:hover {
+    background-color: $overflow-menu-color-hover-background;
   }
 
-  .#{$prefix}-overflow-menu-options {
-    position: absolute;
-    z-index: $z-index-overflow-menu;
-    top: 100%;
-    right: auto;
-    left: 0;
-    display: none;
-    overflow: hidden;
-    min-width: $overflow-menu-size-container-min-width;
-    max-width: $overflow-menu-size-container-max-width;
-    max-height: $overflow-menu-size-container-max-height;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: $spacing-2x-small;
-    background-color: $overflow-menu-color-background;
-    border-radius: $overflow-menu-border-radius;
-    box-shadow: 0 2px 6px rgb(31 31 31 / 24%);
-    list-style: none;
-    overflow-y: auto;
+  &:active {
+    background-color: $overflow-menu-color-active-background;
   }
 
-  .#{$prefix}-overflow-menu-options--length-large {
-    max-height: $overflow-menu-size-container-large-max-height;
-  }
-
-  .#{$prefix}-overflow-menu-options__item {
-    display: flex;
-    width: 100%;
-    height: $overflow-menu-size-item-height;
-    flex-shrink: 0;
-    align-items: center;
-  }
-
-  .#{$prefix}-overflow-menu-options__btn {
-    @include type-style('label-01');
-
-    display: inline-flex;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    padding-right: $overflow-menu-size-item-padding;
-    padding-left: $overflow-menu-size-item-padding;
-    color: $overflow-menu-color-text;
-    cursor: pointer;
-    gap: $overflow-menu-size-item-gap;
-    transition: all 200ms ease;
-
-    &:hover {
-      background-color: $overflow-menu-color-hover-background;
-    }
-
-    &:active {
-      background-color: $overflow-menu-color-active-background;
-    }
-
-    &:focus-visible {
-      box-shadow: inset 0 0 0 2px $overflow-menu-color-focus-border,
-        inset 0 0 0 3px $color-white;
-    }
-  }
-
-  .#{$prefix}-overflow-menu-options
-    .#{$prefix}-overflow-menu-options__item:first-child
-    .#{$prefix}-overflow-menu-options__btn {
-    border-radius: $overflow-menu-border-radius $overflow-menu-border-radius 0 0;
-  }
-
-  .#{$prefix}-overflow-menu-options
-    .#{$prefix}-overflow-menu-options__item:last-child
-    .#{$prefix}-overflow-menu-options__btn {
-    border-radius: 0 0 $overflow-menu-border-radius $overflow-menu-border-radius;
-  }
-
-  .#{$prefix}-overflow-menu-options__item-label {
-    @include truncate;
-  }
-
-  .#{$prefix}-overflow-menu-options__item-prefix-icon,
-  .#{$prefix}-overflow-menu-options__item-suffix-icon {
-    @include icon-size('md');
-
-    flex-shrink: 0;
-  }
-
-  .#{$prefix}-overflow-menu-options__item-suffix-icon {
-    margin-left: auto;
-  }
-
-  .#{$prefix}-overflow-menu__header {
-    @include type-style('label-02');
-
-    display: flex;
-    width: 100%;
-    height: $overflow-menu-size-item-height;
-    flex-shrink: 0;
-    align-items: center;
-    padding-right: $overflow-menu-size-item-padding;
-    padding-left: $overflow-menu-size-item-padding;
-    color: $color-gray-60;
-
-    span {
-      @include truncate;
-    }
-  }
-
-  .#{$prefix}-overflow-menu__seperator {
-    width: 100%;
-    height: 0;
-    border-top: 1px solid $color-gray-10;
-  }
-
-  .#{$prefix}-overflow-menu-options__item--destructive
-    .#{$prefix}-overflow-menu-options__btn {
-    color: $overflow-menu-color-destructive-text;
-  }
-
-  .#{$prefix}-overflow-menu-options__item--disabled
-    .#{$prefix}-overflow-menu-options__btn {
-    color: $overflow-menu-color-disabled-text;
-    cursor: not-allowed;
-
-    &:hover {
-      background-color: unset;
-    }
-
-    &:focus-visible {
-      box-shadow: unset;
-    }
-  }
-
-  .#{$prefix}-overflow-menu.#{$prefix}-overflow-menu--open
-    .#{$prefix}-overflow-menu-options {
-    display: flex;
-  }
-
-  .#{$prefix}-overflow-menu.#{$prefix}-overflow-menu--right
-    .#{$prefix}-overflow-menu-options {
-    right: 0;
-    left: auto;
-  }
-
-  .#{$prefix}-overflow-menu-options__btn .#{$prefix}-checkbox,
-  .#{$prefix}-overflow-menu-options__btn
-    .#{$prefix}-checkbox
-    .#{$prefix}-checkbox__label {
-    width: 100%;
-    height: 100%;
+  &:focus-visible {
+    box-shadow: inset 0 0 0 2px $overflow-menu-color-focus-border,
+      inset 0 0 0 3px $color-white;
   }
 }
 
-@include overflow-menu;
+.#{$prefix}-overflow-menu__options
+  .#{$prefix}-overflow-menu__option:first-child
+  .#{$prefix}-overflow-menu__option-btn {
+  border-radius: $overflow-menu-border-radius $overflow-menu-border-radius 0 0;
+}
+
+.#{$prefix}-overflow-menu__options
+  .#{$prefix}-overflow-menu__option:last-child
+  .#{$prefix}-overflow-menu__option-btn {
+  border-radius: 0 0 $overflow-menu-border-radius $overflow-menu-border-radius;
+}
+
+.#{$prefix}-overflow-menu__option-label {
+  @include truncate;
+}
+
+.#{$prefix}-overflow-menu__option-prefix-icon,
+.#{$prefix}-overflow-menu__option-suffix-icon {
+  flex-shrink: 0;
+}
+
+.#{$prefix}-overflow-menu__option-suffix-icon {
+  margin-left: auto;
+}
+
+.#{$prefix}-overflow-menu__header {
+  @include type-style('label-02');
+
+  display: flex;
+  width: 100%;
+  height: $overflow-menu-size-item-height;
+  flex-shrink: 0;
+  align-items: center;
+  padding-right: $overflow-menu-size-item-padding;
+  padding-left: $overflow-menu-size-item-padding;
+  color: $color-gray-60;
+}
+
+.#{$prefix}-overflow-menu__header-label {
+  @include truncate;
+}
+
+.#{$prefix}-overflow-menu__seperator {
+  width: 100%;
+  height: 0;
+  border-top: 1px solid $color-gray-10;
+}
+
+.#{$prefix}-overflow-menu__option--destructive
+  .#{$prefix}-overflow-menu__option-btn {
+  color: $overflow-menu-color-destructive-text;
+}
+
+.#{$prefix}-overflow-menu__option--disabled
+  .#{$prefix}-overflow-menu__option-btn {
+  color: $overflow-menu-color-disabled-text;
+  cursor: not-allowed;
+
+  &:hover {
+    background-color: unset;
+  }
+
+  &:focus-visible {
+    box-shadow: unset;
+  }
+}
+
+.#{$prefix}-overflow-menu.#{$prefix}-overflow-menu--open
+  .#{$prefix}-overflow-menu__options {
+  display: flex;
+}
+
+.#{$prefix}-overflow-menu.#{$prefix}-overflow-menu--right
+  .#{$prefix}-overflow-menu__options {
+  right: 0;
+  left: auto;
+}
