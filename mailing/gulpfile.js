@@ -1,10 +1,9 @@
 const gulp = require('gulp');
 const mjml = require('gulp-mjml');
-const mjmlEngine = require('mjml')
+const mjmlEngine = require('mjml');
 const browserSync = require('browser-sync').create();
 
-
-function handleError (err) {
+function handleError(err) {
   console.log(err.toString());
   this.emit('end');
 }
@@ -12,7 +11,7 @@ function handleError (err) {
 const buildHtml = () => {
   return gulp
     .src('src/*.mjml')
-    .pipe(mjml(mjmlEngine, {validationLevel: 'strict'}))
+    .pipe(mjml(mjmlEngine, { validationLevel: 'strict' }))
     .pipe(gulp.dest('./dist/'));
 };
 
@@ -32,8 +31,5 @@ const watch = () => {
 
 gulp.task(
   'default',
-  gulp.series(
-    gulp.parallel(buildHtml),
-    gulp.parallel(browsersync, watch),
-  ),
+  gulp.series(gulp.parallel(buildHtml), gulp.parallel(browsersync, watch)),
 );
