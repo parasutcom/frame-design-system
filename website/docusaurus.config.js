@@ -16,6 +16,8 @@ const config = {
     locales: ['en'],
   },
 
+  themes: ['@docusaurus/theme-live-codeblock'],
+
   presets: [
     [
       'classic',
@@ -25,6 +27,7 @@ const config = {
           sidebarPath: './sidebars.js',
           editUrl:
             'https://github.com/parasutcom/frame-design-system/website/tree/master',
+          routeBasePath: '/',
         },
 
         blog: false,
@@ -42,6 +45,9 @@ const config = {
         defaultMode: 'light',
         disableSwitch: true,
       },
+      liveCodeBlock: {
+        playgroundPosition: 'top',
+      },
       navbar: {
         title: 'Frame Design System',
         /*
@@ -52,7 +58,7 @@ const config = {
         */
         items: [
           {
-            to: 'docs/get-started/',
+            to: '/',
             label: 'Get Started',
             position: 'left',
           },
@@ -75,12 +81,6 @@ const config = {
             to: 'docs/layout/',
             label: 'Layout',
             position: 'left',
-          },
-          {
-            type: 'docSidebar',
-            sidebarId: 'sidebar',
-            position: 'left',
-            label: 'Tutorial',
           },
           {
             href: 'https://github.com/parasutcom/frame-design-system',
