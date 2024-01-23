@@ -55,6 +55,19 @@
     background-color: #f7f9fa;
   }
 
+  [class*='playgroundPreview_node'] .playgroundPreview {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  [class*='playgroundPreview_node'] .playgroundPreviewVertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
   [class*='playgroundEditor'] {
     border-top: 1px solid #e5e9ec;
   }
