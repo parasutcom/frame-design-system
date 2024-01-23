@@ -49,13 +49,14 @@ const config = {
         playgroundPosition: 'top',
       },
       navbar: {
-        title: 'Frame Design System',
-        /*
+        title: '',
         logo: {
-          alt: '',
-          src: '',
+          alt: 'Frame Design System Logo',
+          src: 'img/logo.svg',
+          width: 242,
+          height: 21,
+          href: '/',
         },
-        */
         items: [
           {
             to: '/',
