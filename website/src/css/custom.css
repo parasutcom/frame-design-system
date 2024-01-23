@@ -1,0 +1,100 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+@import '../../../dist/css/main.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Nunito:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,300&display=swap');
+
+:root {
+  --ifm-color-primary: #344461;
+  --ifm-color-primary-dark: #202e49;
+  --ifm-color-primary-darker: #121d31;
+  --ifm-color-primary-darkest: #080e19;
+  --ifm-color-primary-light: #d4d9df;
+  --ifm-color-primary-lighter: #e5e9ec;
+  --ifm-color-primary-lightest: #f7f9fa;
+  --ifm-code-font-size: 95%;
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, Segoe UI, Roboto,
+    Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, 'Segoe UI',
+    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+  --ifm-font-family-monospace: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco,
+    Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --ifm-navbar-background-color: var(--ifm-color-primary-darker);
+  --ifm-navbar-link-color: #fafafa;
+  --ifm-navbar-link-hover-color: #b2bcc9;
+  --ifm-footer-background-color: var(--ifm-color-primary-darker);
+
+  .navbar__brand {
+    margin-right: 2rem;
+  }
+
+  .menu__link--sublist-caret::after {
+    background: var(--ifm-menu-link-sublist-icon) 50% / 1.75rem 1.75rem;
+  }
+
+  .footer {
+    background-color: var(--ifm-color-primary-darker);
+  }
+
+  [class*='playgroundContainer'] {
+    border: 1px solid #e5e9ec;
+    box-shadow: none;
+  }
+
+  [class*='playgroundHeader'] {
+    display: none;
+  }
+
+  [class*='playgroundPreview_node'] {
+    padding: 24px;
+    background-color: #f7f9fa;
+  }
+
+  [class*='playgroundEditor'] {
+    border-top: 1px solid #e5e9ec;
+  }
+
+  [class*='playgroundEditor'] pre {
+    border-radius: 0;
+    padding: 24px !important;
+    background-color: #f7f9fa !important;
+  }
+
+  @media (min-width: 997px) {
+    [class*='docItemCol'] {
+      padding: 1rem 3rem;
+    }
+  }
+
+  @media (min-width: 997px) {
+    .markdown header {
+      margin-left: -32px;
+      margin-right: -48px;
+    }
+  }
+
+  .markdown header {
+    padding-inline: 32px;
+    margin-bottom: 32px;
+    background-color: #f7f9fa;
+    padding-top: 64px;
+    padding-bottom: 48px;
+    border-radius: 12px;
+  }
+
+  .markdown h1:first-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 997px) {
+    .theme-doc-breadcrumbs {
+      margin-left: -32px;
+      margin-right: -48px;
+    }
+  }
+}
