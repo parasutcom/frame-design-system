@@ -5,14 +5,38 @@
  */
 
 /* You can override the default Infima variables here. */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Nunito:wght@700&display=swap');
+
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #344461;
+  --ifm-color-primary-dark: #202e49;
+  --ifm-color-primary-darker: #121d31;
+  --ifm-color-primary-darkest: #080e19;
+  --ifm-color-primary-light: #d4d9df;
+  --ifm-color-primary-lighter: #e5e9ec;
+  --ifm-color-primary-lightest: #f7f9fa;
   --ifm-code-font-size: 95%;
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, Segoe UI, Roboto,
+    Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, 'Segoe UI',
+    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+  --ifm-navbar-background-color: var(--ifm-color-primary-darker);
+  --ifm-navbar-link-color: #fafafa;
+  --ifm-navbar-link-hover-color: #b2bcc9;
+  --ifm-footer-background-color: var(--ifm-color-primary-darker);
+
+  .navbar__brand {
+    margin-right: 2rem;
+  }
+
+  .menu__link--sublist-caret::after {
+    background: var(--ifm-menu-link-sublist-icon) 50% / 1.75rem 1.75rem;
+  }
+
+  .footer {
+    background-color: var(--ifm-color-primary-darker);
+  }
+
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
