@@ -29,6 +29,10 @@
   --ifm-navbar-link-hover-color: #b2bcc9;
   --ifm-footer-background-color: var(--ifm-color-primary-darker);
 
+  .navbar {
+    z-index: 9999;
+  }
+
   .navbar__brand {
     margin-right: 2rem;
   }
@@ -109,5 +113,9 @@
       margin-left: -32px;
       margin-right: -48px;
     }
+  }
+
+  .demo .fds-calendar {
+    position: relative;
   }
 }
