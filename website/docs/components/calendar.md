@@ -10,9 +10,7 @@ title: Calendar
 <div class="demo">
   <div class="fds-calendar fds-calendar--open">
     <div class="fds-calendar__header">
-      <button
-        class="fds-btn fds-btn--ghost fds-btn--icon fds-calendar__prev-btn"
-      >
+      <button class="fds-btn fds-btn--ghost fds-btn--icon fds-calendar__prev-btn">
         <span class="fds-icon"><i class="fa-regular fa-chevron-left"></i></span>
       </button>
       <div class="fds-calendar__filter">
@@ -41,13 +39,10 @@ title: Calendar
           </select>
         </div>
       </div>
-      <button
-        class="fds-btn fds-btn--ghost fds-btn--icon fds-calendar__prev-btn"
-      >
-        <span class="fds-icon"
-          ><i class="fa-regular fa-chevron-right"></i
-        ></span>
+      <button class="fds-btn fds-btn--ghost fds-btn--icon fds-calendar__prev-btn">
+        <span class="fds-icon"><i class="fa-regular fa-chevron-right"></i></span>
       </button>
+
     </div>
     <div class="fds-calendar__content">
       <div class="fds-calendar__weekdays">
@@ -60,24 +55,12 @@ title: Calendar
         <span class="fds-calendar__weekday">S</span>
       </div>
       <div class="fds-calendar__days">
-        <span class="fds-calendar__day fds-calendar__day--prev-month-day"
-          >26</span
-        >
-        <span class="fds-calendar__day fds-calendar__day--prev-month-day"
-          >27</span
-        >
-        <span class="fds-calendar__day fds-calendar__day--prev-month-day"
-          >28</span
-        >
-        <span class="fds-calendar__day fds-calendar__day--prev-month-day"
-          >29</span
-        >
-        <span class="fds-calendar__day fds-calendar__day--prev-month-day"
-          >30</span
-        >
-        <span class="fds-calendar__day fds-calendar__day--prev-month-day"
-          >31</span
-        >
+        <span class="fds-calendar__day fds-calendar__day--prev-month-day">26</span>
+        <span class="fds-calendar__day fds-calendar__day--prev-month-day">27</span>
+        <span class="fds-calendar__day fds-calendar__day--prev-month-day">28</span>
+        <span class="fds-calendar__day fds-calendar__day--prev-month-day">29</span>
+        <span class="fds-calendar__day fds-calendar__day--prev-month-day">30</span>
+        <span class="fds-calendar__day fds-calendar__day--prev-month-day">31</span>
         <span class="fds-calendar__day">1</span>
         <span class="fds-calendar__day">2</span>
         <span class="fds-calendar__day">3</span>
@@ -93,12 +76,7 @@ title: Calendar
         <span class="fds-calendar__day">13</span>
         <span class="fds-calendar__day">14</span>
         <span class="fds-calendar__day">15</span>
-        <span
-          class="fds-calendar__day fds-calendar__day--today"
-          role="button"
-          tabindex="0"
-          >16</span
-        >
+        <span class="fds-calendar__day fds-calendar__day--today" role="button" tabindex="0">16</span>
         <span class="fds-calendar__day">17</span>
         <span class="fds-calendar__day">18</span>
         <span class="fds-calendar__day">19</span>
@@ -114,21 +92,11 @@ title: Calendar
         <span class="fds-calendar__day">29</span>
         <span class="fds-calendar__day">30</span>
         <span class="fds-calendar__day">31</span>
-        <span class="fds-calendar__day fds-calendar__day--next-month-day"
-          >1</span
-        >
-        <span class="fds-calendar__day fds-calendar__day--next-month-day"
-          >2</span
-        >
-        <span class="fds-calendar__day fds-calendar__day--next-month-day"
-          >3</span
-        >
-        <span class="fds-calendar__day fds-calendar__day--next-month-day"
-          >4</span
-        >
-        <span class="fds-calendar__day fds-calendar__day--next-month-day"
-          >5</span
-        >
+        <span class="fds-calendar__day fds-calendar__day--next-month-day">1</span>
+        <span class="fds-calendar__day fds-calendar__day--next-month-day">2</span>
+        <span class="fds-calendar__day fds-calendar__day--next-month-day">3</span>
+        <span class="fds-calendar__day fds-calendar__day--next-month-day">4</span>
+        <span class="fds-calendar__day fds-calendar__day--next-month-day">5</span>
       </div>
     </div>
   </div>
@@ -141,9 +109,7 @@ title: Calendar
 <div class="demo">
   <div class="fds-calendar fds-calendar--open">
     <div class="fds-calendar__header">
-      <button
-        class="fds-btn fds-btn--ghost fds-btn--icon fds-calendar__prev-btn"
-      >
+      <button class="fds-btn fds-btn--ghost fds-btn--icon fds-calendar__prev-btn">
         <span class="fds-icon"><i class="fa-regular fa-chevron-left"></i></span>
       </button>
       <div class="fds-calendar__filter">
@@ -172,12 +138,8 @@ title: Calendar
           </select>
         </div>
       </div>
-      <button
-        class="fds-btn fds-btn--ghost fds-btn--icon fds-calendar__prev-btn"
-      >
-        <span class="fds-icon"
-          ><i class="fa-regular fa-chevron-right"></i
-        ></span>
+      <button class="fds-btn fds-btn--ghost fds-btn--icon fds-calendar__prev-btn">
+        <span class="fds-icon"><i class="fa-regular fa-chevron-right"></i></span>
       </button>
     </div>
     <div class="fds-calendar__content">
@@ -191,24 +153,12 @@ title: Calendar
         <span class="fds-calendar__weekday">S</span>
       </div>
       <div class="fds-calendar__days">
-        <span class="fds-calendar__day fds-calendar__day--prev-month-day"
-          >26</span
-        >
-        <span class="fds-calendar__day fds-calendar__day--prev-month-day"
-          >27</span
-        >
-        <span class="fds-calendar__day fds-calendar__day--prev-month-day"
-          >28</span
-        >
-        <span class="fds-calendar__day fds-calendar__day--prev-month-day"
-          >29</span
-        >
-        <span class="fds-calendar__day fds-calendar__day--prev-month-day"
-          >30</span
-        >
-        <span class="fds-calendar__day fds-calendar__day--prev-month-day"
-          >31</span
-        >
+        <span class="fds-calendar__day fds-calendar__day--prev-month-day">26</span>
+        <span class="fds-calendar__day fds-calendar__day--prev-month-day">27</span>
+        <span class="fds-calendar__day fds-calendar__day--prev-month-day">28</span>
+        <span class="fds-calendar__day fds-calendar__day--prev-month-day">29</span>
+        <span class="fds-calendar__day fds-calendar__day--prev-month-day">30</span>
+        <span class="fds-calendar__day fds-calendar__day--prev-month-day">31</span>
         <span class="fds-calendar__day">1</span>
         <span class="fds-calendar__day">2</span>
         <span class="fds-calendar__day fds-calendar__day--start-range">3</span>
@@ -229,12 +179,7 @@ title: Calendar
         <span class="fds-calendar__day">18</span>
         <span class="fds-calendar__day">19</span>
         <span class="fds-calendar__day">20</span>
-        <span
-          class="fds-calendar__day fds-calendar__day--today"
-          role="button"
-          tabindex="0"
-          >21</span
-        >
+        <span class="fds-calendar__day fds-calendar__day--today" role="button" tabindex="0">21</span>
         <span class="fds-calendar__day">22</span>
         <span class="fds-calendar__day">23</span>
         <span class="fds-calendar__day">24</span>
@@ -245,23 +190,14 @@ title: Calendar
         <span class="fds-calendar__day">29</span>
         <span class="fds-calendar__day">30</span>
         <span class="fds-calendar__day">31</span>
-        <span class="fds-calendar__day fds-calendar__day--next-month-day"
-          >1</span
-        >
-        <span class="fds-calendar__day fds-calendar__day--next-month-day"
-          >2</span
-        >
-        <span class="fds-calendar__day fds-calendar__day--next-month-day"
-          >3</span
-        >
-        <span class="fds-calendar__day fds-calendar__day--next-month-day"
-          >4</span
-        >
-        <span class="fds-calendar__day fds-calendar__day--next-month-day"
-          >5</span
-        >
+        <span class="fds-calendar__day fds-calendar__day--next-month-day">1</span>
+        <span class="fds-calendar__day fds-calendar__day--next-month-day">2</span>
+        <span class="fds-calendar__day fds-calendar__day--next-month-day">3</span>
+        <span class="fds-calendar__day fds-calendar__day--next-month-day">4</span>
+        <span class="fds-calendar__day fds-calendar__day--next-month-day">5</span>
       </div>
     </div>
   </div>
 </div>
 ```
+

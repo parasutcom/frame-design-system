@@ -6,12 +6,7 @@ title: Toggle Switch
 
 ```html live
 <div class="fds-toggle">
-  <input
-    type="checkbox"
-    class="fds-toggle__input"
-    name=""
-    id="toggle-default"
-  />
+  <input type="checkbox" class="fds-toggle__input" name="toggle-default" id="toggle-default" />
   <label for="toggle-default" class="fds-toggle__label">
     <span class="fds-toggle__label-mark"></span>
   </label>
@@ -20,36 +15,12 @@ title: Toggle Switch
 
 ## With label
 
-### Left
-
 ```html live
 <div class="fds-toggle">
-  <input
-    type="checkbox"
-    class="fds-toggle__input"
-    name=""
-    id="toggle-left-label"
-  />
-  <label for="toggle-left-label" class="fds-toggle__label">
+  <input type="checkbox" class="fds-toggle__input" name="toggle-with-label" id="toggle-with-label" />
+  <label for="toggle-with-label" class="fds-toggle__label">
     <span class="fds-toggle__label-text">Toggle label</span>
     <span class="fds-toggle__label-mark"></span>
-  </label>
-</div>
-```
-
-### Right
-
-```html live
-<div class="fds-toggle">
-  <input
-    type="checkbox"
-    class="fds-toggle__input"
-    name=""
-    id="toggle-right-label"
-  />
-  <label for="toggle-right-label" class="fds-toggle__label">
-    <span class="fds-toggle__label-mark"></span>
-    <span class="fds-toggle__label-text">Toggle label</span>
   </label>
 </div>
 ```
@@ -60,13 +31,8 @@ title: Toggle Switch
 
 ```html live
 <div class="fds-toggle">
-  <input
-    type="checkbox"
-    class="fds-toggle__input"
-    name=""
-    id="toggle-default-size"
-  />
-  <label for="toggle-default-size" class="fds-toggle__label">
+  <input type="checkbox" class="fds-toggle__input" name="toggle-default-2" id="toggle-default-2" />
+  <label for="toggle-default-2" class="fds-toggle__label">
     <span class="fds-toggle__label-text">Default toggle</span>
     <span class="fds-toggle__label-mark"></span>
   </label>
@@ -77,13 +43,8 @@ title: Toggle Switch
 
 ```html live
 <div class="fds-toggle fds-toggle--lg">
-  <input
-    type="checkbox"
-    class="fds-toggle__input"
-    name=""
-    id="toggle-large-size"
-  />
-  <label for="toggle-large-size" class="fds-toggle__label">
+  <input type="checkbox" class="fds-toggle__input" name="toggle-large" id="toggle-large" />
+  <label for="toggle-large" class="fds-toggle__label">
     <span class="fds-toggle__label-text">Large toggle</span>
     <span class="fds-toggle__label-mark"></span>
   </label>
@@ -96,13 +57,7 @@ title: Toggle Switch
 
 ```html live
 <div class="fds-toggle">
-  <input
-    type="checkbox"
-    class="fds-toggle__input"
-    name=""
-    id="toggle-checked"
-    checked
-  />
+  <input type="checkbox" class="fds-toggle__input" name="toggle-checked" id="toggle-checked" checked />
   <label for="toggle-checked" class="fds-toggle__label">
     <span class="fds-toggle__label-text">Checked toggle</span>
     <span class="fds-toggle__label-mark"></span>
@@ -114,13 +69,7 @@ title: Toggle Switch
 
 ```html live
 <div class="fds-toggle">
-  <input
-    type="checkbox"
-    class="fds-toggle__input"
-    name=""
-    id="toggle-disabled"
-    disabled
-  />
+  <input type="checkbox" class="fds-toggle__input" name="toggle-disabled" id="toggle-disabled" disabled />
   <label for="toggle-disabled" class="fds-toggle__label">
     <span class="fds-toggle__label-text">Disabled toggle</span>
     <span class="fds-toggle__label-mark"></span>
@@ -132,14 +81,7 @@ title: Toggle Switch
 
 ```html live
 <div class="fds-toggle">
-  <input
-    type="checkbox"
-    class="fds-toggle__input"
-    name=""
-    id="toggle-checked-disabled"
-    checked
-    disabled
-  />
+  <input type="checkbox" class="fds-toggle__input" name="toggle-checked-disabled" id="toggle-checked-disabled" checked disabled />
   <label for="toggle-checked-disabled" class="fds-toggle__label">
     <span class="fds-toggle__label-text">Checked disabled toggle</span>
     <span class="fds-toggle__label-mark"></span>

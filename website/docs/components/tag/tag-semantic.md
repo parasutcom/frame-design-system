@@ -1,13 +1,11 @@
 ---
-title: Tag semantic
+title: Tag Semantic
 ---
 
-## Types
-
-### Default
+## Status
 
 ```html live
-<div class="playgroundPreview">
+<div class="demo">
   <div class="fds-tag fds-tag--semantic fds-tag--success">
     <span class="fds-tag__label">Success tag</span>
   </div>
@@ -30,10 +28,10 @@ title: Tag semantic
 </div>
 ```
 
-### With icon
+## With icon
 
 ```html live
-<div class="playgroundPreview">
+<div class="demo">
   <div class="fds-tag fds-tag--semantic fds-tag--success">
     <span class="fds-icon">
       <i class="fa-solid fa-circle-check"></i>
@@ -71,10 +69,10 @@ title: Tag semantic
 </div>
 ```
 
-### Transparent
+## Transparent
 
 ```html live
-<div class="playgroundPreview">
+<div class="demo">
   <div class="fds-tag fds-tag--semantic fds-tag--success fds-tag--transparent">
     <span class="fds-icon">
       <i class="fa-solid fa-circle-check"></i>
@@ -103,9 +101,7 @@ title: Tag semantic
     <span class="fds-tag__label">Purple tag</span>
   </div>
 
-  <div
-    class="fds-tag fds-tag--semantic fds-tag--information fds-tag--transparent"
-  >
+  <div class="fds-tag fds-tag--semantic fds-tag--information fds-tag--transparent">
     <span class="fds-icon">
       <i class="fa-solid fa-circle"></i>
     </span>

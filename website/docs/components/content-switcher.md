@@ -9,13 +9,13 @@ title: Content Switcher
 ```html live
 <div class="fds-content-switcher fds-content-switcher--solid">
   <button class="fds-content-switcher__btn fds-content-switcher__btn--selected">
-    <span class="fds-content-switcher__label">First section</span>
+    <span class="fds-content-switcher__label">First Section</span>
   </button>
   <button class="fds-content-switcher__btn">
-    <span class="fds-content-switcher__label">Second section</span>
+    <span class="fds-content-switcher__label">Second Section</span>
   </button>
   <button class="fds-content-switcher__btn">
-    <span class="fds-content-switcher__label">Third section</span>
+    <span class="fds-content-switcher__label">Third Section</span>
   </button>
 </div>
 ```
@@ -25,13 +25,13 @@ title: Content Switcher
 ```html live
 <div class="fds-content-switcher fds-content-switcher--outline">
   <button class="fds-content-switcher__btn fds-content-switcher__btn--selected">
-    <span class="fds-content-switcher__label">First section</span>
+    <span class="fds-content-switcher__label">First Section</span>
   </button>
   <button class="fds-content-switcher__btn">
-    <span class="fds-content-switcher__label">Second section</span>
+    <span class="fds-content-switcher__label">Second Section</span>
   </button>
   <button class="fds-content-switcher__btn">
-    <span class="fds-content-switcher__label">Third section</span>
+    <span class="fds-content-switcher__label">Third Section</span>
   </button>
 </div>
 ```
@@ -43,13 +43,13 @@ title: Content Switcher
 ```html live
 <div class="fds-content-switcher fds-content-switcher--solid">
   <button class="fds-content-switcher__btn fds-content-switcher__btn--selected">
-    <span class="fds-content-switcher__label">First section</span>
+    <span class="fds-content-switcher__label">First Section</span>
   </button>
   <button class="fds-content-switcher__btn">
-    <span class="fds-content-switcher__label">Second section</span>
+    <span class="fds-content-switcher__label">Second Section</span>
   </button>
   <button class="fds-content-switcher__btn">
-    <span class="fds-content-switcher__label">Third section</span>
+    <span class="fds-content-switcher__label">Third Section</span>
   </button>
 </div>
 ```
@@ -57,17 +57,15 @@ title: Content Switcher
 ### Small
 
 ```html live
-<div
-  class="fds-content-switcher fds-content-switcher--solid fds-content-switcher--sm"
->
+<div class="fds-content-switcher fds-content-switcher--solid fds-content-switcher--sm">
   <button class="fds-content-switcher__btn fds-content-switcher__btn--selected">
-    <span class="fds-content-switcher__label">First section</span>
+    <span class="fds-content-switcher__label">First Section</span>
   </button>
   <button class="fds-content-switcher__btn">
-    <span class="fds-content-switcher__label">Second section</span>
+    <span class="fds-content-switcher__label">Second Section</span>
   </button>
   <button class="fds-content-switcher__btn">
-    <span class="fds-content-switcher__label">Third section</span>
+    <span class="fds-content-switcher__label">Third Section</span>
   </button>
 </div>
 ```

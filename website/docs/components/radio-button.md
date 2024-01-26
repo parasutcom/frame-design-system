@@ -97,7 +97,7 @@ title: Radio Button
   <div class="fds-form-item__label-wrapper">
     <label class="fds-form-item__label">Label</label>
   </div>
-  <div class="fds-radio-button-group fds-radio-button-group--horizontal">
+  <div class="fds-radio-button-group">
     <div class="fds-radio-button">
       <input type="radio" class="fds-radio-button__input" name="fds-radio-group-helper-text" id="radio-7" checked />
       <label for="radio-7" class="fds-radio-button__label">
