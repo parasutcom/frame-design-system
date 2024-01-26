@@ -32,7 +32,7 @@ title: Pagination
     <span class="fds-pagination__label">...</span>
   </button>
   <button class="fds-pagination__btn">
-    <span class="fds-pagination__label">100</span>
+    <span class="fds-pagination__label">10</span>
   </button>
   <button class="fds-pagination__btn">
     <span class="fds-icon fds-pagination__icon">
@@ -57,7 +57,7 @@ title: Pagination
   <button class="fds-pagination__btn">
     <span class="fds-pagination__label">2</span>
   </button>
-  <button class="fds-pagination__btn fds-pagination__btn--disabled">
+  <button class="fds-pagination__btn">
     <span class="fds-pagination__label">3</span>
   </button>
   <button class="fds-pagination__btn">
@@ -70,7 +70,7 @@ title: Pagination
     <span class="fds-pagination__label">...</span>
   </button>
   <button class="fds-pagination__btn">
-    <span class="fds-pagination__label">100</span>
+    <span class="fds-pagination__label">10</span>
   </button>
   <button class="fds-pagination__btn">
     <span class="fds-icon fds-pagination__icon">
@@ -110,7 +110,7 @@ title: Pagination
     <span class="fds-pagination__label">...</span>
   </button>
   <button class="fds-pagination__btn">
-    <span class="fds-pagination__label">100</span>
+    <span class="fds-pagination__label">10</span>
   </button>
   <button class="fds-pagination__btn">
     <span class="fds-icon fds-pagination__icon">
@@ -148,7 +148,7 @@ title: Pagination
     <span class="fds-pagination__label">...</span>
   </button>
   <button class="fds-pagination__btn">
-    <span class="fds-pagination__label">100</span>
+    <span class="fds-pagination__label">10</span>
   </button>
   <button class="fds-pagination__btn">
     <span class="fds-icon fds-pagination__icon">

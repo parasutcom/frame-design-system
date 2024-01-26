@@ -2,60 +2,45 @@
 title: Button
 ---
 
+:::warning
+Inline styles in these examples are for demo purposes.
+:::
+
 ## Types
 
-### Primary
-
 ```html live
-<button class="fds-btn fds-btn--primary">
-  <span class="fds-btn__label">Primary button</span>
-</button>
-```
+<div class="demo">
+  <button class="fds-btn fds-btn--primary">
+    <span class="fds-btn__label">Primary button</span>
+  </button>
 
-### Secondary
+  <button class="fds-btn fds-btn--secondary">
+    <span class="fds-btn__label">Secondary button</span>
+  </button>
 
-```html live
-<button class="fds-btn fds-btn--secondary">
-  <span class="fds-btn__label">Secondary button</span>
-</button>
-```
+  <button class="fds-btn fds-btn--outline">
+    <span class="fds-btn__label">Outline button</span>
+  </button>
 
-### Outline
+  <button class="fds-btn fds-btn--ghost">
+    <span class="fds-btn__label">Ghost button</span>
+  </button>
 
-```html live
-<button class="fds-btn fds-btn--outline">
-  <span class="fds-btn__label">Outline button</span>
-</button>
-```
+  <button class="fds-btn fds-btn--destructive">
+    <span class="fds-btn__label">Destructive button</span>
+  </button>
 
-### Ghost
+  <button class="fds-btn fds-btn--destructive-outline">
+    <span class="fds-btn__label">Destructive outline button</span>
+  </button>
+</div>
 
-```html live
-<button class="fds-btn fds-btn--ghost">
-  <span class="fds-btn__label">Ghost button</span>
-</button>
-```
-
-### Destructive
-
-```html live
-<button class="fds-btn fds-btn--destructive">
-  <span class="fds-btn__label">Destructive button</span>
-</button>
-```
-
-### Destructive outline
-
-```html live
-<button class="fds-btn fds-btn--destructive-outline">
-  <span class="fds-btn__label">Destructive outline button</span>
-</button>
 ```
 
 ## Size
 
 ```html live
-<div class="playgroundPreview">
+<div class="demo">
   <button class="fds-btn fds-btn--primary fds-btn--lg">
     <span class="fds-btn__label">Large button</span>
   </button>
@@ -73,13 +58,15 @@ title: Button
 ## Full width
 
 ```html live
-<div class="playgroundPreviewVertical">
+<div class="demo-vertical">
   <button class="fds-btn fds-btn--primary fds-btn--full-width">
     <span class="fds-btn__label">Full width button</span>
   </button>
 
   <button class="fds-btn fds-btn--primary fds-btn--full-width">
-    <span class="fds-icon"><i class="fa-regular fa-plus"></i></span>
+    <span class="fds-icon">
+      <i class="fa-regular fa-plus"></i>
+    </span>
     <span class="fds-btn__label">Full width button</span>
   </button>
 </div>
@@ -87,21 +74,25 @@ title: Button
 
 ## Button with icon
 
-### Icon before
+### Icon left
 
 ```html live
 <button class="fds-btn fds-btn--primary">
-  <span class="fds-icon"><i class="fa-regular fa-chevron-left"></i></span>
-  <span class="fds-btn__label">Icon before</span>
+  <span class="fds-icon">
+    <i class="fa-regular fa-chevron-left"></i>
+  </span>
+  <span class="fds-btn__label">Icon left</span>
 </button>
 ```
 
-### Icon after
+### Icon right
 
 ```html live
 <button class="fds-btn fds-btn--primary">
-  <span class="fds-btn__label">Icon after</span>
-  <span class="fds-icon"><i class="fa-regular fa-chevron-right"></i></span>
+  <span class="fds-btn__label">Icon right</span>
+  <span class="fds-icon">
+    <i class="fa-regular fa-chevron-right"></i>
+  </span>
 </button>
 ```
 
@@ -109,8 +100,26 @@ title: Button
 
 ```html live
 <button class="fds-btn fds-btn--primary fds-btn--icon">
-  <span class="fds-icon"><i class="fa-regular fa-plus"></i></span>
+  <span class="fds-icon">
+    <i class="fa-regular fa-plus"></i>
+  </span>
 </button>
+```
+
+## Truncation
+```html live
+<div class="demo">
+  <button class="fds-btn fds-btn--primary" style={{ maxWidth: '150px' }}>
+    <span class="fds-btn__label">A very long sentence</span>
+  </button>
+
+  <button class="fds-btn fds-btn--primary" style={{ maxWidth: '150px' }}>
+    <span class="fds-btn__label">A very long sentence</span>
+    <span class="fds-icon">
+      <i class="fa-regular fa-chevron-right"></i>
+    </span>
+  </button>
+</div>
 ```
 
 ## States
@@ -118,7 +127,7 @@ title: Button
 ### Disabled
 
 ```html live
-<div class="playgroundPreview">
+<div class="demo">
   <button class="fds-btn fds-btn--primary fds-btn--disabled" disabled>
     <span class="fds-btn__label">Disabled button</span>
   </button>
@@ -127,11 +136,10 @@ title: Button
     <span class="fds-btn__label">Disabled button</span>
   </button>
 
-  <button
-    class="fds-btn fds-btn--primary fds-btn--icon fds-btn--disabled"
-    disabled
-  >
-    <span class="fds-icon"><i class="fa-regular fa-plus"></i></span>
+  <button class="fds-btn fds-btn--primary fds-btn--icon fds-btn--disabled" disabled>
+    <span class="fds-icon">
+      <i class="fa-regular fa-plus"></i>
+    </span>
   </button>
 </div>
 ```
@@ -139,13 +147,9 @@ title: Button
 ### Busy
 
 ```html live
-<div class="playgroundPreview">
+<div class="demo">
   <button class="fds-btn fds-btn--primary fds-btn--busy" disabled>
-    <div
-      role="status"
-      aria-label="Loading process"
-      class="fds-spinner fds-spinner--sm fds-spinner--secondary"
-    >
+    <div role="status" aria-label="Loading process" class="fds-spinner fds-spinner--sm fds-spinner--secondary">
       <span class="fds-icon fds-spinner__icon">
         <i class="fa-regular fa-spinner-third"></i>
       </span>
@@ -154,11 +158,7 @@ title: Button
   </button>
 
   <button class="fds-btn fds-btn--outline fds-btn--busy" disabled>
-    <div
-      role="status"
-      aria-label="Loading process"
-      class="fds-spinner fds-spinner--sm fds-spinner--secondary"
-    >
+    <div role="status" aria-label="Loading process" class="fds-spinner fds-spinner--sm fds-spinner--secondary">
       <span class="fds-icon fds-spinner__icon">
         <i class="fa-regular fa-spinner-third"></i>
       </span>
@@ -167,16 +167,14 @@ title: Button
   </button>
 
   <button class="fds-btn fds-btn--primary fds-btn--icon fds-btn--busy" disabled>
-    <div
-      role="status"
-      aria-label="Loading process"
-      class="fds-spinner fds-spinner--sm fds-spinner--secondary"
-    >
+    <div role="status" aria-label="Loading process" class="fds-spinner fds-spinner--sm fds-spinner--secondary">
       <span class="fds-icon fds-spinner__icon">
         <i class="fa-regular fa-spinner-third"></i>
       </span>
     </div>
-    <span class="fds-icon"><i class="fa-regular fa-plus"></i></span>
+    <span class="fds-icon">
+      <i class="fa-regular fa-plus"></i>
+    </span>
   </button>
 </div>
 ```

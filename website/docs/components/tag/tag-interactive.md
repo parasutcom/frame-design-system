@@ -1,5 +1,5 @@
 ---
-title: Tag interactive
+title: Tag Interactive
 ---
 
 ## Types
@@ -12,7 +12,7 @@ title: Tag interactive
 </div>
 ```
 
-### With actions
+### With action
 
 ```html live
 <div class="fds-tag fds-tag--interactive">
