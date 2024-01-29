@@ -55,6 +55,10 @@ ul, ol {
   margin: 0;
 }
 
+.markdown a[class^="fds"]:hover {
+  text-decoration: none;
+}
+
 pre {
   white-space: pre !important;
 }
