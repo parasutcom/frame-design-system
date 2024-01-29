@@ -18,104 +18,196 @@
   --ifm-color-primary-lighter: #e5e9ec;
   --ifm-color-primary-lightest: #f7f9fa;
   --ifm-code-font-size: 95%;
-  --ifm-font-family-base: 'Inter', system-ui, -apple-system, Segoe UI, Roboto,
-    Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, 'Segoe UI',
-    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, segoe ui, roboto,
+    ubuntu, cantarell, noto sans, sans-serif, blinkmacsystemfont, 'Segoe UI',
+    helvetica, arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';
-  --ifm-font-family-monospace: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco,
-    Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --ifm-font-family-monospace: 'JetBrains Mono', sfmono-regular, menlo, monaco,
+    consolas, 'Liberation Mono', 'Courier New', monospace;
   --ifm-navbar-background-color: var(--ifm-color-primary-darker);
   --ifm-navbar-link-color: #fafafa;
   --ifm-navbar-link-hover-color: #b2bcc9;
   --ifm-footer-background-color: var(--ifm-color-primary-darker);
+  --ifm-color-warning-contrast-background: #faf5f0;
+  --ifm-color-warning-dark: #ad5f00;
+  --ifm-color-warning-contrast-foreground: #ad5f00;
+}
 
-  .navbar {
-    z-index: 9999;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--ifm-font-family-base);
+  font-size: 14px;
+}
+
+pre {
+  white-space: pre !important;
+}
+
+.alert {
+  border-left-width: 2px;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+[class*='admonitionHeading_node'] {
+  text-transform: capitalize !important;
+}
+
+.navbar {
+  z-index: 9999;
+}
+
+.navbar__brand {
+  margin-right: 2rem;
+}
+
+.menu__link--sublist-caret::after {
+  font-family: 'Font Awesome 6 Pro';
+  content: '\f077';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+}
+
+.table-of-contents__link--active {
+  font-weight: var(--ifm-font-weight-semibold);
+}
+
+.pagination-nav__sublabel {
+  font-size: 12px;
+  color: #505f79;
+}
+
+.pagination-nav__label {
+  font-size: 14px;
+  font-weight: var(--ifm-font-weight-semibold);
+}
+
+.pagination-nav__link--prev .pagination-nav__label::before {
+  font-family: 'Font Awesome 6 Pro';
+  content: '\f053';
+  font-size: 12px;
+  margin-right: 4px;
+}
+
+.pagination-nav__link--next .pagination-nav__label::after {
+  font-family: 'Font Awesome 6 Pro';
+  content: '\f054';
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+.footer {
+  background-color: var(--ifm-color-primary-darker);
+}
+
+[class*='playgroundContainer'] {
+  border: 1px solid #e5e9ec;
+  box-shadow: none !important;
+}
+
+[class*='playgroundHeader'] {
+  display: none;
+}
+
+[class*='playgroundPreview_node'] {
+  padding: 24px !important;
+  background-color: #ffffff !important;
+  background-image: radial-gradient(#e5e9ec 1px, transparent 0);
+  background-size: 16px 16px;
+}
+
+[class*='playgroundEditor'] {
+  border-top: 1px solid #e5e9ec;
+}
+
+[class*='playgroundEditor'] pre {
+  border-radius: 0;
+  padding: 24px !important;
+  background-color: #f7f9fa !important;
+  font-size: 14px;
+}
+
+@media (min-width: 997px) {
+  .theme-doc-breadcrumbs {
+    margin-left: -32px;
+    margin-right: -48px;
   }
+}
 
-  .navbar__brand {
-    margin-right: 2rem;
+@media (min-width: 997px) {
+  [class*='docItemCol'] {
+    padding: 1rem 3rem;
   }
+}
 
-  .menu__link--sublist-caret::after {
-    background: var(--ifm-menu-link-sublist-icon) 50% / 1.75rem 1.75rem;
-  }
-
-  .footer {
-    background-color: var(--ifm-color-primary-darker);
-  }
-
-  [class*='playgroundContainer'] {
-    border: 1px solid #e5e9ec;
-    box-shadow: none;
-  }
-
-  [class*='playgroundHeader'] {
-    display: none;
-  }
-
-  [class*='playgroundPreview_node'] {
-    padding: 24px;
-    background-color: #f7f9fa;
-  }
-
-  [class*='playgroundPreview_node'] .playgroundPreview {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  [class*='playgroundPreview_node'] .playgroundPreviewVertical {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
-
-  [class*='playgroundEditor'] {
-    border-top: 1px solid #e5e9ec;
-  }
-
-  [class*='playgroundEditor'] pre {
-    border-radius: 0;
-    padding: 24px !important;
-    background-color: #f7f9fa !important;
-  }
-
-  @media (min-width: 997px) {
-    [class*='docItemCol'] {
-      padding: 1rem 3rem;
-    }
-  }
-
-  @media (min-width: 997px) {
-    .markdown header {
-      margin-left: -32px;
-      margin-right: -48px;
-    }
-  }
-
+@media (min-width: 997px) {
   .markdown header {
-    padding-inline: 32px;
-    margin-bottom: 32px;
-    background-color: #f7f9fa;
-    padding-top: 64px;
-    padding-bottom: 48px;
-    border-radius: 12px;
+    margin-left: -32px;
+    margin-right: -48px;
   }
+}
 
-  .markdown h1:first-child {
-    margin-bottom: 0;
-  }
+.markdown header {
+  padding-inline: 32px;
+  margin-bottom: 32px;
+  background-color: #f7f9fa;
+  padding-top: 64px;
+  padding-bottom: 48px;
+  border-radius: 12px;
+}
 
-  @media (min-width: 997px) {
-    .theme-doc-breadcrumbs {
-      margin-left: -32px;
-      margin-right: -48px;
-    }
-  }
+.markdown h1:first-child {
+  margin-bottom: 0;
+  font-size: 2.5rem;
+  font-weight: var(--ifm-font-weight-bold);
+  line-height: 1.25;
+}
 
-  .demo .fds-calendar {
-    position: relative;
-  }
+.markdown > h2 {
+  font-size: 1.75rem;
+  font-weight: var(--ifm-font-weight-bold);
+  line-height: 1.25;
+}
+
+.markdown > h3 {
+  font-size: 1.5rem;
+  font-weight: var(--ifm-font-weight-bold);
+  line-height: 1.25;
+}
+
+.markdown > h4 {
+  font-size: 1.25rem;
+  font-weight: var(--ifm-font-weight-bold);
+  line-height: 1.25;
+}
+
+.markdown > p {
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+.demo {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.demo-vertical {
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.demo .fds-calendar {
+  position: relative;
 }
