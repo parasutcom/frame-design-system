@@ -42,9 +42,23 @@ body {
   font-size: 14px;
 }
 
+ul, ol {
+  margin: 0;
+  padding-left: 0;
+}
+
+.markdown li + li {
+  margin-top: 0;
+}
+
+.markdown p[class^="fds"] {
+  margin: 0;
+}
+
 pre {
   white-space: pre !important;
 }
+
 
 .alert {
   border-left-width: 2px;
@@ -204,7 +218,6 @@ pre {
   position: relative;
   display: flex;
   flex-flow: column wrap;
-  align-items: center;
   gap: 12px;
 }
 
