@@ -31,6 +31,8 @@
   --ifm-color-warning-contrast-background: #faf5f0;
   --ifm-color-warning-dark: #ad5f00;
   --ifm-color-warning-contrast-foreground: #ad5f00;
+  --ifm-table-head-background: var(--ifm-color-primary-lightest);
+  --ifm-table-border-color: var(--ifm-color-primary-lighter);
 }
 
 html {
@@ -252,4 +254,53 @@ pre {
 .color-box-wrapper > .color-box:last-child {
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
+}
+
+.spacing-box {
+  background-color: var(--ifm-color-primary);
+}
+
+table .token {
+  font-family: var(--ifm-font-family-monospace);
+  background-color: var(--ifm-color-primary-lighter);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 8px;
+  padding-block: 4px;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 1.25;
+  font-weight: var(--ifm-font-weight-semibold);
+}
+
+.markdown table tr:nth-child(2n) {
+  background-color: transparent;
+}
+
+.markdown table th,
+.markdown table td {
+  border: 0;
+}
+
+.markdown table td {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.markdown table thead {
+  background-color: transparent;
+}
+
+.markdown table thead tr {
+  border-width: 1px;
+  border-top: 0;
+}
+
+.markdown table thead tr th:first-child {
+  border-top-left-radius: 6px;
+}
+
+.markdown table thead tr th:last-child {
+  border-top-right-radius: 6px;
 }
