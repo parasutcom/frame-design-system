@@ -304,3 +304,23 @@ table .token {
 .markdown table thead tr th:last-child {
   border-top-right-radius: 6px;
 }
+
+.icon-box-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.icon-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  gap: 20px;
+  width: 128px;
+  height: 128px;
+  border: 1px solid var(--ifm-color-primary-lighter);
+  border-radius: 6px;
+  text-align: center;
+}
