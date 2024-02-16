@@ -59,29 +59,34 @@ const config = {
         },
         items: [
           {
-            to: '/',
+            to: '/get-started/introduction',
             label: 'Get Started',
             position: 'left',
+            activeBasePath: 'get-started',
           },
           {
-            to: 'docs/foundations/',
+            to: '/foundations/color',
             label: 'Foundations',
             position: 'left',
+            activeBasePath: 'foundations',
           },
           {
-            to: 'docs/components/',
+            to: '/components/aggregate',
             label: 'Components',
             position: 'left',
+            activeBasePath: 'components',
           },
           {
             to: 'docs/patterns/',
             label: 'Patterns',
             position: 'left',
+            activeBasePath: 'patterns',
           },
           {
             to: 'docs/layout/',
             label: 'Layout',
             position: 'left',
+            activeBasePath: 'layout',
           },
           {
             href: 'https://github.com/parasutcom/frame-design-system',
