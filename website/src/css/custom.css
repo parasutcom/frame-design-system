@@ -44,27 +44,31 @@ body {
   font-size: 14px;
 }
 
-ul, ol {
+ul,
+ol {
   margin: 0;
   padding-left: 0;
+}
+
+a[class^='fds']:hover {
+  color: unset;
 }
 
 .markdown li + li {
   margin-top: 0;
 }
 
-.markdown p[class^="fds"] {
+.markdown p[class^='fds'] {
   margin: 0;
 }
 
-.markdown a[class^="fds"]:hover {
+.markdown a[class^='fds']:not('fds-tooltip'):hover {
   text-decoration: none;
 }
 
 pre {
   white-space: pre !important;
 }
-
 
 .alert {
   border-left-width: 2px;
@@ -225,6 +229,14 @@ pre {
   display: flex;
   flex-flow: column wrap;
   gap: 12px;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.min-h-200 {
+  min-height: 200px !important;
 }
 
 .demo .fds-calendar {
