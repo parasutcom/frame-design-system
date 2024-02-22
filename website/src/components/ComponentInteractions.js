@@ -6,21 +6,19 @@ function ComponentInteractions() {
 
   useEffect(() => {
     const applyComponentActions = () => {
-      setTimeout(function () {
-        const tooltip = document.querySelectorAll('.fds-tooltip');
-        tooltip.forEach((tooltip) => {
-          tooltip.addEventListener('mouseenter', () => {
-            if (tooltip) {
+      setTimeout(() => {
+        const tooltipActions = () => {
+          const tooltips = document.querySelectorAll('.fds-tooltip');
+          tooltips.forEach((tooltip) => {
+            tooltip.addEventListener('mouseenter', () => {
               tooltip.classList.add('fds-tooltip--open');
-            }
-          });
-
-          tooltip.addEventListener('mouseleave', () => {
-            if (tooltip) {
+            });
+            tooltip.addEventListener('mouseleave', () => {
               tooltip.classList.remove('fds-tooltip--open');
-            }
+            });
           });
-        });
+        };
+        tooltipActions();
       }, 1000);
 
       setTimeout(() => {

@@ -2,6 +2,10 @@
 title: Tooltip
 ---
 
+:::warning
+Custom javascript in these examples are for demo purposes.
+:::
+
 ## Default
 
 ```html live
