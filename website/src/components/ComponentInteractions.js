@@ -7,6 +7,45 @@ function ComponentInteractions() {
   useEffect(() => {
     const applyComponentActions = () => {
       setTimeout(() => {
+        const checkboxActions = () => {
+          const indeterminateCheckboxes = document.querySelectorAll('.fds-checkbox__input[name="checkbox-indeterminate"]');
+          indeterminateCheckboxes.forEach((checkbox) => {
+            checkbox.indeterminate = true;
+          });
+        };
+        checkboxActions();
+      }, 1000);
+
+      setTimeout(() => {
+        const tabActions = () => {
+          const tabGroups = document.querySelectorAll('.demo');
+
+          tabGroups.forEach((group) => {
+            const tabButtons = group.querySelectorAll('.fds-tablist__tab');
+            const tabContents = group.querySelectorAll('.fds-tab-content');
+
+            tabButtons.forEach((button) => {
+              button.addEventListener('click', () => {
+                tabButtons.forEach((tab) =>
+                  tab.classList.remove('fds-tablist__tab--selected'),
+                );
+                button.classList.add('fds-tablist__tab--selected');
+
+                tabContents.forEach((content) => (content.hidden = true));
+
+                const tabId = button.id.replace('-tab', '');
+                const activeTab = group.querySelector(`#${tabId}`);
+                if (activeTab) {
+                  activeTab.hidden = false;
+                }
+              });
+            });
+          });
+        };
+        tabActions();
+      }, 1000);
+
+      setTimeout(() => {
         const tooltipActions = () => {
           const tooltips = document.querySelectorAll('.fds-tooltip');
           tooltips.forEach((tooltip) => {
@@ -23,38 +62,38 @@ function ComponentInteractions() {
 
       setTimeout(() => {
         const modalActions = () => {
-          const openModalButtons = document.querySelectorAll(".fds-btn[data-open-modal]");
-          const closeModalButtons = document.querySelectorAll(".fds-btn[data-close-modal]");
+          const openModalButtons = document.querySelectorAll('.fds-btn[data-open-modal]');
+          const closeModalButtons = document.querySelectorAll('.fds-btn[data-close-modal]');
 
           openModalButtons.forEach((button) => {
-            button.addEventListener("click", () => {
-              const modalID = button.getAttribute("data-open-modal");
+            button.addEventListener('click', () => {
+              const modalID = button.getAttribute('data-open-modal');
               const modal = document.getElementById(modalID);
               modal.classList.add('fds-modal--open');
-            })
+            });
           });
 
           closeModalButtons.forEach((button) => {
-            button.addEventListener("click", () => {
-              const modalID = button.getAttribute("data-close-modal");
+            button.addEventListener('click', () => {
+              const modalID = button.getAttribute('data-close-modal');
               const modal = document.getElementById(modalID);
               modal.classList.remove('fds-modal--open');
             });
           });
         };
         modalActions();
-      }, 1000)
+      }, 1000);
 
       setTimeout(() => {
         const overflowMenuActions = () => {
           const overflowMenus = document.querySelectorAll('.fds-overflow-menu');
 
           overflowMenus.forEach((menu) => {
-            const overflowMenuButton = menu.querySelector(".fds-btn");
-            const overflowMenuInput = menu.querySelector(".fds-select-input");
-            const overflowMenuOptions = menu.querySelectorAll(".fds-overflow-menu__option");
-            const SelectInputLabel = menu.querySelector(".fds-select-input__label");
-            const SelectInputArrow = menu.querySelector(".fds-select-input__arrow");
+            const overflowMenuButton = menu.querySelector('.fds-btn');
+            const overflowMenuInput = menu.querySelector('.fds-select-input');
+            const overflowMenuOptions = menu.querySelectorAll('.fds-overflow-menu__option');
+            const SelectInputLabel = menu.querySelector('.fds-select-input__label');
+            const SelectInputArrow = menu.querySelector('.fds-select-input__arrow');
 
             if (overflowMenuButton) {
               overflowMenuButton.addEventListener('click', (e) => {
