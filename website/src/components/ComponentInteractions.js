@@ -17,6 +17,33 @@ function ComponentInteractions() {
       }, 1000);
 
       setTimeout(() => {
+        const tabActions = () => {
+          const tabGroups = document.querySelectorAll(".demo");
+      
+          tabGroups.forEach(group => {
+            const tabButtons = group.querySelectorAll(".fds-tablist__tab");
+            const tabContents = group.querySelectorAll(".fds-tab-content");
+      
+            tabButtons.forEach(button => {
+              button.addEventListener("click", () => {
+                tabButtons.forEach(tab => tab.classList.remove("fds-tablist__tab--selected"));
+                button.classList.add("fds-tablist__tab--selected");
+      
+                tabContents.forEach(content => content.hidden = true);
+      
+                const tabId = button.id.replace('-tab', '');
+                const activeTab = group.querySelector(`#${tabId}`);
+                if (activeTab) {
+                  activeTab.hidden = false;
+                }
+              });
+            });
+          });
+        };
+        tabActions();
+      }, 1000)
+
+      setTimeout(() => {
         const tooltipActions = () => {
           const tooltips = document.querySelectorAll('.fds-tooltip');
           tooltips.forEach((tooltip) => {
