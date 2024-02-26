@@ -22,6 +22,30 @@ function ComponentInteractions() {
       }, 1000);
 
       setTimeout(() => {
+        const modalActions = () => {
+          const openModalButtons = document.querySelectorAll(".fds-btn[data-open-modal]");
+          const closeModalButtons = document.querySelectorAll(".fds-btn[data-close-modal]");
+
+          openModalButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+              const modalID = button.getAttribute("data-open-modal");
+              const modal = document.getElementById(modalID);
+              modal.classList.add('fds-modal--open');
+            })
+          });
+
+          closeModalButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+              const modalID = button.getAttribute("data-close-modal");
+              const modal = document.getElementById(modalID);
+              modal.classList.remove('fds-modal--open');
+            });
+          });
+        };
+        modalActions();
+      }, 1000)
+
+      setTimeout(() => {
         const overflowMenuActions = () => {
           const overflowMenus = document.querySelectorAll('.fds-overflow-menu');
 
