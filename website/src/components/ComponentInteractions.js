@@ -7,6 +7,16 @@ function ComponentInteractions() {
   useEffect(() => {
     const applyComponentActions = () => {
       setTimeout(() => {
+        const checkboxActions = () => {
+          const indeterminateCheckboxes = document.querySelectorAll('.fds-checkbox__input[name="checkbox-indeterminate"]');
+          indeterminateCheckboxes.forEach((checkbox) => {
+            checkbox.indeterminate = true;
+          })
+        };
+        checkboxActions();
+      }, 1000);
+
+      setTimeout(() => {
         const tooltipActions = () => {
           const tooltips = document.querySelectorAll('.fds-tooltip');
           tooltips.forEach((tooltip) => {
