@@ -54,6 +54,22 @@ a:hover {
   color: unset;
 }
 
+.fds-link--primary:hover {
+  color: #0f62fe;
+}
+
+.fds-link--primary:active {
+  color: #002599;
+}
+
+.fds-link--dark:hover {
+  color: #ffffff;
+}
+
+.fds-link--dark:active {
+  color: #ffffff;
+}
+
 .markdown li + li {
   margin-top: 0;
 }

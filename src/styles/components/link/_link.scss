@@ -1,17 +1,21 @@
 .#{$prefix}-link {
+  @include type-style('body-short-01');
+
+  display: inline-flex;
   padding: 0;
   border: 0;
-  appearance: none;
+  margin: 0;
   color: inherit;
   cursor: pointer;
-  font-size: inherit;
-  font-weight: inherit;
-  line-height: none;
   outline: none;
   text-decoration: none;
 
   &:hover {
     text-decoration: underline;
+  }
+
+  &:active {
+    color: inherit;
   }
 
   &:focus-visible {
@@ -28,6 +32,18 @@
     cursor: not-allowed;
     text-decoration: none;
   }
+}
+
+.#{$prefix}-link--inline {
+  display: inline;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+}
+
+.#{$prefix}-link__icon {
+  margin-left: $spacing-4x-small;
 }
 
 .#{$prefix}-link--primary {
@@ -52,12 +68,4 @@
   &:active {
     color: $link-color-dark-active-text;
   }
-}
-
-.#{$prefix}-link--standalone {
-  @include type-style('body-short-01');
-}
-
-.#{$prefix}-link__icon {
-  display: inline-flex;
 }
