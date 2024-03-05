@@ -2,6 +2,10 @@
 title: Link
 ---
 
+:::warning
+Inline styles in these examples are for demo purposes.
+:::
+
 ## Types
 
 ### Primary
