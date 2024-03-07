@@ -352,3 +352,40 @@ table .token {
   border-radius: 6px;
   text-align: center;
 }
+
+.fds-grid-container {
+  outline: 1px dashed#202E49;
+  background-color: #d4d9df;
+}
+
+.fds-row [class*='col'] {
+  box-shadow: 0 0 0 1px #344461;
+  background-color: #344461;
+}
+
+.fds-row [class*='col'] .inside {
+  height: 80px;
+  background-color: #505f79;
+  color: #ffffff;
+}
+
+.inside p {
+  margin-bottom: 0;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 12px;
+}
+
+.fds-row .fds-row [class*='col'] {
+  box-shadow: 0 0 0 1px #79889f;
+  background-color: #79889f;
+}
+
+.fds-row .fds-row [class*='col'] .inside {
+  background-color: #94a2b4;
+}
+
+td strong,
+td code,
+th code {
+  white-space: nowrap;
+}
