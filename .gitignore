@@ -1,3 +1,17 @@
 
-dist
-node_modules
+# Dependencies
+/node_modules
+/website/node_modules
+
+# Production
+/dist
+/website/build
+
+# Generated files
+/website/.docusaurus
+
+# IDE 
+.vscode/
+.idea/
+
+.DS_Store
