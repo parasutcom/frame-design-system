@@ -26,7 +26,7 @@ jobs:
         run: |
           npm install gulp-cli -g
           npm install --legacy-peer-deps
-          gulp --cwd ./website
+          gulp
 
       - name: Install Dependencies and Build
         run: |
