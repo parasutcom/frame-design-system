@@ -78,18 +78,6 @@ const config = {
             activeBasePath: 'components',
           },
           {
-            to: 'docs/patterns/',
-            label: 'Patterns',
-            position: 'left',
-            activeBasePath: 'patterns',
-          },
-          {
-            to: 'docs/layout/',
-            label: 'Layout',
-            position: 'left',
-            activeBasePath: 'layout',
-          },
-          {
             href: 'https://github.com/parasutcom/frame-design-system',
             label: 'GitHub',
             position: 'right',
