@@ -4,8 +4,8 @@ import { themes as prismThemes } from 'prism-react-renderer';
 const config = {
   title: 'Frame Design System Documentation',
   tagline: 'Guides and docs for Frame Design System',
-  url: 'http://framedesignsystem.com/',
-  baseUrl: '/',
+  url: 'https://parasutcom.github.io/',
+  baseUrl: '/frame-design-system/',
   favicon: 'img/favicon.ico',
   organizationName: 'parasutcom',
   projectName: 'frame-design-system',
@@ -15,6 +15,7 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+  deploymentBranch: 'gh-pages',
 
   themes: ['@docusaurus/theme-live-codeblock'],
 
