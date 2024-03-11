@@ -22,6 +22,12 @@ jobs:
         with:
           node-version: 18
 
+      - name: Install Gulp and Build CSS
+        run: |
+          npm install gulp-cli -g
+          npm install --legacy-peer-deps
+          gulp --cwd ./website
+
       - name: Install Dependencies and Build
         run: |
           cd website
