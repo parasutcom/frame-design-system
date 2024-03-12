@@ -27,7 +27,7 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
           editUrl:
-            'https://github.com/parasutcom/frame-design-system/website/tree/master',
+            'https://github.com/parasutcom/frame-design-system/tree/main/website/',
           routeBasePath: '/',
         },
 
