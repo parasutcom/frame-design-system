@@ -104,6 +104,25 @@ pre {
   margin-right: 2rem;
 }
 
+@media (max-width: 996px) {
+  .menu__link {
+    color: var(--ifm-color-primary-light);
+  }
+
+  .menu__link:hover,
+  .menu__caret:hover {
+    color: var(--ifm-color-primary-lighter);
+  }
+
+  .menu__link--active:not(.menu__link--sublist) {
+    background-color: var(--ifm-color-primary-dark);
+  }
+
+  .clean-btn {
+    color: var(--ifm-color-primary-light);
+  }
+}
+
 .menu__link--sublist-caret::after {
   font-family: 'Font Awesome 6 Pro';
   content: '\f077';
@@ -154,7 +173,7 @@ pre {
   display: none;
 }
 
-[class*='playgroundPreview_node'] {
+[class*='playgroundPreview'] {
   padding: 24px !important;
   background-color: #ffffff !important;
   background-image: radial-gradient(#e5e9ec 1px, transparent 0);
@@ -354,7 +373,9 @@ table .token {
 }
 
 .fds-grid-container {
-  outline: 1px dashed#202E49;
+  outline-width: 1px;
+  outline-style: dashed;
+  outline-color: #202e49;
   background-color: #d4d9df;
 }
 
