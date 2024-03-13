@@ -23,24 +23,35 @@ const buildStylesMinify = () => {
     .pipe(gulp.dest('./dist/css/'));
 };
 
-const browsersync = () => {
+const browsersyncServe = (done) => {
   browserSync.init({
     server: {
       baseDir: './',
     },
     startPath: './html/index.html',
   });
+  done();
 };
 
-const watch = () => {
-  gulp.watch(['src/**/*.scss'], gulp.series(buildStyles, buildStylesMinify));
-  gulp.watch(['dist/css/main.css']).on('change', browserSync.reload);
+const browsersyncReload = (done) => {
+  browserSync.reload();
+  done();
 };
+
+const watchFiles = () => {
+  gulp.watch(
+    ['src/**/*.scss'],
+    gulp.series(buildStyles, buildStylesMinify, browsersyncReload),
+  );
+};
+
+gulp.task('build', gulp.series(buildStyles, buildStylesMinify));
 
 gulp.task(
   'default',
   gulp.series(
     gulp.parallel(buildStyles, buildStylesMinify),
-    gulp.parallel(browsersync, watch),
+    browsersyncServe,
+    watchFiles,
   ),
 );
