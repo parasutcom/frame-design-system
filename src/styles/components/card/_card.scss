@@ -1,0 +1,27 @@
+.#{$prefix}-card {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-medium;
+  background-color: $color-white;
+  border-radius: $radius-medium;
+  padding: $spacing-medium;
+  box-shadow: 0 1px 0 0 $color-gray-20;
+  color: $color-gray-90;
+}
+
+.#{$prefix}-card__heading {
+  @include type-style('heading-05');
+}
+
+.#{$prefix}-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-medium;
+}
+
+.#{$prefix}-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: $spacing-2x-small;
+}
