@@ -410,3 +410,7 @@ td code,
 th code {
   white-space: nowrap;
 }
+
+h5[class*='fds'] {
+  margin: 0;
+}
