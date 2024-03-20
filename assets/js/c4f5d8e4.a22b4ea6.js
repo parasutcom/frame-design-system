@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[4195],{2841:(e,s,t)=>{t.r(s),t.d(s,{default:()=>c});var u=t(7294),n=t(6550);function c(){const e=(0,n.k6)();(0,u.useEffect)((()=>{e.push("/frame-design-system/get-started/introduction")}),[e])}}}]);
