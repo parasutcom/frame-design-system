@@ -147,6 +147,60 @@ function ComponentInteractions() {
       }, 1000);
 
       setTimeout(() => {
+        const navigationActions = () => {
+          const navs = document.querySelectorAll('.fds-side-nav');
+          navs.forEach((nav) => {
+            nav.addEventListener('click', function (e) {
+              const target = e.target.closest('.fds-side-nav__link');
+
+              if (e.target.closest('#collapse-link')) {
+                e.preventDefault();
+                nav.classList.toggle('fds-side-nav--collapsed');
+                return;
+              }
+
+              if (!target) return;
+
+              e.preventDefault();
+
+              if (target.classList.contains('fds-side-nav__link--has-submenu')) {
+                const isOpen = target.classList.contains('fds-side-nav__link--submenu-active');
+                closeAllSubmenus(nav);
+                if (!isOpen) {
+                  target.classList.add('fds-side-nav__link--submenu-active','fds-side-nav__link--selected');
+                }
+              } else {
+                removeAllSelected(nav);
+                target.classList.add('fds-side-nav__link--selected');
+                const parentSubmenuLink = target.closest('.fds-side-nav__submenu')?.previousElementSibling;
+                if (parentSubmenuLink) {
+                  parentSubmenuLink.classList.add(
+                    'fds-side-nav__link--selected',
+                  );
+                }
+              }
+
+              function closeAllSubmenus(nav) {
+                nav.querySelectorAll('.fds-side-nav__link--submenu-active').forEach((submenu) => {
+                  submenu.classList.remove(
+                    'fds-side-nav__link--submenu-active',
+                    'fds-side-nav__link--selected',
+                  );
+                });
+              }
+
+              function removeAllSelected(nav) {
+                nav.querySelectorAll('.fds-side-nav__link--selected').forEach((link) => {
+                  link.classList.remove('fds-side-nav__link--selected');
+                });
+              }
+            });
+          });
+        };
+        navigationActions();
+      }, 1000);
+
+      setTimeout(() => {
         const tabActions = () => {
           const tabGroups = document.querySelectorAll('.demo');
 
