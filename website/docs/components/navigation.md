@@ -16,7 +16,7 @@ title: Navigation
   <div class="fds-side-nav__content">
     <ul class="fds-side-nav__items fds-side-nav__items--top">
       <li class="fds-side-nav__item">
-        <a class="fds-side-nav__link fds-side-nav__link--selected">
+        <a class="fds-side-nav__link">
           <div class="fds-side-nav__link-icon">
             <i class="fa-duotone fa-newspaper"></i>
           </div>
@@ -24,7 +24,7 @@ title: Navigation
         </a>
       </li>
       <li class="fds-side-nav__item">
-        <button class="fds-side-nav__link fds-side-nav__link--has-submenu fds-side-nav__link--submenu-active">
+        <button class="fds-side-nav__link fds-side-nav__link--has-submenu">
           <div class="fds-side-nav__link-icon">
             <i class="fa-duotone fa-shopping-cart"></i>
           </div>
@@ -35,7 +35,7 @@ title: Navigation
         </button>
         <ul class="fds-side-nav__submenu">
           <li class="fds-side-nav__submenu-item">
-            <a class="fds-side-nav__link fds-side-nav__link--selected">
+            <a class="fds-side-nav__link">
               <span class="fds-side-nav__link-text">Child item</span>
             </a>
           </li>
@@ -57,7 +57,7 @@ title: Navigation
         </ul>
       </li>
       <li class="fds-side-nav__item">
-        <button class="fds-side-nav__link fds-side-nav__link--has-submenu fds-side-nav__link--submenu-active">
+        <button class="fds-side-nav__link fds-side-nav__link--has-submenu">
           <div class="fds-side-nav__link-icon">
             <i class="fa-duotone fa-money-bill-wave"></i>
           </div>
@@ -68,7 +68,7 @@ title: Navigation
         </button>
         <ul class="fds-side-nav__submenu">
           <li class="fds-side-nav__submenu-item">
-            <a class="fds-side-nav__link fds-side-nav__link--selected">
+            <a class="fds-side-nav__link">
               <span class="fds-side-nav__link-text">Child item</span>
             </a>
           </li>
@@ -132,7 +132,7 @@ title: Navigation
         </a>
       </li>
       <li class="fds-side-nav__item">
-        <a class="fds-side-nav__link">
+        <a class="fds-side-nav__link" id="collapse-link">
           <div class="fds-side-nav__link-icon">
             <i class="fa-duotone fa-arrow-left-to-line"></i>
           </div>
@@ -156,7 +156,7 @@ title: Navigation
   <div class="fds-side-nav__content">
     <ul class="fds-side-nav__items fds-side-nav__items--top">
       <li class="fds-side-nav__item">
-        <a class="fds-side-nav__link fds-side-nav__link--selected">
+        <a class="fds-side-nav__link">
           <div class="fds-side-nav__link-icon">
             <i class="fa-duotone fa-newspaper"></i>
           </div>
@@ -164,7 +164,7 @@ title: Navigation
         </a>
       </li>
       <li class="fds-side-nav__item">
-        <button class="fds-side-nav__link fds-side-nav__link--has-submenu fds-side-nav__link--submenu-active">
+        <button class="fds-side-nav__link fds-side-nav__link--has-submenu">
           <div class="fds-side-nav__link-icon">
             <i class="fa-duotone fa-shopping-cart"></i>
           </div>
@@ -175,7 +175,7 @@ title: Navigation
         </button>
         <ul class="fds-side-nav__submenu">
           <li class="fds-side-nav__submenu-item">
-            <a class="fds-side-nav__link fds-side-nav__link--selected">
+            <a class="fds-side-nav__link">
               <span class="fds-side-nav__link-text">Child item</span>
             </a>
           </li>
@@ -197,7 +197,7 @@ title: Navigation
         </ul>
       </li>
       <li class="fds-side-nav__item">
-        <button class="fds-side-nav__link fds-side-nav__link--has-submenu fds-side-nav__link--submenu-active">
+        <button class="fds-side-nav__link fds-side-nav__link--has-submenu">
           <div class="fds-side-nav__link-icon">
             <i class="fa-duotone fa-money-bill-wave"></i>
           </div>
@@ -208,7 +208,7 @@ title: Navigation
         </button>
         <ul class="fds-side-nav__submenu">
           <li class="fds-side-nav__submenu-item">
-            <a class="fds-side-nav__link fds-side-nav__link--selected">
+            <a class="fds-side-nav__link">
               <span class="fds-side-nav__link-text">Child item</span>
             </a>
           </li>
@@ -272,7 +272,7 @@ title: Navigation
         </a>
       </li>
       <li class="fds-side-nav__item">
-        <a class="fds-side-nav__link">
+        <a class="fds-side-nav__link" id="collapse-link">
           <div class="fds-side-nav__link-icon">
             <i class="fa-duotone fa-arrow-left-to-line"></i>
           </div>
