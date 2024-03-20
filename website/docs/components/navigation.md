@@ -2,6 +2,10 @@
 title: Navigation
 ---
 
+:::warning
+Custom javascript in these examples are for demo purposes.
+:::
+
 ## Types
 
 ### Light
