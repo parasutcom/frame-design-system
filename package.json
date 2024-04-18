@@ -36,7 +36,6 @@
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
     "@commitlint/prompt-cli": "^17.7.1",
-    "browser-sync": "^3.0.2",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-rename": "^2.0.0",
