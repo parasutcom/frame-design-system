@@ -14,6 +14,20 @@ module.exports = {
         use: 'ts-loader',
         exclude: /node_modules/,
       },
+      {
+        test: /\.css|\.s(c|a)ss$/,
+        use: [
+          {
+            loader: 'lit-scss-loader',
+            options: {
+              minify: true,
+            },
+          },
+          'extract-loader',
+          'css-loader',
+          'sass-loader',
+        ],
+      },
     ],
   },
   resolve: {
