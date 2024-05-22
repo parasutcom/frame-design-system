@@ -1,6 +1,5 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
-const browserSync = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
@@ -23,35 +22,13 @@ const buildStylesMinify = () => {
     .pipe(gulp.dest('./dist/css/'));
 };
 
-const browsersyncServe = (done) => {
-  browserSync.init({
-    server: {
-      baseDir: './',
-    },
-    startPath: './html/index.html',
-  });
-  done();
-};
-
-const browsersyncReload = (done) => {
-  browserSync.reload();
-  done();
-};
-
 const watchFiles = () => {
-  gulp.watch(
-    ['src/**/*.scss'],
-    gulp.series(buildStyles, buildStylesMinify, browsersyncReload),
-  );
+  gulp.watch(['src/**/*.scss'], gulp.series(buildStyles, buildStylesMinify));
 };
 
 gulp.task('build', gulp.series(buildStyles, buildStylesMinify));
 
 gulp.task(
   'default',
-  gulp.series(
-    gulp.parallel(buildStyles, buildStylesMinify),
-    browsersyncServe,
-    watchFiles,
-  ),
+  gulp.series(gulp.parallel(buildStyles, buildStylesMinify), watchFiles),
 );
