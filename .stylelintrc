@@ -1,5 +1,0 @@
-{
-  "ignoreFiles": ["node_modules", "dist"],
-
-  "extends": "./config/stylelint-config/index.js"
-}

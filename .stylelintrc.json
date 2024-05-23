@@ -1,0 +1,9 @@
+{
+  "extends": ["stylelint-config-standard-scss"],
+  "plugins": ["stylelint-scss"],
+  "rules": {
+    "length-zero-no-unit": true,
+    "selector-type-no-unknown": [true, { "ignore": ["custom-elements"] }],
+    "alpha-value-notation": "number"
+  }
+}
