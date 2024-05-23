@@ -1,4 +1,6 @@
-dist
-node_modules
-html
-tests
+.github/
+dist/
+node_modules/
+error-pages/
+mailing/
+website/
