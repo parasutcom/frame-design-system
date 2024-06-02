@@ -4,6 +4,7 @@
   "rules": {
     "length-zero-no-unit": true,
     "selector-type-no-unknown": [true, { "ignore": ["custom-elements"] }],
-    "alpha-value-notation": "number"
+    "alpha-value-notation": "number",
+    "scss/no-global-function-names": null
   }
 }

@@ -4,10 +4,10 @@
       "x-small": { "value": "12px"},
       "small": { "value": "14px"},
       "medium": { "value": "16px"},
-      "x-large": { "value": "20px"},
-      "2x-large": { "value": "24px"},
-      "3x-large": { "value": "28px"},
-      "4x-large": { "value": "32px"}
+      "large": { "value": "20px"},
+      "x-large": { "value": "24px"},
+      "2x-large": { "value": "28px"},
+      "3x-large": { "value": "32px"}
     }
   }
 }

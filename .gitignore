@@ -14,4 +14,7 @@
 .vscode/
 .idea/
 
+# Config files
+.npmrc
+
 .DS_Store
