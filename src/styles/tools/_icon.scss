@@ -1,20 +1,18 @@
-@import '../settings/icon-vars';
 @import '../settings/icon';
 
-@function fa-content($fa-var) {
-  @return unquote('"#{ $fa-var }"');
-}
-
 @mixin set-icon-size($size) {
-  @if map-has-key($fds-icon-sizes, $size) {
+  @if map.has-key($fds-icon-sizes, $size) {
     $unit: 4px !default;
-    $width: map-get($fds-icon-sizes, $size);
-    $height: map-get($fds-icon-sizes, $size);
-    $font-size: map-get($fds-icon-sizes, $size);
+    $width: map.get($fds-icon-sizes, $size);
+    $height: map.get($fds-icon-sizes, $size);
 
-    width: calc(#{$unit} + #{$height});
-    height: calc(#{$unit} + #{$width});
-    font-size: $font-size;
+    width: $width + $unit;
+    height: $height + $unit;
+
+    svg {
+      width: $width;
+      height: $height;
+    }
   } @else {
     @error 'Unable to find a token with the name: `#{$name}`';
   }
