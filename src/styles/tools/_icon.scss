@@ -1,10 +1,10 @@
 @import '../settings/icon';
 
 @mixin set-icon-size($size) {
-  @if map.has-key($fds-icon-sizes, $size) {
+  @if map-has-key($fds-icon-sizes, $size) {
     $unit: 4px !default;
-    $width: map.get($fds-icon-sizes, $size);
-    $height: map.get($fds-icon-sizes, $size);
+    $width: map-get($fds-icon-sizes, $size);
+    $height: map-get($fds-icon-sizes, $size);
 
     width: $width + $unit;
     height: $height + $unit;
