@@ -1,0 +1,38 @@
+@import '../../styles/settings/prefix';
+@import '../../styles/tools/icon';
+
+:host {
+  @include icon-size('md');
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:host([size='x-small']) {
+  @include icon-size('xs');
+}
+
+:host([size='small']) {
+  @include icon-size('sm');
+}
+
+:host([size='large']) {
+  @include icon-size('lg');
+}
+
+:host([size='x-large']) {
+  @include icon-size('xl');
+}
+
+:host([size='2x-large']) {
+  @include icon-size('2xl');
+}
+
+:host([size='3x-large']) {
+  @include icon-size('3xl');
+}
+
+:host .fa-secondary {
+  opacity: 0.4;
+}
