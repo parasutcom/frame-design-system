@@ -38,6 +38,12 @@ export class FdsButton extends LitElement {
   autofocus = false;
 
   @property({ type: String, reflect: true })
+  icon?: string;
+
+  @property({ type: String, reflect: true, attribute: 'icon-placement' })
+  iconPlacement?: 'left' | 'right' = 'left';
+
+  @property({ type: String, reflect: true })
   label?: string;
 
   @property({ type: String, reflect: true })
@@ -49,10 +55,22 @@ export class FdsButton extends LitElement {
   @property({ type: String })
   target?: LinkTarget = '_self';
 
-  protected get buttonContent(): TemplateResult {
-    const label = html`<span class="fds-btn__label"><slot></slot></span>`;
-    const content = html`${label}`;
-    return content;
+  private get hasLabel(): boolean {
+    return !!this.textContent?.trim();
+  }
+
+  private renderIcon() {
+    return this.icon ? html`<fds-icon prefix="far" name=${this.icon}></fds-icon>` : '';
+  }
+
+  private renderLabel() {
+    return this.hasLabel ? html`<span class="fds-btn__label"><slot></slot></span>` : '';
+  }
+
+  private get buttonContent(): TemplateResult {
+    return this.iconPlacement === 'right'
+      ? html`${this.renderLabel()} ${this.renderIcon()}`
+      : html`${this.renderIcon()} ${this.renderLabel()}`;
   }
 
   render(): TemplateResult {
@@ -62,6 +80,7 @@ export class FdsButton extends LitElement {
       [`fds-btn--${this.size}`]: this.size,
       [`fds-btn--full-width`]: this.fullWidth,
       [`fds-btn--disabled`]: this.disabled,
+      [`fds-btn--icon`]: !this.hasLabel && !!this.icon,
     });
 
     return this.href
