@@ -16,7 +16,7 @@
     "noUnusedLocals": true,
     "skipLibCheck": true,
     "outDir": "dist",
-    "rootDir": "./src",
+    "rootDir": ".",
     "plugins": [
       {
         "name": "ts-lit-plugin",

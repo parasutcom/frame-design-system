@@ -1,13 +1,6 @@
 module.exports = {
   plugins: ['prettier', '@typescript-eslint', 'wc', 'lit', 'import'],
-  extends: [
-    'eslint:recommended',
-    'plugin:wc/recommended',
-    'plugin:wc/best-practice',
-    'plugin:lit/recommended',
-    'plugin:@typescript-eslint/recommended',
-    'prettier',
-  ],
+  extends: ['eslint:recommended', 'plugin:wc/recommended', 'plugin:wc/best-practice', 'plugin:lit/recommended', 'plugin:@typescript-eslint/recommended', 'prettier', 'plugin:storybook/recommended'],
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: 'module',
