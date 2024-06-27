@@ -16,9 +16,6 @@ const config: StorybookConfig = {
   docs: {
     autodocs: true,
   },
-  staticDirs: [
-    '../dist',
-  ],
   webpackFinal: async (config) => {
     if (!config.module) {
       config.module = { rules: [] };
