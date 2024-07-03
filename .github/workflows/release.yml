@@ -19,7 +19,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20.8.1 
       - name: Authenticate with npm for FontAwesome
         run: echo "//npm.fontawesome.com/:_authToken=${{ secrets.FONTAWESOME_NPM_AUTH_TOKEN }}" >> ~/.npmrc
       - name: Prepare npmrc for npm registry
