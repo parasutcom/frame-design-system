@@ -2,12 +2,12 @@
   "name": "frame-design-system",
   "version": "0.1.0",
   "description": "Open source design system for financial products and digital experiences.",
-  "homepage": "https://github.com/parasutcom/frame-design-system#readme",
-  "author": "",
-  "license": "ISC",
+  "homepage": "https://framedesignsystem.com",
+  "author": "Parasut",
+  "license": "MIT",
   "keywords": [
-    "frame",
     "frame design system",
+    "web component",
     "design system"
   ],
   "bugs": {
@@ -17,7 +17,11 @@
     "type": "git",
     "url": "git+https://github.com/parasutcom/frame-design-system.git"
   },
-  "main": "index.js",
+  "main": "dist/bundle.js",
+  "module": "dist/bundle.js",
+  "engines": {
+    "node": ">=18.20"
+  },
   "scripts": {
     "build": "webpack",
     "tokens:build": "cd src/design-tokens && style-dictionary build --config ./config.json",
