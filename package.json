@@ -47,6 +47,8 @@
     "@fortawesome/pro-duotone-svg-icons": "^6.5.2",
     "@fortawesome/pro-regular-svg-icons": "^6.5.2",
     "@fortawesome/pro-solid-svg-icons": "^6.5.2",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
     "@storybook/addon-a11y": "^8.1.10",
     "@storybook/addon-essentials": "^8.1.10",
     "@storybook/addon-links": "^8.1.10",
