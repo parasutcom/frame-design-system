@@ -1,3 +1,10 @@
+## [0.2.1](https://github.com/parasutcom/frame-design-system/compare/v0.2.0...v0.2.1) (2024-07-03)
+
+
+### Bug Fixes
+
+* **button:** adjust small and large button class name ([ca3b2f4](https://github.com/parasutcom/frame-design-system/commit/ca3b2f4464b63b2daf90936baf7729f26539a175))
+
 # [0.2.0](https://github.com/parasutcom/frame-design-system/compare/v0.1.0...v0.2.0) (2024-07-03)
 
 
