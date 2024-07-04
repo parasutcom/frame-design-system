@@ -23,8 +23,8 @@ export class FdsBadge extends LitElement {
   @property({ type: String, reflect: true })
   size: BadgeSize = 'medium';
 
-  @property({ type: Boolean, reflect: true })
-  circle = false;
+  @property({ type: String, reflect: true })
+  shape: 'rounded' | 'circle' = 'rounded';
 
   private renderLetter() {
     return this.letter ? html`<div class="fds-badge__letter">${this.letter}</div>` : '';
@@ -57,7 +57,7 @@ export class FdsBadge extends LitElement {
   }
 
   render(): TemplateResult {
-    return html`<div class="fds-badge" size="${this.size}" ?circle="${this.circle}">
+    return html`<div class="fds-badge" size="${this.size}" shape="${this.shape}">
       ${this.renderContent()}
     </div>`;
   }
