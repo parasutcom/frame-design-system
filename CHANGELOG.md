@@ -1,3 +1,11 @@
+# [0.3.0](https://github.com/parasutcom/frame-design-system/compare/v0.2.1...v0.3.0) (2024-07-04)
+
+
+### Features
+
+* add shape property instead of circle boolean ([d1900cd](https://github.com/parasutcom/frame-design-system/commit/d1900cd862d6c2db71db1a629fffe987dd4b9a0a))
+* **badge:** add fds-badge component ([539e5c2](https://github.com/parasutcom/frame-design-system/commit/539e5c2a3519ea37625e75df9647ff5897ae5ae3))
+
 ## [0.2.1](https://github.com/parasutcom/frame-design-system/compare/v0.2.0...v0.2.1) (2024-07-03)
 
 
