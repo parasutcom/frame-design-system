@@ -1,3 +1,10 @@
+# [0.4.0](https://github.com/parasutcom/frame-design-system/compare/v0.3.0...v0.4.0) (2024-07-04)
+
+
+### Features
+
+* release bum version to 0.4.0 ([c1ccf6c](https://github.com/parasutcom/frame-design-system/commit/c1ccf6ccbe71ffe65564d15ebe5065c8e4faa570))
+
 # [0.3.0](https://github.com/parasutcom/frame-design-system/compare/v0.2.1...v0.3.0) (2024-07-04)
 
 
