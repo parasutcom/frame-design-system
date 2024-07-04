@@ -12,7 +12,7 @@ export default {
     docs: {
       description: {
         component:
-          'A badge is a component that represents the type of record registered in the system. Badges are a non-interactive way to visually identify and distinguish a specific type of record within a system.',
+          'Badges are a non-interactive way to visually identify and distinguish a specific record type within a system.',
       },
     },
   },
