@@ -39,15 +39,17 @@ export default {
         type: 'inline-radio',
       },
     },
-    circle: {
+    shape: {
+      options: ['rounded', 'circle'],
       control: {
-        type: 'boolean',
+        type: 'inline-radio',
       },
     },
   },
   args: {
     size: 'medium',
     letter: 'DS',
+    shape: 'rounded',
   },
 };
 
@@ -58,7 +60,7 @@ export const Default = (args: any) => html`
     image=${ifDefined(args.image)}
     icon=${ifDefined(args.icon)}
     size=${ifDefined(args.size)}
-    ?circle=${args.circle}
+    shape=${ifDefined(args.shape)}
   >
   </fds-badge>
 `;
@@ -66,24 +68,35 @@ export const Default = (args: any) => html`
 export const Letter = {
   render: () => html`
     <div style="display: flex; align-items: center; gap: 1rem">
+      <fds-badge letter="F"></fds-badge>
       <fds-badge letter="DS"></fds-badge>
-      <fds-badge letter="DS" circle></fds-badge>
     </div>
   `,
 };
 
 export const Image = {
   render: () => html`
-    <div style="display: flex; align-items: center; gap: 1rem">
-      <fds-badge
-        image="https://images.unsplash.com/photo-1574158622682-e40e69881006?q=80&amp;w=2333&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        circle
-      ></fds-badge>
-      <fds-badge
-        image="https://images.unsplash.com/photo-1574158622682-e40e69881006?q=80&amp;w=2333&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        circle
-        size="large"
-      ></fds-badge>
+    <div style="display: flex; flex-direction: column; gap: 1rem">
+      <div style="display: flex; align-items: center; gap: 1rem">
+        <fds-badge
+          image="https://images.unsplash.com/photo-1574158622682-e40e69881006?q=80&amp;w=2333&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        ></fds-badge>
+        <fds-badge
+          image="https://images.unsplash.com/photo-1574158622682-e40e69881006?q=80&amp;w=2333&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          size="large"
+        ></fds-badge>
+      </div>
+      <div style="display: flex; align-items: center; gap: 1rem">
+        <fds-badge
+          image="https://images.unsplash.com/photo-1574158622682-e40e69881006?q=80&amp;w=2333&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          shape="circle"
+        ></fds-badge>
+        <fds-badge
+          image="https://images.unsplash.com/photo-1574158622682-e40e69881006?q=80&amp;w=2333&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          shape="circle"
+          size="large"
+        ></fds-badge>
+      </div>
     </div>
   `,
 };
@@ -97,20 +110,46 @@ export const Icon = {
   `,
 };
 
-export const Circle = {
+export const Shape = {
   render: () => html`
     <div style="display: flex; align-items: center; gap: 1rem">
-      <fds-badge letter="DS" circle></fds-badge>
-      <fds-badge letter="DS" circle size="large"></fds-badge>
+      <fds-badge letter="DS"></fds-badge>
+      <fds-badge letter="DS" shape="circle"></fds-badge>
     </div>
   `,
 };
 
 export const Size = {
   render: () => html`
-    <div style="display: flex; align-items: center; gap: 1rem">
-      <fds-badge letter="MD"></fds-badge>
-      <fds-badge letter="LG" size="large"></fds-badge>
+    <div style="display: flex; flex-direction: column; gap: 1rem">
+      <div style="display: flex; align-items: center; gap: 1rem">
+        <fds-badge letter="DS"></fds-badge>
+        <fds-badge letter="DS" size="large"></fds-badge>
+        <fds-badge letter="DS" shape="circle"></fds-badge>
+        <fds-badge letter="DS" shape="circle" size="large"></fds-badge>
+      </div>
+      <div style="display: flex; align-items: center; gap: 1rem">
+        <fds-badge
+          image="https://images.unsplash.com/photo-1574158622682-e40e69881006?q=80&amp;w=2333&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        ></fds-badge>
+        <fds-badge
+          image="https://images.unsplash.com/photo-1574158622682-e40e69881006?q=80&amp;w=2333&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          size="large"
+        ></fds-badge>
+        <fds-badge
+          image="https://images.unsplash.com/photo-1574158622682-e40e69881006?q=80&amp;w=2333&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          shape="circle"
+        ></fds-badge>
+        <fds-badge
+          image="https://images.unsplash.com/photo-1574158622682-e40e69881006?q=80&amp;w=2333&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          shape="circle"
+          size="large"
+        ></fds-badge>
+      </div>
+      <div style="display: flex; align-items: center; gap: 1rem">
+        <fds-badge icon="bank"></fds-badge>
+        <fds-badge icon="bank" size="large"></fds-badge>
+      </div>
     </div>
   `,
 };
