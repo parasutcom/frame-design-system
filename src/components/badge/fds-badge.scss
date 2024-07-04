@@ -48,7 +48,7 @@
   }
 }
 
-:host([circle]) .#{$prefix}-badge {
+:host([shape="circle"]) .#{$prefix}-badge {
   border-radius: $radius-pill;
 
   .#{$prefix}-badge__image {
@@ -56,7 +56,7 @@
   }
 }
 
-:host([size="large"][circle]) .#{$prefix}-badge {
+:host([size="large"][shape="circle"]) .#{$prefix}-badge {
   .#{$prefix}-badge__image {
     max-width: $spacing-3x-large;
   }
