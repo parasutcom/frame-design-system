@@ -1,0 +1,63 @@
+@import '../../styles/settings/prefix';
+@import '../../design-tokens/build/scss/tokens';
+@import '../../styles/tools/typography';
+
+:host {
+  display: inline-block;
+}
+
+.#{$prefix}-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: $badge-size-width;
+  height: $badge-size-height;
+  flex-shrink: 0;
+  background-color: $badge-color-background;
+  border-radius: $badge-border-radius;
+  color: $badge-color-text;
+}
+
+.#{$prefix}-badge__letter {
+  @include type-style('label-02');
+
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.#{$prefix}-badge__image {
+  width: 100%;
+  max-width: $spacing-x-large;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  border-radius: calc($badge-border-radius / 2);
+  object-fit: cover;
+}
+
+:host([size="large"]) .#{$prefix}-badge {
+  width: $badge-size-large-width;
+  height: $badge-size-large-height;
+
+  .#{$prefix}-badge__image {
+    max-width: $spacing-2x-large;
+  }
+}
+
+:host([shape="circle"]) .#{$prefix}-badge {
+  border-radius: $radius-pill;
+
+  .#{$prefix}-badge__image {
+    max-width: $spacing-2x-large;
+  }
+}
+
+:host([size="large"][shape="circle"]) .#{$prefix}-badge {
+  .#{$prefix}-badge__image {
+    max-width: $spacing-3x-large;
+  }
+}
