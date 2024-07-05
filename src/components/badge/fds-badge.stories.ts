@@ -79,10 +79,10 @@ export const Image = {
     <div style="display: flex; flex-direction: column; gap: 1rem">
       <div style="display: flex; align-items: center; gap: 1rem">
         <fds-badge
-          image="https://images.unsplash.com/photo-1574158622682-e40e69881006?q=80&amp;w=2333&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          image="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&amp;w=3064&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         ></fds-badge>
         <fds-badge
-          image="https://images.unsplash.com/photo-1574158622682-e40e69881006?q=80&amp;w=2333&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          image="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&amp;w=3064&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           size="large"
         ></fds-badge>
       </div>
@@ -130,10 +130,10 @@ export const Size = {
       </div>
       <div style="display: flex; align-items: center; gap: 1rem">
         <fds-badge
-          image="https://images.unsplash.com/photo-1574158622682-e40e69881006?q=80&amp;w=2333&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          image="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&amp;w=3064&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         ></fds-badge>
         <fds-badge
-          image="https://images.unsplash.com/photo-1574158622682-e40e69881006?q=80&amp;w=2333&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          image="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&amp;w=3064&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           size="large"
         ></fds-badge>
         <fds-badge
