@@ -1,3 +1,10 @@
+## [0.4.1](https://github.com/parasutcom/frame-design-system/compare/v0.4.0...v0.4.1) (2024-07-05)
+
+
+### Bug Fixes
+
+* **release:** add build step to release workflow ([38b5ed5](https://github.com/parasutcom/frame-design-system/commit/38b5ed53089d583a5634216e17ca080615baf74f))
+
 # [0.4.0](https://github.com/parasutcom/frame-design-system/compare/v0.3.0...v0.4.0) (2024-07-04)
 
 
