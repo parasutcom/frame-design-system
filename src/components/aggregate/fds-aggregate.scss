@@ -1,0 +1,18 @@
+@import '../../styles/settings/prefix';
+@import '../../styles/tools/typography';
+
+.#{$prefix}-aggregate {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: $color-gray-90;
+  gap: $spacing-3x-small;
+}
+
+::slotted([slot="tally"]) {
+  @include type-style('amount-01');
+}
+
+::slotted([slot="meta"]) {
+  @include type-style('label-01');
+}
