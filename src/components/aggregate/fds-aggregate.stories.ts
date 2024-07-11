@@ -9,7 +9,7 @@ export default {
     docs: {
       description: {
         component:
-          'Aggregate is the representation of the arithmetic or value sum of all aggregatable values present in a data table or index list.',
+          'Aggregate represents the arithmetic or sum of all values in a data table or index list.',
       },
     },
   },
@@ -32,7 +32,7 @@ export default {
     },
   },
   args: {
-    meta: 'To be collected',
+    meta: 'Outstanding amuount',
     tally: '1.000,00₺',
   },
 };
