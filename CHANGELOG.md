@@ -1,3 +1,10 @@
+# [0.5.0](https://github.com/parasutcom/frame-design-system/compare/v0.4.1...v0.5.0) (2024-07-11)
+
+
+### Features
+
+* **aggregate:** add fds-aggregate component ([c48a463](https://github.com/parasutcom/frame-design-system/commit/c48a46348f8cfac65dd72df7963eb3cc60a3e2fe))
+
 ## [0.4.1](https://github.com/parasutcom/frame-design-system/compare/v0.4.0...v0.4.1) (2024-07-05)
 
 
