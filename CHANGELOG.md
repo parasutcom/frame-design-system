@@ -1,3 +1,10 @@
+# [0.6.0](https://github.com/parasutcom/frame-design-system/compare/v0.5.0...v0.6.0) (2024-07-11)
+
+
+### Features
+
+* **progress-bar:** add fds-progress-bar component ([a99dcc6](https://github.com/parasutcom/frame-design-system/commit/a99dcc6ec305b017bc65a9cf2df569445e2d723e))
+
 # [0.5.0](https://github.com/parasutcom/frame-design-system/compare/v0.4.1...v0.5.0) (2024-07-11)
 
 
