@@ -28,7 +28,7 @@
   gap: $spinner-size-small-gap;
 }
 
-:host([placement="vertical"]) .#{$prefix}-spinner {
+:host([label-placement="vertical"]) .#{$prefix}-spinner {
   flex-direction: column;
 }
 

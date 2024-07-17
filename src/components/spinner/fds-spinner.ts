@@ -6,7 +6,7 @@ import style from './fds-spinner.scss';
 
 export type SpinnerVariant = 'primary' | 'secondary';
 export type SpinnerSize = 'small' | 'medium';
-export type SpinnerPlacement = 'horizontal' | 'vertical';
+export type LabelPlacement = 'horizontal' | 'vertical';
 
 @customElement('fds-spinner')
 export class FdsSpinner extends LitElement {
@@ -23,8 +23,8 @@ export class FdsSpinner extends LitElement {
   @property({ type: String, reflect: true })
   label?: string = '';
 
-  @property({ type: String, reflect: true })
-  placement: SpinnerPlacement = 'horizontal';
+  @property({ type: String, reflect: true, attribute: 'label-placement' })
+  LabelPlacement: LabelPlacement = 'horizontal';
 
   render(): TemplateResult {
     const iconSize = this.size === 'medium' ? '3x-large' : 'medium';
