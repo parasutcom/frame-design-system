@@ -10,7 +10,8 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Description will come',
+        component:
+          'A spinner is an animated circle icon used to indicate an indeterminate loading process.',
       },
     },
   },
@@ -32,7 +33,7 @@ export default {
         type: 'text',
       },
     },
-    placement: {
+    LabelPlacement: {
       options: ['horizontal', 'vertical'],
       control: {
         type: 'inline-radio',
@@ -42,53 +43,61 @@ export default {
   args: {
     variant: 'primary',
     size: 'medium',
-    label: 'Loading label',
-    placement: 'horizontal',
   },
 };
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
-export const Default = (args: any) => html`
+export const Base = (args: any) => html`
   <fds-spinner
     variant=${ifDefined(args.variant)}
     size=${ifDefined(args.size)}
     label=${ifDefined(args.label)}
-    placement=${ifDefined(args.placement)}
+    label-placement=${ifDefined(args.LabelPlacement)}
   ></fds-spinner>
 `;
 
 export const Variants = {
   render: () => html`
     <div style="display: flex; align-items: center; gap: 1rem">
-      <fds-spinner variant="primary" label="Loading label"></fds-spinner>
-      <fds-spinner variant="secondary" label="Loading label"></fds-spinner>
+      <fds-spinner variant="primary"></fds-spinner>
+      <fds-spinner variant="secondary"></fds-spinner>
     </div>
   `,
 };
 
 export const Size = {
   render: () => html`
-    <div style="display: flex; align-items: center; gap: 1rem">
-      <fds-spinner variant="primary" label="Loading label" size="medium"></fds-spinner>
-      <fds-spinner variant="primary" label="Loading label" size="small"></fds-spinner>
+    <div style="display: flex; flex-direction: column; gap: 1rem">
+      <div style="display: flex; align-items: center; gap: 1rem">
+        <fds-spinner variant="primary" size="medium"></fds-spinner>
+        <fds-spinner variant="primary" size="small"></fds-spinner>
+      </div>
+      <div style="display: flex; align-items: center; gap: 1rem">
+        <fds-spinner variant="secondary" size="medium"></fds-spinner>
+        <fds-spinner variant="secondary" size="small"></fds-spinner>
+      </div>
     </div>
   `,
 };
 
-export const Placement = {
+export const WithLabel = {
   render: () => html`
     <div style="display: flex; align-items: center; gap: 1rem">
-      <fds-spinner variant="primary" label="Loading" placement="horizontal"></fds-spinner>
-      <fds-spinner variant="primary" label="Loading" placement="vertical"></fds-spinner>
+      <fds-spinner variant="primary" label="Spinner label"></fds-spinner>
+      <fds-spinner variant="secondary" label="Spinner label"></fds-spinner>
     </div>
   `,
 };
 
-export const Plain = {
+export const LabelPlacement = {
   render: () => html`
     <div style="display: flex; align-items: center; gap: 1rem">
-      <fds-spinner variant="primary"></fds-spinner>
-      <fds-spinner variant="secondary"></fds-spinner>
+      <fds-spinner
+        variant="primary"
+        label="Spinner label"
+        label-placement="horizontal"
+      ></fds-spinner>
+      <fds-spinner variant="primary" label="Spinner label" label-placement="vertical"></fds-spinner>
     </div>
   `,
 };
