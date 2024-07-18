@@ -1,0 +1,42 @@
+@import '../../styles/settings/prefix';
+@import '../../design-tokens/build/scss/tokens';
+@import '../../styles/tools/typography';
+@import '../../styles/tools/animation';
+
+:host {
+  display: inline-flex;
+
+  #{$prefix}-icon {
+    @include animation-spin;
+  }
+}
+
+.#{$prefix}-spinner {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: $spinner-color-text;
+  gap: $spinner-size-gap;
+}
+
+.#{$prefix}-spinner__label {
+  @include type-style('label-01');
+}
+
+:host([size="small"]) .#{$prefix}-spinner {
+  gap: $spinner-size-small-gap;
+}
+
+:host([label-placement="vertical"]) .#{$prefix}-spinner {
+  flex-direction: column;
+}
+
+:host([variant="primary"]) #{$prefix}-icon {
+  color: $spinner-color-primary-text;
+}
+
+:host([variant="secondary"]) #{$prefix}-icon,
+:host([variant="secondary"]) .#{$prefix}-spinner__label {
+  color: $spinner-color-secondary-text;
+}
