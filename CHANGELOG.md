@@ -1,3 +1,11 @@
+# [0.7.0](https://github.com/parasutcom/frame-design-system/compare/v0.6.0...v0.7.0) (2024-07-22)
+
+
+### Features
+
+* **button:** add spinner to button in its busy state ([#164](https://github.com/parasutcom/frame-design-system/issues/164)) ([94a1ec7](https://github.com/parasutcom/frame-design-system/commit/94a1ec79801d4c5d206b29e765e5235289940fc3))
+* **spinner:** add fds-spinner component ([#163](https://github.com/parasutcom/frame-design-system/issues/163)) ([3409066](https://github.com/parasutcom/frame-design-system/commit/3409066e9ea5de14edc3b277a73d6ad860ac522a))
+
 # [0.6.0](https://github.com/parasutcom/frame-design-system/compare/v0.5.0...v0.6.0) (2024-07-11)
 
 
