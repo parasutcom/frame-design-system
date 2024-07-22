@@ -33,6 +33,11 @@ export default {
         type: 'boolean',
       },
     },
+    busy: {
+      control: {
+        type: 'boolean',
+      },
+    },
     fullWidth: {
       control: {
         type: 'boolean',
@@ -86,6 +91,7 @@ export const Default = (args: any) => html`
     variant=${ifDefined(args.variant)}
     size=${ifDefined(args.size)}
     ?disabled=${args.disabled}
+    ?busy=${args.busy}
     ?full-width=${args.fullWidth}
     icon=${ifDefined(args.icon)}
     icon-placement=${ifDefined(args.iconPlacement)}
@@ -134,6 +140,15 @@ export const Disabled = {
     <div style="display: flex; gap: 1rem">
       <fds-button variant="primary" disabled>Disabled button</fds-button>
       <fds-button variant="outline" disabled>Disabled button</fds-button>
+    </div>
+  `,
+};
+
+export const Busy = {
+  render: () => html`
+    <div style="display: flex; gap: 1rem">
+      <fds-button variant="primary" busy>Busy button</fds-button>
+      <fds-button variant="outline" busy>Busy button</fds-button>
     </div>
   `,
 };
