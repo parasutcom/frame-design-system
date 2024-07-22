@@ -42,14 +42,18 @@
   flex-grow: 1;
 }
 
-.#{$prefix}-btn--busy .#{$prefix}-btn__label,
-.#{$prefix}-btn--busy > .#{$prefix}-icon {
-  opacity: 0;
+:host([busy]) .#{$prefix}-btn {
+  cursor: wait;
 }
 
-.#{$prefix}-btn--busy .#{$prefix}-spinner {
+.#{$prefix}-btn--busy #{$prefix}-icon,
+.#{$prefix}-btn--busy .#{$prefix}-btn__label {
+  visibility: hidden;
+}
+
+.#{$prefix}-btn--busy #{$prefix}-spinner {
   position: absolute;
-  inset: 0;
+  inset-block: 0
 }
 
 .#{$prefix}-btn--primary {

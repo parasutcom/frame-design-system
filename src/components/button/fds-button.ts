@@ -3,6 +3,8 @@ import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
 
+import '../spinner/fds-spinner';
+
 import style from './fds-button.scss';
 
 export type ButtonType = 'button' | 'submit' | 'reset';
@@ -33,6 +35,9 @@ export class FdsButton extends LitElement {
 
   @property({ type: Boolean, reflect: true })
   disabled = false;
+
+  @property({ type: Boolean, reflect: true })
+  busy = false;
 
   @property({ type: Boolean, reflect: true })
   autofocus = false;
@@ -67,10 +72,14 @@ export class FdsButton extends LitElement {
     return this.hasLabel ? html`<span class="fds-btn__label"><slot></slot></span>` : '';
   }
 
+  private renderBusy() {
+    return this.busy ? html`<fds-spinner variant="secondary" size="small"></fds-spinner>` : '';
+  }
+
   private get buttonContent(): TemplateResult {
     return this.iconPlacement === 'right'
-      ? html`${this.renderLabel()} ${this.renderIcon()}`
-      : html`${this.renderIcon()} ${this.renderLabel()}`;
+      ? html`${this.renderBusy()} ${this.renderLabel()} ${this.renderIcon()}`
+      : html`${this.renderBusy()} ${this.renderIcon()} ${this.renderLabel()}`;
   }
 
   render(): TemplateResult {
@@ -80,6 +89,7 @@ export class FdsButton extends LitElement {
       [`fds-btn--${this.size}`]: this.size,
       [`fds-btn--full-width`]: this.fullWidth,
       [`fds-btn--disabled`]: this.disabled,
+      [`fds-btn--busy`]: this.busy,
       [`fds-btn--icon`]: !this.hasLabel && !!this.icon,
     });
 
@@ -100,8 +110,8 @@ export class FdsButton extends LitElement {
             class="${classes}"
             type="${ifDefined(this.type)}"
             ?autofocus=${this.autofocus}
-            ?disabled="${this.disabled}"
-            aria-disabled="${ifDefined(this.disabled)}"
+            ?disabled="${this.disabled || this.busy}"
+            aria-disabled="${ifDefined(this.disabled || this.busy)}"
             aria-label="${ifDefined(this.label)}"
           >
             ${this.buttonContent}
