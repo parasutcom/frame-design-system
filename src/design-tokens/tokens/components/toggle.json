@@ -27,11 +27,40 @@
       }
     },
     "size": {
-      "height": {
-        "value": "{spacing.large}"
+      "track": {
+        "width": {
+          "value": "{spacing.3x-large}"
+        },
+        "height": {
+          "value": "{spacing.large}"
+        },
+        "large": {
+          "width": {
+            "value": "56px"
+          },
+          "height": {
+            "value": "{spacing.x-large}"
+          }
+        }
       },
-      "width": {
-        "value": "{spacing.3x-large}"
+      "thumb": {
+        "width": {
+          "value": "18px"
+        },
+        "height": {
+          "value": "18px"
+        },
+        "offset": {
+          "value": "3px"
+        },
+        "large": {
+          "width": {
+            "value": "26px"
+          },
+          "height": {
+            "value": "26px"
+          }
+        }
       },
       "gap": {
         "value": "{spacing.medium}"
