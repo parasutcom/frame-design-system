@@ -1,0 +1,84 @@
+@import '../../styles/settings/prefix';
+@import '../../design-tokens/build/scss/tokens';
+@import '../../styles/tools/typography';
+@import '../../styles/tools/visually-hidden';
+
+:host {
+  display: inline-block;
+}
+
+.#{$prefix}-toggle-switch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  gap: $toggle-size-gap;
+}
+
+.#{$prefix}-toggle-switch__input {
+  @include visually-hidden;
+}
+
+.#{$prefix}-toggle-switch__label {
+  @include type-style('label-02');
+
+  color: $toggle-color-text;
+}
+
+.#{$prefix}-toggle-switch__control {
+  position: relative;
+  width: $toggle-size-track-width;
+  height: $toggle-size-track-height;
+  flex-shrink: 0;
+  background-color: $toggle-color-background;
+  border-radius: $toggle-border-radius;
+  transition: all 200ms ease;
+}
+
+.#{$prefix}-toggle-switch__control::before {
+  content: '';
+  position: absolute;
+  top: $toggle-size-thumb-offset;
+  left: $toggle-size-thumb-offset;
+  width: $toggle-size-thumb-width;
+  height: $toggle-size-thumb-height;
+  background-color: $color-white;
+  border-radius: $radius-pill;
+  transition: all 200ms ease;
+}
+
+:host([size="large"]) .#{$prefix}-toggle-switch__control {
+  width: $toggle-size-track-large-width;
+  height: $toggle-size-track-large-height;
+}
+
+:host([size="large"]) .#{$prefix}-toggle-switch__control::before {
+  width: $toggle-size-thumb-large-width;
+  height: $toggle-size-thumb-large-height;
+}
+
+:host([checked]) .#{$prefix}-toggle-switch__control {
+  background-color: $toggle-color-active-background;
+}
+
+:host([checked]) .#{$prefix}-toggle-switch__control::before {
+  transform: translateX($spacing-large);
+}
+
+:host([disabled]) .#{$prefix}-toggle-switch {
+  cursor: not-allowed;
+}
+
+:host([disabled]) .#{$prefix}-toggle-switch__control {
+  background-color: $toggle-color-disabled-background;
+}
+
+:host([disabled]) .#{$prefix}-toggle-switch__control::before {
+  background-color: $toggle-color-disabled-text;
+}
+
+.#{$prefix}-toggle-switch__input:focus-visible + .#{$prefix}-toggle-switch__control {
+  outline: 2px solid $toggle-color-focus-border;
+  outline-offset: 1px;
+  transition: none;
+}
