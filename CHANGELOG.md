@@ -1,3 +1,10 @@
+# [0.8.0](https://github.com/parasutcom/frame-design-system/compare/v0.7.0...v0.8.0) (2024-07-25)
+
+
+### Features
+
+* **toggle-switch:** add toggle-switch-component ([#165](https://github.com/parasutcom/frame-design-system/issues/165)) ([c577e2d](https://github.com/parasutcom/frame-design-system/commit/c577e2d127fb3e8ffbec6155e45a23ec0c306b48))
+
 # [0.7.0](https://github.com/parasutcom/frame-design-system/compare/v0.6.0...v0.7.0) (2024-07-22)
 
 
