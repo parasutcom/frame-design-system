@@ -1,0 +1,49 @@
+@import '../../styles/settings/prefix';
+@import '../../styles/tools/typography';
+
+:host {
+  display: block;
+  margin-inline-start: $spacing-medium;
+}
+
+.#{$prefix}-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+:host([type="bulleted"]) .#{$prefix}-list {
+  list-style-type: disc;
+}
+
+:host([type="dashed"]) ::slotted(#{$prefix}-list-item) {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '\002013';
+    inset-inline-start: calc(-1 * $spacing-medium);
+  }
+}
+
+:host([type="numbered"]) .#{$prefix}-list {
+  list-style-type: decimal;
+}
+
+:host([type="lettered"]) .#{$prefix}-list {
+  list-style-type: lower-alpha;
+}
+
+:host ::slotted(#{$prefix}-list-item) {
+  @include type-style('body-short-01');
+
+  position: relative;
+}
+
+:host ::slotted(#{$prefix}-list-item:not(:last-child)) {
+  margin-bottom: $spacing-2x-small;
+}
+
+:host([nested]) {
+  margin-block-start: $spacing-2x-small;
+}
