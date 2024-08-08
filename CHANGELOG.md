@@ -1,3 +1,10 @@
+# [0.9.0](https://github.com/parasutcom/frame-design-system/compare/v0.8.0...v0.9.0) (2024-08-08)
+
+
+### Features
+
+* **list:** add fds-list component ([#166](https://github.com/parasutcom/frame-design-system/issues/166)) ([c9873c7](https://github.com/parasutcom/frame-design-system/commit/c9873c7f3b187f8d1034fded65657befe02253d1))
+
 # [0.8.0](https://github.com/parasutcom/frame-design-system/compare/v0.7.0...v0.8.0) (2024-07-25)
 
 
