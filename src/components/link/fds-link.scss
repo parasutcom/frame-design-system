@@ -1,0 +1,56 @@
+@import '../../styles/settings/prefix';
+@import '../../design-tokens/build/scss/tokens';
+
+.#{$prefix}-link {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-4x-small;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: inherit;
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 0 2px $link-color-focus-border;
+  }
+}
+
+:host([variant='primary']) .#{$prefix}-link {
+  color: $link-color-primary-text;
+
+  &:active {
+    color: $link-color-primary-active-text;
+  }
+}
+
+:host([variant='secondary']) .#{$prefix}-link {
+  color: $link-color-secondary-text;
+
+  &:active {
+    color: $link-color-secondary-active-text;
+  }
+}
+
+:host([variant='dark']) .#{$prefix}-link {
+  color: $link-color-dark-text;
+
+  &:active {
+    color: $link-color-dark-active-text;
+  }
+}
+
+:host([inline]) .#{$prefix}-link {
+  display: inline;
+}
