@@ -1,3 +1,10 @@
+# [0.10.0](https://github.com/parasutcom/frame-design-system/compare/v0.9.0...v0.10.0) (2024-08-08)
+
+
+### Features
+
+* **link:** add fds-link component ([#167](https://github.com/parasutcom/frame-design-system/issues/167)) ([d3d3a57](https://github.com/parasutcom/frame-design-system/commit/d3d3a575c9dda7bc75df23ec123e8e3d3d95a7f7))
+
 # [0.9.0](https://github.com/parasutcom/frame-design-system/compare/v0.8.0...v0.9.0) (2024-08-08)
 
 
