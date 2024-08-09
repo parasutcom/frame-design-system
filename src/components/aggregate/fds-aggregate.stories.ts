@@ -38,7 +38,7 @@ export default {
 };
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
-export const Default = (args: any) => html`
+export const Base = (args: any) => html`
   <fds-aggregate>
     <p slot="meta">${args.meta}</p>
     <p slot="tally">${args.tally}</p>

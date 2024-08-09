@@ -65,7 +65,7 @@ export class FdsButton extends LitElement {
   }
 
   private renderIcon() {
-    return this.icon ? html`<fds-icon prefix="far" name=${this.icon}></fds-icon>` : '';
+    return this.icon ? html`<fds-icon icon-style="far" name=${this.icon}></fds-icon>` : '';
   }
 
   private renderLabel() {

@@ -36,15 +36,13 @@ export default {
     },
   },
   args: {
-    label: 'Process label',
-    valueLabel: '%40',
     value: 40,
     size: 'medium',
   },
 };
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
-export const Default = (args: any) => html`
+export const Base = (args: any) => html`
   <fds-progress-bar
     value=${ifDefined(args.value)}
     label=${ifDefined(args.label)}
@@ -54,7 +52,7 @@ export const Default = (args: any) => html`
   </fds-progress-bar>
 `;
 
-export const Plain = {
+export const Sizes = {
   render: () => html`
     <div style="display: flex; flex-direction: column; gap: 2rem">
       <fds-progress-bar value="40" size="small"></fds-progress-bar>
@@ -64,35 +62,10 @@ export const Plain = {
   `,
 };
 
-export const WithoutValueLabel = {
-  render: () => html` <fds-progress-bar value="40" label="Process label"></fds-progress-bar> `,
+export const WithLabel = {
+  render: () => html` <fds-progress-bar value="40" label="Progress label"></fds-progress-bar> `,
 };
 
-export const WithoutLabel = {
+export const WithValueLabel = {
   render: () => html` <fds-progress-bar value="40" value-label="%40"></fds-progress-bar> `,
-};
-
-export const Size = {
-  render: () => html`
-    <div style="display: flex; flex-direction: column; gap: 2rem">
-      <fds-progress-bar
-        value="40"
-        size="small"
-        label="Process label"
-        value-label="%40"
-      ></fds-progress-bar>
-      <fds-progress-bar
-        value="40"
-        size="medium"
-        label="Process label"
-        value-label="%40"
-      ></fds-progress-bar>
-      <fds-progress-bar
-        value="40"
-        size="large"
-        label="Process label"
-        value-label="%40"
-      ></fds-progress-bar>
-    </div>
-  `,
 };

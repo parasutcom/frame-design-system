@@ -24,7 +24,7 @@ export class FdsSpinner extends LitElement {
   label?: string = '';
 
   @property({ type: String, reflect: true, attribute: 'label-placement' })
-  LabelPlacement: LabelPlacement = 'horizontal';
+  labelPlacement: LabelPlacement = 'horizontal';
 
   render(): TemplateResult {
     const iconSize = this.size === 'medium' ? '3x-large' : 'medium';
@@ -33,7 +33,7 @@ export class FdsSpinner extends LitElement {
       role="progressbar"
       aria-label="${ifDefined(this.label ? this.label : 'Loading')}"
     >
-      <fds-icon prefix="far" name="spinner-third" size="${iconSize}"></fds-icon>
+      <fds-icon icon-style="far" name="spinner-third" size="${iconSize}"></fds-icon>
       ${this.label ? html`<div class="fds-spinner__label">${this.label}</div>` : ''}
     </div>`;
   }

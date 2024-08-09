@@ -26,8 +26,8 @@ export class FdsIcon extends LitElement {
     return [unsafeCSS(style)];
   }
 
-  @property({ type: String, reflect: true })
-  prefix: IconStyles = 'fas';
+  @property({ type: String, reflect: true, attribute: 'icon-style' })
+  iconStyle: IconStyles = 'fas';
 
   @property({ type: String, reflect: true })
   name: string = '';
@@ -37,7 +37,7 @@ export class FdsIcon extends LitElement {
 
   private _getIcon(): string {
     const iconDefinition = findIconDefinition({
-      prefix: this.prefix,
+      prefix: this.iconStyle,
       iconName: this.name as IconName,
     });
     return iconDefinition ? icon(iconDefinition).html.join('') : '';
