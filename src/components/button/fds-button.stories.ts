@@ -81,12 +81,12 @@ export default {
   args: {
     variant: 'primary',
     size: 'medium',
-    label: 'Button',
+    label: 'Button label',
   },
 };
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
-export const Default = (args: any) => html`
+export const Base = (args: any) => html`
   <fds-button
     variant=${ifDefined(args.variant)}
     size=${ifDefined(args.size)}
@@ -116,30 +116,12 @@ export const Variants = {
   `,
 };
 
-export const Size = {
+export const Sizes = {
   render: () => html`
     <div style="display: flex; align-items: center; gap: 1rem">
-      <fds-button variant="primary" size="large">Large button</fds-button>
-      <fds-button variant="primary" size="medium">Medium button</fds-button>
       <fds-button variant="primary" size="small">Small button</fds-button>
-    </div>
-  `,
-};
-
-export const FullWidth = {
-  render: () => html`
-    <div style="display: flex; flex-direction: column; gap: 1rem">
-      <fds-button variant="primary" full-width>Full width button</fds-button>
-      <fds-button variant="outline" full-width>Full width button</fds-button>
-    </div>
-  `,
-};
-
-export const Disabled = {
-  render: () => html`
-    <div style="display: flex; gap: 1rem">
-      <fds-button variant="primary" disabled>Disabled button</fds-button>
-      <fds-button variant="outline" disabled>Disabled button</fds-button>
+      <fds-button variant="primary" size="medium">Medium button</fds-button>
+      <fds-button variant="primary" size="large">Large button</fds-button>
     </div>
   `,
 };
@@ -153,11 +135,37 @@ export const Busy = {
   `,
 };
 
+export const Disabled = {
+  render: () => html`
+    <div style="display: flex; gap: 1rem">
+      <fds-button variant="primary" disabled>Disabled button</fds-button>
+      <fds-button variant="outline" disabled>Disabled button</fds-button>
+    </div>
+  `,
+};
+
+export const FullWidth = {
+  render: () => html`
+    <div style="display: flex; flex-direction: column; gap: 1rem">
+      <fds-button variant="primary" full-width>Full width button</fds-button>
+      <fds-button variant="outline" full-width>Full width button</fds-button>
+    </div>
+  `,
+};
+
+export const LinkButton = {
+  render: () => html`
+    <fds-button variant="primary" href="https://www.framedesignsystem.com" target="_blank"
+      >Link button</fds-button
+    >
+  `,
+};
+
 export const WithIcon = {
   render: () => html`
     <div style="display: flex; gap: 1rem">
-      <fds-button variant="primary" icon="filter">Icon left</fds-button>
-      <fds-button variant="primary" icon="plus" icon-placement="right">Icon right</fds-button>
+      <fds-button variant="primary" icon="filter">Button label</fds-button>
+      <fds-button variant="primary" icon="plus" icon-placement="right">Button label</fds-button>
     </div>
   `,
 };
@@ -166,7 +174,11 @@ export const IconOnly = {
   render: () => html`
     <div style="display: flex; gap: 1rem">
       <fds-button variant="primary" icon="plus"></fds-button>
+      <fds-button variant="secondary" icon="plus"></fds-button>
       <fds-button variant="outline" icon="plus"></fds-button>
+      <fds-button variant="ghost" icon="plus"></fds-button>
+      <fds-button variant="destructive" icon="plus"></fds-button>
+      <fds-button variant="destructive-outline" icon="plus"></fds-button>
     </div>
   `,
 };

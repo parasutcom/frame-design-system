@@ -33,7 +33,7 @@ export default {
         type: 'text',
       },
     },
-    LabelPlacement: {
+    labelPlacement: {
       options: ['horizontal', 'vertical'],
       control: {
         type: 'inline-radio',
@@ -52,7 +52,7 @@ export const Base = (args: any) => html`
     variant=${ifDefined(args.variant)}
     size=${ifDefined(args.size)}
     label=${ifDefined(args.label)}
-    label-placement=${ifDefined(args.LabelPlacement)}
+    label-placement=${ifDefined(args.labelPlacement)}
   ></fds-spinner>
 `;
 
@@ -65,17 +65,11 @@ export const Variants = {
   `,
 };
 
-export const Size = {
+export const Sizes = {
   render: () => html`
-    <div style="display: flex; flex-direction: column; gap: 1rem">
-      <div style="display: flex; align-items: center; gap: 1rem">
-        <fds-spinner variant="primary" size="medium"></fds-spinner>
-        <fds-spinner variant="primary" size="small"></fds-spinner>
-      </div>
-      <div style="display: flex; align-items: center; gap: 1rem">
-        <fds-spinner variant="secondary" size="medium"></fds-spinner>
-        <fds-spinner variant="secondary" size="small"></fds-spinner>
-      </div>
+    <div style="display: flex; align-items: center; gap: 1rem">
+      <fds-spinner variant="primary" size="small"></fds-spinner>
+      <fds-spinner variant="primary" size="medium"></fds-spinner>
     </div>
   `,
 };
