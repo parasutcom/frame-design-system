@@ -52,13 +52,13 @@ export const Base = (args: any) => html`
   <fds-toggle-switch
     name=${ifDefined(args.name)}
     label=${ifDefined(args.label)}
-    .disabled=${args.disabled}
-    .checked=${args.checked}
+    ?disabled=${args.disabled}
+    ?checked=${args.checked}
     size=${ifDefined(args.size)}
   ></fds-toggle-switch>
 `;
 
-export const Size = {
+export const Sizes = {
   render: () => html`
     <div style="display: flex; align-items: center; gap: 1rem">
       <fds-toggle-switch size="medium"></fds-toggle-switch>
@@ -68,28 +68,20 @@ export const Size = {
 };
 
 export const Checked = {
-  render: () => html`
-    <div style="display: flex; align-items: center; gap: 1rem">
-      <fds-toggle-switch size="medium" checked></fds-toggle-switch>
-      <fds-toggle-switch size="large" checked></fds-toggle-switch>
-    </div>
-  `,
+  render: () => html`<fds-toggle-switch size="medium" checked></fds-toggle-switch>`,
 };
 
 export const Disabled = {
   render: () => html`
     <div style="display: flex; align-items: center; gap: 1rem">
       <fds-toggle-switch size="medium" disabled></fds-toggle-switch>
-      <fds-toggle-switch size="medium" disabled checked></fds-toggle-switch>
+      <fds-toggle-switch size="medium" checked disabled></fds-toggle-switch>
     </div>
   `,
 };
 
 export const WithLabel = {
   render: () => html`
-    <div style="display: flex; align-items: center; gap: 1rem">
-      <fds-toggle-switch label="Toggle switch label" size="medium"></fds-toggle-switch>
-      <fds-toggle-switch label="Toggle switch label"></fds-toggle-switch>
-    </div>
+    <fds-toggle-switch label="Toggle switch label" size="medium"></fds-toggle-switch>
   `,
 };

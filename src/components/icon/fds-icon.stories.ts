@@ -21,7 +21,7 @@ export default {
         type: 'select',
       },
     },
-    prefix: {
+    iconStyle: {
       options: ['fas', 'far', 'fad'],
       control: {
         type: 'inline-radio',
@@ -35,27 +35,37 @@ export default {
     },
   },
   args: {
-    prefix: 'fas',
-    name: 'home',
+    iconStyle: 'fas',
+    name: 'bank',
     size: 'medium',
   },
 };
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
-export const Default = (args: any) => html`
-  <fds-icon name=${args.name} prefix=${args.prefix} size=${args.size}></fds-icon>
+export const Base = (args: any) => html`
+  <fds-icon name=${args.name} icon-style=${args.iconStyle} size=${args.size}></fds-icon>
 `;
 
-export const Size = {
+export const Styles = {
   render: () => html`
     <div style="display: flex; align-items: center; gap: 1rem">
-      <fds-icon prefix="fas" name="home" size="x-small"></fds-icon>
-      <fds-icon prefix="fas" name="home" size="small"></fds-icon>
-      <fds-icon prefix="fas" name="home" size="medium"></fds-icon>
-      <fds-icon prefix="fas" name="home" size="large"></fds-icon>
-      <fds-icon prefix="fas" name="home" size="x-large"></fds-icon>
-      <fds-icon prefix="fas" name="home" size="2x-large"></fds-icon>
-      <fds-icon prefix="fas" name="home" size="3x-large"></fds-icon>
+      <fds-icon icon-style="fas" name="bank"></fds-icon>
+      <fds-icon icon-style="far" name="bank"></fds-icon>
+      <fds-icon icon-style="fad" name="bank"></fds-icon>
+    </div>
+  `,
+};
+
+export const Sizes = {
+  render: () => html`
+    <div style="display: flex; align-items: center; gap: 1rem">
+      <fds-icon icon-style="fas" name="bank" size="x-small"></fds-icon>
+      <fds-icon icon-style="fas" name="bank" size="small"></fds-icon>
+      <fds-icon icon-style="fas" name="bank" size="medium"></fds-icon>
+      <fds-icon icon-style="fas" name="bank" size="large"></fds-icon>
+      <fds-icon icon-style="fas" name="bank" size="x-large"></fds-icon>
+      <fds-icon icon-style="fas" name="bank" size="2x-large"></fds-icon>
+      <fds-icon icon-style="fas" name="bank" size="3x-large"></fds-icon>
     </div>
   `,
 };
@@ -68,7 +78,7 @@ export const IconList = {
       ${icons.map(
         icon => html`
           <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem">
-            <fds-icon prefix="far" name="${icon}"></fds-icon>
+            <fds-icon icon-style="fas" name="${icon}"></fds-icon>
             <div style="font-family: sans-serif;">${icon}</div>
           </div>
         `

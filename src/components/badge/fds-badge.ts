@@ -38,7 +38,7 @@ export class FdsBadge extends LitElement {
     const iconSize = this.size === 'large' ? 'x-large' : 'large';
     return this.icon
       ? html`<fds-icon
-          prefix="far"
+          icon-style="far"
           name="${this.icon}"
           size="${iconSize}"
           aria-hidden="true"
