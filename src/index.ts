@@ -1,6 +1,7 @@
 export { FdsAggregate } from './components/aggregate/fds-aggregate';
 export { FdsBadge } from './components/badge/fds-badge';
 export { FdsButton } from './components/button/fds-button';
+export { FdsCard } from './components/card/fds-card';
 export { FdsIcon } from './components/icon/fds-icon';
 export { FdsLink } from './components/link/fds-link';
 export { FdsList } from './components/list/fds-list';
