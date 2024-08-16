@@ -1,3 +1,10 @@
+# [0.12.0](https://github.com/parasutcom/frame-design-system/compare/v0.11.0...v0.12.0) (2024-08-16)
+
+
+### Features
+
+* **helper-text:** add fds-card component ([#170](https://github.com/parasutcom/frame-design-system/issues/170)) ([85dcec3](https://github.com/parasutcom/frame-design-system/commit/85dcec3e09a9cee5e51fe326052e83637e6f8c65))
+
 # [0.11.0](https://github.com/parasutcom/frame-design-system/compare/v0.10.0...v0.11.0) (2024-08-13)
 
 
