@@ -1,0 +1,27 @@
+@import '../../styles/settings/prefix';
+@import '../../design-tokens/build/scss/tokens';
+@import '../../styles/tools/typography';
+
+:host {
+  display: inline-block;
+}
+
+.#{$prefix}-helper-text {
+  @include type-style('helper-text-01');
+
+  display: inline-flex;
+  align-items: flex-start;
+  gap: $spacing-3x-small;
+}
+
+:host([status="information"]) .#{$prefix}-helper-text {
+  color: $color-gray-50;
+}
+
+:host([status="error"]) .#{$prefix}-helper-text {
+  color: $color-red-60;
+}
+
+:host([status="warning"]) .#{$prefix}-helper-text {
+  color: $color-bronze-60;
+}
