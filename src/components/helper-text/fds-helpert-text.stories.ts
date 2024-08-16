@@ -36,7 +36,7 @@ export default {
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export const Base = (args: any) => html`
   <fds-helper-text status=${ifDefined(args.status)} ?with-icon=${args.withIcon}
-    >Helper text goes here Helper text goes here Helper text goes hereHelper text goes here
+    >Helper text goes here
   </fds-helper-text>
 `;
 
