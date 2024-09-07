@@ -1,0 +1,31 @@
+@import '../../styles/settings/prefix';
+@import '../../design-tokens/build/scss/tokens';
+@import '../../styles/tools/typography';
+
+:host {
+  display: inline-block;
+}
+
+.#{$prefix}-checkbox-group {
+  border: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.#{$prefix}-checkbox-group__legend {
+  @include type-style('label-02');
+
+  color: $color-gray-90;
+}
+
+.#{$prefix}-checkbox-group__options {
+  display: flex;
+  flex-direction: row;
+  gap: $spacing-2x-small;
+  margin-block: $spacing-2x-small;
+}
+
+:host([placement="vertical"]) .#{$prefix}-checkbox-group__options {
+  flex-direction: column;
+}

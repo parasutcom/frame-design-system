@@ -3,6 +3,7 @@ export { FdsBadge } from './components/badge/fds-badge';
 export { FdsButton } from './components/button/fds-button';
 export { FdsCard } from './components/card/fds-card';
 export { FdsCheckbox } from './components/checkbox/fds-checkbox';
+export { FdsCheckboxGroup } from './components/checkbox-group/fds-checkbox-group';
 export { FdsHelperText } from './components/helper-text/fds-helper-text';
 export { FdsIcon } from './components/icon/fds-icon';
 export { FdsLink } from './components/link/fds-link';
