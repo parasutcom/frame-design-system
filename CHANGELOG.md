@@ -1,3 +1,10 @@
+# [0.14.0](https://github.com/parasutcom/frame-design-system/compare/v0.13.0...v0.14.0) (2024-09-07)
+
+
+### Features
+
+* **checkbox-group:** add fds-checkbox-group component ([#174](https://github.com/parasutcom/frame-design-system/issues/174)) ([1d99c71](https://github.com/parasutcom/frame-design-system/commit/1d99c710ef8829ba12960c35b4b70dfa2f47f89f))
+
 # [0.13.0](https://github.com/parasutcom/frame-design-system/compare/v0.12.0...v0.13.0) (2024-09-07)
 
 
