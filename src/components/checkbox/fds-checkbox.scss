@@ -1,0 +1,75 @@
+@import '../../styles/settings/prefix';
+@import '../../design-tokens/build/scss/tokens';
+@import '../../styles/tools/visually-hidden';
+@import '../../styles/tools/typography';
+
+:host {
+  display: inline-block;
+}
+
+.#{$prefix}-checkbox {
+  display: flex;
+  flex-direction: column
+}
+
+label {
+  @include type-style('label-01');
+
+  display: flex;
+  align-items: center;
+  gap: $spacing-2x-small;
+  user-select: none;
+  cursor: pointer;
+}
+
+.#{$prefix}-checkbox__input {
+  @include visually-hidden;
+}
+
+.#{$prefix}-checkbox__control {
+  position: relative;
+  width: $checkbox-size-width;
+  height: $checkbox-size-height;
+  flex-shrink: 0;
+  background-color: $checkbox-color-background;
+  border-radius: $checkbox-border-radius;
+  box-shadow: inset 0 0 0 1px $checkbox-color-border;
+  color: $color-white;
+  transition: all 200ms ease;
+}
+
+.#{$prefix}-checkbox__label {
+  color: $checkbox-color-text;
+}
+
+:host(:is([checked], [indeterminate])) .#{$prefix}-checkbox__control {
+  background-color: $checkbox-color-active-background;
+}
+
+:host([disabled]) label {
+  cursor: not-allowed;
+}
+
+:host([disabled]) .#{$prefix}-checkbox__control {
+  box-shadow: inset 0 0 0 1px $checkbox-color-disabled-border;
+}
+
+:host([disabled]) .#{$prefix}-checkbox__label {
+  color: $checkbox-color-disabled-text;
+}
+
+:host(:is([disabled][checked], [disabled][indeterminate])) .#{$prefix}-checkbox__control {
+  background-color: $checkbox-color-disabled-background;
+  box-shadow: unset;
+  color: $checkbox-color-disabled-text;
+}
+
+:host(:not([disabled])) .#{$prefix}-checkbox__input:focus-visible + .#{$prefix}-checkbox__control {
+  outline: 2px solid $checkbox-color-focus-border;
+  transition: none;
+}
+
+:host fds-helper-text {
+  margin-top: $spacing-2x-small;
+  margin-inline-start: $spacing-large;
+}
