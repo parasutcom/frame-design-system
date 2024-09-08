@@ -10,5 +10,6 @@ export { FdsLink } from './components/link/fds-link';
 export { FdsList } from './components/list/fds-list';
 export { FdsListItem } from './components/list/fds-list-item';
 export { FdsProgressBar } from './components/progress-bar/fds-progress-bar';
+export { FdsRadio } from './components/radio/fds-radio';
 export { FdsSpinner } from './components/spinner/fds-spinner';
 export { FdsToggleSwitch } from './components/toggle-switch/fds-toggle-switch';
