@@ -1,3 +1,10 @@
+# [0.15.0](https://github.com/parasutcom/frame-design-system/compare/v0.14.0...v0.15.0) (2024-09-08)
+
+
+### Features
+
+* **radio:** add fds-radio component ([#175](https://github.com/parasutcom/frame-design-system/issues/175)) ([488d9f8](https://github.com/parasutcom/frame-design-system/commit/488d9f8c84f1de2c6c98c525012394d561cfd598))
+
 # [0.14.0](https://github.com/parasutcom/frame-design-system/compare/v0.13.0...v0.14.0) (2024-09-07)
 
 
