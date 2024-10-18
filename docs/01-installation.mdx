@@ -2,64 +2,67 @@ import { Meta } from '@storybook/blocks';
 
 <Meta title="Documentation/Installation" />
 
-Welcome to Frame Design System. This guide walks you through the process of installing and integrating the Frame Design System into your project directly from GitHub. Please follow the steps below to get started.
+# Installation
 
-## Prerequisites
+Frame Design System offers multiple installation options to meet different project needs—This guide provides detailed instructions on how to install and integrate our web components into your project.
 
-Before you begin, ensure you have Node 14.x or newer installed.
+The easiest and quickest way to start is using our CDN, which allows you to add components directly in your HTML with a single `<script>` tag. This method is perfect for rapid prototyping, static HTML pages, or projects without a build process.
 
-## Getting Started
+Using the CDN, you can instantly start using Frame Design System components without local setup or build steps.
 
-#### Clone the Repository
+For more advanced use cases, such as projects with a build pipeline, we recommend installing via NPM.
 
-Open your terminal and navigate to your project directory. Then, run one of the following commands to clone the repository:
+## CDN Installation
 
-Using HTTPS:
+Add the following in the `<head>` of your project:
 
-```bash
-  git clone https://github.com/parasutcom/frame-design-system.git
-```
+````html
+<script type="module" src="https://cdn.jsdelivr.net/npm/frame-design-system@0.16.0/dist/bundle.min.js"></script>
+````
 
-Or using SSH:
+## NPM Installation
 
-```bash
-  git clone git@github.com:parasutcom/frame-design-system.git
-```
+### System Requirements
 
-### Install Dependencies
+- Node.js: v18.0.0+
+- npm: v9.0.0+
 
-Change into the cloned design system directory:
+### Prerequisites
 
-```bash
-  cd frame-design-system
-```
+Before installing the Frame Design System via NPM, you need to set up authentication for Font Awesome Pro we use for icons: 
 
-Install the necessary dependencies with npm:
+1. Create a `.npmrc` file in the root of your project (if it doesn't already exist). This file will store your Font Awesome authentication token.
+2. Contact the Frame Design System team to get your Font Awesome Pro token.
 
-```bash
-  npm install
-```
+Once you have the token, add the following lines to your `.npmrc` file:
 
-### Build with Gulp
+````
+@fortawesome:registry=https://npm.fontawesome.com/
+@awesome.me:registry=https://npm.fontawesome.com/
+//npm.fontawesome.com/:_authToken=YOUR_FONTAWESOME_TOKEN
+````
 
-Frame Design System uses Gulp to compile and build assets. If you haven't installed Gulp CLI globally, do so by running:
+Replace `YOUR_FONTAWESOME_TOKEN` with the token provided by our team.
 
-```bash
-  npm install -g gulp-cli
-```
+After setting up the `.npmrc` file, you can install the Frame Design System package by running:
 
-Next, execute the Gulp build process:
+````bash
+npm install @parasutcom/frame-design-system --save
+````
 
-```bash
-  gulp
-```
+Once installed, import the Frame Design System into your project:
 
-### Embedding Frame Design System into Your Project
+````javascript
+import '@parasutcom/frame-design-system/dist/bundle.js';
+````
 
-After the build process, the dist folder will contain all the compiled CSS and other assets. To apply Frame Design System styles to your web project, include the CSS file in your HTML:
+Now that you have installed the Frame Design System, you're ready to start using it in your project.
 
-```bash
-  <link rel="stylesheet" href="path/to/frame-design-system/dist/css/main.css">
-```
+## Troubleshooting
 
-Congratulations! You've successfully installed the Frame Design System from GitHub and built it using Gulp. Now, you can begin to use the design system's components and utilities in your project. For further instructions on usage and access to component documentation, please see our Components Documentation.
+If you run into issues during installation, check for these common problems:
+
+- **Font Awesome Authentication Error**: Ensure that your Font Awesome Pro token is correctly added to your `.npmrc` file.
+- **NPM Installation Failure**: Review any error messages in the terminal after running `npm install` and ensure that you have a stable internet connection.
+
+If issues persist, please [open an issue](https://github.com/parasutcom/frame-design-system/issues/new) on our GitHub repository.
