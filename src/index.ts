@@ -4,6 +4,8 @@ export { FdsButton } from './components/button/fds-button';
 export { FdsCard } from './components/card/fds-card';
 export { FdsCheckbox } from './components/checkbox/fds-checkbox';
 export { FdsCheckboxGroup } from './components/checkbox-group/fds-checkbox-group';
+export { FdsContentSwitcher } from './components/content-switcher/fds-content-switcher';
+export { FdsContentSwitcherButton } from './components/content-switcher/content-switcher-button/fds-content-switcher-button';
 export { FdsHelperText } from './components/helper-text/fds-helper-text';
 export { FdsIcon } from './components/icon/fds-icon';
 export { FdsLink } from './components/link/fds-link';
