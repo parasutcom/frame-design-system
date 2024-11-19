@@ -1,0 +1,43 @@
+@import '../../../styles/settings/prefix';
+@import '../../../design-tokens/build/scss/tokens';
+@import '../../../styles/tools/button';
+@import '../../../styles/tools/text-truncate';
+
+:host {
+  display: inline-block;
+}
+
+:host(:first-of-type),
+:host(:first-of-type[selected]) .#{$prefix}-content-switcher-btn {
+  border-radius: $button-border-radius 0 0 $button-border-radius;
+}
+
+:host(:last-of-type),
+:host(:last-of-type[selected]) .#{$prefix}-content-switcher-btn {
+  border-radius: 0 $button-border-radius $button-border-radius 0;
+}
+
+.#{$prefix}-content-switcher-btn {
+  @include button-base;
+
+  height: 100%;
+  color: inherit;
+  border-radius: 0;
+}
+
+.#{$prefix}-content-switcher-btn__label {
+  @include truncate;
+
+  flex-grow: 1;
+}
+ 
+:host([selected]) .#{$prefix}-content-switcher-btn,
+:host([selected]) .#{$prefix}-content-switcher-btn:hover {
+  background-color: $button-color-outline-active-background;
+  box-shadow: inset 0 0 0 1px $button-color-outline-active-border;
+  color: $button-color-outline-active-text;
+}
+
+:host([selected]) .#{$prefix}-content-switcher-btn {
+  cursor: default;
+}

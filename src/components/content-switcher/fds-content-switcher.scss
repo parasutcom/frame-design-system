@@ -1,0 +1,72 @@
+@import '../../styles/settings/prefix';
+@import '../../design-tokens/build/scss/tokens';
+
+
+:host {
+  display: inline-flex;
+}
+
+.#{$prefix}-content-switcher {
+  display: inline-flex;
+  height: $content-switcher-size-height;
+  flex-wrap: nowrap;
+  gap: 1px;
+}
+
+:host([variant="solid"]) ::slotted(fds-content-switcher-button) {
+  background-color: $button-color-secondary-background;
+  box-shadow: inset 0 0 0 1px $button-color-secondary-border;
+  color: $button-color-secondary-text;
+}
+
+:host([variant="solid"]) ::slotted(fds-content-switcher-button:hover) {
+  background-color: $button-color-secondary-hover-background;
+  box-shadow: inset 0 0 0 1px $button-color-secondary-hover-border;
+}
+
+:host([variant="solid"]) ::slotted(fds-content-switcher-button:active) {
+  background-color: $button-color-secondary-active-background;
+  box-shadow: inset 0 0 0 1px $button-color-secondary-active-border;
+}
+
+:host([variant="solid"]) ::slotted(fds-content-switcher-button:focus-visible) {
+  box-shadow: inset 0 0 0 2px $button-color-focus-border,
+              inset 0 0 0 3px $color-white;
+}
+
+:host([variant="outline"]) {
+  .#{$prefix}-content-switcher {
+    gap: 0;
+  }
+}
+
+:host([variant="outline"]) ::slotted(fds-content-switcher-button) {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1px $button-color-outline-border;
+  color: $button-color-outline-text;
+}
+
+:host([variant="outline"]) ::slotted(fds-content-switcher-button:not(:first-child)) {
+  margin-left: -1px;
+}
+
+:host([variant="outline"]) ::slotted(fds-content-switcher-button:hover) {
+  color: $button-color-outline-hover-text;
+  background-color: $button-color-outline-hover-background;
+  box-shadow: inset 0 0 0 1px $button-color-outline-hover-border;
+}
+
+:host([variant="outline"]) ::slotted(fds-content-switcher-button:active) {
+  color: $button-color-outline-active-text;
+  background-color: $button-color-outline-active-background;
+  box-shadow: inset 0 0 0 1px $button-color-outline-active-border;
+}
+
+:host([variant="outline"]) ::slotted(fds-content-switcher-button:focus-visible) {
+  box-shadow: inset 0 0 0 2px $button-color-focus-border,
+  inset 0 0 0 3px $color-white;
+}
+
+:host([size="small"]) .#{$prefix}-content-switcher {
+  height: $content-switcher-size-small-height;
+}
