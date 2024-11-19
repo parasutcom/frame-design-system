@@ -1,3 +1,10 @@
+# [0.17.0](https://github.com/parasutcom/frame-design-system/compare/v0.16.0...v0.17.0) (2024-11-19)
+
+
+### Features
+
+* **content-switcher:** add fds-content-switcher component ([#186](https://github.com/parasutcom/frame-design-system/issues/186)) ([367575c](https://github.com/parasutcom/frame-design-system/commit/367575c757d16b42a945e60766a8a9b76e5442eb))
+
 # [0.16.0](https://github.com/parasutcom/frame-design-system/compare/v0.15.0...v0.16.0) (2024-09-08)
 
 
