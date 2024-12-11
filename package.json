@@ -17,6 +17,9 @@
     "type": "git",
     "url": "git+https://github.com/parasutcom/frame-design-system.git"
   },
+  "files": [
+    "dist"
+  ],
   "main": "dist/bundle.js",
   "module": "dist/bundle.js",
   "engines": {
