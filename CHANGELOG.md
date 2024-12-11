@@ -1,3 +1,10 @@
+# [0.18.0](https://github.com/parasutcom/frame-design-system/compare/v0.17.0...v0.18.0) (2024-12-11)
+
+
+### Features
+
+* add files field to package.json for npm optimization ([#189](https://github.com/parasutcom/frame-design-system/issues/189)) ([439c221](https://github.com/parasutcom/frame-design-system/commit/439c22139848a99a45ff781eed2eebe5ac2aaf5e))
+
 # [0.17.0](https://github.com/parasutcom/frame-design-system/compare/v0.16.0...v0.17.0) (2024-11-19)
 
 
