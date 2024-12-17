@@ -1,3 +1,10 @@
+# [0.19.0](https://github.com/parasutcom/frame-design-system/compare/v0.18.0...v0.19.0) (2024-12-17)
+
+
+### Features
+
+* **notification:** add fds-notification component ([#192](https://github.com/parasutcom/frame-design-system/issues/192)) ([6911ef0](https://github.com/parasutcom/frame-design-system/commit/6911ef0674e2a2be9ee9de243a9f640d659beefd))
+
 # [0.18.0](https://github.com/parasutcom/frame-design-system/compare/v0.17.0...v0.18.0) (2024-12-11)
 
 
