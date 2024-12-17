@@ -1,35 +1,20 @@
+@import '../../design-tokens/build/scss/tokens';
+
 @mixin notification-base {
   position: relative;
   display: flex;
-  width: 100%;
-  height: auto;
   align-items: flex-start;
+  justify-content: space-between;
   padding: $notification-size-padding;
   gap: $notification-size-gap;
 }
 
-@mixin notification-variant(
+@mixin notification-status(
   $background-color,
   $text-color,
   $border-color,
-  $hover-background-color,
-  $active-background-color
 ) {
-  border-left: 2px solid $border-color;
   background-color: $background-color;
   color: $text-color;
-
-  .#{$prefix}-icon {
-    color: $text-color;
-  }
-
-  .#{$prefix}-notification__btn-close {
-    &:hover {
-      background-color: $hover-background-color;
-    }
-
-    &:active {
-      background-color: $active-background-color;
-    }
-  }
+  border-left: 2px solid $border-color;
 }
