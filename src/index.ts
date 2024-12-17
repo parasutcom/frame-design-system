@@ -11,6 +11,7 @@ export { FdsIcon } from './components/icon/fds-icon';
 export { FdsLink } from './components/link/fds-link';
 export { FdsList } from './components/list/fds-list';
 export { FdsListItem } from './components/list/fds-list-item';
+export { FdsNotification } from './components/notification/fds-notification';
 export { FdsProgressBar } from './components/progress-bar/fds-progress-bar';
 export { FdsRadio } from './components/radio/fds-radio';
 export { FdsRadioGroup } from './components/radio-group/fds-radio-group';
