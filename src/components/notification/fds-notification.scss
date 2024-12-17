@@ -1,0 +1,82 @@
+@import '../../styles/settings/prefix';
+@import '../../styles/tools/notification';
+@import '../../styles/tools/typography';
+
+:host {
+  display: block;
+}
+
+.#{$prefix}-notification {
+  @include notification-base;
+}
+
+.#{$prefix}-notification__content-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  flex: 1 1 auto;
+  justify-content: flex-start;
+  gap: $spacing-3x-small;
+}
+
+.#{$prefix}-notification__header {
+  @include type-style('heading-06');
+}
+
+.#{$prefix}-notification__content {
+  @include type-style('body-short-01');
+}
+
+:host([hidden]) {
+  display: none;
+}
+
+:host([status="information"]) {
+  @include notification-status(
+    $notification-color-information-background,
+    $notification-color-information-text,
+    $notification-color-information-border,
+  );
+}
+
+:host([status="success"]) {
+  @include notification-status(
+    $notification-color-success-background,
+    $notification-color-success-text,
+    $notification-color-success-border,
+  );
+}
+
+:host([status="warning"]) {
+  @include notification-status(
+    $notification-color-warning-background,
+    $notification-color-warning-text,
+    $notification-color-warning-border,
+  );
+}
+
+:host([status="error"]) {
+  @include notification-status(
+    $notification-color-error-background,
+    $notification-color-error-text,
+    $notification-color-error-border,
+  );
+}
+
+:host([type="toast"]) {
+  min-width: calc($spacing-medium * 18);
+  max-width: calc($spacing-medium * 18);
+}
+
+:host([type="app"]) .#{$prefix}-notification {
+  align-items: center;
+}
+
+:host([type="app"]) .#{$prefix}-notification__content-wrapper {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+
