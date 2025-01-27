@@ -8,6 +8,13 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    options: {
+      storySort: {
+        method: 'alphabetical',
+        order: ['Get Started',['Overview', 'Installation', 'Changelog'], 'Frameworks', 'Components', 'Design Tokens'],
+        locales: 'en-US',
+      },
+    },
   },
 };
 
